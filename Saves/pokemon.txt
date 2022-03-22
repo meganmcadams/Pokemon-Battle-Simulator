@@ -1,0 +1,2 @@
+ID	Pid	Tid	Name	Level	Moves	Battles	Status	Curr HP	HP	Defense	SP Attack	SP Defense	Speed	HP IV	Defense IV	SP Attack IV	SP Defense IV	Speed IV	HP EV	Defense EV	SP Attack EV	SP Defense EV	Speed EV	Exp
+0	74	0	Gerry	1	33	0		40	40	100	30	30	20	27	22	13	9	25	0	0	0	0	0	100

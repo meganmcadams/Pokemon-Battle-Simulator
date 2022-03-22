@@ -1,0 +1,4 @@
+ID	Player	Name	Pokedex Count	Pokedex	Pokemon Count	Pokemon
+0	Meg	Mango	1	74	1	74
+1	Ava	Peach	0		0	
+2	Quentin	Brick	0		0	
