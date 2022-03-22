@@ -16,7 +16,7 @@ from Headers.Menu.party_builder import *
 from Headers.Menu.battle_simulator import *
 from Headers.Menu.pokemon_manager import *
 
-header('Pokemon: Gateway')
+header('Pokemon Battle Simulator')
 
 pokemon = load_pokemon()
 moves = load_moves()
@@ -49,6 +49,7 @@ while True:
 
     elif inp == 1: # Encounter Generator
         print("test")
+        save(stored_pokemon, "pokemon")
 
     elif inp == 2: # Trainer Manager
         print("test")
@@ -56,10 +57,12 @@ while True:
 
     elif inp == 3: # Shop
         print("test")
+        save(trainers, "trainers")
 
     elif inp == 4: # Battle Simulator
         battle_simulator(pokemon, stored_pokemon, parties)
-        save(pokemon, "pokemon")
+        save(stored_pokemon, "pokemon")
+        save(trainers, "trainers")
 
     elif inp == 5: # Party Builder
         party_builder(pokemon, stored_pokemon, parties)
