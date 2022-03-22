@@ -16,10 +16,6 @@ from Headers.Menu.party_builder import *
 from Headers.Menu.battle_simulator import *
 from Headers.Menu.pokemon_manager import *
 
-# handlers
-from Headers.level_handler import *
-from Headers.create_handler import *
-
 header('Pokemon: Gateway')
 
 pokemon = load_pokemon()
@@ -37,7 +33,7 @@ while True:
     option(1, "Encounter Generator")
     option(2, "Trainer Manager")
     option(3, "Shop")
-    option(4, "Battle")
+    option(4, "Battle Simulator")
     option(5, "Party Builder")
     option(6, "Exit")
     inp = input("--> ")

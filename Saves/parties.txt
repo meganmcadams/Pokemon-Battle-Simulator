@@ -1,2 +1,4 @@
 ID	Name	Pokemon
 0	Abc	0
+1	Test for Battle Sim	2,3
+2	Test	0,1
