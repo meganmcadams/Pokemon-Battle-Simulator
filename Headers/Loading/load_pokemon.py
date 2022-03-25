@@ -32,7 +32,10 @@ def load_pokemon():
             
             i = 0
             for l in line:
-                p[headers[i]] = l
+                try:
+                    p[headers[i]] = float(l)
+                except:
+                    p[headers[i]] = l
                 i += 1
 
             try:

@@ -7,6 +7,7 @@ from Headers.Loading.load_moves import *
 from Headers.Loading.load_move_levels import *
 from Headers.Loading.load_to_next_level import *
 from Headers.Loading.load_saves import *
+from Headers.Loading.load import *
 
 # saving
 from Headers.save import *
@@ -18,13 +19,16 @@ from Headers.Menu.pokemon_manager import *
 
 header('Pokemon Battle Simulator')
 
-pokemon = load_pokemon()
-moves = load_moves()
-parties = load_parties()
-move_levels = load_move_levels(len(pokemon) - 1)
-to_next_level = load_to_next_level()
-stored_pokemon = load_stored_pokemon()
-trainers = load_trainers()
+pokemon = load("pokemon", "Resources")
+moves = load("moves", "Resources")
+parties = load("parties", "Saves")
+move_levels = load("move_levels","Resources")
+to_next_level = load("to_next_level","Resources")
+stored_pokemon = load("pokemon","Saves")
+trainers = load("trainers","Saves")
+
+#for p in stored_pokemon:
+#level_check(pokemon, p, to_next_level, move_levels, moves)
 
 while True:
 
@@ -44,7 +48,7 @@ while True:
         inp = -1
 
     if inp == 0: # Pokemon Manager
-        pokemon_manager(pokemon, stored_pokemon, to_next_level)
+        pokemon_manager(pokemon, stored_pokemon, to_next_level, parties, move_levels, moves)
         save(stored_pokemon, "pokemon")
 
     elif inp == 1: # Encounter Generator
@@ -60,7 +64,7 @@ while True:
         save(trainers, "trainers")
 
     elif inp == 4: # Battle Simulator
-        battle_simulator(pokemon, stored_pokemon, parties)
+        battle_simulator(trainers, pokemon, stored_pokemon, parties, moves, to_next_level, move_levels)
         save(stored_pokemon, "pokemon")
         save(trainers, "trainers")
 

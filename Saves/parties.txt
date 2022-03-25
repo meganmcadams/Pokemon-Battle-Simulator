@@ -1,4 +1,11 @@
 ID	Name	Pokemon
-0	Abc	0
-1	Test for Battle Sim	2,3
-2	Test	0,1
+0	Mango	0,1,2
+1	Wild Squirtle	4
+2	Wild Ekans	15
+3	Main Party - No Estelle	7,8,9,10,11,12
+4	Zorua Wild	17
+5	Minus Durian	7,8,10,11,12
+6	Minus Peach and Durian	7,8,11,14
+7	Zorua Wild 2	16
+8	Wild Taillow	18
+9	12,9,7	12,9,7

@@ -25,8 +25,8 @@ def header(text):
 def subheader(text):
     text_size = len(text)
     print("") # print newline
-    if text_size >= 15:
-        print(text)
+    if text_size >= 20:
+        print("-" + text)
     else:
 
         header_size = (15 - text_size)

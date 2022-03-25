@@ -32,7 +32,7 @@ def load_moves():
             
             i = 0
             for l in line:
-                m[headers[i]] = l
+                m[headers[i]] = l.strip()
                 i += 1
 
             try:

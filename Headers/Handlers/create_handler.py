@@ -2,7 +2,7 @@ import random
 from Headers.Handlers.level_handler import *
 from Headers.tools import *
 
-def create(pokemon, to_next_level, stored_pokemon, level, name, nickname):
+def create(pokemon, to_next_level, stored_pokemon, level, name, nickname, move_levels, moves):
     copy = stored_pokemon[0].copy() # make a copy of the first stored pokemon
     for key in copy.keys(): # for key in copy
         copy[key] = int(0) # default every value to 0
@@ -14,13 +14,21 @@ def create(pokemon, to_next_level, stored_pokemon, level, name, nickname):
         print("ERROR: Could not find",name,"in pokemon.")
         exit()
     copy['Pid'] = pid # pid
-    copy['Tid'] = -1 # tid
+    copy['Tid'] = "" # tid
     copy['Name'] = nickname # name
     copy['Status'] = ""
+
+    # gender
+    min_num = random.randrange(1,100)
+    num = float(pokemon[copy['Pid']]['Percent Male']) * 100
+    if num <= min_num:
+        copy['Gender'] = "Male"
+    else:
+        copy['Gender'] = "Female"
     
-    moves = pokemon[pid]['Learnable Moves'].split(',') # set moves to list of possible moves
+    moves = move_levels[int(pid)][0] # set moves to list of possible moves
     res = ""
-    if level < 3:
+    if level < 3: # if level is less than 3, have it learn 2 moves
         num = 2
     elif level < 7:
         num = 3
@@ -36,17 +44,23 @@ def create(pokemon, to_next_level, stored_pokemon, level, name, nickname):
 
     copy['Moves'] = res # store result
     copy['HP IV'] = random.randrange(1,32)
+    copy['Attack IV'] = random.randrange(1,32)
     copy['Defense IV'] = random.randrange(1,32)
-    copy['SP Attack IV'] = random.randrange(1,32)
-    copy['SP Defense IV'] = random.randrange(1,32)
+    copy['Sp Attack IV'] = random.randrange(1,32)
+    copy['Sp Defense IV'] = random.randrange(1,32)
     copy['Speed IV'] = random.randrange(1,32)
     
     i = 0
     while i < level:
-        level_up(copy, pokemon[pid], to_next_level, False, False)
+        level_up(copy, pokemon[pid], to_next_level, move_levels, moves, False, False)
         i += 1
 
     copy['Curr HP'] = copy['HP']
+    copy['Curr Attack'] = copy['Attack']
+    copy['Curr Defense'] = copy['Defense']
+    copy['Curr Sp Attack'] = copy['Sp Attack']
+    copy['Curr Sp Defense'] = copy['Sp Defense']
+    copy['Curr Speed'] = copy['Speed']
 
     stored_pokemon.append(copy)
 

@@ -1,851 +1,850 @@
-id	name	type	category	pp	power	accuracy	status	status chance
-1	Pound	Normal	Physical	35	40	1		
-2	Karate Chop	Fighting	Physical	25	50	1		
-3	Double Slap	Normal	Physical	10	15	0.85		
-4	Comet Punch	Normal	Physical	15	18	0.85		
-5	Mega Punch	Normal	Physical	20	80	0.85		
-6	Pay Day	Normal	Physical	20	40	1		
-7	Fire Punch	Fire	Physical	15	75	1	0.1	Burn
-8	Ice Punch	Ice	Physical	15	75	1	0.1	Freeze
-9	Thunder Punch	Electric	Physical	15	75	1	0.1	Paralysis
-10	Scratch	Normal	Physical	35	40	1		
-11	Vise Grip	Normal	Physical	30	55	1		
-12	Guillotine	Normal	Physical	5	0	0.3		
-13	Razor Wind	Normal	Special	10	80	1		
-14	Swords Dance	Normal	Status	20	0	1		
-15	Cut	Normal	Physical	30	50	0.95		
-16	Gust	Flying	Special	35	40	1		
-17	Wing Attack	Flying	Physical	35	60	1		
-18	Whirlwind	Normal	Status	20	0	1		
-19	Fly	Flying	Physical	15	90	0.95		
-20	Bind	Normal	Physical	20	15	0.85		
-21	Slam	Normal	Physical	20	80	0.75		
-22	Vine Whip	Grass	Physical	25	45	1		
-23	Stomp	Normal	Physical	20	65	1		
-24	Double Kick	Fighting	Physical	30	30	1		
-25	Mega Kick	Normal	Physical	5	120	0.75		
-26	Jump Kick	Fighting	Physical	10	100	0.95		
-27	Rolling Kick	Fighting	Physical	15	60	0.85		
-28	Sand Attack	Ground	Status	15	0	1		
-29	Headbutt	Normal	Physical	15	70	1		
-30	Horn Attack	Normal	Physical	25	65	1		
-31	Fury Attack	Normal	Physical	20	15	0.85		
-32	Horn Drill	Normal	Physical	5	0	0.3		
-33	Tackle	Normal	Physical	35	40	1		
-34	Body Slam	Normal	Physical	15	85	1	0.3	Paralysis
-35	Wrap	Normal	Physical	20	15	0.9		
-36	Take Down	Normal	Physical	20	90	0.85		
-37	Thrash	Normal	Physical	10	120	1		
-38	Double-Edge	Normal	Physical	15	120	1		
-39	Tail Whip	Normal	Status	30	0	1		
-40	Poison Sting	Poison	Physical	35	15	1	0.3	Poison
-41	Twineedle	Bug	Physical	20	25	1		
-42	Pin Missile	Bug	Physical	20	25	0.95		
-43	Leer	Normal	Status	30	0	1		
-44	Bite	Dark	Physical	25	60	1		
-45	Growl	Normal	Status	40	0	1		
-46	Roar	Normal	Status	20	0	1		
-47	Sing	Normal	Status	15	0	0.55	1	Sleep
-48	Supersonic	Normal	Status	20	0	0.55	1	Confusion
-49	Sonic Boom	Normal	Special	20	0	0.9		
-50	Disable	Normal	Status	20	0	1		
-51	Acid	Poison	Special	30	40	1		
-52	Ember	Fire	Special	25	40	1	0.1	Burn
-53	Flamethrower	Fire	Special	15	90	1	0.1	Burn
-54	Mist	Ice	Status	30	0	1		
-55	Water Gun	Water	Special	25	40	1		
-56	Hydro Pump	Water	Special	5	110	0.8		
-57	Surf	Water	Special	15	90	1		
-58	Ice Beam	Ice	Special	10	90	1	0.1	Freeze
-59	Blizzard	Ice	Special	5	110	0.7	0.1	Freeze
-60	Psybeam	Psychic	Special	20	65	1	0.1	Confusion
-61	Bubble Beam	Water	Special	20	65	1		
-62	Aurora Beam	Ice	Special	20	65	1		
-63	Hyper Beam	Normal	Special	5	150	0.9		
-64	Peck	Flying	Physical	35	35	1		
-65	Drill Peck	Flying	Physical	20	80	1		
-66	Submission	Fighting	Physical	20	80	0.8		
-67	Low Kick	Fighting	Physical	20	0	1		
-68	Counter	Fighting	Physical	20	0	1		
-69	Seismic Toss	Fighting	Physical	20	0	1		
-70	Strength	Normal	Physical	15	80	1		
-71	Absorb	Grass	Special	25	20	1		
-72	Mega Drain	Grass	Special	15	40	1		
-73	Leech Seed	Grass	Status	10	0	0.9		
-74	Growth	Normal	Status	20	0	1		
-75	Razor Leaf	Grass	Physical	25	55	0.95		
-76	Solar Beam	Grass	Special	10	120	1		
-77	Poison Powder	Poison	Status	35	0	0.75	1	Poison
-78	Stun Spore	Grass	Status	30	0	0.75	1	Paralysis
-79	Sleep Powder	Grass	Status	15	0	0.75	1	Sleep
-80	Petal Dance	Grass	Special	10	120	1		
-81	String Shot	Bug	Status	40	0	0.95		
-82	Dragon Rage	Dragon	Special	10	0	1		
-83	Fire Spin	Fire	Special	15	35	0.85		
-84	Thunder Shock	Electric	Special	30	40	1	0.1	Paralysis
-85	Thunderbolt	Electric	Special	15	90	1	0.1	Paralysis
-86	Thunder Wave	Electric	Status	20	0	0.9	1	Paralysis
-87	Thunder	Electric	Special	10	110	0.7	0.3	Paralysis
-88	Rock Throw	Rock	Physical	15	50	0.9		
-89	Earthquake	Ground	Physical	10	100	1		
-90	Fissure	Ground	Physical	5	0	0.3		
-91	Dig	Ground	Physical	10	80	1		
-92	Toxic	Poison	Status	10	0	0.9	1	Poison
-93	Confusion	Psychic	Special	25	50	1	0.1	Confusion
-94	Psychic	Psychic	Special	10	90	1		
-95	Hypnosis	Psychic	Status	20	0	0.6	1	Sleep
-96	Meditate	Psychic	Status	40	0	1		
-97	Agility	Psychic	Status	30	0	1		
-98	Quick Attack	Normal	Physical	30	40	1		
-99	Rage	Normal	Physical	20	20	1		
-100	Teleport	Psychic	Status	20	0	1		
-101	Night Shade	Ghost	Special	15	0	1		
-102	Mimic	Normal	Status	10	0	1		
-103	Screech	Normal	Status	40	0	0.85		
-104	Double Team	Normal	Status	15	0	1		
-105	Recover	Normal	Status	10	0	1		
-106	Harden	Normal	Status	30	0	1		
-107	Minimize	Normal	Status	10	0	1		
-108	Smokescreen	Normal	Status	20	0	1		
-109	Confuse Ray	Ghost	Status	10	0	1	1	Confusion
-110	Withdraw	Water	Status	40	0	1		
-111	Defense Curl	Normal	Status	40	0	1		
-112	Barrier	Psychic	Status	20	0	1		
-113	Light Screen	Psychic	Status	30	0	1		
-114	Haze	Ice	Status	30	0	1		
-115	Reflect	Psychic	Status	20	0	1		
-116	Focus Energy	Normal	Status	30	0	1		
-117	Bide	Normal	Physical	10	0	1		
-118	Metronome	Normal	Status	10	0	1		
-119	Mirror Move	Flying	Status	20	0	1		
-120	Self-Destruct	Normal	Physical	5	200	1		
-121	Egg Bomb	Normal	Physical	10	100	0.75		
-122	Lick	Ghost	Physical	30	30	1	0.3	Paralysis
-123	Smog	Poison	Special	20	30	0.7	0.4	Poison
-124	Sludge	Poison	Special	20	65	1	0.3	Poison
-125	Bone Club	Ground	Physical	20	65	0.85		
-126	Fire Blast	Fire	Special	5	110	0.85	0.3	Burn
-127	Waterfall	Water	Physical	15	80	1		
-128	Clamp	Water	Physical	15	35	0.85		
-129	Swift	Normal	Special	20	60	1		
-130	Skull Bash	Normal	Physical	10	130	1		
-131	Spike Cannon	Normal	Physical	15	20	1		
-132	Constrict	Normal	Physical	35	10	1		
-133	Amnesia	Psychic	Status	20	0	1		
-134	Kinesis	Psychic	Status	15	0	0.8		
-135	Soft-Boiled	Normal	Status	10	0	1		
-136	High Jump Kick	Fighting	Physical	10	130	0.9		
-137	Glare	Normal	Status	30	0	1	1	Paralysis
-138	Dream Eater	Psychic	Special	15	100	1		
-139	Poison Gas	Poison	Status	40	0	0.9	1	Poison
-140	Barrage	Normal	Physical	20	15	0.85		
-141	Leech Life	Bug	Physical	10	80	1		
-142	Lovely Kiss	Normal	Status	10	0	0.75	1	Sleep
-143	Sky Attack	Flying	Physical	5	140	0.9		
-144	Transform	Normal	Status	10	0	1		
-145	Bubble	Water	Special	30	40	1		
-146	Dizzy Punch	Normal	Physical	10	70	1		
-147	Spore	Grass	Status	15	0	1	1	Sleep
-148	Flash	Normal	Status	20	0	1		
-149	Psywave	Psychic	Special	15	0	1		
-150	Splash	Normal	Status	40	0	1		
-151	Acid Armor	Poison	Status	20	0	1		
-152	Crabhammer	Water	Physical	10	100	0.9		
-153	Explosion	Normal	Physical	5	250	1		
-154	Fury Swipes	Normal	Physical	15	18	0.8		
-155	Bonemerang	Ground	Physical	10	50	0.9		
-156	Rest	Psychic	Status	10	0	1	1	Sleep
-157	Rock Slide	Rock	Physical	10	75	0.9		
-158	Hyper Fang	Normal	Physical	15	80	0.9		
-159	Sharpen	Normal	Status	30	0	1		
-160	Conversion	Normal	Status	30	0	1		
-161	Tri Attack	Normal	Special	10	80	1	0.2	Paralysis,Freeze,Burn
-162	Super Fang	Normal	Physical	10	0	0.9		
-163	Slash	Normal	Physical	20	70	1		
-164	Substitute	Normal	Status	10	0	1		
-165	Struggle	Normal	Physical	1	50	1		
-166	Sketch	Normal	Status	1	0	1		
-167	Triple Kick	Fighting	Physical	10	10	0.9		
-168	Thief	Dark	Physical	25	60	1		
-169	Spider Web	Bug	Status	10	0	1		
-170	Mind Reader	Normal	Status	5	0	1		
-171	Nightmare	Ghost	Status	15	0	1		
-172	Flame Wheel	Fire	Physical	25	60	1	0.1	Burn
-173	Snore	Normal	Special	15	50	1		
-174	Curse	Ghost	Status	10	0	1	1	Confusion
-175	Flail	Normal	Physical	15	0	1		
-176	Conversion 2	Normal	Status	30	0	1		
-177	Aeroblast	Flying	Special	5	100	0.95		
-178	Cotton Spore	Grass	Status	40	0	1		
-179	Reversal	Fighting	Physical	15	0	1		
-180	Spite	Ghost	Status	10	0	1		
-181	Powder Snow	Ice	Special	25	40	1	0.1	Freeze
-182	Protect	Normal	Status	10	0	1		
-183	Mach Punch	Fighting	Physical	30	40	1		
-184	Scary Face	Normal	Status	10	0	1		
-185	Feint Attack	Dark	Physical	20	60	1		
-186	Sweet Kiss	Fairy	Status	10	0	0.75	1	Confusion
-187	Belly Drum	Normal	Status	10	0	1		
-188	Sludge Bomb	Poison	Special	10	90	1	0.3	Poison
-189	Mud-Slap	Ground	Special	10	20	1		
-190	Octazooka	Water	Special	10	65	0.85		
-191	Spikes	Ground	Status	20	0	1		
-192	Zap Cannon	Electric	Special	5	120	0.5	1	Paralysis
-193	Foresight	Normal	Status	40	0	1		
-194	Destiny Bond	Ghost	Status	5	0	1		
-195	Perish Song	Normal	Status	5	0	1		
-196	Icy Wind	Ice	Special	15	55	0.95		
-197	Detect	Fighting	Status	5	0	1		
-198	Bone Rush	Ground	Physical	10	25	0.9		
-199	Lock-On	Normal	Status	5	0	1		
-200	Outrage	Dragon	Physical	10	120	1		
-201	Sandstorm	Rock	Status	10	0	1		
-202	Giga Drain	Grass	Special	10	75	1		
-203	Endure	Normal	Status	10	0	1		
-204	Charm	Fairy	Status	20	0	1		
-205	Rollout	Rock	Physical	20	30	0.9		
-206	False Swipe	Normal	Physical	40	40	1		
-207	Swagger	Normal	Status	15	0	0.85	1	Confusion
-208	Milk Drink	Normal	Status	10	0	1		
-209	Spark	Electric	Physical	20	65	1	0.3	Paralysis
-210	Fury Cutter	Bug	Physical	20	40	0.95		
-211	Steel Wing	Steel	Physical	25	70	0.9		
-212	Mean Look	Normal	Status	5	0	1		
-213	Attract	Normal	Status	15	0	1	1	Confusion
-214	Sleep Talk	Normal	Status	10	0	1		
-215	Heal Bell	Normal	Status	5	0	1		
-216	Return	Normal	Physical	20	0	1		
-217	Present	Normal	Physical	15	0	0.9		
-218	Frustration	Normal	Physical	20	0	1		
-219	Safeguard	Normal	Status	25	0	1		
-220	Pain Split	Normal	Status	20	0	1		
-221	Sacred Fire	Fire	Physical	5	100	0.95	0.5	Burn
-222	Magnitude	Ground	Physical	30	0	1		
-223	Dynamic Punch	Fighting	Physical	5	100	0.5	1	Confusion
-224	Megahorn	Bug	Physical	10	120	0.85		
-225	Dragon Breath	Dragon	Special	20	60	1	0.3	Paralysis
-226	Baton Pass	Normal	Status	40	0	1		
-227	Encore	Normal	Status	5	0	1		
-228	Pursuit	Dark	Physical	20	40	1		
-229	Rapid Spin	Normal	Physical	40	50	1		
-230	Sweet Scent	Normal	Status	20	0	1		
-231	Iron Tail	Steel	Physical	15	100	0.75		
-232	Metal Claw	Steel	Physical	35	50	0.95		
-233	Vital Throw	Fighting	Physical	10	70	1		
-234	Morning Sun	Normal	Status	5	0	1		
-235	Synthesis	Grass	Status	5	0	1		
-236	Moonlight	Fairy	Status	5	0	1		
-237	Hidden Power	Normal	Special	15	60	1		
-238	Cross Chop	Fighting	Physical	5	100	0.8		
-239	Twister	Dragon	Special	20	40	1		
-240	Rain Dance	Water	Status	5	0	1		
-241	Sunny Day	Fire	Status	5	0	1		
-242	Crunch	Dark	Physical	15	80	1		
-243	Mirror Coat	Psychic	Special	20	0	1		
-244	Psych Up	Normal	Status	10	0	1		
-245	Extreme Speed	Normal	Physical	5	80	1		
-246	Ancient Power	Rock	Special	5	60	1		
-247	Shadow Ball	Ghost	Special	15	80	1		
-248	Future Sight	Psychic	Special	10	120	1		
-249	Rock Smash	Fighting	Physical	15	40	1		
-250	Whirlpool	Water	Special	15	35	0.85		
-251	Beat Up	Dark	Physical	10	0	1		
-252	Fake Out	Normal	Physical	10	40	1		
-253	Uproar	Normal	Special	10	90	1		
-254	Stockpile	Normal	Status	20	0	1		
-255	Spit Up	Normal	Special	10	0	1		
-256	Swallow	Normal	Status	10	0	1		
-257	Heat Wave	Fire	Special	10	95	0.9	0.1	Burn
-258	Hail	Ice	Status	10	0	1		
-259	Torment	Dark	Status	15	0	1		
-260	Flatter	Dark	Status	15	0	1	1	Confusion
-261	Will-O-Wisp	Fire	Status	15	0	0.85	1	Burn
-262	Memento	Dark	Status	10	0	1		
-263	Facade	Normal	Physical	20	70	1		
-264	Focus Punch	Fighting	Physical	20	150	1		
-265	Smelling Salts	Normal	Physical	10	70	1		
-266	Follow Me	Normal	Status	20	0	1		
-267	Nature Power	Normal	Status	20	0	1		
-268	Charge	Electric	Status	20	0	1		
-269	Taunt	Dark	Status	20	0	1		
-270	Helping Hand	Normal	Status	20	0	1		
-271	Trick	Psychic	Status	10	0	1		
-272	Role Play	Psychic	Status	10	0	1		
-273	Wish	Normal	Status	10	0	1		
-274	Assist	Normal	Status	20	0	1		
-275	Ingrain	Grass	Status	20	0	1		
-276	Superpower	Fighting	Physical	5	120	1		
-277	Magic Coat	Psychic	Status	15	0	1		
-278	Recycle	Normal	Status	10	0	1		
-279	Revenge	Fighting	Physical	10	60	1		
-280	Brick Break	Fighting	Physical	15	75	1		
-281	Yawn	Normal	Status	10	0	1	1	Sleep
-282	Knock Off	Dark	Physical	20	65	1		
-283	Endeavor	Normal	Physical	5	0	1		
-284	Eruption	Fire	Special	5	150	1		
-285	Skill Swap	Psychic	Status	10	0	1		
-286	Imprison	Psychic	Status	10	0	1		
-287	Refresh	Normal	Status	20	0	1		
-288	Grudge	Ghost	Status	5	0	1		
-289	Snatch	Dark	Status	10	0	1		
-290	Secret Power	Normal	Physical	20	70	1		
-291	Dive	Water	Physical	10	80	1		
-292	Arm Thrust	Fighting	Physical	20	15	1		
-293	Camouflage	Normal	Status	20	0	1		
-294	Tail Glow	Bug	Status	20	0	1		
-295	Luster Purge	Psychic	Special	5	70	1		
-296	Mist Ball	Psychic	Special	5	70	1		
-297	Feather Dance	Flying	Status	15	0	1		
-298	Teeter Dance	Normal	Status	20	0	1	1	Confusion
-299	Blaze Kick	Fire	Physical	10	85	0.9	0.1	Burn
-300	Mud Sport	Ground	Status	15	0	1		
-301	Ice Ball	Ice	Physical	20	30	0.9		
-302	Needle Arm	Grass	Physical	15	60	1		
-303	Slack Off	Normal	Status	10	0	1		
-304	Hyper Voice	Normal	Special	10	90	1		
-305	Poison Fang	Poison	Physical	15	50	1	0.3	Poison
-306	Crush Claw	Normal	Physical	10	75	0.95		
-307	Blast Burn	Fire	Special	5	150	0.9		
-308	Hydro Cannon	Water	Special	5	150	0.9		
-309	Meteor Mash	Steel	Physical	10	90	0.9		
-310	Astonish	Ghost	Physical	15	30	1		
-311	Weather Ball	Normal	Special	10	50	1		
-312	Aromatherapy	Grass	Status	5	0	1		
-313	Fake Tears	Dark	Status	20	0	1		
-314	Air Cutter	Flying	Special	25	60	0.95		
-315	Overheat	Fire	Special	5	130	0.9		
-316	Odor Sleuth	Normal	Status	40	0	1		
-317	Rock Tomb	Rock	Physical	15	60	0.95		
-318	Silver Wind	Bug	Special	5	60	1		
-319	Metal Sound	Steel	Status	40	0	0.85		
-320	Grass Whistle	Grass	Status	15	0	0.55	1	Sleep
-321	Tickle	Normal	Status	20	0	1		
-322	Cosmic Power	Psychic	Status	20	0	1		
-323	Water Spout	Water	Special	5	150	1		
-324	Signal Beam	Bug	Special	15	75	1		
-325	Shadow Punch	Ghost	Physical	20	60	1		
-326	Extrasensory	Psychic	Special	20	80	1		
-327	Sky Uppercut	Fighting	Physical	15	85	0.9		
-328	Sand Tomb	Ground	Physical	15	35	0.85		
-329	Sheer Cold	Ice	Special	5	0	0.3		
-330	Muddy Water	Water	Special	10	90	0.85		
-331	Bullet Seed	Grass	Physical	30	25	1		
-332	Aerial Ace	Flying	Physical	20	60	1		
-333	Icicle Spear	Ice	Physical	30	25	1		
-334	Iron Defense	Steel	Status	15	0	1		
-335	Block	Normal	Status	5	0	1		
-336	Howl	Normal	Status	40	0	1		
-337	Dragon Claw	Dragon	Physical	15	80	1		
-338	Frenzy Plant	Grass	Special	5	150	0.9		
-339	Bulk Up	Fighting	Status	20	0	1		
-340	Bounce	Flying	Physical	5	85	0.85	0.3	Paralysis
-341	Mud Shot	Ground	Special	15	55	0.95		
-342	Poison Tail	Poison	Physical	25	50	1	0.1	Poison
-343	Covet	Normal	Physical	25	60	1		
-344	Volt Tackle	Electric	Physical	15	120	1	0.1	Paralysis
-345	Magical Leaf	Grass	Special	20	60	1		
-346	Water Sport	Water	Status	15	0	1		
-347	Calm Mind	Psychic	Status	20	0	1		
-348	Leaf Blade	Grass	Physical	15	90	1		
-349	Dragon Dance	Dragon	Status	20	0	1		
-350	Rock Blast	Rock	Physical	10	25	0.9		
-351	Shock Wave	Electric	Special	20	60	1		
-352	Water Pulse	Water	Special	20	60	1	0.2	Confusion
-353	Doom Desire	Steel	Special	5	140	1		
-354	Psycho Boost	Psychic	Special	5	140	0.9		
-355	Roost	Flying	Status	10	0	1		
-356	Gravity	Psychic	Status	5	0	1		
-357	Miracle Eye	Psychic	Status	40	0	1		
-358	Wake-Up Slap	Fighting	Physical	10	70	1		
-359	Hammer Arm	Fighting	Physical	10	100	0.9		
-360	Gyro Ball	Steel	Physical	5	0	1		
-361	Healing Wish	Psychic	Status	10	0	1		
-362	Brine	Water	Special	10	65	1		
-363	Natural Gift	Normal	Physical	15	0	1		
-364	Feint	Normal	Physical	10	30	1		
-365	Pluck	Flying	Physical	20	60	1		
-366	Tailwind	Flying	Status	15	0	1		
-367	Acupressure	Normal	Status	30	0	1		
-368	Metal Burst	Steel	Physical	10	0	1		
-369	U-turn	Bug	Physical	20	70	1		
-370	Close Combat	Fighting	Physical	5	120	1		
-371	Payback	Dark	Physical	10	50	1		
-372	Assurance	Dark	Physical	10	60	1		
-373	Embargo	Dark	Status	15	0	1		
-374	Fling	Dark	Physical	10	0	1		
-375	Psycho Shift	Psychic	Status	10	0	1		
-376	Trump Card	Normal	Special	5	0	1		
-377	Heal Block	Psychic	Status	15	0	1		
-378	Wring Out	Normal	Special	5	0	1		
-379	Power Trick	Psychic	Status	10	0	1		
-380	Gastro Acid	Poison	Status	10	0	1		
-381	Lucky Chant	Normal	Status	30	0	1		
-382	Me First	Normal	Status	20	0	1		
-383	Copycat	Normal	Status	20	0	1		
-384	Power Swap	Psychic	Status	10	0	1		
-385	Guard Swap	Psychic	Status	10	0	1		
-386	Punishment	Dark	Physical	5	0	1		
-387	Last Resort	Normal	Physical	5	140	1		
-388	Worry Seed	Grass	Status	10	0	1		
-389	Sucker Punch	Dark	Physical	5	70	1		
-390	Toxic Spikes	Poison	Status	20	0	1	1	Poison
-391	Heart Swap	Psychic	Status	10	0	1		
-392	Aqua Ring	Water	Status	20	0	1		
-393	Magnet Rise	Electric	Status	10	0	1		
-394	Flare Blitz	Fire	Physical	15	120	1	0.1	Burn
-395	Force Palm	Fighting	Physical	10	60	1	0.3	Paralysis
-396	Aura Sphere	Fighting	Special	20	80	1		
-397	Rock Polish	Rock	Status	20	0	1		
-398	Poison Jab	Poison	Physical	20	80	1	0.3	Poison
-399	Dark Pulse	Dark	Special	15	80	1		
-400	Night Slash	Dark	Physical	15	70	1		
-401	Aqua Tail	Water	Physical	10	90	0.9		
-402	Seed Bomb	Grass	Physical	15	80	1		
-403	Air Slash	Flying	Special	15	75	0.95		
-404	X-Scissor	Bug	Physical	15	80	1		
-405	Bug Buzz	Bug	Special	10	90	1		
-406	Dragon Pulse	Dragon	Special	10	85	1		
-407	Dragon Rush	Dragon	Physical	10	100	0.75		
-408	Power Gem	Rock	Special	20	80	1		
-409	Drain Punch	Fighting	Physical	10	75	1		
-410	Vacuum Wave	Fighting	Special	30	40	1		
-411	Focus Blast	Fighting	Special	5	120	0.7		
-412	Energy Ball	Grass	Special	10	90	1		
-413	Brave Bird	Flying	Physical	15	120	1		
-414	Earth Power	Ground	Special	10	90	1		
-415	Switcheroo	Dark	Status	10	0	1		
-416	Giga Impact	Normal	Physical	5	150	0.9		
-417	Nasty Plot	Dark	Status	20	0	1		
-418	Bullet Punch	Steel	Physical	30	40	1		
-419	Avalanche	Ice	Physical	10	60	1		
-420	Ice Shard	Ice	Physical	30	40	1		
-421	Shadow Claw	Ghost	Physical	15	70	1		
-422	Thunder Fang	Electric	Physical	15	65	0.95	0.1	Paralysis,Flinch
-423	Ice Fang	Ice	Physical	15	65	0.95	0.1	Flinch
-424	Fire Fang	Fire	Physical	15	65	0.95	0.1	Burn
-425	Shadow Sneak	Ghost	Physical	30	40	1		
-426	Mud Bomb	Ground	Special	10	65	0.85		
-427	Psycho Cut	Psychic	Physical	20	70	1		
-428	Zen Headbutt	Psychic	Physical	15	80	0.9		
-429	Mirror Shot	Steel	Special	10	65	0.85		
-430	Flash Cannon	Steel	Special	10	80	1		
-431	Rock Climb	Normal	Physical	20	90	0.85		
-432	Defog	Flying	Status	15	0	1		
-433	Trick Room	Psychic	Status	5	0	1		
-434	Draco Meteor	Dragon	Special	5	130	0.9		
-435	Discharge	Electric	Special	15	80	1	0.3	Paralysis
-436	Lava Plume	Fire	Special	15	80	1	0.3	Burn
-437	Leaf Storm	Grass	Special	5	130	0.9		
-438	Power Whip	Grass	Physical	10	120	0.85		
-439	Rock Wrecker	Rock	Physical	5	150	0.9		
-440	Cross Poison	Poison	Physical	20	70	1	0.1	Poison
-441	Gunk Shot	Poison	Physical	5	120	0.8	0.3	Poison
-442	Iron Head	Steel	Physical	15	80	1		
-443	Magnet Bomb	Steel	Physical	20	60	1		
-444	Stone Edge	Rock	Physical	5	100	0.8		
-445	Captivate	Normal	Status	20	0	1		
-446	Stealth Rock	Rock	Status	20	0	1		
-447	Grass Knot	Grass	Special	20	0	1		
-448	Chatter	Flying	Special	20	65	1	1	Confusion
-449	Judgment	Normal	Special	10	100	1		
-450	Bug Bite	Bug	Physical	20	60	1		
-451	Charge Beam	Electric	Special	10	50	0.9		
-452	Wood Hammer	Grass	Physical	15	120	1		
-453	Aqua Jet	Water	Physical	20	40	1		
-454	Attack Order	Bug	Physical	15	90	1		
-455	Defend Order	Bug	Status	10	0	1		
-456	Heal Order	Bug	Status	10	0	1		
-457	Head Smash	Rock	Physical	5	150	0.8		
-458	Double Hit	Normal	Physical	10	35	0.9		
-459	Roar of Time	Dragon	Special	5	150	0.9		
-460	Spacial Rend	Dragon	Special	5	100	0.95		
-461	Lunar Dance	Psychic	Status	10	0	1		
-462	Crush Grip	Normal	Physical	5	0	1		
-463	Magma Storm	Fire	Special	5	100	0.75		
-464	Dark Void	Dark	Status	10	0	0.5	1	Sleep
-465	Seed Flare	Grass	Special	5	120	0.85		
-466	Ominous Wind	Ghost	Special	5	60	1		
-467	Shadow Force	Ghost	Physical	5	120	1		
-468	Hone Claws	Dark	Status	15	0	1		
-469	Wide Guard	Rock	Status	10	0	1		
-470	Guard Split	Psychic	Status	10	0	1		
-471	Power Split	Psychic	Status	10	0	1		
-472	Wonder Room	Psychic	Status	10	0	1		
-473	Psyshock	Psychic	Special	10	80	1		
-474	Venoshock	Poison	Special	10	65	1		
-475	Autotomize	Steel	Status	15	0	1		
-476	Rage Powder	Bug	Status	20	0	1		
-477	Telekinesis	Psychic	Status	15	0	1		
-478	Magic Room	Psychic	Status	10	0	1		
-479	Smack Down	Rock	Physical	15	50	1		
-480	Storm Throw	Fighting	Physical	10	60	1		
-481	Flame Burst	Fire	Special	15	70	1		
-482	Sludge Wave	Poison	Special	10	95	1	0.1	Poison
-483	Quiver Dance	Bug	Status	20	0	1		
-484	Heavy Slam	Steel	Physical	10	0	1		
-485	Synchronoise	Psychic	Special	10	120	1		
-486	Electro Ball	Electric	Special	10	0	1		
-487	Soak	Water	Status	20	0	1		
-488	Flame Charge	Fire	Physical	20	50	1		
-489	Coil	Poison	Status	20	0	1		
-490	Low Sweep	Fighting	Physical	20	65	1		
-491	Acid Spray	Poison	Special	20	40	1		
-492	Foul Play	Dark	Physical	15	95	1		
-493	Simple Beam	Normal	Status	15	0	1		
-494	Entrainment	Normal	Status	15	0	1		
-495	After You	Normal	Status	15	0	1		
-496	Round	Normal	Special	15	60	1		
-497	Echoed Voice	Normal	Special	15	40	1		
-498	Chip Away	Normal	Physical	20	70	1		
-499	Clear Smog	Poison	Special	15	50	1		
-500	Stored Power	Psychic	Special	10	20	1		
-501	Quick Guard	Fighting	Status	15	0	1		
-502	Ally Switch	Psychic	Status	15	0	1		
-503	Scald	Water	Special	15	80	1	0.3	Burn
-504	Shell Smash	Normal	Status	15	0	1		
-505	Heal Pulse	Psychic	Status	10	0	1		
-506	Hex	Ghost	Special	10	65	1		
-507	Sky Drop	Flying	Physical	10	60	1		
-508	Shift Gear	Steel	Status	10	0	1		
-509	Circle Throw	Fighting	Physical	10	60	0.9		
-510	Incinerate	Fire	Special	15	60	1		
-511	Quash	Dark	Status	15	0	1		
-512	Acrobatics	Flying	Physical	15	55	1		
-513	Reflect Type	Normal	Status	15	0	1		
-514	Retaliate	Normal	Physical	5	70	1		
-515	Final Gambit	Fighting	Special	5	0	1		
-516	Bestow	Normal	Status	15	0	1		
-517	Inferno	Fire	Special	5	100	0.5	1	Burn
-518	Water Pledge	Water	Special	10	80	1		
-519	Fire Pledge	Fire	Special	10	80	1		
-520	Grass Pledge	Grass	Special	10	80	1		
-521	Volt Switch	Electric	Special	20	70	1		
-522	Struggle Bug	Bug	Special	20	50	1		
-523	Bulldoze	Ground	Physical	20	60	1		
-524	Frost Breath	Ice	Special	10	60	0.9		
-525	Dragon Tail	Dragon	Physical	10	60	0.9		
-526	Work Up	Normal	Status	30	0	1		
-527	Electroweb	Electric	Special	15	55	0.95		
-528	Wild Charge	Electric	Physical	15	90	1		
-529	Drill Run	Ground	Physical	10	80	0.95		
-530	Dual Chop	Dragon	Physical	15	40	0.9		
-531	Heart Stamp	Psychic	Physical	25	60	1		
-532	Horn Leech	Grass	Physical	10	75	1		
-533	Sacred Sword	Fighting	Physical	15	90	1		
-534	Razor Shell	Water	Physical	10	75	0.95		
-535	Heat Crash	Fire	Physical	10	0	1		
-536	Leaf Tornado	Grass	Special	10	65	0.9		
-537	Steamroller	Bug	Physical	20	65	1		
-538	Cotton Guard	Grass	Status	10	0	1		
-539	Night Daze	Dark	Special	10	85	0.95		
-540	Psystrike	Psychic	Special	10	100	1		
-541	Tail Slap	Normal	Physical	10	25	0.85		
-542	Hurricane	Flying	Special	10	110	0.7	0.3	Confusion
-543	Head Charge	Normal	Physical	15	120	1		
-544	Gear Grind	Steel	Physical	15	50	0.85		
-545	Searing Shot	Fire	Special	5	100	1	0.3	Burn
-546	Techno Blast	Normal	Special	5	120	1		
-547	Relic Song	Normal	Special	10	75	1	1	Sleep
-548	Secret Sword	Fighting	Special	10	85	1		
-549	Glaciate	Ice	Special	10	65	0.95		
-550	Bolt Strike	Electric	Physical	5	130	0.85	0.2	Paralysis
-551	Blue Flare	Fire	Special	5	130	0.85	0.2	Burn
-552	Fiery Dance	Fire	Special	10	80	1		
-553	Freeze Shock	Ice	Physical	5	140	0.9	0.3	Paralysis
-554	Ice Burn	Ice	Special	5	140	0.9	0.3	Burn
-555	Snarl	Dark	Special	15	55	0.95		
-556	Icicle Crash	Ice	Physical	10	85	0.9		
-557	V-create	Fire	Physical	5	180	0.95		
-558	Fusion Flare	Fire	Special	5	100	1		
-559	Fusion Bolt	Electric	Physical	5	100	1		
-560	Flying Press	Fighting	Physical	10	100	0.95		
-561	Mat Block	Fighting	Status	10	0	1		
-562	Belch	Poison	Special	10	120	0.9		
-563	Rototiller	Ground	Status	10	0	1		
-564	Sticky Web	Bug	Status	20	0	1		
-565	Fell Stinger	Bug	Physical	25	50	1		
-566	Phantom Force	Ghost	Physical	10	90	1		
-567	Trick-or-Treat	Ghost	Status	20	0	1		
-568	Noble Roar	Normal	Status	30	0	1		
-569	Ion Deluge	Electric	Status	25	0	1		
-570	Parabolic Charge	Electric	Special	20	65	1		
-571	Forest's Curse	Grass	Status	20	0	1		
-572	Petal Blizzard	Grass	Physical	15	90	1		
-573	Freeze-Dry	Ice	Special	20	70	1	0.1	Freeze
-574	Disarming Voice	Fairy	Special	15	40	1		
-575	Parting Shot	Dark	Status	20	0	1		
-576	Topsy-Turvy	Dark	Status	20	0	1		
-577	Draining Kiss	Fairy	Special	10	50	1		
-578	Crafty Shield	Fairy	Status	10	0	1		
-579	Flower Shield	Fairy	Status	10	0	1		
-580	Grassy Terrain	Grass	Status	10	0	1		
-581	Misty Terrain	Fairy	Status	10	0	1		
-582	Electrify	Electric	Status	20	0	1		
-583	Play Rough	Fairy	Physical	10	90	0.9		
-584	Fairy Wind	Fairy	Special	30	40	1		
-585	Moonblast	Fairy	Special	15	95	1		
-586	Boomburst	Normal	Special	10	140	1		
-587	Fairy Lock	Fairy	Status	10	0	1		
-588	King's Shield	Steel	Status	10	0	1		
-589	Play Nice	Normal	Status	20	0	1		
-590	Confide	Normal	Status	20	0	1		
-591	Diamond Storm	Rock	Physical	5	100	0.95		
-592	Steam Eruption	Water	Special	5	110	0.95	0.3	Burn
-593	Hyperspace Hole	Psychic	Special	5	80	1		
-594	Water Shuriken	Water	Special	20	15	1		
-595	Mystical Fire	Fire	Special	10	75	1		
-596	Spiky Shield	Grass	Status	10	0	1		
-597	Aromatic Mist	Fairy	Status	20	0	1		
-598	Eerie Impulse	Electric	Status	15	0	1		
-599	Venom Drench	Poison	Status	20	0	1		
-600	Powder	Bug	Status	20	0	1		
-601	Geomancy	Fairy	Status	10	0	1		
-602	Magnetic Flux	Electric	Status	20	0	1		
-603	Happy Hour	Normal	Status	30	0	1		
-604	Electric Terrain	Electric	Status	10	0	1		
-605	Dazzling Gleam	Fairy	Special	10	80	1		
-606	Celebrate	Normal	Status	40	0	1		
-607	Hold Hands	Normal	Status	40	0	1		
-608	Baby-Doll Eyes	Fairy	Status	30	0	1		
-609	Nuzzle	Electric	Physical	20	20	1	1	Paralysis
-610	Hold Back	Normal	Physical	40	40	1		
-611	Infestation	Bug	Special	20	20	1		
-612	Power-Up Punch	Fighting	Physical	20	40	1		
-613	Oblivion Wing	Flying	Special	10	80	1		
-614	Thousand Arrows	Ground	Physical	10	90	1		
-615	Thousand Waves	Ground	Physical	10	90	1		
-616	Land's Wrath	Ground	Physical	10	90	1		
-617	Light of Ruin	Fairy	Special	5	140	0.9		
-618	Origin Pulse	Water	Special	10	110	0.85		
-619	Precipice Blades	Ground	Physical	10	120	0.85		
-620	Dragon Ascent	Flying	Physical	5	120	1		
-621	Hyperspace Fury	Dark	Physical	5	100	1		
-622	Breakneck Blitz	Normal	Physical	1	0	1		
-623	Breakneck Blitz	Normal	Special	1	0	1		
-624	All-Out Pummeling	Fighting	Physical	1	0	1		
-625	All-Out Pummeling	Fighting	Special	1	0	1		
-626	Supersonic Skystrike	Flying	Physical	1	0	1		
-627	Supersonic Skystrike	Flying	Special	1	0	1		
-628	Acid Downpour	Poison	Physical	1	0	1		
-629	Acid Downpour	Poison	Special	1	0	1		
-630	Tectonic Rage	Ground	Physical	1	0	1		
-631	Tectonic Rage	Ground	Special	1	0	1		
-632	Continental Crush	Rock	Physical	1	0	1		
-633	Continental Crush	Rock	Special	1	0	1		
-634	Savage Spin-Out	Bug	Physical	1	0	1		
-635	Savage Spin-Out	Bug	Special	1	0	1		
-636	Never-Ending Nightmare	Ghost	Physical	1	0	1		
-637	Never-Ending Nightmare	Ghost	Special	1	0	1		
-638	Corkscrew Crash	Steel	Physical	1	0	1		
-639	Corkscrew Crash	Steel	Special	1	0	1		
-640	Inferno Overdrive	Fire	Physical	1	0	1		
-641	Inferno Overdrive	Fire	Special	1	0	1		
-642	Hydro Vortex	Water	Physical	1	0	1		
-643	Hydro Vortex	Water	Special	1	0	1		
-644	Bloom Doom	Grass	Physical	1	0	1		
-645	Bloom Doom	Grass	Special	1	0	1		
-646	Gigavolt Havoc	Electric	Physical	1	0	1		
-647	Gigavolt Havoc	Electric	Special	1	0	1		
-648	Shattered Psyche	Psychic	Physical	1	0	1		
-649	Shattered Psyche	Psychic	Special	1	0	1		
-650	Subzero Slammer	Ice	Physical	1	0	1		
-651	Subzero Slammer	Ice	Special	1	0	1		
-652	Devastating Drake	Dragon	Physical	1	0	1		
-653	Devastating Drake	Dragon	Special	1	0	1		
-654	Black Hole Eclipse	Dark	Physical	1	0	1		
-655	Black Hole Eclipse	Dark	Special	1	0	1		
-656	Twinkle Tackle	Fairy	Physical	1	0	1		
-657	Twinkle Tackle	Fairy	Special	1	0	1		
-658	Catastropika	Electric	Physical	1	210	1		
-659	Shore Up	Ground	Status	10	0	1		
-660	First Impression	Bug	Physical	10	90	1		
-661	Baneful Bunker	Poison	Status	10	0	1	1	Poison
-662	Spirit Shackle	Ghost	Physical	10	80	1		
-663	Darkest Lariat	Dark	Physical	10	85	1		
-664	Sparkling Aria	Water	Special	10	90	1		
-665	Ice Hammer	Ice	Physical	10	100	0.9		
-666	Floral Healing	Fairy	Status	10	0	1		
-667	High Horsepower	Ground	Physical	10	95	0.95		
-668	Strength Sap	Grass	Status	10	0	1		
-669	Solar Blade	Grass	Physical	10	125	1		
-670	Leafage	Grass	Physical	40	40	1		
-671	Spotlight	Normal	Status	15	0	1		
-672	Toxic Thread	Poison	Status	20	0	1	1	Poison
-673	Laser Focus	Normal	Status	30	0	1		
-674	Gear Up	Steel	Status	20	0	1		
-675	Throat Chop	Dark	Physical	15	80	1		
-676	Pollen Puff	Bug	Special	15	90	1		
-677	Anchor Shot	Steel	Physical	20	80	1		
-678	Psychic Terrain	Psychic	Status	10	0	1		
-679	Lunge	Bug	Physical	15	80	1		
-680	Fire Lash	Fire	Physical	15	80	1		
-681	Power Trip	Dark	Physical	10	20	1		
-682	Burn Up	Fire	Special	5	130	1		
-683	Speed Swap	Psychic	Status	10	0	1		
-684	Smart Strike	Steel	Physical	10	70	1		
-685	Purify	Poison	Status	20	0	1		
-686	Revelation Dance	Normal	Special	15	90	1		
-687	Core Enforcer	Dragon	Special	10	100	1		
-688	Trop Kick	Grass	Physical	15	70	1		
-689	Instruct	Psychic	Status	15	0	1		
-690	Beak Blast	Flying	Physical	15	100	1		
-691	Clanging Scales	Dragon	Special	5	110	1		
-692	Dragon Hammer	Dragon	Physical	15	90	1		
-693	Brutal Swing	Dark	Physical	20	60	1		
-694	Aurora Veil	Ice	Status	20	0	1		
-695	Sinister Arrow Raid	Ghost	Physical	1	180	1		
-696	Malicious Moonsault	Dark	Physical	1	180	1		
-697	Oceanic Operetta	Water	Special	1	195	1		
-698	Guardian of Alola	Fairy	Special	1	0	1		
-699	Soul-Stealing 7-Star Strike	Ghost	Physical	1	195	1		
-700	Stoked Sparksurfer	Electric	Special	1	175	1		
-701	Pulverizing Pancake	Normal	Physical	1	210	1		
-702	Extreme Evoboost	Normal	Status	1	0	1		
-703	Genesis Supernova	Psychic	Special	1	185	1		
-704	Shell Trap	Fire	Special	5	150	1		
-705	Fleur Cannon	Fairy	Special	5	130	0.9		
-706	Psychic Fangs	Psychic	Physical	10	85	1		
-707	Stomping Tantrum	Ground	Physical	10	75	1		
-708	Shadow Bone	Ghost	Physical	10	85	1		
-709	Accelerock	Rock	Physical	20	40	1		
-710	Liquidation	Water	Physical	10	85	1		
-711	Prismatic Laser	Psychic	Special	10	160	1		
-712	Spectral Thief	Ghost	Physical	10	90	1		
-713	Sunsteel Strike	Steel	Physical	5	100	1		
-714	Moongeist Beam	Ghost	Special	5	100	1		
-715	Tearful Look	Normal	Status	20	0	1		
-716	Zing Zap	Electric	Physical	10	80	1		
-717	Nature's Madness	Fairy	Special	10	0	0.9		
-718	Multi-Attack	Normal	Physical	10	120	1		
-719	10,000,000 Volt Thunderbolt	Electric	Special	1	195	1		
-720	Mind Blown	Fire	Special	5	150	1		
-721	Plasma Fists	Electric	Physical	15	100	1		
-722	Photon Geyser	Psychic	Special	5	100	1		
-723	Light That Burns the Sky	Psychic	Special	1	200	1		
-724	Searing Sunraze Smash	Steel	Physical	1	200	1		
-725	Menacing Moonraze Maelstrom	Ghost	Special	1	200	1		
-726	Let's Snuggle Forever	Fairy	Physical	1	190	1		
-727	Splintered Stormshards	Rock	Physical	1	190	1		
-728	Clangorous Soulblaze	Dragon	Special	1	185	1		
-729	Zippy Zap	Electric	Physical	10	80	1		
-730	Splishy Splash	Water	Special	15	90	1		
-731	Floaty Fall	Flying	Physical	15	90	0.95		
-732	Pika Papow	Electric	Special	20	0	1		
-733	Bouncy Bubble	Water	Special	20	60	1		
-734	Buzzy Buzz	Electric	Special	20	60	1		
-735	Sizzly Slide	Fire	Physical	20	60	1		
-736	Glitzy Glow	Psychic	Special	15	80	0.95		
-737	Baddy Bad	Dark	Special	15	80	0.95		
-738	Sappy Seed	Grass	Physical	10	100	0.9		
-739	Freezy Frost	Ice	Special	10	100	0.9		
-740	Sparkly Swirl	Fairy	Special	5	120	0.85		
-741	Veevee Volley	Normal	Physical	20	0	1		
-742	Double Iron Bash	Steel	Physical	5	60	1		
-743	Max Guard	Normal	Status	10	0	1		
-744	Dynamax Cannon	Dragon	Special	5	100	1		
-745	Snipe Shot	Water	Special	15	80	1		
-746	Jaw Lock	Dark	Physical	10	80	1		
-747	Stuff Cheeks	Normal	Status	10	0	1		
-748	No Retreat	Fighting	Status	5	0	1		
-749	Tar Shot	Rock	Status	15	0	1		
-750	Magic Powder	Psychic	Status	20	0	1		
-751	Dragon Darts	Dragon	Physical	10	50	1		
-752	Teatime	Normal	Status	10	0	1		
-753	Octolock	Fighting	Status	15	0	1		
-754	Bolt Beak	Electric	Physical	10	85	1		
-755	Fishious Rend	Water	Physical	10	85	1		
-756	Court Change	Normal	Status	10	0	1		
-757	Max Flare	Fire	???	10	0	1		
-758	Max Flutterby	Bug	???	10	0	1		
-759	Max Lightning	Electric	???	10	0	1		
-760	Max Strike	Normal	???	10	0	1		
-761	Max Knuckle	Fighting	???	10	0	1		
-762	Max Phantasm	Ghost	???	10	0	1		
-763	Max Hailstorm	Ice	???	10	0	1		
-764	Max Ooze	Poison	???	10	0	1		
-765	Max Geyser	Water	???	10	0	1		
-766	Max Airstream	Flying	???	10	0	1		
-767	Max Starfall	Fairy	???	10	0	1		
-768	Max Wyrmwind	Dragon	???	10	0	1		
-769	Max Mindstorm	Psychic	???	10	0	1		
-770	Max Rockfall	Rock	???	10	0	1		
-771	Max Quake	Ground	???	10	0	1		
-772	Max Darkness	Dark	???	10	0	1		
-773	Max Overgrowth	Grass	???	10	0	1		
-774	Max Steelspike	Steel	???	10	0	1		
-775	Clangorous Soul	Dragon	Status	5	0	1		
-776	Body Press	Fighting	Physical	10	80	1		
-777	Decorate	Fairy	Status	15	0	1		
-778	Drum Beating	Grass	Physical	10	80	1		
-779	Snap Trap	Grass	Physical	15	35	1		
-780	Pyro Ball	Fire	Physical	5	120	0.9	0.1	Burn
-781	Behemoth Blade	Steel	Physical	5	100	1		
-782	Behemoth Bash	Steel	Physical	5	100	1		
-783	Aura Wheel	Electric	Physical	10	110	1		
-784	Breaking Swipe	Dragon	Physical	15	60	1		
-785	Branch Poke	Grass	Physical	40	40	1		
-786	Overdrive	Electric	Special	10	80	1		
-787	Apple Acid	Grass	Special	10	80	1		
-788	Grav Apple	Grass	Physical	10	80	1		
-789	Spirit Break	Fairy	Physical	15	75	1		
-790	Strange Steam	Fairy	Special	10	90	0.95	0.2	Confusion
-791	Life Dew	Water	Status	10	0	1		
-792	Obstruct	Dark	Status	10	0	1		
-793	False Surrender	Dark	Physical	10	80	1		
-794	Meteor Assault	Fighting	Physical	5	150	1		
-795	Eternabeam	Dragon	Special	5	160	0.9		
-796	Steel Beam	Steel	Special	5	140	0.95		
-797	Expanding Force	Psychic	Special	10	80	1		
-798	Steel Roller	Steel	Physical	5	130	1		
-799	Scale Shot	Dragon	Physical	20	25	0.9		
-800	Meteor Beam	Rock	Special	10	120	0.9		
-801	Shell Side Arm	Poison	Special	10	90	1	0.3	Poison
-802	Misty Explosion	Fairy	Special	5	100	1		
-803	Grassy Glide	Grass	Physical	20	70	1		
-804	Rising Voltage	Electric	Special	20	70	1		
-805	Terrain Pulse	Normal	Special	10	50	1		
-806	Skitter Smack	Bug	Physical	10	70	0.9		
-807	Burning Jealousy	Fire	Special	5	70	1		
-808	Lash Out	Dark	Physical	5	75	1		
-809	Poltergeist	Ghost	Physical	5	110	0.9		
-810	Corrosive Gas	Poison	Status	40	0	1		
-811	Coaching	Fighting	Status	10	0	1		
-812	Flip Turn	Water	Physical	20	60	1		
-813	Triple Axel	Ice	Physical	10	20	0.9		
-814	Dual Wingbeat	Flying	Physical	10	40	0.9		
-815	Scorching Sands	Ground	Special	10	70	1	0.3	Burn
-816	Jungle Healing	Grass	Status	10	0	1		
-817	Wicked Blow	Dark	Physical	5	80	1		
-818	Surging Strikes	Water	Physical	5	25	1		
-819	Thunder Cage	Electric	Special	15	80	0.9		
-820	Dragon Energy	Dragon	Special	5	150	1		
-821	Freezing Glare	Psychic	Special	10	90	1	0.1	Freeze
-822	Fiery Wrath	Dark	Special	10	90	1		
-823	Thunderous Kick	Fighting	Physical	10	90	1		
-824	Glacial Lance	Ice	Physical	5	130	1		
-825	Astral Barrage	Ghost	Special	5	120	1		
-826	Eerie Spell	Psychic	Special	5	80	1		
-827	Dire Claw	Poison	Physical	15	60	100		
-828	Psyshield Bash	Psychic	Physical	10	70	90		
-829	Power Shift	Normal	Status	10	0	1		
-830	Stone Axe	Rock	Physical	15	65	90		
-831	Springtide Storm	Fairy	Special	5	95	80		
-832	Mystical Power	Psychic	Special	10	70	90		
-833	Raging Fury	Fire	Physical	10	90	85		
-834	Wave Crash	Water	Physical	10	75	100		
-835	Chloroblast	Grass	Special	5	120	95		
-836	Mountain Gale	Ice	Physical	5	100	85		
-837	Victory Dance	Fighting	Status	10	0	1		
-838	Headlong Rush	Ground	Physical	5	100	100		
-839	Barb Barrage	Poison	Physical	15	60	100		
-840	Esper Wing	Psychic	Special	10	75	90		
-841	Bitter Malice	Ghost	Special	15	60	100		
-842	Shelter	Steel	Status	10	0	1		
-843	Triple Arrows	Fighting	Physical	15	50	100		
-844	Infernal Parade	Ghost	Special	15	60	100		
-845	Ceaseless Edge	Dark	Physical	15	65	90		
-846	Bleakwind Storm	Flying	Special	5	95	80		
-847	Wildbolt Storm	Electric	Special	5	95	80		
-848	Sandsear Storm	Ground	Special	5	95	80		
-849	Lunar Blessing	Psychic	Status	10	0	1		
-850	Take Heart	Psychic	Status	10	0	1		
+ID	Name	Type	Category	PP	Power	Accuracy	Status Chance	Status	Times	Weather	P Critical Hits	P HP	P Attack	O Attack	P Defense	O Defense	P Sp Attack	O Sp Attack	P Sp Defense	O Sp Defense	P Speed	O Speed	Flinch	Description
+1	Pound	Normal	Physical	35	40	1			1		0		0	0	0	0	0	0	0	0	0	0	Not Found	The target is physically pounded with a long tail, a foreleg, or the like.
+2	Karate Chop	Fighting	Physical	25	50	1			1		1		0	0	0	0	0	0	0	0	0	0	0	The target is attacked with a sharp chop. Critical hits land more easily.
+3	Double Slap	Normal	Physical	10	15	0.85			2,5		0		0	0	0	0	0	0	0	0	0	0	0	The target is slapped repeatedly, back and forth, two to five times in a row.
+4	Comet Punch	Normal	Physical	15	18	0.85			2,5		0		0	0	0	0	0	0	0	0	0	0	0	The target is hit with a flurry of punches that strike two to five times in a row.
+5	Mega Punch	Normal	Physical	20	80	0.85			1		0		0	0	0	0	0	0	0	0	0	0	0	The target is slugged by a punch thrown with muscle-packed power.
+6	Pay Day	Normal	Physical	20	40	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Numerous coins are hurled at the target to inflict damage. Money is earned after the battle.
+7	Fire Punch	Fire	Physical	15	75	1	0.1	Burn	1		0		0	0	0	0	0	0	0	0	0	0	0	The target is punched with a fiery fist. This may also leave the target with a burn.
+8	Ice Punch	Ice	Physical	15	75	1	0.1	Freeze	1		0		0	0	0	0	0	0	0	0	0	0	0	The target is punched with an icy fist. This may also leave the target frozen.
+9	Thunder Punch	Electric	Physical	15	75	1	0.1	Paralysis	1		0		0	0	0	0	0	0	0	0	0	0	0	The target is punched with an electrified fist. This may also leave the target with paralysis.
+10	Scratch	Normal	Physical	35	40	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Hard, pointed, sharp claws rake the target to inflict damage.
+11	Vise Grip	Normal	Physical	30	55	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The target is gripped and squeezed from both sides to inflict damage.
+12	Guillotine	Normal	Physical	5	100	0.3			1		0		0	0	0	0	0	0	0	0	0	0	0	A vicious, tearing attack with big pincers. The target faints instantly if this attack hits.
+13	Razor Wind	Normal	Special	10	80	1			2		1		0	0	0	0	0	0	0	0	0	0	0	Blades of wind hit opposing Pokémon. Critical hits land more easily.
+14	Swords Dance	Normal	Status	20	0	1			1		0		2	0	0	0	0	0	0	0	0	0	0	A frenetic dance to uplift the fighting spirit. This sharply raises the user's Attack stat.
+15	Cut	Normal	Physical	30	50	0.95			1		0		0	0	0	0	0	0	0	0	0	0	0	The target is cut with a scythe or claw. This can also be used to cut down thin trees.
+16	Gust	Flying	Special	35	40	1			1		0		0	0	0	0	0	0	0	0	0	0	0	A gust of wind is whipped up by wings and launched at the target to inflict damage.
+17	Wing Attack	Flying	Physical	35	60	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The target is struck with large, imposing wings spread wide to inflict damage.
+18	Whirlwind	Normal	Status	20	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The target is blown away, and a different Pokémon is dragged out. In the wild, this ends a battle against a single Pokémon.
+19	Fly	Flying	Physical	15	90	0.95			1		0		0	0	0	0	0	0	0	0	0	0	0	The user soars and then strikes its target on the next turn. This can also be used to fly to any familiar town.
+20	Bind	Normal	Physical	20	15	0.85			1		0		0	0	0	0	0	0	0	0	0	0	0	Things such as long bodies or tentacles are used to bind and squeeze the target for four to five turns.
+21	Slam	Normal	Physical	20	80	0.75			1		0		0	0	0	0	0	0	0	0	0	0	0	The target is slammed with a long tail, vines, or the like to inflict damage.
+22	Vine Whip	Grass	Physical	25	45	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The target is struck with slender, whiplike vines to inflict damage.
+23	Stomp	Normal	Physical	20	65	1			1		0		0	0	0	0	0	0	0	0	0	0	1	The target is stomped with a big foot. This may also make the target flinch.
+24	Double Kick	Fighting	Physical	30	30	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The target is quickly kicked twice in succession using both feet.
+25	Mega Kick	Normal	Physical	5	120	0.75			1		0		0	0	0	0	0	0	0	0	0	0	0	The target is attacked by a kick launched with muscle-packed power.
+26	Jump Kick	Fighting	Physical	10	100	0.95			1		0		0	0	0	0	0	0	0	0	0	0	0	The user jumps up high, then strikes with a kick. If the kick misses, the user hurts itself.
+27	Rolling Kick	Fighting	Physical	15	60	0.85			1		0		0	0	0	0	0	0	0	0	0	0	1	The user lashes out with a quick, spinning kick. This may also make the target flinch.
+28	Sand Attack	Ground	Status	15	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Sand is hurled in the target's face, reducing the target's accuracy.
+29	Headbutt	Normal	Physical	15	70	1			1		0		0	0	0	0	0	0	0	0	0	0	1	The user sticks out its head and attacks by charging straight into the target. This may also make the target flinch.
+30	Horn Attack	Normal	Physical	25	65	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The target is jabbed with a sharply pointed horn to inflict damage.
+31	Fury Attack	Normal	Physical	20	15	0.85			2,5		0		0	0	0	0	0	0	0	0	0	0	0	The target is jabbed repeatedly with a horn or beak two to five times in a row.
+32	Horn Drill	Normal	Physical	5	250	0.3			1		0		0	0	0	0	0	0	0	0	0	0	0	The user stabs the target with a horn that rotates like a drill. The target faints instantly if this attack hits.
+33	Tackle	Normal	Physical	35	40	1			1		0		0	0	0	0	0	0	0	0	0	0	0	A physical attack in which the user charges and slams into the target with its whole body.
+34	Body Slam	Normal	Physical	15	85	1	0.3	Paralysis	1		0		0	0	0	0	0	0	0	0	0	0	0	The user drops onto the target with its full body weight. This may also leave the target with paralysis.
+35	Wrap	Normal	Physical	20	15	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	A long body or vines are used to wrap and squeeze the target for four to five turns.
+36	Take Down	Normal	Physical	20	90	0.85			1		0		0	0	0	0	0	0	0	0	0	0	0	A reckless, full-body charge attack for slamming into the target. This also damages the user a little.
+37	Thrash	Normal	Physical	10	120	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user rampages and attacks for two to three turns. The user then becomes confused.
+38	Double-Edge	Normal	Physical	15	120	1			1		0		0	0	0	0	0	0	0	0	0	0	0	A reckless, life-risking tackle. This also damages the user quite a lot.
+39	Tail Whip	Normal	Status	30	0	1			1		0		0	0	0	-1	0	0	0	0	0	0	0	The user wags its tail cutely, making opposing Pokémon less wary and lowering their Defense stat.
+40	Poison Sting	Poison	Physical	35	15	1	0.3	Poison	1		0		0	0	0	0	0	0	0	0	0	0	0	The user stabs the target with a poisonous stinger. This may also poison the target.
+41	Twineedle	Bug	Physical	20	25	1	0.1	Poison	1		0		0	0	0	0	0	0	0	0	0	0	0	The user damages the target twice in succession by jabbing it with two spikes. This may also poison the target.
+42	Pin Missile	Bug	Physical	20	25	0.95			2,5		0		0	0	0	0	0	0	0	0	0	0	0	Sharp spikes are shot at the target in rapid succession. They hit two to five times in a row.
+43	Leer	Normal	Status	30	0	1			1		0		0	0	0	-1	0	0	0	0	0	0	0	The user gives opposing Pokémon an intimidating leer that lowers the Defense stat.
+44	Bite	Dark	Physical	25	60	1			1		0		0	0	0	0	0	0	0	0	0	0	1	The target is bitten with viciously sharp fangs. This may also make the target flinch.
+45	Growl	Normal	Status	40	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user growls in an endearing way, making opposing Pokémon less wary. This lowers their Attack stats.
+46	Roar	Normal	Status	20	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The target is scared off and a different Pokémon is dragged out. In the wild, this ends a battle against a single Pokémon.
+47	Sing	Normal	Status	15	0	0.55	1	Sleep	1		0		0	0	0	0	0	0	0	0	0	0	0	A soothing lullaby is sung in a calming voice that puts the target into a deep slumber.
+48	Supersonic	Normal	Status	20	0	0.55	1	Confusion	1		0		0	0	0	0	0	0	0	0	0	0	0	The user generates odd sound waves from its body that confuse the target.
+49	Sonic Boom	Normal	Special	20	20	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	The target is hit with a destructive shock wave.
+50	Disable	Normal	Status	20	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	For four turns, this move prevents the target from using the move it last used.
+51	Acid	Poison	Special	30	40	1			1		0		0	0	0	0	0	0	0	-1	0	0	0	The opposing Pokémon are attacked with a spray of harsh acid. This may also lower their Sp. Def stats.
+52	Ember	Fire	Special	25	40	1	0.1	Burn	1		0		0	0	0	0	0	0	0	0	0	0	0	The target is attacked with small flames. This may also leave the target with a burn.
+53	Flamethrower	Fire	Special	15	90	1	0.1	Burn	1		0		0	0	0	0	0	0	0	0	0	0	0	The target is scorched with an intense blast of fire. This may also leave the target with a burn.
+54	Mist	Ice	Status	30	0	1			1		0		0	0	1	0	0	0	0	0	0	0	0	The user summons a mist to increase its Defense.
+55	Water Gun	Water	Special	25	40	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The target is blasted with a forceful shot of water.
+56	Hydro Pump	Water	Special	5	110	0.8			1		0		0	0	0	0	0	0	0	0	0	0	0	The target is blasted by a huge volume of water launched under great pressure.
+57	Surf	Water	Special	15	90	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks everything around it by swamping its surroundings with a giant wave. This can also be used for crossing water.
+58	Ice Beam	Ice	Special	10	90	1	0.1	Freeze	1		0		0	0	0	0	0	0	0	0	0	0	0	The target is struck with an icy-cold beam of energy. This may also leave the target frozen.
+59	Blizzard	Ice	Special	5	110	0.7	0.1	Freeze	1		0		0	0	0	0	0	0	0	0	0	0	0	A howling blizzard is summoned to strike opposing Pokémon. This may also leave the opposing Pokémon frozen.
+60	Psybeam	Psychic	Special	20	65	1	0.1	Confusion	1		0		0	0	0	0	0	0	0	0	0	0	0	The target is attacked with a peculiar ray. This may also leave the target confused.
+61	Bubble Beam	Water	Special	20	65	1			1		0		0	0	0	0	0	0	0	0	-1	0	0	A spray of bubbles is forcefully ejected at the target. This may also lower its Speed stat.
+62	Aurora Beam	Ice	Special	20	65	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The target is hit with a rainbow-colored beam. This may also lower the target's Attack stat.
+63	Hyper Beam	Normal	Special	5	150	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	The target is attacked with a powerful beam. The user can't move on the next turn.
+64	Peck	Flying	Physical	35	35	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The target is jabbed with a sharply pointed beak or horn.
+65	Drill Peck	Flying	Physical	20	80	1			1		0		0	0	0	0	0	0	0	0	0	0	0	A corkscrewing attack with a sharp beak acting as a drill.
+66	Submission	Fighting	Physical	20	80	0.8			1		0		0	0	0	0	0	0	0	0	0	0	0	The user grabs the target and recklessly dives for the ground. This also damages the user a little.
+67	Low Kick	Fighting	Physical	20	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	A powerful low kick that makes the target fall over. The heavier the target, the greater the move's power.
+68	Counter	Fighting	Physical	20	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	A retaliation move that counters any physical attack, inflicting double the damage taken.
+69	Seismic Toss	Fighting	Physical	20	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The target is thrown using the power of gravity. It inflicts damage equal to the user's level.
+70	Strength	Normal	Physical	15	80	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The target is slugged with a punch thrown at maximum power. This can also be used to move heavy boulders.
+71	Absorb	Grass	Special	25	20	1			1		0		0	0	0	0	0	0	0	0	0	0	0	A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+72	Mega Drain	Grass	Special	15	40	1			1		0		0	0	0	0	0	0	0	0	0	0	0	A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+73	Leech Seed	Grass	Status	10	0	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	A seed is planted on the target. It steals some HP from the target every turn.
+74	Growth	Normal	Status	20	0	1			1		0		0	0	0	0	1	0	0	0	0	0	0	The user's body grows all at once, raising the Attack and Sp. Atk stats.
+75	Razor Leaf	Grass	Physical	25	55	0.95			1		1		0	0	0	0	0	0	0	0	0	0	0	Sharp-edged leaves are launched to slash at the opposing Pokémon. Critical hits land more easily.
+76	Solar Beam	Grass	Special	10	120	1			1		0		0	0	0	0	0	0	0	0	0	0	0	A two-turn attack. The user gathers light, then blasts a bundled beam on the next turn.
+77	Poison Powder	Poison	Status	35	0	0.75	1	Poison	1		0		0	0	0	0	0	0	0	0	0	0	0	The user scatters a cloud of poisonous dust on the target. This may also poison the target.
+78	Stun Spore	Grass	Status	30	0	0.75	1	Paralysis	1		0		0	0	0	0	0	0	0	0	0	0	0	The user scatters a cloud of numbing powder that paralyzes the target.
+79	Sleep Powder	Grass	Status	15	0	0.75	1	Sleep	1		0		0	0	0	0	0	0	0	0	0	0	0	The user scatters a big cloud of sleep-inducing dust around the target.
+80	Petal Dance	Grass	Special	10	120	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks the target by scattering petals for two to three turns. The user then becomes confused.
+81	String Shot	Bug	Status	40	0	0.95			1		0		0	0	0	0	0	0	0	0	0	-2	0	The opposing Pokémon are bound with silk blown from the user's mouth that harshly lowers the Speed stat.
+82	Dragon Rage	Dragon	Special	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	This attack hits the target with a shock wave of pure rage. This attack always inflicts 40 HP damage.
+83	Fire Spin	Fire	Special	15	35	0.85			1		0		0	0	0	0	0	0	0	0	0	0	0	The target becomes trapped within a fierce vortex of fire that rages for four to five turns.
+84	Thunder Shock	Electric	Special	30	40	1	0.1	Paralysis	1		0		0	0	0	0	0	0	0	0	0	0	0	A jolt of electricity crashes down on the target to inflict damage. This may also leave the target with paralysis.
+85	Thunderbolt	Electric	Special	15	90	1	0.1	Paralysis	1		0		0	0	0	0	0	0	0	0	0	0	0	A strong electric blast crashes down on the target. This may also leave the target with paralysis.
+86	Thunder Wave	Electric	Status	20	0	0.9	1	Paralysis	1		0		0	0	0	0	0	0	0	0	0	0	0	The user launches a weak jolt of electricity that paralyzes the target.
+87	Thunder	Electric	Special	10	110	0.7	0.3	Paralysis	1		0		0	0	0	0	0	0	0	0	0	0	0	A wicked thunderbolt is dropped on the target to inflict damage. This may also leave the target with paralysis.
+88	Rock Throw	Rock	Physical	15	50	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	The user picks up and throws a small rock at the target to attack.
+89	Earthquake	Ground	Physical	10	100	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user sets off an earthquake that strikes every Pokémon around it.
+90	Fissure	Ground	Physical	5	0	0.3			1		0		0	0	0	0	0	0	0	0	0	0	0	The user opens up a fissure in the ground and drops the target in. The target faints instantly if this attack hits.
+91	Dig	Ground	Physical	10	80	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user burrows, then attacks on the next turn. It can also be used to exit dungeons.
+92	Toxic	Poison	Status	10	0	0.9	1	Poison	1		0		0	0	0	0	0	0	0	0	0	0	0	A move that leaves the target badly poisoned. Its poison damage worsens every turn.
+93	Confusion	Psychic	Special	25	50	1	0.1	Confusion	1		0		0	0	0	0	0	0	0	0	0	0	0	The target is hit by a weak telekinetic force. This may also confuse the target.
+94	Psychic	Psychic	Special	10	90	1			1		0		0	0	0	0	0	0	-1	0	0	0	0	The target is hit by a strong telekinetic force. This may also lower the target's Sp. Def stat.
+95	Hypnosis	Psychic	Status	20	0	0.6	1	Sleep	1		0		0	0	0	0	0	0		0	0	0	0	The user employs hypnotic suggestion to make the target fall into a deep sleep.
+96	Meditate	Psychic	Status	40	0	1			1		0		1	0	0	0	0	0		0	0	0	0	The user meditates to awaken the power deep within its body and raise its Attack stat.
+97	Agility	Psychic	Status	30	0	1			1		0		0	0	0	0	0	0		0	2	0	0	The user relaxes and lightens its body to move faster. This sharply raises the Speed stat.
+98	Quick Attack	Normal	Physical	30	40	1			1		0		0	0	0	0	0	0		0	0	0	0	The user lunges at the target at a speed that makes it almost invisible. This move always goes first.
+99	Rage	Normal	Physical	20	20	1			1		0		1	0	0	0	0	0		0	0	0	0	As long as this move is in use, the power of rage raises the Attack stat each time the user is hit in battle.
+100	Teleport	Psychic	Status	20	0	1			1		0		0	0	0	0	0	0		0	0	0	0	Use it to flee from any wild Pokémon. It can also warp to the last Pokémon Center visited.
+101	Night Shade	Ghost	Special	15	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user makes the target see a frightening mirage. It inflicts damage equal to the user's level.
+102	Mimic	Normal	Status	10	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user copies the target's last move. The move can be used during battle until the Pokémon is switched out.
+103	Screech	Normal	Status	40	0	0.85			1		0		0	0	0	-2	0	0		0	0	0	0	An earsplitting screech harshly lowers the target's Defense stat.
+104	Double Team	Normal	Status	15	0	1			1		0		0	0	0	0	0	0		0	0	0	0	By moving rapidly, the user makes illusory copies of itself to raise its evasiveness.
+105	Recover	Normal	Status	10	0	1			1		0		0	0	0	0	0	0		0	0	0	0	Restoring its own cells, the user restores its own HP by half of its max HP.
+106	Harden	Normal	Status	30	0	1			1		0		0	0	1	0	0	0		0	0	0	0	The user stiffens all the muscles in its body to raise its Defense stat.
+107	Minimize	Normal	Status	10	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user compresses its body to make itself look smaller, which sharply raises its evasiveness.
+108	Smokescreen	Normal	Status	20	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user releases an obscuring cloud of smoke or ink. This lowers the target's accuracy.
+109	Confuse Ray	Ghost	Status	10	0	1	1	Confusion	1		0		0	0	0	0	0	0		0	0	0	0	The target is exposed to a sinister ray that triggers confusion.
+110	Withdraw	Water	Status	40	0	1			1		0		0	0	1	0	0	0		0	0	0	0	The user withdraws its body into its hard shell, raising its Defense stat.
+111	Defense Curl	Normal	Status	40	0	1			1		0		0	0	1	0	0	0		0	0	0	0	The user curls up to conceal weak spots and raise its Defense stat.
+112	Barrier	Psychic	Status	20	0	1			1		0		0	0	2	0	0	0		0	0	0	0	The user throws up a sturdy wall that sharply raises its Defense stat.
+113	Light Screen	Psychic	Status	30	0	1			1		0		0	0	0	0	0	0		0	0	0	0	A wondrous wall of light is put up to reduce damage from special attacks for five turns.
+114	Haze	Ice	Status	30	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user creates a haze that eliminates every stat change among all the Pokémon engaged in battle.
+115	Reflect	Psychic	Status	20	0	1			1		0		0	0	0	0	0	0		0	0	0	0	A wondrous wall of light is put up to reduce damage from physical attacks for five turns.
+116	Focus Energy	Normal	Status	30	0	1			1		1		0	0	0	0	0	0	0	0	0	0	0	The user takes a deep breath and focuses so that critical hits land more easily.
+117	Bide	Normal	Physical	10	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user endures attacks for two turns, then strikes back to cause double the damage taken.
+118	Metronome	Normal	Status	10	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user waggles a finger and stimulates its brain into randomly using nearly any move.
+119	Mirror Move	Flying	Status	20	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user counters the target by mimicking the target's last move.
+120	Self-Destruct	Normal	Physical	5	200	1			1		0		0	0	0	0	0	0		0	0	0	0	The user attacks everything around it by causing an explosion. The user faints upon using this move.
+121	Egg Bomb	Normal	Physical	10	100	0.75			1		0		0	0	0	0	0	0		0	0	0	0	A large egg is hurled at the target with maximum force to inflict damage.
+122	Lick	Ghost	Physical	30	30	1	0.3	Paralysis	1		0		0	0	0	0	0	0		0	0	0	0	The target is licked with a long tongue, causing damage. This may also leave the target with paralysis.
+123	Smog	Poison	Special	20	30	0.7	0.4	Poison	1		0		0	0	0	0	0	0		0	0	0	0	The target is attacked with a discharge of filthy gases. This may also poison the target.
+124	Sludge	Poison	Special	20	65	1	0.3	Poison	1		0		0	0	0	0	0	0		0	0	0	0	Unsanitary sludge is hurled at the target. This may also poison the target.
+125	Bone Club	Ground	Physical	20	65	0.85			1		0		0	0	0	0	0	0		0	0	0	1	The user clubs the target with a bone. This may also make the target flinch.
+126	Fire Blast	Fire	Special	5	110	0.85	0.3	Burn	1		0		0	0	0	0	0	0		0	0	0	0	The target is attacked with an intense blast of all-consuming fire. This may also leave the target with a burn.
+127	Waterfall	Water	Physical	15	80	1			1		0		0	0	0	0	0	0		0	0	0	1	The user charges at the target and may make it flinch. This can also be used to climb a waterfall.
+128	Clamp	Water	Physical	15	35	0.85			1		0		0	0	0	0	0	0		0	0	0	0	The target is clamped and squeezed by the user's very thick and sturdy shell for four to five turns.
+129	Swift	Normal	Special	20	60	1			1		0		0	0	0	0	0	0		0	0	0	0	Star-shaped rays are shot at the opposing Pokémon. This attack never misses.
+130	Skull Bash	Normal	Physical	10	130	1			1		0		0	0	1	0	0	0		0	0	0	0	The user tucks in its head to raise its Defense in the first turn, then rams the target on the next turn.
+131	Spike Cannon	Normal	Physical	15	20	1			2,5		0		0	0	0	0	0	0		0	0	0	0	Sharp spikes are shot at the target in rapid succession. They hit two to five times in a row.
+132	Constrict	Normal	Physical	35	10	1			1		0		0	0	0	0	0	0		0	0	-1	0	The target is attacked with long, creeping tentacles or vines. This may also lower the target's Speed stat.
+133	Amnesia	Psychic	Status	20	0	1			1		0		0	0	0	0	0	0	2	0	0	0	0	The user temporarily empties its mind to forget its concerns. This sharply raises the user's Sp. Def stat.
+134	Kinesis	Psychic	Status	15	0	0.8			1		0		0	0	0	0	0	0		0	0	0	0	The user distracts the target by bending a spoon. This lowers the target's accuracy.
+135	Soft-Boiled	Normal	Status	10	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user restores its own HP by up to half of its max HP. May also be used in the field to heal HP.
+136	High Jump Kick	Fighting	Physical	10	130	0.9			1		0		0	0	0	0	0	0		0	0	0	0	The target is attacked with a knee kick from a jump. If it misses, the user is hurt instead.
+137	Glare	Normal	Status	30	0	1	1	Paralysis	1		0		0	0	0	0	0	0		0	0	0	0	The user intimidates the target with the pattern on its belly to cause paralysis.
+138	Dream Eater	Psychic	Special	15	100	1			1		0		0	0	0	0	0	0		0	0	0	0	The user eats the dreams of a sleeping target. It absorbs half the damage caused to heal its own HP.
+139	Poison Gas	Poison	Status	40	0	0.9	1	Poison	1		0		0	0	0	0	0	0		0	0	0	0	A cloud of poison gas is sprayed in the face of opposing Pokémon. This may also poison those hit.
+140	Barrage	Normal	Physical	20	15	0.85			2,5		0		0	0	0	0	0	0		0	0	0	0	Round objects are hurled at the target to strike two to five times in a row.
+141	Leech Life	Bug	Physical	10	80	1			1		0		0	0	0	0	0	0		0	0	0	0	The user drains the target's blood. The user's HP is restored by half the damage taken by the target.
+142	Lovely Kiss	Normal	Status	10	0	0.75	1	Sleep	1		0		0	0	0	0	0	0		0	0	0	0	With a scary face, the user tries to force a kiss on the target. If it succeeds, the target falls asleep.
+143	Sky Attack	Flying	Physical	5	140	0.9			1		1		0	0	0	0	0	0	0	0	0	0	1	A second-turn attack move where critical hits land more easily. This may also make the target flinch.
+144	Transform	Normal	Status	10	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user transforms into a copy of the target right down to having the same move set.
+145	Bubble	Water	Special	30	40	1			1		0		0	0	0	0	0	0		0	0	-1	0	A spray of countless bubbles is jetted at the opposing Pokémon. This may also lower their Speed stats.
+146	Dizzy Punch	Normal	Physical	10	70	1			1		0		0	0	0	0	0	0		0	0	0	0	The target is hit with rhythmically launched punches. This may also leave the target confused.
+147	Spore	Grass	Status	15	0	1	1	Sleep	1		0		0	0	0	0	0	0		0	0	0	0	The user scatters bursts of spores that induce sleep.
+148	Flash	Normal	Status	20	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user flashes a bright light that cuts the target's accuracy. It can also be used to illuminate dark caves.
+149	Psywave	Psychic	Special	15	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The target is attacked with an odd psychic wave. The attack varies in intensity.
+150	Splash	Normal	Status	40	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user just flops and splashes around to no effect at all...
+151	Acid Armor	Poison	Status	20	0	1			1		0		0	0	2	0	0	0		0	0	0	0	The user alters its cellular structure to liquefy itself, sharply raising its Defense stat.
+152	Crabhammer	Water	Physical	10	100	0.9			1		1		0	0	0	0	0	0	0	0	0	0	0	The target is hammered with a large pincer. Critical hits land more easily.
+153	Explosion	Normal	Physical	5	250	1			1		0		0	0	0	0	0	0		0	0	0	0	The user attacks everything around it by causing a tremendous explosion. The user faints upon using this move.
+154	Fury Swipes	Normal	Physical	15	18	0.8			2,5		0		0	0	0	0	0	0		0	0	0	0	The target is raked with sharp claws or scythes quickly two to five times in a row.
+155	Bonemerang	Ground	Physical	10	50	0.9			1		0		0	0	0	0	0	0		0	0	0	0	The user throws the bone it holds. The bone loops to hit the target twice, coming and going.
+156	Rest	Psychic	Status	10	0	1	1	Sleep	1		0		0	0	0	0	0	0		0	0	0	0	The user goes to sleep for two turns. This fully restores the user's HP and heals any status conditions.
+157	Rock Slide	Rock	Physical	10	75	0.9			1		0		0	0	0	0	0	0		0	0	0	1	Large boulders are hurled at the opposing Pokémon to inflict damage. This may also make the opposing Pokémon flinch.
+158	Hyper Fang	Normal	Physical	15	80	0.9			1		0		0	0	0	0	0	0		0	0	0	1	The user bites hard on the target with its sharp front fangs. This may also make the target flinch.
+159	Sharpen	Normal	Status	30	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user lowers its polygon count to make itself more jagged, raising the Attack stat.
+160	Conversion	Normal	Status	30	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user changes its type to become the same type as the move at the top of the list of moves it knows.
+161	Tri Attack	Normal	Special	10	80	1	0.2	Paralysis,Freeze,Burn	1		0		0	0	0	0	0	0		0	0	0	0	The user strikes with a simultaneous three-beam attack. May also burn, freeze, or leave the target with paralysis.
+162	Super Fang	Normal	Physical	10	0	0.9			1		0		0	0	0	0	0	0		0	0	0	0	The user chomps hard on the target with its sharp front fangs. This cuts the target's HP in half.
+163	Slash	Normal	Physical	20	70	1			1		1		0	0	0	0	0	0	0	0	0	0	0	The target is attacked with a slash of claws or blades. Critical hits land more easily.
+164	Substitute	Normal	Status	10	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user makes a copy of itself using some of its HP. The copy serves as the user's decoy.
+165	Struggle	Normal	Physical	1	50	1			1		0		0	0	0	0	0	0		0	0	0	0	Only usable when all PP are gone. Hurts the user.
+166	Sketch	Normal	Status	1	0	1			1		0		0	0	0	0	0	0		0	0	0	0	It enables the user to permanently learn the move last used by the target. Once used, Sketch disappears.
+167	Triple Kick	Fighting	Physical	10	10	0.9			1		0		0	0	0	0	0	0		0	0	0	0	A consecutive three-kick attack that becomes more powerful with each successive hit.
+168	Thief	Dark	Physical	25	60	1			1		0		0	0	0	0	0	0		0	0	0	0	The user attacks and steals the target's held item simultaneously. The user can't steal anything if it already holds an item.
+169	Spider Web	Bug	Status	10	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user ensnares the target with thin, gooey silk so it can't flee from battle.
+170	Mind Reader	Normal	Status	5	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user senses the target's movements with its mind to ensure its next attack does not miss the target.
+171	Nightmare	Ghost	Status	15	0	1			1		0		0	0	0	0	0	0		0	0	0	0	A sleeping target sees a nightmare that inflicts some damage every turn.
+172	Flame Wheel	Fire	Physical	25	60	1	0.1	Burn	1		0		0	0	0	0	0	0		0	0	0	0	The user cloaks itself in fire and charges at the target. This may also leave the target with a burn.
+173	Snore	Normal	Special	15	50	1			1		0		0	0	0	0	0	0		0	0	0	1	An attack that can be used only if the user is asleep. The harsh noise may also make the target flinch.
+174	Curse	Ghost	Status	10	0	1	1	Confusion	1		0		0	0	0	0	0	0		0	0	0	0	A move that works differently for the Ghost type than for all other types.
+175	Flail	Normal	Physical	15	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user flails about aimlessly to attack. The less HP the user has, the greater the move's power.
+176	Conversion 2	Normal	Status	30	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user changes its type to make itself resistant to the type of the attack the opponent used last.
+177	Aeroblast	Flying	Special	5	100	0.95			1		1		0	0	0	0	0	0	0	0	0	0	0	A vortex of air is shot at the target to inflict damage. Critical hits land more easily.
+178	Cotton Spore	Grass	Status	40	0	1			1		0		0	0	0	0	0	0		0	0	-2	0	The user releases cotton-like spores that cling to the opposing Pokémon, which harshly lowers their Speed stats.
+179	Reversal	Fighting	Physical	15	0	1			1		0		0	0	0	0	0	0		0	0	0	0	An all-out attack that becomes more powerful the less HP the user has.
+180	Spite	Ghost	Status	10	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user unleashes its grudge on the move last used by the target by cutting 4 PP from it.
+181	Powder Snow	Ice	Special	25	40	1	0.1	Freeze	1		0		0	0	0	0	0	0		0	0	0	0	The user attacks with a chilling gust of powdery snow. This may also freeze the opposing Pokémon.
+182	Protect	Normal	Status	10	0	1			1		0		0	0	0	0	0	0		0	0	0	0	Enables the user to evade all attacks. Its chance of failing rises if it is used in succession.
+183	Mach Punch	Fighting	Physical	30	40	1			1		0		0	0	0	0	0	0		0	0	0	0	The user throws a punch at blinding speed. This move always goes first.
+184	Scary Face	Normal	Status	10	0	1			1		0		0	0	0	0	0	0		0	0	-2	0	The user frightens the target with a scary face to harshly lower its Speed stat.
+185	Feint Attack	Dark	Physical	20	60	1			1		0		0	0	0	0	0	0		0	0	0	0	The user approaches the target disarmingly, then throws a sucker punch. This attack never misses.
+186	Sweet Kiss	Fairy	Status	10	0	0.75	1	Confusion	1		0		0	0	0	0	0	0		0	0	0	0	The user kisses the target with a sweet, angelic cuteness that causes confusion.
+187	Belly Drum	Normal	Status	10	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user maximizes its Attack stat in exchange for HP equal to half its max HP.
+188	Sludge Bomb	Poison	Special	10	90	1	0.3	Poison	1		0		0	0	0	0	0	0		0	0	0	0	Unsanitary sludge is hurled at the target. This may also poison the target.
+189	Mud-Slap	Ground	Special	10	20	1			1		0		0	0	0	0	0	0		0	0	0	0	The user hurls mud in the target's face to inflict damage and lower its accuracy.
+190	Octazooka	Water	Special	10	65	0.85			1		0		0	0	0	0	0	0		0	0	0	0	The user attacks by spraying ink at the target's face or eyes. This may also lower the target's accuracy.
+191	Spikes	Ground	Status	20	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user lays a trap of spikes at the opposing team's feet. The trap hurts Pokémon that switch into battle.
+192	Zap Cannon	Electric	Special	5	120	0.5	1	Paralysis	1		0		0	0	0	0	0	0		0	0	0	0	The user fires an electric blast like a cannon to inflict damage and cause paralysis.
+193	Foresight	Normal	Status	40	0	1			1		0		0	0	0	0	0	0		0	0	0	0	Enables a Ghost-type target to be hit by Normal- and Fighting-type attacks. This also enables an evasive target to be hit.
+194	Destiny Bond	Ghost	Status	5	0	1			1		0		0	0	0	0	0	0		0	0	0	0	When this move is used, if the user faints, the Pokémon that landed the knockout hit also faints.
+195	Perish Song	Normal	Status	5	0	1			1		0		0	0	0	0	0	0		0	0	0	0	Any Pokémon that hears this song faints in three turns, unless it switches out of battle.
+196	Icy Wind	Ice	Special	15	55	0.95			1		0		0	0	0	0	0	0		0	0	-1	0	The user attacks with a gust of chilled air. This also lowers the opposing Pokémon's Speed stats.
+197	Detect	Fighting	Status	5	0	1			1		0		0	0	0	0	0	0		0	0	0	0	Enables the user to evade all attacks. Its chance of failing rises if it is used in succession.
+198	Bone Rush	Ground	Physical	10	25	0.9			2,5		0		0	0	0	0	0	0		0	0	0	0	The user strikes the target with a hard bone two to five times in a row.
+199	Lock-On	Normal	Status	5	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user takes sure aim at the target. This ensures the next attack does not miss the target.
+200	Outrage	Dragon	Physical	10	120	1			1		0		0	0	0	0	0	0		0	0	0	0	The user rampages and attacks for two to three turns. It then becomes confused, however.
+201	Sandstorm	Rock	Status	10	0	1			1		0		0	0	0	0	0	0		0	0	0	0	A five-turn sandstorm is summoned to hurt all combatants except the Rock, Ground, and Steel types.
+202	Giga Drain	Grass	Special	10	75	1			1		0		0	0	0	0	0	0		0	0	0	0	A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+203	Endure	Normal	Status	10	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user endures any attack with at least 1 HP. Its chance of failing rises if it is used in succession.
+204	Charm	Fairy	Status	20	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user gazes at the target rather charmingly, making it less wary. This harshly lowers its Attack stat.
+205	Rollout	Rock	Physical	20	30	0.9			1		0		0	0	0	0	0	0		0	0	0	0	The user continually rolls into the target over five turns. It becomes more powerful each time it hits.
+206	False Swipe	Normal	Physical	40	40	1			1		0		0	0	0	0	0	0		0	0	0	0	A restrained attack that prevents the target from fainting. The target is left with at least 1 HP.
+207	Swagger	Normal	Status	15	0	0.85	1	Confusion	1		0		0	0	0	0	0	0		0	0	0	0	The user enrages and confuses the target. However, this also sharply raises the target's Attack stat.
+208	Milk Drink	Normal	Status	10	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user restores its own HP by up to half of its max HP. May also be used in the field to heal HP.
+209	Spark	Electric	Physical	20	65	1	0.3	Paralysis	1		0		0	0	0	0	0	0		0	0	0	0	The user throws an electrically charged tackle at the target. This may also leave the target with paralysis.
+210	Fury Cutter	Bug	Physical	20	40	0.95			1		0		0	0	0	0	0	0		0	0	0	0	The target is slashed with scythes or claws. This attack becomes more powerful if it hits in succession.
+211	Steel Wing	Steel	Physical	25	70	0.9			1		0		0	0	1	0	0	0		0	0	0	0	The target is hit with wings of steel. This may also raise the user's Defense stat.
+212	Mean Look	Normal	Status	5	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user pins the target with a dark, arresting look. The target becomes unable to flee.
+213	Attract	Normal	Status	15	0	1	1	Confusion	1		0		0	0	0	0	0	0		0	0	0	0	If it is the opposite gender of the user, the target becomes infatuated and less likely to attack.
+214	Sleep Talk	Normal	Status	10	0	1			1		0		0	0	0	0	0	0		0	0	0	0	While it is asleep, the user randomly uses one of the moves it knows.
+215	Heal Bell	Normal	Status	5	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user makes a soothing bell chime to heal the status conditions of all the party Pokémon.
+216	Return	Normal	Physical	20	0	1			1		0		0	0	0	0	0	0		0	0	0	0	A full-power attack that grows more powerful the more the user likes its Trainer.
+217	Present	Normal	Physical	15	0	0.9			1		0		0	0	0	0	0	0		0	0	0	0	The user attacks by giving the target a gift with a hidden trap. It restores HP sometimes, however.
+218	Frustration	Normal	Physical	20	0	1			1		0		0	0	0	0	0	0		0	0	0	0	A full-power attack that grows more powerful the less the user likes its Trainer.
+219	Safeguard	Normal	Status	25	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user creates a protective field that prevents status conditions for five turns.
+220	Pain Split	Normal	Status	20	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user adds its HP to the target's HP, then equally shares the combined HP with the target.
+221	Sacred Fire	Fire	Physical	5	100	0.95	0.5	Burn	1		0		0	0	0	0	0	0		0	0	0	0	The target is razed with a mystical fire of great intensity. This may also leave the target with a burn.
+222	Magnitude	Ground	Physical	30	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user attacks everything around it with a ground-shaking quake. Its power varies.
+223	Dynamic Punch	Fighting	Physical	5	100	0.5	1	Confusion	1		0		0	0	0	0	0	0		0	0	0	0	The user punches the target with full, concentrated power. This confuses the target if it hits.
+224	Megahorn	Bug	Physical	10	120	0.85			1		0		0	0	0	0	0	0		0	0	0	0	Using its tough and impressive horn, the user rams into the target with no letup.
+225	Dragon Breath	Dragon	Special	20	60	1	0.3	Paralysis	1		0		0	0	0	0	0	0		0	0	0	0	The user exhales a mighty gust that inflicts damage. This may also leave the target with paralysis.
+226	Baton Pass	Normal	Status	40	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user switches places with a party Pokémon in waiting and passes along any stat changes.
+227	Encore	Normal	Status	5	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user compels the target to keep using only the move it last used for three turns.
+228	Pursuit	Dark	Physical	20	40	1			1		0		0	0	0	0	0	0		0	0	0	0	An attack move that inflicts double damage if used on a target that is switching out of battle.
+229	Rapid Spin	Normal	Physical	40	50	1			1		0		0	0	0	0	0	0		0	0	0	0	A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.
+230	Sweet Scent	Normal	Status	20	0	1			1		0		0	0	0	0	0	0		0	0	0	0	A sweet scent that harshly lowers opposing Pokémon's evasiveness. This also lures wild Pokémon if used in places such as tall grass.
+231	Iron Tail	Steel	Physical	15	100	0.75			1		0		0	0	0	-1	0	0		0	0	0	0	The target is slammed with a steel-hard tail. This may also lower the target's Defense stat.
+232	Metal Claw	Steel	Physical	35	50	0.95			1		0		1	0	0	0	0	0		0	0	0	0	The target is raked with steel claws. This may also raise the user's Attack stat.
+233	Vital Throw	Fighting	Physical	10	70	1			1		0		0	0	0	0	0	0		0	0	0	0	The user attacks last. In return, this throw move never misses.
+234	Morning Sun	Normal	Status	5	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user restores its own HP. The amount of HP regained varies with the weather.
+235	Synthesis	Grass	Status	5	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user restores its own HP. The amount of HP regained varies with the weather.
+236	Moonlight	Fairy	Status	5	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user restores its own HP. The amount of HP regained varies with the weather.
+237	Hidden Power	Normal	Special	15	60	1			1		0		0	0	0	0	0	0		0	0	0	0	A unique attack that varies in type depending on the Pokémon using it.
+238	Cross Chop	Fighting	Physical	5	100	0.8			1		1		0	0	0	0	0	0	0	0	0	0	0	The user delivers a double chop with its forearms crossed. Critical hits land more easily.
+239	Twister	Dragon	Special	20	40	1			1		0		0	0	0	0	0	0		0	0	0	1	The user whips up a vicious tornado to tear at the opposing Pokémon. This may also make them flinch.
+240	Rain Dance	Water	Status	5	0	1			1	Water	0		0	0	0	0	0	0		0	0	0	0	The user summons a heavy rain that falls for five turns, powering up Water-type moves.
+241	Sunny Day	Fire	Status	5	0	1			1	Fire	0		0	0	0	0	0	0		0	0	0	0	The user intensifies the sun for five turns, powering up Fire-type moves.
+242	Crunch	Dark	Physical	15	80	1			1		0		0	0	0	-1	0	0		0	0	0	0	The user crunches up the target with sharp fangs. This may also lower the target's Defense stat.
+243	Mirror Coat	Psychic	Special	20	0	1			1		0		0	0	0	0	0	0		0	0	0	0	A retaliation move that counters any special attack, inflicting double the damage taken.
+244	Psych Up	Normal	Status	10	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user hypnotizes itself into copying any stat change made by the target.
+245	Extreme Speed	Normal	Physical	5	80	1			1		0		0	0	0	0	0	0		0	0	0	0	The user charges the target at blinding speed. This move always goes first.
+246	Ancient Power	Rock	Special	5	60	1			1		0		1	0	0	0	0	0		0	0	0	0	The user attacks with a prehistoric power. This may also raise all the user's stats at once.
+247	Shadow Ball	Ghost	Special	15	80	1			1		0		0	0	0	0	0	0		-1	0	0	0	The user hurls a shadowy blob at the target. This may also lower the target's Sp. Def stat.
+248	Future Sight	Psychic	Special	10	120	1			1		0		0	0	0	0	0	0		0	0	0	0	Two turns after this move is used, a hunk of psychic energy attacks the target.
+249	Rock Smash	Fighting	Physical	15	40	1			1		0		0	0	0	-1	0	0		0	0	0	0	The user attacks with a punch. This may also lower the target's Defense stat. This move can also shatter rocks in the field.
+250	Whirlpool	Water	Special	15	35	0.85			1		0		0	0	0	0	0	0		0	0	0	0	The user traps the target in a violent swirling whirlpool for four to five turns.
+251	Beat Up	Dark	Physical	10	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user gets all party Pokémon to attack the target. The more party Pokémon, the greater the number of attacks.
+252	Fake Out	Normal	Physical	10	40	1			1		0		0	0	0	0	0	0		0	0	0	1	An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.
+253	Uproar	Normal	Special	10	90	1			1		0		0	0	0	0	0	0		0	0	0	0	The user attacks in an uproar for three turns. During that time, no one can fall asleep.
+254	Stockpile	Normal	Status	20	0	1			1		0		0	0	1	0	0	0	1	0	0	0	0	The user charges up power and raises both its Defense and Sp. Def. stats.
+255	Spit Up	Normal	Special	10	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The power stored using the move Stockpile is released at once in an attack. The more power is stored, the greater the move's power.
+256	Swallow	Normal	Status	10	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The power stored using the move Stockpile is absorbed by the user to heal its HP. Storing more power heals more HP.
+257	Heat Wave	Fire	Special	10	95	0.9	0.1	Burn	1		0		0	0	0	0	0	0		0	0	0	0	The user attacks by exhaling hot breath on the opposing Pokémon. This may also leave those Pokémon with a burn.
+258	Hail	Ice	Status	10	0	1			1	Hail	0		0	0	0	0	0	0		0	0	0	0	The user summons a hailstorm.
+259	Torment	Dark	Status	15	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user torments and enrages the target, making it incapable of using the same move twice in a row.
+260	Flatter	Dark	Status	15	0	1	1	Confusion	1		0		0	0	0	0	0	1		0	0	0	0	Flattery is used to confuse the target. However, this also raises the target's Sp. Atk stat.
+261	Will-O-Wisp	Fire	Status	15	0	0.85	1	Burn	1		0		0	0	0	0	0	0		0	0	0	0	The user shoots a sinister, bluish-white flame at the target to inflict a burn.
+262	Memento	Dark	Status	10	0	1			1		0		0	0	0	0	1	0	1	0	0	0	0	The user raises its Sp. Attack and Sp. Defense.
+263	Facade	Normal	Physical	20	70	1			1		0		0	0	0	0	0	0		0	0	0	0	An attack move that doubles its power if the user is poisoned, is burned, or has paralysis.
+264	Focus Punch	Fighting	Physical	20	150	1			1		0		0	0	0	0	0	0		0	0	0	0	The user focuses its mind before launching a punch. This move fails if the user is hit before it is used.
+265	Smelling Salts	Normal	Physical	10	70	1			1		0		0	0	0	0	0	0		0	0	0	0	This attack inflicts double damage on a target with paralysis. This also cures the target's paralysis, however.
+266	Follow Me	Normal	Status	20	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user draws attention to itself, making all targets take aim only at the user.
+267	Nature Power	Normal	Status	20	0	1			1		0		0	0	0	0	0	0		0	0	0	0	An attack that makes use of nature's power. Its effects vary depending on the user's environment.
+268	Charge	Electric	Status	20	0	1			1		0		0	0	0	0	0	0	1	0	0	0	0	The user boosts the power of the Electric move it uses on the next turn. This also raises the user's Sp. Def stat.
+269	Taunt	Dark	Status	20	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The target is taunted into a rage that allows it to use only attack moves for three turns.
+270	Helping Hand	Normal	Status	20	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user assists an ally by boosting the power of that ally's attack.
+271	Trick	Psychic	Status	10	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user catches the target off guard and swaps its held item with its own.
+272	Role Play	Psychic	Status	10	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user mimics the target completely, copying the target's natural Ability.
+273	Wish	Normal	Status	10	0	1			1		0		0	0	0	0	0	0		0	0	0	0	One turn after this move is used, the target's HP is restored by half the user's max HP.
+274	Assist	Normal	Status	20	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user hurriedly and randomly uses a move among those known by other Pokémon in the party.
+275	Ingrain	Grass	Status	20	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user lays roots that restore its HP on every turn. Because it is rooted, it can't switch out.
+276	Superpower	Fighting	Physical	5	120	1			1		0		-1	0	-1	0	0	0		0	0	0	0	The user attacks the target with great power. However, this also lowers the user's Attack and Defense stats.
+277	Magic Coat	Psychic	Status	15	0	1			1		0		0	0	0	0	0	0		0	0	0	0	A barrier reflects back to the target moves like Leech Seed and moves that damage status.
+278	Recycle	Normal	Status	10	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user recycles a held item that has been used in battle so it can be used again.
+279	Revenge	Fighting	Physical	10	60	1			1		0		0	0	0	0	0	0		0	0	0	0	An attack move that inflicts double the damage if the user has been hurt by the opponent in the same turn.
+280	Brick Break	Fighting	Physical	15	75	1			1		0		0	0	0	0	0	0		0	0	0	0	The user attacks with a swift chop. It can also break barriers, such as Light Screen and Reflect.
+281	Yawn	Normal	Status	10	0	1	1	Sleep	1		0		0	0	0	0	0	0		0	0	0	0	The user lets loose a huge yawn that lulls the target into falling asleep on the next turn.
+282	Knock Off	Dark	Physical	20	65	1			1		0		0	0	0	0	0	0		0	0	0	0	The user slaps down the target's held item, and that item can't be used in that battle. The move does more damage if the target has a held item.
+283	Endeavor	Normal	Physical	5	0	1			1		0		0	0	0	0	0	0		0	0	0	0	An attack move that cuts down the target's HP to equal the user's HP.
+284	Eruption	Fire	Special	5	150	1			1		0		0	0	0	0	0	0		0	0	0	0	The user attacks opposing Pokémon with explosive fury. The lower the user's HP, the lower the move's power.
+285	Skill Swap	Psychic	Status	10	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user employs its psychic power to exchange Abilities with the target.
+286	Imprison	Psychic	Status	10	0	1			1		0		0	0	0	0	0	0		0	0	0	0	If opposing Pokémon know any move also known by the user, they are prevented from using it.
+287	Refresh	Normal	Status	20	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user rests to cure itself of a poisoning, burn, or paralysis.
+288	Grudge	Ghost	Status	5	0	1			1		0		0	0	0	0	0	0		0	0	0	0	If the user faints, the user's grudge fully depletes the PP of the opponent's move that knocked it out.
+289	Snatch	Dark	Status	10	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user steals the effects of any attempts to use a healing or stat-changing move.
+290	Secret Power	Normal	Physical	20	70	1			1		0		0	0	0	0	0	0		0	0	0	0	An attack whose additional effects depend on where it was used. Can also be used to make a Secret Base.
+291	Dive	Water	Physical	10	80	1			1		0		0	0	0	0	0	0		0	0	0	0	Diving on the first turn, the user floats up and attacks on the next turn. It can be used to dive deep in the ocean.
+292	Arm Thrust	Fighting	Physical	20	15	1			2,5		0		0	0	0	0	0	0		0	0	0	0	The user looses a flurry of open-palmed arm thrusts that hit two to five times in a row.
+293	Camouflage	Normal	Status	20	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user's type is changed depending on its environment, such as at water's edge, in grass, or in a cave.
+294	Tail Glow	Bug	Status	20	0	1			1		0		0	0	0	0	3	0		0	0	0	0	The user stares at flashing lights to focus its mind, drastically raising its Sp. Atk stat.
+295	Luster Purge	Psychic	Special	5	70	1			1		0		0	0	0	0	0	0		-1	0	0	0	The user lets loose a damaging burst of light. This may also lower the target's Sp. Def stat.
+296	Mist Ball	Psychic	Special	5	70	1			1		0		0	0	0	0	0	-1		0	0	0	0	A mist-like flurry of down envelops and damages the target. This may also lower the target's Sp. Atk stat.
+297	Feather Dance	Flying	Status	15	0	1			1		0		0	0	0	0	0	0		0	0	0	0	The user covers the target's body with a mass of down that harshly lowers its Attack stat.
+298	Teeter Dance	Normal	Status	20	0	1	1	Confusion	1		0		0	0	0	0	0	0	0	0	0	0	0	The user performs a wobbly dance that confuses the Pokémon around it.
+299	Blaze Kick	Fire	Physical	10	85	0.9	0.1	Burn	1		1		0	0	0	0	0	0	0	0	0	0	0	The user launches a kick that lands a critical hit more easily. This may also leave the target with a burn.
+300	Mud Sport	Ground	Status	15	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user covers itself with mud. This weakens Electric-type moves for five turns.
+301	Ice Ball	Ice	Physical	20	30	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	The user continually rolls into the target over five turns. It becomes stronger each time it hits.
+302	Needle Arm	Grass	Physical	15	60	1			1		0		0	0	0	0	0	0	0	0	0	0	1	The user attacks by wildly swinging its thorny arms. This may also make the target flinch.
+303	Slack Off	Normal	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user slacks off, restoring its own HP by up to half of its max HP.
+304	Hyper Voice	Normal	Special	10	90	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user lets loose a horribly echoing shout with the power to inflict damage.
+305	Poison Fang	Poison	Physical	15	50	1	0.3	Poison	1		0		0	0	0	0	0	0	0	0	0	0	0	The user bites the target with toxic fangs. This may also leave the target badly poisoned.
+306	Crush Claw	Normal	Physical	10	75	0.95			1		0		0	0	0	-1	0	0	0	0	0	0	0	The user slashes the target with hard and sharp claws. This may also lower the target's Defense.
+307	Blast Burn	Fire	Special	5	150	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	The target is razed by a fiery explosion. The user can't move on the next turn.
+308	Hydro Cannon	Water	Special	5	150	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	The target is hit by a watery blast. The user can't move on the next turn.
+309	Meteor Mash	Steel	Physical	10	90	0.9			1		0		1	0	0	0	0	0	0	0	0	0	0	The target is hit with a hard punch fired like a meteor. This may also raise the user's Attack stat.
+310	Astonish	Ghost	Physical	15	30	1			1		0		0	0	0	0	0	0	0	0	0	0	1	The user attacks the target while shouting in a startling fashion. This may also make the target flinch.
+311	Weather Ball	Normal	Special	10	50	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user throws a ball of rain at the opponent.
+312	Aromatherapy	Grass	Status	5	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user releases a soothing scent that heals all status conditions affecting the user's party.
+313	Fake Tears	Dark	Status	20	0	1			1		0		0	0	0	0	0	0	0	-2	0	0	0	The user feigns crying to fluster the target, harshly lowering its Sp. Def stat.
+314	Air Cutter	Flying	Special	25	60	0.95			1		1		0	0	0	0	0	0	0	0	0	0	0	The user launches razor-like wind to slash the opposing Pokémon. Critical hits land more easily.
+315	Overheat	Fire	Special	5	130	0.9			1		0		0	0	0	0	-2	0	0	0	0	0	0	The user attacks the target at full power. The attack's recoil harshly lowers the user's Sp. Atk stat.
+316	Odor Sleuth	Normal	Status	40	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Enables a Ghost-type target to be hit with Normal- and Fighting-type attacks. This also enables an evasive target to be hit.
+317	Rock Tomb	Rock	Physical	15	60	0.95			1		0		0	0	0	0	0	0	0	0	0	-1	0	Boulders are hurled at the target. This also lowers the target's Speed stat by preventing its movement.
+318	Silver Wind	Bug	Special	5	60	1			1		0		1	0	1	0	0	0	0	0	0	0	0	The target is attacked with powdery scales blown by wind. This may also raise all the user's stats.
+319	Metal Sound	Steel	Status	40	0	0.85			1		0		0	0	0	0	0	0	0	-2	0	0	0	A horrible sound like scraping metal harshly lowers the target's Sp. Def stat.
+320	Grass Whistle	Grass	Status	15	0	0.55	1	Sleep	1		0		0	0	0	0	0	0	0	0	0	0	0	The user plays a pleasant melody that lulls the target into a deep sleep.
+321	Tickle	Normal	Status	20	0	1			1		0		0	-1	0	-1	0	0	0	0	0	0	0	The user tickles the target into laughing, reducing its Attack and Defense stats.
+322	Cosmic Power	Psychic	Status	20	0	1			1		0		0	0	1	0	0	0	1	0	0	0	0	The user absorbs a mystical power from the space to raise its Defense and Sp. Def stats.
+323	Water Spout	Water	Special	5	150	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user spouts water to damage opposing Pokémon. The lower the user's HP, the lower the move's power.
+324	Signal Beam	Bug	Special	15	75	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks with a sinister beam of light. This may also confuse the target.
+325	Shadow Punch	Ghost	Physical	20	60	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user throws a punch from the shadows. This attack never misses.
+326	Extrasensory	Psychic	Special	20	80	1			1		0		0	0	0	0	0	0	0	0	0	0	1	The user attacks with an odd, unseeable power. This may also make the target flinch.
+327	Sky Uppercut	Fighting	Physical	15	85	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks the target with an uppercut thrown skyward with force.
+328	Sand Tomb	Ground	Physical	15	35	0.85			1		0		0	0	0	0	0	0	0	0	0	0	0	The user traps the target inside a harshly raging sandstorm for four to five turns.
+329	Sheer Cold	Ice	Special	5	0	0.3			1		0		0	0	0	0	0	0	0	0	0	0	0	The target is attacked with a blast of absolute-zero cold. The target faints instantly if this attack hits.
+330	Muddy Water	Water	Special	10	90	0.85			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks by shooting muddy water at the opposing Pokémon. This may also lower their accuracy.
+331	Bullet Seed	Grass	Physical	30	25	1			2,5		0		0	0	0	0	0	0	0	0	0	0	0	The user forcefully shoots seeds at the target two to five times in a row.
+332	Aerial Ace	Flying	Physical	20	60	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user confounds the target with speed, then slashes. This attack never misses.
+333	Icicle Spear	Ice	Physical	30	25	1			2,5		0		0	0	0	0	0	0	0	0	0	0	0	The user launches sharp icicles at the target two to five times in a row.
+334	Iron Defense	Steel	Status	15	0	1			1		0		0	0	2	0	0	0	0	0	0	0	0	The user hardens its body's surface like iron, sharply raising its Defense stat.
+335	Block	Normal	Status	5	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user blocks the target's way with arms spread wide to prevent escape.
+336	Howl	Normal	Status	40	0	1			1		0		1	0	0	0	0	0	0	0	0	0	0	The user howls loudly to raise its spirit, which raises its Attack stat.
+337	Dragon Claw	Dragon	Physical	15	80	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user slashes the target with huge, sharp claws.
+338	Frenzy Plant	Grass	Special	5	150	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	The user slams the target with an enormous tree. The user can't move on the next turn.
+339	Bulk Up	Fighting	Status	20	0	1			1		0		1	0	1	0	0	0	0	0	0	0	0	The user tenses its muscles to bulk up its body, raising both its Attack and Defense stats.
+340	Bounce	Flying	Physical	5	85	0.85	0.3	Paralysis	1		0		0	0	0	0	0	0	0	0	0	0	0	The user bounces up high, then drops on the target on the second turn. This may also leave the target with paralysis.
+341	Mud Shot	Ground	Special	15	55	0.95			1		0		0	0	0	0	0	0	0	0	0	-1	0	The user attacks by hurling a blob of mud at the target. This also lowers the target's Speed stat.
+342	Poison Tail	Poison	Physical	25	50	1	0.1	Poison	1		1		0	0	0	0	0	0	0	0	0	0	0	The user hits the target with its tail. This may also poison the target. Critical hits land more easily.
+343	Covet	Normal	Physical	25	60	0.7	1	Confusion	1		0		0	0	0	0	0	0	0	0	0	0	0	The user endearingly approaches the target, causing confusion.
+344	Volt Tackle	Electric	Physical	15	120	1	0.1	Paralysis	1		0		0	0	0	0	0	0	0	0	0	0	0	The user electrifies itself, then charges. This also damages the user quite a lot. This may leave the target with paralysis.
+345	Magical Leaf	Grass	Special	20	60	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user scatters curious leaves that chase the target. This attack never misses.
+346	Water Sport	Water	Status	15	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user soaks itself with water. This weakens Fire-type moves for five turns.
+347	Calm Mind	Psychic	Status	20	0	1			1		0		0	0	0	0	1	0	1	0	0	0	0	The user quietly focuses its mind and calms its spirit to raise its Sp. Atk and Sp. Def stats.
+348	Leaf Blade	Grass	Physical	15	90	1			1		1		0	0	0	0	0	0	0	0	0	0	0	The user handles a sharp leaf like a sword and attacks by cutting its target. Critical hits land more easily.
+349	Dragon Dance	Dragon	Status	20	0	1			1		0		1	0	0	0	0	0	0	0	1	0	0	The user vigorously performs a mystic, powerful dance that boosts its Attack and Speed stats.
+350	Rock Blast	Rock	Physical	10	25	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	The user hurls hard rocks at the target. Two to five rocks are launched in a row.
+351	Shock Wave	Electric	Special	20	60	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user strikes the target with a quick jolt of electricity. This attack never misses.
+352	Water Pulse	Water	Special	20	60	1	0.2	Confusion	1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks the target with a pulsing blast of water. This may also confuse the target.
+353	Doom Desire	Steel	Special	5	140	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Two turns after this move is used, the user blasts the target with a concentrated bundle of light.
+354	Psycho Boost	Psychic	Special	5	140	0.9			1		0		0	0	0	0	-2	0	0	0	0	0	0	The user attacks the target at full power. The attack's recoil harshly lowers the user's Sp. Atk stat.
+355	Roost	Flying	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user lands and rests its body. It restores the user's HP by up to half of its max HP.
+356	Gravity	Psychic	Status	5	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Gravity is intensified for five turns, making moves involving flying unusable and negating Levitate.
+357	Miracle Eye	Psychic	Status	40	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Enables a Dark-type target to be hit by Psychic-type attacks. This also enables an evasive target to be hit.
+358	Wake-Up Slap	Fighting	Physical	10	70	1			1		0		0	0	0	0	0	0	0	0	0	0	0	This attack inflicts big damage on a sleeping target. This also wakes the target up, however.
+359	Hammer Arm	Fighting	Physical	10	100	0.9			1		0		0	0	0	0	0	0	0	0	-1	0	0	The user swings and hits with its strong and heavy fist. It lowers the user's Speed, however.
+360	Gyro Ball	Steel	Physical	5	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user tackles the target with a high-speed spin. The slower the user compared to the target, the greater the move's power.
+361	Healing Wish	Psychic	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user faints. In return, the Pokémon taking its place will have its HP restored and status conditions cured.
+362	Brine	Water	Special	10	65	1			1		0		0	0	0	0	0	0	0	0	0	0	0	If the target's HP is half or less, this attack will hit with double the power.
+363	Natural Gift	Normal	Physical	15	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user draws power to attack by using its held Berry. The Berry determines the move's type and power.
+364	Feint	Normal	Physical	10	30	1			1		0		0	0	0	0	0	0	0	0	0	0	0	An attack that hits a target using Protect or Detect. This also lifts the effects of those moves.
+365	Pluck	Flying	Physical	20	60	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user pecks the target. If the target is holding a Berry, the user eats it and gains its effect.
+366	Tailwind	Flying	Status	15	0	1			1		0		0	0	0	0	0	0	0	0	1	0	0	The user whips up a turbulent whirlwind that ups the Speed stat of the user.
+367	Acupressure	Normal	Status	30	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user applies pressure to stress points, sharply boosting one of its stats or its allies' stats.
+368	Metal Burst	Steel	Physical	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user retaliates with much greater power against the opponent that last inflicted damage on it.
+369	U-turn	Bug	Physical	20	70	1			1		0		0	0	0	0	0	0	0	0	0	0	0	After making its attack, the user rushes back to switch places with a party Pokémon in waiting.
+370	Close Combat	Fighting	Physical	5	120	1			1		0		0	0	-1	0	0	0	-1	0	0	0	0	The user fights the target up close without guarding itself. This also lowers the user's Defense and Sp. Def stats.
+371	Payback	Dark	Physical	10	50	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user stores power, then attacks. If the user moves after the target, this attack's power will be doubled.
+372	Assurance	Dark	Physical	10	60	1			1		0		0	0	0	0	0	0	0	0	0	0	0	If the target has already taken some damage in the same turn, this attack's power is doubled.
+373	Embargo	Dark	Status	15	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	This move prevents the target from using its held item. Its Trainer is also prevented from using items on it.
+374	Fling	Dark	Physical	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user flings its held item at the target to attack. This move's power and effects depend on the item.
+375	Psycho Shift	Psychic	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Using its psychic power of suggestion, the user transfers its status conditions to the target.
+376	Trump Card	Normal	Special	5	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The fewer PP this move has, the greater its power.
+377	Heal Block	Psychic	Status	15	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	For five turns, the user prevents the opposing team from using any moves, Abilities, or held items that recover HP.
+378	Wring Out	Normal	Special	5	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user powerfully wrings the target. The more HP the target has, the greater the move's power.
+379	Power Trick	Psychic	Status	10	0	1			1		0		1	0	1	0	0	0	0	0	0	0	0	The user employs its psychic power to increase its Attack and its Defense stat.
+380	Gastro Acid	Poison	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user hurls up its stomach acids on the target. The fluid eliminates the effect of the target's Ability.
+381	Lucky Chant	Normal	Status	30	0	1			1		1		0	0	0	0	0	0	0	0	0	0	0	The user chants an incantation toward the sky, preventing opposing Pokémon from landing critical hits.
+382	Me First	Normal	Status	20	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user cuts ahead of the target to steal and use the target's intended move with greater power. This move fails if it isn't used first.
+383	Copycat	Normal	Status	20	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user mimics the move used immediately before it. The move fails if no other move has been used yet.
+384	Power Swap	Psychic	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user employs its psychic power to switch changes to its Attack and Sp. Atk stats with the target.
+385	Guard Swap	Psychic	Status	10	0	1			1		0		0	0	1	0	0	0	1	0	0	0	0	The user employs its psychic power to increase its Defense and Sp. Def stats.
+386	Punishment	Dark	Physical	5	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The more the target has powered up with stat changes, the greater the move's power.
+387	Last Resort	Normal	Physical	5	140	1			1		0		0	0	0	0	0	0	0	0	0	0	0	This move can be used only after the user has used all the other moves it knows in the battle.
+388	Worry Seed	Grass	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	A seed that causes worry is planted on the target. It prevents sleep by making the target's Ability Insomnia.
+389	Sucker Punch	Dark	Physical	5	70	1			1		0		0	0	0	0	0	0	0	0	0	0	0	This move enables the user to attack first. This move fails if the target is not readying an attack.
+390	Toxic Spikes	Poison	Status	20	0	1	1	Poison	1		0		0	0	0	0	0	0	0	0	0	0	0	The user lays a trap of poison spikes at the opposing team's feet. They poison opposing Pokémon that switch into battle.
+391	Heart Swap	Psychic	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user employs its psychic power to switch stat changes with the target.
+392	Aqua Ring	Water	Status	20	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user envelops itself in a veil made of water. It regains some HP every turn.
+393	Magnet Rise	Electric	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user levitates using electrically generated magnetism for five turns.
+394	Flare Blitz	Fire	Physical	15	120	1	0.1	Burn	1		0		0	0	0	0	0	0	0	0	0	0	0	The user cloaks itself in fire and charges the target. This also damages the user quite a lot. This may leave the target with a burn.
+395	Force Palm	Fighting	Physical	10	60	1	0.3	Paralysis	1		0		0	0	0	0	0	0	0	0	0	0	0	The target is attacked with a shock wave. This may also leave the target with paralysis.
+396	Aura Sphere	Fighting	Special	20	80	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user looses a blast of aura power from deep within its body at the target. This attack never misses.
+397	Rock Polish	Rock	Status	20	0	1			1		0		0	0	0	0	0	0	0	0	2	0	0	The user polishes its body to reduce drag. This can sharply raise the Speed stat.
+398	Poison Jab	Poison	Physical	20	80	1	0.3	Poison	1		0		0	0	0	0	0	0	0	0	0	0	0	The target is stabbed with a tentacle or arm steeped in poison. This may also poison the target.
+399	Dark Pulse	Dark	Special	15	80	1			1		0		0	0	0	0	0	0	0	0	0	0	1	The user releases a horrible aura imbued with dark thoughts. This may also make the target flinch.
+400	Night Slash	Dark	Physical	15	70	1			1		1		0	0	0	0	0	0	0	0	0	0	0	The user slashes the target the instant an opportunity arises. Critical hits land more easily.
+401	Aqua Tail	Water	Physical	10	90	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks by swinging its tail as if it were a vicious wave in a raging storm.
+402	Seed Bomb	Grass	Physical	15	80	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user slams a barrage of hard-shelled seeds on the target from above.
+403	Air Slash	Flying	Special	15	75	0.95			1		0		0	0	0	0	0	0	0	0	0	0	1	The user attacks with a blade of air that slices even the sky. This may also make the target flinch.
+404	X-Scissor	Bug	Physical	15	80	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user slashes at the target by crossing its scythes or claws as if they were a pair of scissors.
+405	Bug Buzz	Bug	Special	10	90	1			1		0		0	0	0	0	0	0	0	-1	0	0	0	The user vibrates its wings to generate a damaging sound wave. This may also lower the target's Sp. Def stat.
+406	Dragon Pulse	Dragon	Special	10	85	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The target is attacked with a shock wave generated by the user's gaping mouth.
+407	Dragon Rush	Dragon	Physical	10	100	0.75			1		0		0	0	0	0	0	0	0	0	0	0	1	The user tackles the target while exhibiting overwhelming menace. This may also make the target flinch.
+408	Power Gem	Rock	Special	20	80	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks with a ray of light that sparkles as if it were made of gemstones.
+409	Drain Punch	Fighting	Physical	10	75	1			1		0		0	0	0	0	0	0	0	0	0	0	0	An energy-draining punch. The user's HP is restored by half the damage taken by the target.
+410	Vacuum Wave	Fighting	Special	30	40	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user whirls its fists to send a wave of pure vacuum at the target. This move always goes first.
+411	Focus Blast	Fighting	Special	5	120	0.7			1		0		0	0	0	0	0	0	0	-1	0	0	0	The user heightens its mental focus and unleashes its power. This may also lower the target's Sp. Def.
+412	Energy Ball	Grass	Special	10	90	1			1		0		0	0	0	0	0	0	0	-1	0	0	0	The user draws power from nature and fires it at the target. This may also lower the target's Sp. Def.
+413	Brave Bird	Flying	Physical	15	120	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user tucks in its wings and charges from a low altitude. This also damages the user quite a lot.
+414	Earth Power	Ground	Special	10	90	1			1		0		0	0	0	0	0	0	0	-1	0	0	0	The user makes the ground under the target erupt with power. This may also lower the target's Sp. Def.
+415	Switcheroo	Dark	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user trades held items with the target faster than the eye can follow.
+416	Giga Impact	Normal	Physical	5	150	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	The user charges at the target using every bit of its power. The user can't move on the next turn.
+417	Nasty Plot	Dark	Status	20	0	1			1		0		0	0	0	0	2	0	0	0	0	0	0	The user stimulates its brain by thinking bad thoughts. This sharply raises the user's Sp. Atk.
+418	Bullet Punch	Steel	Physical	30	40	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user strikes the target with tough punches as fast as bullets. This move always goes first.
+419	Avalanche	Ice	Physical	10	60	1			1		0		0	0	0	0	0	0	0	0	0	0	0	An attack move that inflicts double the damage if the user has been hurt by the target in the same turn.
+420	Ice Shard	Ice	Physical	30	40	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user flash-freezes chunks of ice and hurls them at the target. This move always goes first.
+421	Shadow Claw	Ghost	Physical	15	70	1			1		1		0	0	0	0	0	0	0	0	0	0	0	The user slashes with a sharp claw made from shadows. Critical hits land more easily.
+422	Thunder Fang	Electric	Physical	15	65	0.95	0.1	Paralysis,Flinch	1		0		0	0	0	0	0	0	0	0	0	0	1	The user bites with electrified fangs. This may also make the target flinch or leave it with paralysis.
+423	Ice Fang	Ice	Physical	15	65	0.95	0.1	Flinch	1		0		0	0	0	0	0	0	0	0	0	0	1	The user bites with cold-infused fangs. This may also make the target flinch or leave it frozen.
+424	Fire Fang	Fire	Physical	15	65	0.95	0.1	Burn	1		0		0	0	0	0	0	0	0	0	0	0	1	The user bites with flame-cloaked fangs. This may also make the target flinch or leave it with a burn.
+425	Shadow Sneak	Ghost	Physical	30	40	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user extends its shadow and attacks the target from behind. This move always goes first.
+426	Mud Bomb	Ground	Special	10	65	0.85			1		0		0	0	0	0	0	0	0	0	0	0	0	The user launches a hard-packed mud ball to attack. This may also lower the target's accuracy.
+427	Psycho Cut	Psychic	Physical	20	70	1			1		1		0	0	0	0	0	0	0	0	0	0	0	The user tears at the target with blades formed by psychic power. Critical hits land more easily.
+428	Zen Headbutt	Psychic	Physical	15	80	0.9			1		0		0	0	0	0	0	0	0	0	0	0	1	The user focuses its willpower to its head and attacks the target. This may also make the target flinch.
+429	Mirror Shot	Steel	Special	10	65	0.85			1		0		0	0	0	0	0	0	0	0	0	0	0	The user lets loose a flash of energy at the target from its polished body. This may also lower the target's accuracy.
+430	Flash Cannon	Steel	Special	10	80	1			1		0		0	0	0	0	0	0	0	-1	0	0	0	The user gathers all its light energy and releases it at once. This may also lower the target's Sp. Def stat.
+431	Rock Climb	Normal	Physical	20	90	0.85			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks the target by smashing into it with incredible force. This may also confuse the target.
+432	Defog	Flying	Status	15	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	A strong wind blows away the target's barriers such as Reflect or Light Screen. This also lowers the target's evasiveness.
+433	Trick Room	Psychic	Status	5	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user creates a bizarre area in which slower Pokémon get to move first for five turns.
+434	Draco Meteor	Dragon	Special	5	130	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	Comets are summoned down from the sky onto the target. The attack's recoil harshly lowers the user's Special Attack stat.
+435	Discharge	Electric	Special	15	80	1	0.3	Paralysis	1		0		0	0	0	0	0	0	0	0	0	0	0	The user strikes everything around it by letting loose a flare of electricity. This may also cause paralysis.
+436	Lava Plume	Fire	Special	15	80	1	0.3	Burn	1		0		0	0	0	0	0	0	0	0	0	0	0	The user torches everything around it with an inferno of scarlet flames. This may also leave those hit with a burn.
+437	Leaf Storm	Grass	Special	5	130	0.9			1		0		0	0	0	0	-2	0	0	0	0	0	0	The user whips up a storm of leaves around the target. The attack's recoil harshly lowers the user's Sp. Atk stat.
+438	Power Whip	Grass	Physical	10	120	0.85			1		0		0	0	0	0	0	0	0	0	0	0	0	The user violently whirls its vines or tentacles to harshly lash the target.
+439	Rock Wrecker	Rock	Physical	5	150	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	The user launches a huge boulder at the target to attack. The user can't move on the next turn.
+440	Cross Poison	Poison	Physical	20	70	1	0.1	Poison	1		1		0	0	0	0	0	0	0	0	0	0	0	A slashing attack with a poisonous blade that may also poison the target. Critical hits land more easily.
+441	Gunk Shot	Poison	Physical	5	120	0.8	0.3	Poison	1		0		0	0	0	0	0	0	0	0	0	0	0	The user shoots filthy garbage at the target to attack. This may also poison the target.
+442	Iron Head	Steel	Physical	15	80	1			1		0		0	0	0	0	0	0	0	0	0	0	1	The user slams the target with its steel-hard head. This may also make the target flinch.
+443	Magnet Bomb	Steel	Physical	20	60	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user launches steel bombs that stick to the target. This attack never misses.
+444	Stone Edge	Rock	Physical	5	100	0.8			1		1		0	0	0	0	0	0	0	0	0	0	0	The user stabs the target with sharpened stones from below. Critical hits land more easily.
+445	Captivate	Normal	Status	20	0	1			1		0		0	0	0	0	0	-2	0	0	0	0	0	The user charms its opponent, which harshly lowers its Sp. Atk stat.
+446	Stealth Rock	Rock	Status	20	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user lays a trap of levitating stones around the opposing team. The trap hurts opposing Pokémon that switch into battle.
+447	Grass Knot	Grass	Special	20	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user snares the target with grass and trips it. The heavier the target, the greater the move's power.
+448	Chatter	Flying	Special	20	65	1	1	Confusion	1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks the target with sound waves of deafening chatter. This confuses the target.
+449	Judgment	Normal	Special	10	100	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user releases countless shots of light at the target. This move's type varies depending on the kind of Plate the user is holding.
+450	Bug Bite	Bug	Physical	20	60	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user bites the target. If the target is holding a Berry, the user eats it and gains its effect.
+451	Charge Beam	Electric	Special	10	50	0.9			1		0		0	0	0	0	1	0	0	0	0	0	0	The user attacks with an electric charge. The user may use any remaining electricity to raise its Sp. Atk stat.
+452	Wood Hammer	Grass	Physical	15	120	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user slams its rugged body into the target to attack. This also damages the user quite a lot.
+453	Aqua Jet	Water	Physical	20	40	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user lunges at the target at a speed that makes it almost invisible. This move always goes first.
+454	Attack Order	Bug	Physical	15	90	1			1		1		0	0	0	0	0	0	0	0	0	0	0	The user calls out its underlings to pummel the target. Critical hits land more easily.
+455	Defend Order	Bug	Status	10	0	1			1		0		0	0	1	0	0	0	1	0	0	0	0	The user calls out its underlings to shield its body, raising its Defense and Sp. Def stats.
+456	Heal Order	Bug	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user calls out its underlings to heal it. The user regains up to half of its max HP.
+457	Head Smash	Rock	Physical	5	150	0.8			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks the target with a hazardous, full-power headbutt. This also damages the user terribly.
+458	Double Hit	Normal	Physical	10	35	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	The user slams the target with a long tail, vines, or a tentacle. The target is hit twice in a row.
+459	Roar of Time	Dragon	Special	5	150	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	The user blasts the target with power that distorts even time. The user can't move on the next turn.
+460	Spacial Rend	Dragon	Special	5	100	0.95			1		1		0	0	0	0	0	0	0	0	0	0	0	The user tears the target along with the space around it. Critical hits land more easily.
+461	Lunar Dance	Psychic	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user faints. In return, the Pokémon taking its place will have its status and HP fully restored.
+462	Crush Grip	Normal	Physical	5	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The target is crushed with great force. The more HP the target has left, the greater this move's power.
+463	Magma Storm	Fire	Special	5	100	0.75			1		0		0	0	0	0	0	0	0	0	0	0	0	The target becomes trapped within a maelstrom of fire that rages for four to five turns.
+464	Dark Void	Dark	Status	10	0	0.5	1	Sleep	1		0		0	0	0	0	0	0	0	0	0	0	0	Opposing Pokémon are dragged into a world of total darkness that makes them sleep.
+465	Seed Flare	Grass	Special	5	120	0.85			1		0		0	0	0	0	0	0	0	-2	0	0	0	The user emits a shock wave from its body to attack its target. This may harshly lower the target's Sp. Def.
+466	Ominous Wind	Ghost	Special	5	60	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user blasts the target with a gust of repulsive wind. This may also raise all the user's stats at once.
+467	Shadow Force	Ghost	Physical	5	120	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user disappears, then strikes the target on the next turn. This move hits even if the target protects itself.
+468	Hone Claws	Dark	Status	15	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user sharpens its claws to boost its Attack stat and accuracy.
+469	Wide Guard	Rock	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user and its allies are protected from wide-ranging attacks for one turn.
+470	Guard Split	Psychic	Status	10	0	1			1		0		0	0	1	0	0	0	1	0	0	0	0	The user employs its psychic powers to increase its Defense and Sp. Def.
+471	Power Split	Psychic	Status	10	0	1			1		0		1	0	0	0	1	0	0	0	0	0	0	The user employs its psychic power to raise its Attack and Sp. Atk stats.
+472	Wonder Room	Psychic	Status	10	0	1			1		0		0	0	1	0	0	0	0	0	0	0	0	The user increases its Defense.
+473	Psyshock	Psychic	Special	10	80	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user materializes an odd psychic wave to attack the target. This attack does physical damage.
+474	Venoshock	Poison	Special	10	65	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user drenches the target in a special poisonous liquid. This move's power is doubled if the target is poisoned.
+475	Autotomize	Steel	Status	15	0	1			1		0		0	0	0	0	0	0	0	0	2	0	0	The user sheds part of its body to make itself lighter and sharply raise its Speed stat.
+476	Rage Powder	Bug	Status	20	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user scatters a cloud of irritating powder to draw attention to itself. Opponents aim only at the user.
+477	Telekinesis	Psychic	Status	15	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user makes the target float with its psychic power. The target is easier to hit for three turns.
+478	Magic Room	Psychic	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user creates a bizarre area in which Pokémon's held items lose their effects for five turns.
+479	Smack Down	Rock	Physical	15	50	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user throws a stone or similar projectile to attack an opponent. A flying Pokémon will fall to the ground when it's hit.
+480	Storm Throw	Fighting	Physical	10	60	1			1		1		0	0	0	0	0	0	0	0	0	0	0	The user strikes the target with a fierce blow. Critical hits land more easily.
+481	Flame Burst	Fire	Special	15	70	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks the target with a bursting flame. The bursting flame damages Pokémon next to the target as well.
+482	Sludge Wave	Poison	Special	10	95	1	0.1	Poison	1		0		0	0	0	0	0	0	0	0	0	0	0	The user strikes everything around it by swamping the area with a giant sludge wave. This may also poison those hit.
+483	Quiver Dance	Bug	Status	20	0	1			1		0		0	0	0	0	1	0	1	0	1	0	0	The user lightly performs a beautiful, mystic dance. This boosts the user's Sp. Atk, Sp. Def, and Speed stats.
+484	Heavy Slam	Steel	Physical	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user slams into the target with its heavy body. The more the user outweighs the target, the greater the move's power.
+485	Synchronoise	Psychic	Special	10	120	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Using an odd shock wave, the user inflicts damage on any Pokémon of the same type in the area around it.
+486	Electro Ball	Electric	Special	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user hurls an electric orb at the target. The faster the user is than the target, the greater the move's power.
+487	Soak	Water	Status	20	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user shoots a torrent of water at the target and changes the target's type to Water.
+488	Flame Charge	Fire	Physical	20	50	1			1		0		0	0	0	0	0	0	0	0	1	0	0	Cloaking itself in flame, the user attacks. Then, building up more power, the user raises its Speed stat.
+489	Coil	Poison	Status	20	0	1			1		0		1	0	1	0	0	0	0	0	0	0	0	The user coils up and concentrates. This raises its Attack and Defense stats as well as its accuracy.
+490	Low Sweep	Fighting	Physical	20	65	1			1		0		0	0	0	0	0	0	0	0	0	-1	0	The user makes a swift attack on the target's legs, which lowers the target's Speed stat.
+491	Acid Spray	Poison	Special	20	40	1			1		0		0	0	0	0	0	0	-2	0	0	0	0	The user spits fluid that works to melt the target. This harshly lowers the target's Sp. Def stat.
+492	Foul Play	Dark	Physical	15	95	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user turns the target's power against it. The higher the target's Attack stat, the greater the move's power.
+493	Simple Beam	Normal	Status	15	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user's mysterious psychic wave changes the target's Ability to Simple.
+494	Entrainment	Normal	Status	15	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user dances with an odd rhythm that compels the target to mimic it, making the target's Ability the same as the user's.
+495	After You	Normal	Status	15	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user helps the target and makes it use its move right after the user.
+496	Round	Normal	Special	15	60	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks the target with a song. Others can join in the Round and make the attack do greater damage.
+497	Echoed Voice	Normal	Special	15	40	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks the target with an echoing voice. If this move is used every turn, it does greater damage.
+498	Chip Away	Normal	Physical	20	70	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Looking for an opening, the user strikes consistently. The target's stat changes don't affect this attack's damage.
+499	Clear Smog	Poison	Special	15	50	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks by throwing a clump of special mud. All stat changes are returned to normal.
+500	Stored Power	Psychic	Special	10	20	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks the target with stored power. The more the user's stats are raised, the greater the move's power.
+501	Quick Guard	Fighting	Status	15	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user protects itself and its allies from priority moves.
+502	Ally Switch	Psychic	Status	15	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user teleports using a strange power and switches places with one of its allies.
+503	Scald	Water	Special	15	80	1	0.3	Burn	1		0		0	0	0	0	0	0	0	0	0	0	0	The user shoots boiling hot water at its target. This may also leave the target with a burn.
+504	Shell Smash	Normal	Status	15	0	1			1		0		2	0	-1	0	2	0	-1	0	2	0	0	The user breaks its shell, which lowers Defense and Sp. Def stats but sharply raises its Attack, Sp. Atk, and Speed stats.
+505	Heal Pulse	Psychic	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user emits a healing pulse which restores the target's HP by up to half of its max HP.
+506	Hex	Ghost	Special	10	65	1			1		0		0	0	0	0	0	0	0	0	0	0	0	This relentless attack does massive damage to a target affected by status conditions.
+507	Sky Drop	Flying	Physical	10	60	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user takes the target into the sky, then drops it during the next turn. The target cannot attack while in the sky.
+508	Shift Gear	Steel	Status	10	0	1			1		0		1	0	0	0	0	0	0	0	2	0	0	The user rotates its gears, raising its Attack and sharply raising its Speed.
+509	Circle Throw	Fighting	Physical	10	60	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	The target is thrown, and a different Pokémon is dragged out. In the wild, this ends a battle against a single Pokémon.
+510	Incinerate	Fire	Special	15	60	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks opposing Pokémon with fire. If a Pokémon is holding a certain item, such as a Berry, the item becomes burned up and unusable.
+511	Quash	Dark	Status	15	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user suppresses the target and makes its move go last.
+512	Acrobatics	Flying	Physical	15	55	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user nimbly strikes the target. If the user is not holding an item, this attack inflicts massive damage.
+513	Reflect Type	Normal	Status	15	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user reflects the target's type, making it the same type as the target.
+514	Retaliate	Normal	Physical	5	70	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user gets revenge for a fainted ally. If an ally fainted in the previous turn, this move becomes more powerful.
+515	Final Gambit	Fighting	Special	5	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user risks everything to attack its target. The user faints but does damage equal to its HP.
+516	Bestow	Normal	Status	15	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user passes its held item to the target when the target isn't holding an item.
+517	Inferno	Fire	Special	5	100	0.5	1	Burn	1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks by engulfing the target in an intense fire. This leaves the target with a burn.
+518	Water Pledge	Water	Special	10	80	1			1		0		0	0	0	0	0	0	0	0	0	0	0	A column of water strikes the target. When combined with its fire equivalent, the damage increases and a rainbow appears.
+519	Fire Pledge	Fire	Special	10	80	1			1		0		0	0	0	0	0	0	0	0	0	0	0	A column of fire hits opposing Pokémon. When used with its grass equivalent, its damage increases and a vast sea of fire appears.
+520	Grass Pledge	Grass	Special	10	80	1			1		0		0	0	0	0	0	0	0	0	0	0	0	A column of grass hits the target. When used with its water equivalent, its damage increases and a vast swamp appears.
+521	Volt Switch	Electric	Special	20	70	1			1		0		0	0	0	0	0	0	0	0	0	0	0	After making its attack, the user rushes back to switch places with a party Pokémon in waiting.
+522	Struggle Bug	Bug	Special	20	50	1			1		0		0	0	0	0	0	-1	0	0	0	0	0	While resisting, the user attacks the opposing Pokémon. This lowers the Sp. Atk stat of those hit.
+523	Bulldoze	Ground	Physical	20	60	1			1		0		0	0	0	0	0	0	0	0	0	-1	0	The user strikes everything around it by stomping down on the ground. This lowers the Speed stat of those hit.
+524	Frost Breath	Ice	Special	10	60	0.9			1		1		0	0	0	0	0	0	0	0	0	0	0	The user blows its cold breath on the target. Critical hits land more easily.
+525	Dragon Tail	Dragon	Physical	10	60	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	The target is knocked away, and a different Pokémon is dragged out. In the wild, this ends a battle against a single Pokémon.
+526	Work Up	Normal	Status	30	0	1			1		0		1	0	0	0	1	0	0	0	0	0	0	The user is roused, and its Attack and Sp. Attack stats increase.
+527	Electroweb	Electric	Special	15	55	0.95			1		0		0	0	0	0	0	0	0	0	0	-1	0	The user attacks and captures opposing Pokémon by using an electric net. This lowers their Speed stat.
+528	Wild Charge	Electric	Physical	15	90	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user shrouds itself in electricity and smashes into its target. This also damages the user a little.
+529	Drill Run	Ground	Physical	10	80	0.95			1		1		0	0	0	0	0	0	0	0	0	0	0	The user crashes into its target while rotating its body like a drill. Critical hits land more easily.
+530	Dual Chop	Dragon	Physical	15	40	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks its target by hitting it with brutal strikes. The target is hit twice in a row.
+531	Heart Stamp	Psychic	Physical	25	60	1			1		0		0	0	0	0	0	0	0	0	0	0	1	The user unleashes a vicious blow after its cute act makes the target less wary. This may also make the target flinch.
+532	Horn Leech	Grass	Physical	10	75	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user drains the target's energy with its horns. The user's HP is restored by half the damage taken by the target.
+533	Sacred Sword	Fighting	Physical	15	90	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks by slicing with a long horn. The target's stat changes don't affect this attack's damage.
+534	Razor Shell	Water	Physical	10	75	0.95			1		0		0	0	0	-1	0	0	0	0	0	0	0	The user cuts its target with sharp shells. This may also lower the target's Defense stat.
+535	Heat Crash	Fire	Physical	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user slams its target with its flame-covered body. The more the user outweighs the target, the greater the move's power.
+536	Leaf Tornado	Grass	Special	10	65	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks its target by encircling it in sharp leaves. This attack may also lower the target's accuracy.
+537	Steamroller	Bug	Physical	20	65	1			1		0		0	0	0	0	0	0	0	0	0	0	1	The user crushes its targets by rolling over them with its rolled-up body. This attack may make the target flinch.
+538	Cotton Guard	Grass	Status	10	0	1			1		0		0	0	3	0	0	0	0	0	0	0	0	The user protects itself by wrapping its body in soft cotton, which drastically raises the user's Defense stat.
+539	Night Daze	Dark	Special	10	85	0.95			1		0		0	0	0	0	0	0	0	0	0	0	0	The user lets loose a pitch-black shock wave at its target. This may also lower the target's accuracy.
+540	Psystrike	Psychic	Special	10	100	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user materializes an odd psychic wave to attack the target. This attack does physical damage.
+541	Tail Slap	Normal	Physical	10	25	0.85			2,5		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks by striking the target with its hard tail. It hits the target two to five times in a row.
+542	Hurricane	Flying	Special	10	110	0.7	0.3	Confusion	1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks by wrapping its opponent in a fierce wind that flies up into the sky. This may also confuse the target.
+543	Head Charge	Normal	Physical	15	120	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user charges its head into its target, using its powerful guard hair. This also damages the user a little.
+544	Gear Grind	Steel	Physical	15	50	0.85			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks by throwing steel gears at its target twice.
+545	Searing Shot	Fire	Special	5	100	1	0.3	Burn	1		0		0	0	0	0	0	0	0	0	0	0	0	The user torches everything around it with an inferno of scarlet flames. This may also leave those hit with a burn.
+546	Techno Blast	Normal	Special	5	120	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user fires a beam of light at its target. The move's type changes depending on the Drive the user holds.
+547	Relic Song	Normal	Special	10	75	1	1	Sleep	1		0		0	0	0	0	0	0	0	0	0	0	0	The user sings an ancient song and attacks by appealing to the hearts of the listening opposing Pokémon. This may also induce sleep.
+548	Secret Sword	Fighting	Special	10	85	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user cuts with its long horn. The odd power contained in the horn does physical damage to the target.
+549	Glaciate	Ice	Special	10	65	0.95			1		0		0	0	0	0	0	0	0	0	0	-1	0	The user attacks by blowing freezing cold air at opposing Pokémon. This lowers their Speed stat.
+550	Bolt Strike	Electric	Physical	5	130	0.85	0.2	Paralysis	1		0		0	0	0	0	0	0	0	0	0	0	0	The user surrounds itself with a great amount of electricity and charges its target. This may also leave the target with paralysis.
+551	Blue Flare	Fire	Special	5	130	0.85	0.2	Burn	1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks by engulfing the target in an intense, yet beautiful, blue flame. This may also leave the target with a burn.
+552	Fiery Dance	Fire	Special	10	80	1			1		0		0	0	0	0	1	0	0	0	0	0	0	Cloaked in flames, the user dances and flaps its wings. This may also raise the user's Sp. Atk stat.
+553	Freeze Shock	Ice	Physical	5	140	0.9	0.3	Paralysis	1		0		0	0	0	0	0	0	0	0	0	0	0	On the second turn, the user hits the target with electrically charged ice. This may also leave the target with paralysis.
+554	Ice Burn	Ice	Special	5	140	0.9	0.3	Burn	1		0		0	0	0	0	0	0	0	0	0	0	0	On the second turn, an ultracold, freezing wind surrounds the target. This may leave the target with a burn.
+555	Snarl	Dark	Special	15	55	0.95			1		0		0	0	0	0	0	-1	0	0	0	0	0	The user yells as if it's ranting about something, which lowers the Sp. Attack stat of opposing Pokémon.
+556	Icicle Crash	Ice	Physical	10	85	0.9			1		0		0	0	0	0	0	0	0	0	0	0	1	The user attacks by harshly dropping large icicles onto the target. This may also make the target flinch.
+557	V-create	Fire	Physical	5	180	0.95			1		0		0	0	0	-1	0	0	-1	0	-1	0	0	With a hot flame on its forehead, the user hurls itself at its target. This lowers the user's Defense, Sp. Def, and Speed stats.
+558	Fusion Flare	Fire	Special	5	100	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user brings down a giant flame. This attack is more powerful when influenced by an enormous thunderbolt.
+559	Fusion Bolt	Electric	Physical	5	100	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user throws down a giant thunderbolt. This move is more powerful when influenced by an enormous flame.
+560	Flying Press	Fighting	Physical	10	100	0.95			1		0		0	0	0	0	0	0	0	0	0	0	0	The user dives down onto the target from the sky. This move is Fighting and Flying type simultaneously.
+561	Mat Block	Fighting	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Using a pulled-up mat as a shield, the user protects itself and its allies from damaging moves. This does not stop status moves.
+562	Belch	Poison	Special	10	120	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	User must have consumed a Berry.
+563	Rototiller	Ground	Status	10	0	1			1		0		1	0	0	0	0	1	0	0	0	0	0	Tilling the soil, the user makes it easier for plants to grow. This raises the Attack and Sp. Atk stats of the user.
+564	Sticky Web	Bug	Status	20	0	1			1		0		0	0	0	0	0	0	0	0	0	-1	0	The user weaves a sticky net around the opposing team, which lowers their Speed stat.
+565	Fell Stinger	Bug	Physical	25	50	1			1		0		0	0	0	0	0	0	0	0	0	0	0	When the user knocks out a target with this move, the user's Attack stat rises sharply.
+566	Phantom Force	Ghost	Physical	10	90	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user vanishes somewhere, then strikes the target on the next turn. This move hits even if the target protects itself.
+567	Trick-or-Treat	Ghost	Status	20	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user takes the target trick-or-treating. This adds Ghost type to the target's type.
+568	Noble Roar	Normal	Status	30	0	1			1		0		0	-1	0	0	0	-1	0	0	0	0	0	Letting out a noble roar, the user intimidates the target and lowers its Attack and Sp. Atk stats.
+569	Ion Deluge	Electric	Status	25	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user disperses electrically charged particles, which changes Normal-type moves to Electric-type moves.
+570	Parabolic Charge	Electric	Special	20	65	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks everything around it. The user's HP is restored by half the damage taken by those hit.
+571	Forest's Curse	Grass	Status	20	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user puts a forest curse on the target. Afflicted targets are now Grass type as well.
+572	Petal Blizzard	Grass	Physical	15	90	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user stirs up a violent petal blizzard and attacks everything around it.
+573	Freeze-Dry	Ice	Special	20	70	1	0.1	Freeze	1		0		0	0	0	0	0	0	0	0	0	0	0	The user rapidly cools the target. This may also leave the target frozen. This move is super effective on Water types.
+574	Disarming Voice	Fairy	Special	15	40	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Letting out a charming cry, the user does emotional damage to opposing Pokémon. This attack never misses.
+575	Parting Shot	Dark	Status	20	0	1			1		0		0	-1	0	0	0	-1	0	0	0	0	0	The user lowers the target's Attack and Sp. Attack stats.
+576	Topsy-Turvy	Dark	Status	20	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	All stat changes affecting the target turn topsy-turvy and become the opposite of what they were.
+577	Draining Kiss	Fairy	Special	10	50	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user steals the target's energy with a kiss. The user's HP is restored by over half of the damage taken by the target.
+578	Crafty Shield	Fairy	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user protects itself and its allies from status moves with a mysterious power. This does not stop moves that do damage.
+579	Flower Shield	Fairy	Status	10	0	1			1		0		0	0	1	0	0	0	0	0	0	0	0	The user raises the Defense stat of all Grass-type Pokémon in battle with a mysterious power.
+580	Grassy Terrain	Grass	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user turns the ground under everyone's feet to grass for five turns. This restores the HP of Pokémon on the ground a little every turn.
+581	Misty Terrain	Fairy	Status	10	0	1			1		0		0	0	0	0	0	0	1	0	0	0	0	The user covers the ground under their feet with mist, increasing their Sp Defense.
+582	Electrify	Electric	Status	20	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	If the target is electrified before it uses a move during that turn, the target's move becomes Electric type.
+583	Play Rough	Fairy	Physical	10	90	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	The user plays rough with the target and attacks it. This may also lower the target's Attack stat.
+584	Fairy Wind	Fairy	Special	30	40	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user stirs up a fairy wind and strikes the target with it.
+585	Moonblast	Fairy	Special	15	95	1			1		0		0	0	0	0	0	-1	0	0	0	0	0	Borrowing the power of the moon, the user attacks the target. This may also lower the target's Sp. Atk stat.
+586	Boomburst	Normal	Special	10	140	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks everything around it with the destructive power of a terrible, explosive sound.
+587	Fairy Lock	Fairy	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	By locking down the battlefield, the user keeps all Pokémon from fleeing during the next turn.
+588	King's Shield	Steel	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user takes a defensive stance while it protects itself from damage. It also harshly lowers the Attack stat of any attacker who makes direct contact.
+589	Play Nice	Normal	Status	20	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user and the target become friends, and the target loses its will to fight. This lowers the target's Attack stat.
+590	Confide	Normal	Status	20	0	1			1		0		0	0	0	0	0	-1	0	0	0	0	0	The user tells the target a secret, and the target loses its ability to concentrate. This lowers the target's Sp. Atk. stat.
+591	Diamond Storm	Rock	Physical	5	100	0.95			1		0		0	0	1	0	0	0	0	0	0	0	0	The user whips up a storm of diamonds to damage opposing Pokémon. This may also raise the user's Defense stat.
+592	Steam Eruption	Water	Special	5	110	0.95	0.3	Burn	1		0		0	0	0	0	0	0	0	0	0	0	0	The user immerses the target in superheated steam. This may also leave the target with a burn.
+593	Hyperspace Hole	Psychic	Special	5	80	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Using a hyperspace hole, the user appears right next to the target and strikes. This also hits a target using Protect or Detect.
+594	Water Shuriken	Water	Special	20	15	1			2,5		0		0	0	0	0	0	0	0	0	0	0	0	The user hits the target with throwing stars two to five times in a row. This move always goes first.
+595	Mystical Fire	Fire	Special	10	75	1			1		0		0	0	0	0	0	-1	0	0	0	0	0	The user attacks by breathing a special, hot fire. This also lowers the target's Sp. Atk stat.
+596	Spiky Shield	Grass	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	In addition to protecting the user from attacks, this move also damages any attacker who makes direct contact.
+597	Aromatic Mist	Fairy	Status	20	0	1			1		0		0	0	0	0	0	0	1	0	0	0	0	The user raises its Sp. Defense.
+598	Eerie Impulse	Electric	Status	15	0	1			1		0		0	0	0	0	0	-2	0	0	0	0	0	The user's body generates an eerie impulse. Exposing the target to it harshly lowers the target's Sp. Atk stat.
+599	Venom Drench	Poison	Status	20	0	1			1		0		0	0	0	0	0	-2	0	-2	0	-1	0	Opposing Pokémon are drenched in an odd poisonous liquid. This lowers the Attack, Sp. Atk, and Speed stats of a poisoned target.
+600	Powder	Bug	Status	20	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user covers the target in a powder that explodes and damages the target if it uses a Fire-type move.
+601	Geomancy	Fairy	Status	10	0	1			1		0		0	0	0	0	1	0	1	0	1	0	0	The user absorbs energy and sharply raises its Sp. Atk, Sp. Def, and Speed stats.
+602	Magnetic Flux	Electric	Status	20	0	1			1		0		0	0	1	0	0	0	1	0	0	0	0	The user manipulates magnetic fields which raises its Defense and Sp. Def.
+603	Happy Hour	Normal	Status	30	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Using Happy Hour doubles the amount of prize money received after battle.
+604	Electric Terrain	Electric	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user electrifies the ground under everyone's feet for five turns. Pokémon on the ground no longer fall asleep.
+605	Dazzling Gleam	Fairy	Special	10	80	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user damages opposing Pokémon by emitting a powerful flash.
+606	Celebrate	Normal	Status	40	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The Pokémon congratulates you on your special day!
+607	Hold Hands	Normal	Status	40	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user and an ally hold hands. This makes them very happy.
+608	Baby-Doll Eyes	Fairy	Status	30	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user stares at the target with its baby-doll eyes, which lowers its Attack stat. This move always goes first.
+609	Nuzzle	Electric	Physical	20	20	1	1	Paralysis	1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks by nuzzling its electrified cheeks against the target. This also leaves the target with paralysis.
+610	Hold Back	Normal	Physical	40	40	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user holds back when it attacks and the target is left with at least 1 HP.
+611	Infestation	Bug	Special	20	20	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The target is infested and attacked for four to five turns. The target can't flee during this time.
+612	Power-Up Punch	Fighting	Physical	20	40	1			1		0		1	0	0	0	0	0	0	0	0	0	0	Striking opponents over and over makes the user's fists harder. Hitting a target raises the Attack stat.
+613	Oblivion Wing	Flying	Special	10	80	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user absorbs its target's HP. The user's HP is restored by over half of the damage taken by the target.
+614	Thousand Arrows	Ground	Physical	10	90	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Makes Flying-type Pokémon vulnerable to Ground moves.
+615	Thousand Waves	Ground	Physical	10	90	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Opponent cannot flee or switch.
+616	Land's Wrath	Ground	Physical	10	90	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user gathers the energy of the land and focuses that power on opposing Pokémon to damage them.
+617	Light of Ruin	Fairy	Special	5	140	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	Drawing power from the Eternal Flower, the user fires a powerful beam of light. This also damages the user quite a lot.
+618	Origin Pulse	Water	Special	10	110	0.85			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks opposing Pokémon with countless beams of light that glow a deep and brilliant blue.
+619	Precipice Blades	Ground	Physical	10	120	0.85			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks opposing Pokémon by manifesting the power of the land in fearsome blades of stone.
+620	Dragon Ascent	Flying	Physical	5	120	1			1		0		0	0	-1	0	0	0	-1	0	0	0	0	After soaring upward, the user attacks its target by dropping out of the sky at high speeds, although it lowers its own Defense and Sp. Def in the process.
+621	Hyperspace Fury	Dark	Physical	5	100	1			1		0		0	0	-1	0	0	0	0	0	0	0	0	Using its many arms, the user unleashes a barrage of attacks that ignore the effects of moves like Protect and Detect. This attack lowers the user's Defense.
+622	Breakneck Blitz	Normal	Physical	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Normal type Z-Move.
+623	Breakneck Blitz	Normal	Special	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Normal type Z-Move.
+624	All-Out Pummeling	Fighting	Physical	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Fighting type Z-Move.
+625	All-Out Pummeling	Fighting	Special	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Fighting type Z-Move.
+626	Supersonic Skystrike	Flying	Physical	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Flying type Z-Move.
+627	Supersonic Skystrike	Flying	Special	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Flying type Z-Move.
+628	Acid Downpour	Poison	Physical	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Poison type Z-Move.
+629	Acid Downpour	Poison	Special	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Poison type Z-Move.
+630	Tectonic Rage	Ground	Physical	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Ground type Z-Move.
+631	Tectonic Rage	Ground	Special	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Ground type Z-Move.
+632	Continental Crush	Rock	Physical	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Rock type Z-Move.
+633	Continental Crush	Rock	Special	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Rock type Z-Move.
+634	Savage Spin-Out	Bug	Physical	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Bug type Z-Move.
+635	Savage Spin-Out	Bug	Special	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Bug type Z-Move.
+636	Never-Ending Nightmare	Ghost	Physical	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Ghost type Z-Move.
+637	Never-Ending Nightmare	Ghost	Special	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Ghost type Z-Move.
+638	Corkscrew Crash	Steel	Physical	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Steel type Z-Move.
+639	Corkscrew Crash	Steel	Special	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Steel type Z-Move.
+640	Inferno Overdrive	Fire	Physical	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Fire type Z-Move.
+641	Inferno Overdrive	Fire	Special	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Fire type Z-Move.
+642	Hydro Vortex	Water	Physical	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Water type Z-Move.
+643	Hydro Vortex	Water	Special	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Water type Z-Move.
+644	Bloom Doom	Grass	Physical	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Grass type Z-Move.
+645	Bloom Doom	Grass	Special	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Grass type Z-Move.
+646	Gigavolt Havoc	Electric	Physical	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Electric type Z-Move.
+647	Gigavolt Havoc	Electric	Special	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Electric type Z-Move.
+648	Shattered Psyche	Psychic	Physical	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Psychic type Z-Move.
+649	Shattered Psyche	Psychic	Special	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Psychic type Z-Move.
+650	Subzero Slammer	Ice	Physical	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Ice type Z-Move.
+651	Subzero Slammer	Ice	Special	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Ice type Z-Move.
+652	Devastating Drake	Dragon	Physical	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Dragon type Z-Move.
+653	Devastating Drake	Dragon	Special	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Dragon type Z-Move.
+654	Black Hole Eclipse	Dark	Physical	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Dark type Z-Move.
+655	Black Hole Eclipse	Dark	Special	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Dark type Z-Move.
+656	Twinkle Tackle	Fairy	Physical	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Fairy type Z-Move.
+657	Twinkle Tackle	Fairy	Special	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Fairy type Z-Move.
+658	Catastropika	Electric	Physical	1	210	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Pikachu-exclusive Z-Move.
+659	Shore Up	Ground	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user regains up to half of its max HP. It restores more HP in a sandstorm.
+660	First Impression	Bug	Physical	10	90	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Although this move has great power, it only works the first turn the user is in battle.
+661	Baneful Bunker	Poison	Status	10	0	1	1	Poison	1		0		0	0	0	0	0	0	0	0	0	0	0	Protects the user and poisons opponent on contact.
+662	Spirit Shackle	Ghost	Physical	10	80	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Prevents the opponent from switching out.
+663	Darkest Lariat	Dark	Physical	10	85	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Ignores opponent's stat changes.
+664	Sparkling Aria	Water	Special	10	90	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Heals the burns of its target.
+665	Ice Hammer	Ice	Physical	10	100	0.9			1		0		0	0	0	0	0	0	0	0	-1	0	0	The user swings and hits with its strong, heavy fist. It lowers the user's Speed, however.
+666	Floral Healing	Fairy	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user restores the target's HP by up to half of its max HP. It restores more HP when the terrain is grass.
+667	High Horsepower	Ground	Physical	10	95	0.95			1		0		0	0	0	0	0	0	0	0	0	0	0	The user fiercely attacks the target using its entire body.
+668	Strength Sap	Grass	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user restores its HP by the same amount as the target's Attack stat. It also lowers the target's Attack stat.
+669	Solar Blade	Grass	Physical	10	125	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Charges on first turn, attacks on second.
+670	Leafage	Grass	Physical	40	40	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Strikes opponent with leaves.
+671	Spotlight	Normal	Status	15	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user shines a spotlight on the target so that only the target will be attacked during the turn.
+672	Toxic Thread	Poison	Status	20	0	1	1	Poison	1		0		0	0	0	0	0	0	0	0	0	-1	0	Lowers target's Speed.
+673	Laser Focus	Normal	Status	30	0	1			1		1		0	0	0	0	0	0	0	0	0	0	0	User's next attack is guaranteed to result in a critical hit.
+674	Gear Up	Steel	Status	20	0	1			1		0		1	0	0	0	1	0	0	0	0	0	0	The user engages its gears to raise the Attack and Sp. Attack stats.
+675	Throat Chop	Dark	Physical	15	80	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Prevents use of sound moves for two turns.
+676	Pollen Puff	Bug	Special	15	90	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Deals damage to opponent or restores HP of teammate.
+677	Anchor Shot	Steel	Physical	20	80	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user entangles the target with its anchor chain while attacking. The target becomes unable to flee.
+678	Psychic Terrain	Psychic	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Prevents priority moves from being used for 5 turns.
+679	Lunge	Bug	Physical	15	80	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user makes a lunge at the target, attacking with full force. This also lowers the target's Attack stat.
+680	Fire Lash	Fire	Physical	15	80	1			1		0		0	0	-1	0	0	0	0	0	0	0	0	The user strikes the target with a burning lash. This also lowers the target's Defense stat.
+681	Power Trip	Dark	Physical	10	20	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user boasts its strength and attacks the target. The more the user's stats are raised, the greater the move's power.
+682	Burn Up	Fire	Special	5	130	1			1		0		0	0	0	0	0	0	0	0	0	0	0	To inflict massive damage, the user burns itself out. After using this move, the user will no longer be Fire type.
+683	Speed Swap	Psychic	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	1	0	0	The user raises its Speed.
+684	Smart Strike	Steel	Physical	10	70	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user stabs the target with a sharp horn. This attack never misses.
+685	Purify	Poison	Status	20	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user heals the target's status condition. If the move succeeds, it also restores the user's own HP.
+686	Revelation Dance	Normal	Special	15	90	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Type changes based on Oricorio's form.
+687	Core Enforcer	Dragon	Special	10	100	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Suppresses the target's ability if the target has already moved.
+688	Trop Kick	Grass	Physical	15	70	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Lowers opponent's Attack.
+689	Instruct	Psychic	Status	15	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Allows an ally to use a move instead.
+690	Beak Blast	Flying	Physical	15	100	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user first heats up its beak, and then it attacks the target. Making direct contact with the Pokémon while it's heating up its beak results in a burn.
+691	Clanging Scales	Dragon	Special	5	110	1			1		0		0	0	-1	0	0	0	0	0	0	0	0	Lowers user's Defense.
+692	Dragon Hammer	Dragon	Physical	15	90	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user uses its body like a hammer to attack the target and inflict damage.
+693	Brutal Swing	Dark	Physical	20	60	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user swings its body around violently to inflict damage on everything in its vicinity.
+694	Aurora Veil	Ice	Status	20	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Halves damage from Physical and Special attacks for five turns.
+695	Sinister Arrow Raid	Ghost	Physical	1	180	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Decidueye-exclusive Z-Move.
+696	Malicious Moonsault	Dark	Physical	1	180	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Incineroar-exclusive Z-Move.
+697	Oceanic Operetta	Water	Special	1	195	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Primarina-exclusive Z-Move.
+698	Guardian of Alola	Fairy	Special	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Tapu-exclusive Z-move. Cuts opponent's HP by 75%.
+699	Soul-Stealing 7-Star Strike	Ghost	Physical	1	195	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Marshadow-exclusive Z-Move.
+700	Stoked Sparksurfer	Electric	Special	1	175	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Alolan Raichu-exclusive Electric type Z-Move.
+701	Pulverizing Pancake	Normal	Physical	1	210	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Snorlax-exclusive Normal type Z-Move.
+702	Extreme Evoboost	Normal	Status	1	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Eevee-exclusive Z-Move. Sharply raises all stats.
+703	Genesis Supernova	Psychic	Special	1	185	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Mew-exclusive Z-Move.
+704	Shell Trap	Fire	Special	5	150	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Deals more damage to opponent if hit by a Physical move.
+705	Fleur Cannon	Fairy	Special	5	130	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	Sharply lowers user's Special Attack.
+706	Psychic Fangs	Psychic	Physical	10	85	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user bites the target with its psychic capabilities. This can also destroy Light Screen and Reflect.
+707	Stomping Tantrum	Ground	Physical	10	75	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Driven by frustration, the user attacks the target. If the user's previous move has failed, the power of this move doubles.
+708	Shadow Bone	Ghost	Physical	10	85	1			1		0		0	0	0	-1	0	0	0	0	0	0	0	May lower opponent's Defense.
+709	Accelerock	Rock	Physical	20	40	1			1		0		0	0	0	0	0	0	0	0	0	0	0	User attacks first.
+710	Liquidation	Water	Physical	10	85	1			1		0		0	0	0	-1	0	0	0	0	0	0	0	May lower opponent's Defense.
+711	Prismatic Laser	Psychic	Special	10	160	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user shoots powerful lasers using the power of a prism. The user can't move on the next turn.
+712	Spectral Thief	Ghost	Physical	10	90	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user hides in the target's shadow, steals the target's stat boosts, and then attacks.
+713	Sunsteel Strike	Steel	Physical	5	100	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Ignores the target's ability.
+714	Moongeist Beam	Ghost	Special	5	100	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Ignores the target's ability.
+715	Tearful Look	Normal	Status	20	0	1			1		0		0	-1	0	0	0	-1	0	0	0	0	0	The user gets teary eyed to make the target lose its combative spirit. This lowers the target's Attack and Sp. Atk stats.
+716	Zing Zap	Electric	Physical	10	80	1			1		0		0	0	0	0	0	0	0	0	0	0	1	May cause flinching.
+717	Nature's Madness	Fairy	Special	10	0	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	Halves the foe's HP.
+718	Multi-Attack	Normal	Physical	10	120	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Type matches Memory item held.
+719	10,000,000 Volt Thunderbolt	Electric	Special	1	195	1			1		1		0	0	0	0	0	0	0	0	0	0	0	Pikachu-exclusive Z-Move. Critical hits land more easily.
+720	Mind Blown	Fire	Special	5	150	1			1		0		0	0	0	0	0	0	0	0	0	0	0	User receives recoil damage.
+721	Plasma Fists	Electric	Physical	15	100	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Changes Normal-type moves to Electric-type moves.
+722	Photon Geyser	Psychic	Special	5	100	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Uses Attack or Special Attack stat, whichever is higher.
+723	Light That Burns the Sky	Psychic	Special	1	200	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Ultra Necrozma-exclusive Z-Move. Ignores target's ability; uses highest Attack stat.
+724	Searing Sunraze Smash	Steel	Physical	1	200	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Solgaleo-exclusive Z-Move.
+725	Menacing Moonraze Maelstrom	Ghost	Special	1	200	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Lunala-exclusive Z-Move.
+726	Let's Snuggle Forever	Fairy	Physical	1	190	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Mimikyu-exclusive Z-Move.
+727	Splintered Stormshards	Rock	Physical	1	190	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Lycanroc-exclusive Z-Move.
+728	Clangorous Soulblaze	Dragon	Special	1	185	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Kommo-o exclusive Z-Move.
+729	Zippy Zap	Electric	Physical	10	80	1			1		1		0	0	0	0	0	0	0	0	0	0	0	Critical Hits land more easily. 
+730	Splishy Splash	Water	Special	15	90	1			1		0		0	0	0	0	0	0	0	0	0	0	0	May paralyze opponent.
+731	Floaty Fall	Flying	Physical	15	90	0.95			1		0		0	0	0	0	0	0	0	0	0	0	1	May cause flinching.
+732	Pika Papow	Electric	Special	20	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Power increases when player's bond is stronger.
+733	Bouncy Bubble	Water	Special	20	60	1			1		0		0	0	0	0	0	0	0	0	0	0	0	User recovers half the HP inflicted on opponent.
+734	Buzzy Buzz	Electric	Special	20	60	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Paralyzes the opponent.
+735	Sizzly Slide	Fire	Physical	20	60	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Burns the opponent.
+736	Glitzy Glow	Psychic	Special	15	80	0.95			1		0		0	0	0	0	0	0	0	0	0	0	0	Reduces damage from Special attacks.
+737	Baddy Bad	Dark	Special	15	80	0.95			1		0		0	0	0	0	0	0	0	0	0	0	0	Reduces damage from Physical attacks.
+738	Sappy Seed	Grass	Physical	10	100	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	Drains HP from opponent each turn.
+739	Freezy Frost	Ice	Special	10	100	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	Resets all stat changes.
+740	Sparkly Swirl	Fairy	Special	5	120	0.85			1		0		0	0	0	0	0	0	0	0	0	0	0	Cures all status problems in the party Pokémon.
+741	Veevee Volley	Normal	Physical	20	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Power increases when player's bond is stronger.
+742	Double Iron Bash	Steel	Physical	5	60	1			1,2		0		0	0	0	0	0	0	0	0	0	0	1	May cause flinching. Can hit 1-2 times.
+743	Max Guard	Normal	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Status category Dynamax move. Protects the user.
+744	Dynamax Cannon	Dragon	Special	5	100	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Damage doubles if opponent is Dynamaxed.
+745	Snipe Shot	Water	Special	15	80	1			1		1		0	0	0	0	0	0	0	0	0	0	0	The user ignores moves and abilities that draw in moves. Critical hits land more easily.
+746	Jaw Lock	Dark	Physical	10	80	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Prevents user and opponent from switching out.
+747	Stuff Cheeks	Normal	Status	10	0	1			1		0		0	0	2	0	0	0	0	0	0	0	0	The user eats a Berry, then sharply raises its Defense stat.
+748	No Retreat	Fighting	Status	5	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Raises all stats but user cannot switch out.
+749	Tar Shot	Rock	Status	15	0	1			1		0		0	0	0	0	0	0	0	0	0	-1	0	Lowers the opponent's Speed and makes them weaker to Fire-type moves.
+750	Magic Powder	Psychic	Status	20	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Changes target's type to Psychic.
+751	Dragon Darts	Dragon	Physical	10	50	1			1		0		0	0	0	0	0	0	0	0	0	0	0	User attacks twice.
+752	Teatime	Normal	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Forces all Pokémon on the field to eat their berries.
+754	Bolt Beak	Electric	Physical	10	85	1			1		0		0	0	0	0	0	0	0	0	0	0	0	If the user attacks before the target, the power of this move is doubled.
+755	Fishious Rend	Water	Physical	10	85	1			1		0		0	0	0	0	0	0	0	0	0	0	0	If the user attacks before the target, the power of this move is doubled.
+756	Court Change	Normal	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Swaps the effects on either side of the field.
+757	Max Flare	Fire	Special	10	0	1			1	Fire	0		0	0	0	0	0	0	0	0	0	0	0	The user summons harsh sunlight.
+758	Max Flutterby	Bug	Physical	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Bug type Dynamax move. Lowers the target's Special Attack.
+759	Max Lightning	Electric	Special	10	0	1			1	Electric	0		0	0	0	0	0	0	0	0	0	0	0	The user summons bolts of lightning to surround the field, increasing the effectiveness of Electric type moves.
+760	Max Strike	Normal	Physical	10	0	1			1		0		0	0	0	0	0	0	0	0	0	-1	0	Normal type Dynamax move. Lowers the target's Speed.
+761	Max Knuckle	Fighting	Physical	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Fighting type Dynamax move. Increases the team's Attack.
+762	Max Phantasm	Ghost	Physical	10	0	1			1		0		0	0	0	-1	0	0	0	0	0	0	0	Ghost type Dynamax move. Lowers the target's Defense.
+763	Max Hailstorm	Ice	Special	10	0	1			1	Hail	0		0	0	0	0	0	0	0	0	0	0	0	The user summons hail.
+764	Max Ooze	Poison	Physical	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Poison type Dynamax move. Increases the team's Special Attack.
+765	Max Geyser	Water	Special	10	0	1			1	Water	0		0	0	0	0	0	0	0	0	0	0	0	The user summons heavy rain, increasing the effectiveness of Water type moves.
+766	Max Airstream	Flying	Physical	10	0	1			1		0		0	0	0	0	0	0	0	0	1	0	0	Flying type Dynamax move. Raises the user's Speed.
+767	Max Starfall	Fairy	Special	10	0	1			1	Normal	0		0	0	0	0	0	0	0	0	0	0	0	The user summons dirt, increasing the effectiveness of Normal  type moves.
+768	Max Wyrmwind	Dragon	Physical	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Dragon type Dynamax move. Lowers the target's Attack.
+769	Max Mindstorm	Psychic	Special	10	0	1			1	Physic	0		0	0	0	0	0	0	0	0	0	0	0	The user summons uses its psychic powers to increase the effectiveness of Psychic type moves.
+770	Max Rockfall	Rock	Physical	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Rock type Dynamax move. Summons a sandstorm.
+771	Max Quake	Ground	Physical	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Ground type Dynamax move. Increases the user's Special Defense.
+772	Max Darkness	Dark	Physical	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Dark type Dynamax move. Lowers the target's Special Defense.
+773	Max Overgrowth	Grass	Special	10	0	1			1	Grass	0		0	0	0	0	0	0	0	0	0	0	0	The user summons blades of grass to surround the field, increasing the effectiveness of Grass type moves.
+774	Max Steelspike	Steel	Physical	10	0	1			1		0		0	0	1	0	0	0	0	0	0	0	0	Steel type Dynamax move. Raises the user's Defense.
+775	Clangorous Soul	Dragon	Status	5	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Raises all user's stats but loses HP.
+776	Body Press	Fighting	Physical	10	80	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user shoves its body into its opponent.
+777	Decorate	Fairy	Status	15	0	1			1		0		2	0	0	0	0	0	0	0	0	0	0	Sharply raises target's Attack and Special Attack.
+778	Drum Beating	Grass	Physical	10	80	1			1		0		0	0	0	0	0	0	0	0	0	-1	0	Lowers opponent's Speed.
+779	Snap Trap	Grass	Physical	15	35	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Traps opponent, damaging them for 4-5 turns.
+780	Pyro Ball	Fire	Physical	5	120	0.9	0.1	Burn	1		0		0	0	0	0	0	0	0	0	0	0	0	May burn opponent.
+781	Behemoth Blade	Steel	Physical	5	100	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Damage doubles if target is Dynamaxed.
+782	Behemoth Bash	Steel	Physical	5	100	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Damage doubles if target is Dynamaxed.
+783	Aura Wheel	Electric	Physical	10	110	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Changes type based on Morpeko's Mode.
+784	Breaking Swipe	Dragon	Physical	15	60	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Hits multiple opponents and lowers their attack.
+785	Branch Poke	Grass	Physical	40	40	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks the target by poking it with a sharply pointed branch.
+786	Overdrive	Electric	Special	10	80	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks opposing Pokémon by twanging a guitar or bass guitar, causing a huge echo and strong vibration.
+787	Apple Acid	Grass	Special	10	80	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Lowers target's Special Defense.
+788	Grav Apple	Grass	Physical	10	80	1			1		0		0	0	0	-1	0	0	0	0	0	0	0	Lowers the opponent's Defense stat.
+789	Spirit Break	Fairy	Physical	15	75	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Lowers opponent's Special Attack.
+790	Strange Steam	Fairy	Special	10	90	0.95	0.2	Confusion	1		0		0	0	0	0	0	0	0	0	0	0	0	May confuse opponent.
+791	Life Dew	Water	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	User and teammates recover HP.
+792	Obstruct	Dark	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Protects the user and sharply lowers Defence on contact.
+793	False Surrender	Dark	Physical	10	80	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Ignores Accuracy and Evasiveness.
+794	Meteor Assault	Fighting	Physical	5	150	1			1		0		0	0	0	0	0	0	0	0	0	0	0	User must recharge next turn.
+795	Eternabeam	Dragon	Special	5	160	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	User can't move on the next turn.
+796	Steel Beam	Steel	Special	5	140	0.95			1		0		0	0	0	0	0	0	0	0	0	0	0	User loses 50% of its HP.
+797	Expanding Force	Psychic	Special	10	80	1			1	Physic	0		0	0	0	0	0	0	0	0	0	0	0	The user summons uses its psychic powers to increase the effectiveness of Psychic type moves.
+798	Steel Roller	Steel	Physical	5	130	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user rolls into the opponent.
+799	Scale Shot	Dragon	Physical	20	25	0.9			2,5		0		0	0	-1	0	0	0	0	0	1	0	0	Hits 2-5 times in one turn. Boosts user's Speed but lowers its Defense.
+800	Meteor Beam	Rock	Special	10	120	0.9			1		0		0	0	0	0	1	0	0	0	0	0	0	User gathers space power and boosts its Sp. Atk stat, then attacks the target on the next turn.
+801	Shell Side Arm	Poison	Special	10	90	1	0.3	Poison	1		0		0	0	0	0	0	0	0	0	0	0	0	May poison opponent. Inflicts either Special or Physical damage, whichever is better.
+802	Misty Explosion	Fairy	Special	5	100	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user whips its opponent with grass.
+803	Grassy Glide	Grass	Physical	20	70	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user whips its opponent with grass.
+804	Rising Voltage	Electric	Special	20	70	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user whips its opponent with lightning.
+805	Terrain Pulse	Normal	Special	10	50	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user throws dirt at the opponent.
+806	Skitter Smack	Bug	Physical	10	70	0.9			1		0		0	0	0	0	0	-1	0	0	0	0	0	Lowers opponent's Sp. Attack.
+807	Burning Jealousy	Fire	Special	5	70	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Hits all opponents, and burns any that have had their stats boosted.
+808	Lash Out	Dark	Physical	5	75	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Double power if stats were lowered during the turn.
+809	Poltergeist	Ghost	Physical	5	110	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	Fails if the target doesn’t have an item.
+810	Corrosive Gas	Poison	Status	40	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Removes opponent's items.
+811	Coaching	Fighting	Status	10	0	1			1		0		1	0	1	0	0	0	0	0	0	0	0	The user boosts its Attack and Defense.
+812	Flip Turn	Water	Physical	20	60	1			1		0		0	0	0	0	0	0	0	0	0	0	0	After making its attack, the user rushes back to switch places with a party Pokémon in waiting.
+813	Triple Axel	Ice	Physical	10	20	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	Attacks thrice with more power each time.
+814	Dual Wingbeat	Flying	Physical	10	40	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	The user slams the target with its wings. The target is hit twice in a row.
+815	Scorching Sands	Ground	Special	10	70	1	0.3	Burn	1		0		0	0	0	0	0	0	0	0	0	0	0	May burn the target.
+816	Jungle Healing	Grass	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Restores team's HP and cures status conditions.
+817	Wicked Blow	Dark	Physical	5	80	1			1		1		0	0	0	0	0	0	0	0	0	0	0	Critical Hits land more easily. 
+818	Surging Strikes	Water	Physical	5	25	1			1		1		0	0	0	0	0	0	0	0	0	0	0	Critical Hits land more easily. 
+819	Thunder Cage	Electric	Special	15	80	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	Deals damage and traps opponent, damaging them for 4-5 turns.
+820	Dragon Energy	Dragon	Special	5	150	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The higher the user's HP, the higher the power.
+821	Freezing Glare	Psychic	Special	10	90	1	0.1	Freeze	1		0		0	0	0	0	0	0	0	0	0	0	0	May freeze opponent.
+822	Fiery Wrath	Dark	Special	10	90	1			1		0		0	0	0	0	0	0	0	0	0	0	1	May cause flinching.
+823	Thunderous Kick	Fighting	Physical	10	90	1			1		0		0	0	0	-1	0	0	0	0	0	0	0	Lowers opponent's Defense.
+824	Glacial Lance	Ice	Physical	5	130	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks by hurling a blizzard-cloaked icicle lance at opposing Pokémon.
+825	Astral Barrage	Ghost	Special	5	120	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks by sending a frightful amount of small ghosts at opposing Pokémon.
+826	Eerie Spell	Psychic	Special	5	80	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Deals damage and reduces opponent's PP.
+827	Dire Claw	Poison	Physical	15	60	1	0.1	Poison,Confusion,Sleep	1		1		0	0	0	0	0	0	0	0	0	0	0	The user lashes out at the target with ruinous claws, aiming to land a critical hit. This may also leave the target poisoned, paralyzed, or drowsy.
+828	Psyshield Bash	Psychic	Physical	10	70	0.9			1		0		0	0	0	0	0	0	0	0	0	0	0	Cloaking itself in psychic energy, the user slams into the target. This may also raise the user’s defensive stats.
+829	Power Shift	Normal	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user swaps its offensive and defensive stats.
+830	Stone Axe	Rock	Physical	15	65	0.9			1		1		0	0	0	0	0	0	0	0	0	0	0	The user swings its stone axes at the target, aiming to land a critical hit. Stone splinters left behind by this attack continue to damage the target for several turns.
+831	Springtide Storm	Fairy	Special	5	95	0.8			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks by wrapping the target in fierce winds brimming with love and hate. This move’s additional effects depend on the user’s form.
+832	Mystical Power	Psychic	Special	10	70	0.9			1		0		1	0	1	0	0	0	0	0	0	0	0	The user strengthens itself with a mysterious power. Its Attack and Defense are raised.
+833	Raging Fury	Fire	Physical	10	90	0.85			1		0		0	0	0	0	0	0	0	0	0	0	0	The user rampages and spews vicious flames to inflict damage on the target, then becomes fixated on using this move.
+834	Wave Crash	Water	Physical	10	75	1			1		0		0	0	0	0	0	0	0	0	1	0	0	The user shrouds itself in water and slams into the target with its whole body to inflict damage. This also damages the user and raises the user’s action speed.
+835	Chloroblast	Grass	Special	5	120	0.95			1		0		0	0	0	0	0	0	0	0	-1	0	0	Chloroblast inflicts damage, and the user takes damage equal to half of its maximum HP rounded up. It also lowers the user's action speed.
+836	Mountain Gale	Ice	Physical	5	100	0.85			1		0		0	0	0	0	0	0	0	0	0	0	0	The user hurls giant chunks of ice at the target to inflict damage.
+837	Victory Dance	Fighting	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user performs a dance to usher in victory. This raises the user’s offensive and defensive stats and increases the damage dealt by the user’s moves by 50 percent.
+838	Headlong Rush	Ground	Physical	5	100	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user smashes into the target in a full-body tackle. This also lowers the user’s defensive stats.
+839	Barb Barrage	Poison	Physical	15	60	1			1		0		0	0	0	0	0	0	0	0	0	0	0	Barb Barrage deals damage and has a 30% chance to poison the target. Its power is doubled if the target is affected by a non-volatile status condition.
+840	Esper Wing	Psychic	Special	10	75	0.9			1		1		0	0	0	0	0	0	0	0	1	0	0	The user slashes the target with aura-enriched wings. This also raises the user's action speed. This move has a heightened chance of landing a critical hit.
+841	Bitter Malice	Ghost	Special	15	60	1	0.1	Freeze	1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks its target with spine-chilling resentment. This may also leave the target with frostbite.
+842	Shelter	Steel	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user makes its skin as hard as an iron shield, raising its defensive stats. Incoming moves also become more likely to miss.
+843	Triple Arrows	Fighting	Physical	15	50	1			1		1		0	0	-1	0	0	0	0	0	0	0	0	The user delivers an axe kick, then fires three arrows. This raises the chance of its future attacks landing critical hits and also lowers the target's defensive stats.
+844	Infernal Parade	Ghost	Special	15	60	1	0.1	Burn	1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks with myriad fireballs. This may also leave the target with a burn. This move's power is doubled if the target has a status condition.
+845	Ceaseless Edge	Dark	Physical	15	65	0.9			1		1		0	0	0	0	0	0	0	0	0	0	0	The user slashes its shell blade at the target, aiming to land a critical hit. Shell splinters left behind by this attack will continue to damage the target for several turns.
+846	Bleakwind Storm	Flying	Special	5	95	0.8	0.1	Freeze	1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks with savagely cold winds that cause both body and spirit to tremble. This may also leave the target with frostbite.
+847	Wildbolt Storm	Electric	Special	5	95	0.8	0.3	Paralysis	1		0		0	0	0	0	0	0	0	0	0	0	0	The user summons a thunderous tempest and savagely attacks with lightning and wind. This may also leave the target with paralysis.
+848	Sandsear Storm	Ground	Special	5	95	0.8			1		0		0	0	0	0	0	0	0	0	0	0	0	The user attacks by wrapping the target in fierce winds and searingly hot sand. This also leaves the target with a burn.
+849	Lunar Blessing	Psychic	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user heals its own status conditions and restores its HP. Incoming moves also become more likely to miss.
+850	Take Heart	Psychic	Status	10	0	1			1		0		0	0	0	0	0	0	0	0	0	0	0	The user lifts its spirits, healing its own status conditions and raising its offensive and defensive stats.

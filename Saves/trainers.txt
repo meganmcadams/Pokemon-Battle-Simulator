@@ -1,4 +1,8 @@
-ID	Player	Name	Pokedex Count	Pokedex	Pokemon Count	Pokemon
-0	Meg	Mango	1	74	1	74
-1	Ava	Peach	0		0	
-2	Quentin	Brick	0		0	
+ID	Player	Name	Pokedex Count	Pokedex	Pokemon Count	Pokemon	Money	Items
+0	Meg	Mango	1	74	1	74	0	
+1	Ava	Peach	1		1		0	
+2	Quentin	Brick	1		1		0	
+3	Ryan	Lily	1		1		0	
+4	Estelle	E	1		1		0	
+5	Anthony	Sage	1		1		0	
+6	Scott	Durian	1		1		0	
