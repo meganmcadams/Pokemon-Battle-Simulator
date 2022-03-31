@@ -1,3 +1,5 @@
+from re import X
+
 def header(text):
     text_size = len(text)
     print("") # print newline
@@ -44,11 +46,38 @@ def option(num, text):
     print(text)
 
 def print_list(items):
-    if len(items) < 1: # if there aren't any parties to print
+    if len(items) < 1: # if there aren't any items to print
         print("ERROR: There are",len(items),"items.")
         return
 
-    for item in items: # for every item
-        for key in item: # for col in item
-            print(key,": ",item[key],sep="") # print key's contents
+    for item_key in items.keys(): # for every item
+        for key in items[item_key]: # for col in item
+            print(key,": ",items[item_key][key],sep="") # print key's contents
         print("") # print newline
+
+def get_next_id(items):
+    keylist = items.keys()
+    keylist = list(keylist)
+    keylist.sort()
+    
+    if keylist[-1] == len(items) - 1: # if last key is equal to length of items
+        return keylist[-1] + 1
+
+    prev = -1
+    for key in keylist:
+        if key != prev + 1:
+            return prev + 1
+
+    return len(items)
+
+
+def correct_type(item): # fix the type, if possible
+    try:
+        item = int(item)
+    except:
+        try:
+            item = float(item)
+        except:
+            item = str(item)
+
+    return item

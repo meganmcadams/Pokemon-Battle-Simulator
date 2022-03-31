@@ -1,4 +1,5 @@
 import re
+from Headers.tools import *
 
 def load_move_levels(pokemon_num):
 
@@ -12,7 +13,7 @@ def load_move_levels(pokemon_num):
         print("ERROR: Could not open",filename)
         exit()
 
-    move_levels = ['blank']
+    move_levels = {}
     row = {}
 
     headersDone = False
@@ -20,6 +21,11 @@ def load_move_levels(pokemon_num):
 
     for line in openfile:
         line = line.split('\t')
+        i = 0
+        for l in line: # fix the items in the line
+            line[i] = str(line[i]).strip()
+            line[i] = correct_type(line[i]) # fix type to int, float, or string
+            i += 1
 
         if not headersDone: # if haven't stored headers yet
             headersDone = True
@@ -32,19 +38,23 @@ def load_move_levels(pokemon_num):
                 exit()
 
         else: # if are past the headers
-            if int(line[0]) >= len(move_levels): # if we need to make a new row
-                move_levels.append({}) # make new dict row
+            pid = line[0]
+            mid = line[1]
+            level = line[2]
+
+            if int(pid) not in move_levels.keys(): # if we need to make a new row
+                move_levels[pid] = {} # make new dict row
 
             try:
-                move_levels[int(line[0])][int(line[2])].append(int(line[1])) # try to add move to pid's level list
+                move_levels[pid][level].append(mid) # try to add move to pid's level list
             except:
-                move_levels[int(line[0])][int(line[2])] = [] # declare list
-                move_levels[int(line[0])][int(line[2])].append(int(line[1])) # now try adding
+                move_levels[pid][level] = [] # declare list
+                move_levels[pid][level].append(mid) # now try adding
 
     openfile.close() # close file
-    print("Loading complete. Loaded",(len(move_levels) - 1),"move levels.\n")
+    print("Loading complete. Loaded",len(move_levels),"move levels.\n")
 
-    if pokemon_num != len(move_levels) - 1: # make sure every pokemon is stored in move_levels
+    if pokemon_num != len(move_levels): # make sure every pokemon is stored in move_levels
         print("ERROR: Number of move_levels does not equal number of Pokemon.")
         exit()
 

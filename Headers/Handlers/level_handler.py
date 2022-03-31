@@ -4,45 +4,56 @@ def level_check(pokemon, p, to_next_level, move_levels, moves):
     # pokemon = the pokemon to level up
     # p = stored info about pokemon
 
-    pokemon['Exp'] = int(pokemon['Exp'])
-    pokemon['Level'] = int(pokemon['Level'])
-    p['Exp Growth'] = int(p['Exp Growth'])
+    #print(p)
+    #print(p[0])
+    try:
+        pokemon = pokemon[p['Pid']] # set pokemon to actual pokemon's info, not giant list
+    except:
+        pass
 
-    if int(pokemon['Exp']) >= int(to_next_level[int(pokemon['Level']) + 1][int(p['Exp Growth'])]): # if exp is good to level up
+    if int(p['Exp']) >= int(to_next_level[int(p['Level']) + 1][pokemon['Exp Growth']]): # if exp is good to level up
         level_up(pokemon, p, to_next_level, move_levels, moves, True, True) # level up the pokemon
-        level_check(pokemon, p, move_levels, to_next_level) # recursive call in case double level up
+        level_check(pokemon, p, to_next_level, move_levels, moves) # recursive call in case double level up
 
 def level_up(pokemon, p, to_next_level, move_levels, moves, announce, sub_exp):
     # pokemon = the pokemon to level up
     # p = stored info about pokemon
 
-    if sub_exp:
-        pokemon['Exp'] -= to_next_level[pokemon['Level'] + 1][p['Exp Growth']] # subtract needed exp from pokemon exp
-    
-    old = pokemon.copy()
+    try: # ensure that pokemon is the actual pokemon itself, not the full list of all pokemon
+        name = pokemon['Name']
+    except:
+        pokemon = pokemon[p['Pid']]
 
-    pokemon['Level'] += 1 # increase level
-    pokemon['HP'] = int( (int(pokemon['HP IV']) + 2 * int(p['HP']) + (int(pokemon['HP EV'])/4) ) * int(pokemon['Level'])/100 ) + 10 + int(pokemon['Level'])
+    if sub_exp:
+        p['Exp'] -= to_next_level[p['Level'] + 1][pokemon['Exp Growth']] # subtract needed exp from pokemon exp
+    
+    old = p.copy()
+
+    p['Level'] += 1 # increase level
+    p['HP'] = int( (int(p['HP IV']) + 2 * int(p['HP']) + (int(p['HP EV'])/4) ) * int(p['Level'])/100 ) + 10 + int(p['Level'])
     # ( (IV + 2 * BaseStat + (EV/4) ) * Level/100 ) + 10 + Level
 
     # (((IV + 2 * BaseStat + (EV/4) ) * Level/100 ) + 5) * Nature Value
-    pokemon['Attack'] = int((int(p['Attack']) * 2 + int(pokemon['Attack IV']) + int(pokemon['Attack EV'])/4) * int(pokemon['Level']) / 100) + 10 + int(pokemon['Level'])
-    pokemon['Defense'] = int((int(p['Defense']) * 2 + int(pokemon['Defense IV']) + int(pokemon['Defense EV'])/4) * int(pokemon['Level']) / 100) + 10 + int(pokemon['Level'])
-    pokemon['Sp Attack'] = int((int(p['Sp Attack']) * 2 + int(pokemon['Sp Attack IV']) + int(pokemon['Sp Attack EV'])/4) * int(pokemon['Level']) / 100) + 10 + int(pokemon['Level'])
-    pokemon['Sp Defense'] = int((int(p['Sp Defense']) * 2 + int(pokemon['Sp Defense IV']) + int(pokemon['Sp Defense EV'])/4) * int(pokemon['Level']) / 100) + 10 + int(pokemon['Level'])
-    pokemon['Speed'] = int((int(p['Speed']) * 2 + int(pokemon['Speed IV']) + int(pokemon['Speed EV'])/4) * int(pokemon['Level']) / 100) + 10 + int(pokemon['Level'])
-    # stat guide: https://gamefaqs.gamespot.com/boards/989552-pokemon-black-version/58673641
+    p['HP'] = int(0.001 * (2 * pokemon['HP'] + p['HP IV'] + (0.25 * p['HP EV']) * p['Level']) + p['Level'] + 10)
+
+    stat_list = ["Attack","Defense","Sp Attack","Sp Defense","Speed"] # make list of stats
+    for s in stat_list: # set each stat
+        iv = str(s) + " IV"
+        ev = str(s) + " EV"
+
+        p[s] = int(0.01 * (2 * pokemon[s] + p[iv] + (0.25 * p[ev])) * p['Level'] + 5)
+    # stat info: https://pokemon.fandom.com/wiki/Statistics
 
     if announce is True:
 
-        print(pokemon['Name'],"leveled up to level",pokemon['Level']) # notify user
-        print("Level:",old['Level'],"-->",pokemon['Level'])
-        print("HP:",old['HP'],"-->",pokemon['HP'])
-        print("Attack:",old['Attack'],"-->",pokemon['Attack'])
-        print("Defense:",old['Defense'],"-->",pokemon['Defense'])
-        print("Sp Attack:",old['Sp Attack'],"-->",pokemon['Sp Attack'])
-        print("Sp Defense:",old['Sp Defense'],"-->",pokemon['Sp Defense'])
-        print("Speed:",old['Speed'],"-->",pokemon['Speed'],"\n")
+        print(p['Name'],"leveled up to level",p['Level']) # notify user
+        print("Level:",old['Level'],"-->",p['Level'])
+        print("HP:",old['HP'],"-->",p['HP'])
+        print("Attack:",old['Attack'],"-->",p['Attack'])
+        print("Defense:",old['Defense'],"-->",p['Defense'])
+        print("Sp Attack:",old['Sp Attack'],"-->",p['Sp Attack'])
+        print("Sp Defense:",old['Sp Defense'],"-->",p['Sp Defense'])
+        print("Speed:",old['Speed'],"-->",p['Speed'],"\n")
 
     learn_moves(pokemon, p, to_next_level, moves) # learn moves if any
 

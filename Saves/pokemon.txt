@@ -1,20 +1,24 @@
-ID	Pid	Tid	Tname	Gender	Name	Level	Moves	Battles	Status	Curr HP	HP	Attack	Defense	Sp Attack	Sp Defense	Speed	HP IV	Attack IV	Defense IV	Sp Attack IV	Sp Defense IV	Speed IV	HP EV	Attack EV	Defense EV	Sp Attack EV	Sp Defense EV	Speed EV	Exp	Curr Attack	Curr Defense	Curr Sp Attack	Curr Sp Defense	Curr Speed	Flinched
-0	74	0	Mango	Male	Gerry	1	7,8,9,33	0	Burn	11	11	13	13	11	11	11	14	10	18	18	31	1	0	0	0	0	0	0	0	13	13	11	11	11	0
-1	74	0	Mango	Male	Kerry	1	7,33	0	Confusion	11	11	13	13	11	11	11	14	10	18	18	31	1	0	0	0	0	0	0	0	13	13	11	11	11	0
-2	74	0	Mango	Female	Terry	1	7,33	0		11	11	13	13	11	11	11	14	10	18	18	31	1	0	0	0	0	0	0	0	13	13	11	11	11	0
-3	74	0	Mango	Female	Merry	1	7,33	0		11	11	13	13	11	11	11	14	10	18	18	31	1	0	0	0	0	0	0	0	13	13	11	11	11	0
-4	7			Male		8	110,323,240,213	0		25	25	24	28	27	30	25	6	6	6	20	28	13	0	0	0	0	0	0	0	24	28	27	30	25	0
-5	468			Female		58	417,314,365,113	0		184	184	141	186	218	207	163	30	27	14	19	10	5	0	0	0	0	0	0	0	141	186	218	207	163	0
-6	263			Male		69	447,237,102,207	0		150	150	140	156	128	141	170	27	29	31	12	8	13	0	0	0	0	0	0	0	140	156	128	141	170	0
-7	802	0	Mango	Male	Hand Dude	1	123,466	0		11	11	11	11	13	11	12	21	5	19	10	21	25	0	0	0	0	0	0	58	11	11	13	11	12	0
-8	805	2	Brick	Male		1	314,240	0		0	12	13	13	13	13	12	12	19	14	15	18	22	0	0	0	0	0	0	58	13	13	13	13	12	0
-9	808	6	Durian	Male		1	219,488	0		12	12	12	11	12	12	12	23	20	7	17	19	7	0	0	0	0	0	0	58	12	11	12	12	12	0
-10	811	5	Sage	Female	Shaggy	1	87,91	0		7	12	12	12	12	12	11	11	9	30	29	30	18	0	0	0	0	0	0	58	12	12	12	12	11	0
-11	814	3	Lily	Male		1	241,38	0		13	13	12	13	13	13	12	28	8	16	16	27	12	0	0	0	0	0	0	58	12	13	13	13	12	0
-12	817	1	Peach	Female	Asteria	1	252,812	0		12	12	11	12	12	12	12	31	3	24	9	18	28	0	0	0	0	0	0	58	11	12	12	12	12	0
-13	704			Female	Anthony's Stolen Pokemon 1	1	200,482	0		12	12	12	11	12	12	11	24	29	1	28	12	18	0	0	0	0	0	0	0	12	11	12	12	11	0
-14	124			Male	Anthony's Stolen Pokemon 2	1	343,99	0		12	12	12	11	13	13	12	3	8	3	26	29	1	0	0	0	0	0	0	30	12	11	13	13	12	0
-15	23					1	693,72	0		13	13	14	14	14	14	14	1	16	28	23	11	1	0	0	0	0	0	0	0	14	14	14	14	14	0
-16	570			Female	Found in Windmill	3	326,156,182	0		13	15	17	15	18	15	17	15	6	8	8	2	27	0	0	0	0	0	0	0	17	15	18	15	17	0
-17	309	0	Mango	Male	Hamburger	2	216,521	0		2	13	14	14	15	13	15	6	13	30	26	14	20	0	0	0	0	0	0	0	14	14	15	13	15	0
-18	276		0	Male	Found in Bush	3	119,497,241	0		16	16	16	15	14	15	18	28	2	13	6	9	1	0	0	0	0	0	0	0	16	15	14	15	18	0
+ID	Pid	Pname	Tid	Tname	Gender	Name	Level	Moves	Battles	Status	Curr HP	HP	Exp	Attack	Defense	Sp Attack	Sp Defense	Speed	HP IV	Attack IV	Defense IV	Sp Attack IV	Sp Defense IV	Speed IV	HP EV	Attack EV	Defense EV	Sp Attack EV	Sp Defense EV	Speed EV	Curr Attack	Curr Defense	Curr Sp Attack	Curr Sp Defense	Curr Speed	Flinched
+0	74	Geodude	0	Mango	Male	Gerry	1	7,8,9,33	0	Burn	11	11	0	13	13	11	11	11	14	10	18	18	31	1	0	0	0	0	0	0	13	13	11	11	11	0
+1	74	Geodude	0	Mango	Male	Kerry	1	7,33	0	Confusion	11	11	0	13	13	11	11	11	14	10	18	18	31	1	0	0	0	0	0	0	13	13	11	11	11	0
+2	74	Geodude	0	Mango	Female	Terry	1	7,33	0		11	11	0	13	13	11	11	11	14	10	18	18	31	1	0	0	0	0	0	0	13	13	11	11	11	0
+3	74	Geodude	0	Mango	Female	Merry	1	7,33	0		11	11	0	13	13	11	11	11	14	10	18	18	31	1	0	0	0	0	0	0	13	13	11	11	11	0
+4	7	Squirtle			Male		8	110,323,240,213	0		25	25	0	24	28	27	30	25	6	6	6	20	28	13	0	0	0	0	0	0	24	28	27	30	25	0
+5	468	Togekiss			Female		58	417,314,365,113	0		184	184	0	141	186	218	207	163	30	27	14	19	10	5	0	0	0	0	0	0	141	186	218	207	163	0
+6	263	Zigzagoon			Male		69	447,237,102,207	0		150	150	0	140	156	128	141	170	27	29	31	12	8	13	0	0	0	0	0	0	140	156	128	141	170	0
+7	802	Yanari	0	Mango	Male	Hand Dude	2	123,466	0		12	12	10	12	12	12	12	12	21	5	19	10	21	25	0	0	0	0	0	0	12	12	12	12	12	0
+8	805	Maora	2	Brick	Male		2	314,240	0		0	12	21	12	12	12	12	12	12	19	14	15	18	22	0	0	0	0	0	0	13	13	13	13	12	0
+9	808	Nakarligh	6	Durian	Male		2	219,488	0		12	12	35	12	12	12	12	12	23	20	7	17	19	7	0	0	0	0	0	0	12	12	12	12	12	0
+10	811	Glubwee	5	Sage	Female	Shaggy	3	87,91	0		7	14	2	13	14	14	14	14	11	9	30	29	30	18	0	0	0	0	0	0	12	12	12	12	11	0
+11	814	Lymird	3	Lily	Male		2	241,38	0		13	13	35	12	12	12	13	12	28	8	16	16	27	12	0	0	0	0	0	0	12	13	13	13	12	0
+12	817	Crysli	1	Peach	Female	Asteria	2	252,812	0		13	13	10	12	12	12	12	13	31	3	24	9	18	28	0	0	0	0	0	0	12	12	12	12	13	0
+13	704	Goomy			Female	Anthony's Stolen Pokemon 1	1	200,482	0		12	12	0	12	11	12	12	11	24	29	1	28	12	18	0	0	0	0	0	0	12	11	12	12	11	0
+14	124	Jynx			Male	Anthony's Stolen Pokemon 2	2	343,99	0		12	12	11	12	12	13	13	12	3	8	3	26	29	1	0	0	0	0	0	0	12	11	13	13	12	0
+15	23	Ekans					1	693,72	0		13	13	0	14	14	14	14	14	1	16	28	23	11	1	0	0	0	0	0	0	14	14	14	14	14	0
+16	570	Zorua			Female	Found in Windmill	3	326,156,182	0		13	15	0	17	15	18	15	17	15	6	8	8	2	27	0	0	0	0	0	0	17	15	18	15	17	0
+17	309	Electrike	0	Mango	Male	Hamburger	2	216,521	0		2	13	0	14	14	15	13	15	6	13	30	26	14	20	0	0	0	0	0	0	14	14	15	13	15	0
+18	758	Salazzle		0	Male		12	810,,,	0		22	22	0	23	22	32	22	34	13	24	28	7	26	13	0	0	0	0	0	0	23	22	32	22	34	0
+19	262	Mightyena		0	Male		69	675,,,	0		79	79	0	131	110	89	101	117	8	4	13	2	20	23	0	0	0	0	0	0	131	110	89	101	117	0
+20	661	Fletchling		0	Female		52	814,,,	0		62	62	0	60	56	47	48	83	3	7	13	1	7	27	0	0	0	0	0	0	60	56	47	48	83	0
+21	7	Squirtle		0	Female		57	812,,,	0		67	67	0	75	91	69	89	62	14	27	21	14	20	14	0	0	0	0	0	0	75	91	69	89	62	0
+22	560	Scrafty		0	Female		82	249,173,237,510	0		92	92	0	173	203	88	199	112	10	26	12	12	7	15	0	0	0	0	0	0	173	203	88	199	112	0

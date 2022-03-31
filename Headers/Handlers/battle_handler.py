@@ -15,33 +15,40 @@ def get_move(pokemon, moves):
             pokemon_moves[i] = moves[int(pokemon_moves[i])]
         except:
             print("ERROR: Could not find",pokemon_moves[i],"in moves")
-            return -1
+            return -3 # error
 
         i += 1
 
-    options = []
+    options = [-2, -1]
+    option(-2, "Pass")
+    option(-1, "Throw Pokeball")
+
     i = 0
     for m in pokemon_moves: # print move options
-        option(int(i), str(str(m['Name']) + " (" + str(m['Description']) + ")"))
+        option(i, str(str(m['Name']) + " (" + str(m['Description']) + ")"))
         options.append(i)
         i += 1
+
     inp = input("--> ")
 
     try: # try turning to integer
         inp = int(inp)
     except:
         print("ERROR:",inp,"was not an option")
-        return -1
+        return -3 # error
 
     if inp not in options:
         print("ERROR:",inp,"was not an option")
-        return -1
+        return -3 # error
 
-    return pokemon_moves[inp]
+    if inp == -1 or inp == -2: # if pass or throw pokeball
+        return inp
+    return pokemon_moves[inp] # else return move
 
 def accuracy_check(curr_pokemon, move): # determine if a move hits or misses
     if int(curr_pokemon['Flinched']) == 1: # flinch check
         curr_pokemon['Flinched'] = 0
+        print(curr_pokemon['Name'],"flinched!")
         return False
 
     if curr_pokemon['Status'] == "Sleep" or curr_pokemon['Status'] == "Freeze":

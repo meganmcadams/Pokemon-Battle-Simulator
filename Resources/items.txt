@@ -1,0 +1,5 @@
+ID	Name	Type	Action	Stat	Description	Buy	Sell	Discoverable
+0	Master Ball	Pokeballs	Ball	0	The best Ball with the ultimate level of performance. It will catch any wild Pokémon without fail.	99999	20000	1
+1	Ultra Ball	Pokeballs	Ball	150	An ultra-performance Ball that provides a higher Pokémon catch rate than a Great Ball.	900	180	1
+2	Great Ball	Pokeballs	Ball	200	A good, high-performance Ball that provides a higher Pokémon catch rate than a standard Poké Ball.	400	80	1
+3	Poké Ball	Pokeballs	Ball	255	A device for catching wild Pokémon. It is thrown like a ball at the target. It is designed as a capsule system.	100	20	1

@@ -5,7 +5,7 @@ from Headers.Handlers.status_handler import *
 from Headers.Handlers.damage_handler import *
 from Headers.Handlers.level_handler import *
 
-def battle_simulator(trainers, pokemon, stored_pokemon, parties, moves, to_next_level, move_levels):
+def battle_simulator(trainers, items, pokemon, stored_pokemon, parties, moves, to_next_level, move_levels):
     header("Battle Simulator")
 
     if len(parties) < 2: # if there are less than 2 parties
@@ -51,19 +51,26 @@ def battle_simulator(trainers, pokemon, stored_pokemon, parties, moves, to_next_
                 subheader(current_party['Name'] + " | " + party_order_names[curr_pokemon['ID']] + " | " + str("Cycle " + str(cycle) + ", Turn " + str(turn)))
 
                 curr_move = -1
-                while curr_move == -1: # get move
+                while curr_move == -3: # get move
                     curr_move = get_move(curr_pokemon, moves)
 
-                target = -1
-                while target == -1: # get target
-                    target = get_target(pokemon, stored_pokemon, current_party, opposing_party)
+                if curr_move != -2: # if not pass
 
-                if accuracy_check(curr_pokemon, curr_move) is True: # determine if it hits
-                    stat_change_check(curr_move, curr_pokemon, target) # apply stat changes
-                    status_check(pokemon, curr_move, target) # apply status effect
-                    weather_check(curr_move, weather) # update weather
+                    target = -1
+                    while target == -1: # get target
+                        target = get_target(pokemon, stored_pokemon, current_party, opposing_party)
 
-                damage(pokemon, curr_move, curr_pokemon, target, weather) # dish out damage
+                    if curr_move == -1: # throw pokeball
+                        throw_pokeball(pokemon, items, trainers, current_party, opposing_party, target, curr_pokemon['Tid'])
+
+                    if accuracy_check(curr_pokemon, curr_move) is True: # determine if it hits
+                        stat_change_check(curr_move, curr_pokemon, target) # apply stat changes
+                        status_check(pokemon, curr_move, target) # apply status effect
+                        weather_check(curr_move, weather) # update weather
+
+                    damage(pokemon, curr_move, curr_pokemon, target, weather) # dish out damage
+
+                # end of if not pass
 
                 # do a health check if the pokemon is dead or not if it did hit
             curr_health_check = health_check(party_order, party1_pokemon, party2_pokemon, party_order_names, fainted_pokemon)

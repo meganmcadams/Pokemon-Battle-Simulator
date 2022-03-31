@@ -58,17 +58,14 @@ def create_party(stored_pokemon, parties):
     print("Party",len(parties) - 1,"successfully created")
 
 def delete_party(parties):
-    party_id = input("ID (of party to delete): ")
-    print("") # print newline
-
-    try: # turn party_id into an integer
-        party_id = int(party_id)
-    except:
-        party_id = -1
-
-    try:
-        del parties[party_id]
-    except:
-        print("ERROR: Could not remove party. Party may not exist.")
-        return
-    print("Party",party_id,"was successfully deleted.")
+    print_list(parties)
+    print("Which party would you like to delete (-1 to cancel)?")
+    to_delete = correct_type(input("--> "))
+    if to_delete == -1:
+        print("Action cancelled.")
+    else:
+        try:
+            del parties[to_delete]
+            print(to_delete,"was successfully deleted")
+        except:
+            print("ERROR: Could not delete",to_delete)

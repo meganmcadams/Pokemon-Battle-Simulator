@@ -22,13 +22,14 @@ header('Pokemon Battle Simulator')
 pokemon = load("pokemon", "Resources")
 moves = load("moves", "Resources")
 parties = load("parties", "Saves")
-move_levels = load("move_levels","Resources")
+move_levels = load_move_levels(len(pokemon)) # special load func for move_levels (move_levels[pid][level])
 to_next_level = load("to_next_level","Resources")
 stored_pokemon = load("pokemon","Saves")
 trainers = load("trainers","Saves")
+items = load("items","Resources")
 
-#for p in stored_pokemon:
-#level_check(pokemon, p, to_next_level, move_levels, moves)
+for key in stored_pokemon: # check for level ups
+    level_check(pokemon, stored_pokemon[key], to_next_level, move_levels, moves)
 
 while True:
 
@@ -64,7 +65,7 @@ while True:
         save(trainers, "trainers")
 
     elif inp == 4: # Battle Simulator
-        battle_simulator(trainers, pokemon, stored_pokemon, parties, moves, to_next_level, move_levels)
+        battle_simulator(trainers, items, pokemon, stored_pokemon, parties, moves, to_next_level, move_levels)
         save(stored_pokemon, "pokemon")
         save(trainers, "trainers")
 

@@ -14,6 +14,7 @@ def create(pokemon, to_next_level, stored_pokemon, level, name, nickname, move_l
         print("ERROR: Could not find",name,"in pokemon.")
         exit()
     copy['Pid'] = pid # pid
+    copy['Pname'] = pokemon[pid]['Name']
     copy['Tid'] = "" # tid
     copy['Name'] = nickname # name
     copy['Status'] = ""
@@ -37,9 +38,17 @@ def create(pokemon, to_next_level, stored_pokemon, level, name, nickname, move_l
 
     i = 0
     while i < num: # get random moves from list of options
-        res += str(random.choice(moves))
-        if i < num - 1:
-            res += ","
+
+        res_move = -1
+        try: # try to grab random from list
+            res_move = str(random.choice(list(moves)))
+        except: # if only 1 in list
+            res_move = str(moves)
+
+        if res_move not in res: # if haven't stored it already
+            res += res_move
+            if i < num - 1:
+                res += ","
         i += 1
 
     copy['Moves'] = res # store result
@@ -52,7 +61,7 @@ def create(pokemon, to_next_level, stored_pokemon, level, name, nickname, move_l
     
     i = 0
     while i < level:
-        level_up(copy, pokemon[pid], to_next_level, move_levels, moves, False, False)
+        level_up(pokemon, copy, to_next_level, move_levels, moves, False, False)
         i += 1
 
     copy['Curr HP'] = copy['HP']
@@ -62,15 +71,19 @@ def create(pokemon, to_next_level, stored_pokemon, level, name, nickname, move_l
     copy['Curr Sp Defense'] = copy['Sp Defense']
     copy['Curr Speed'] = copy['Speed']
 
-    stored_pokemon.append(copy)
+    stored_id = get_next_id(stored_pokemon)
+
+    stored_pokemon[stored_id] = copy
+
+    print("New pokemon, ",copy['Pname'],", successfully created | ID: ",stored_id,sep="") # print success message
+    return
 
 def get_pid(pokemon, name):
-
     i = 0
-    for p in pokemon:
+    for key in pokemon.keys():
         try:
-            if p['Name'] == name:
-                return i
+            if pokemon[key]['Name'] == name:
+                return int(key)
         except:
             pass
         i += 1
@@ -132,8 +145,8 @@ def get_level(): # get level that user wants to make pokemon at
 
 def get_pokemon_name(pokemon):
     subheader("Pokemon Name")
-    option(0, "Choose random Pokemon by biome")
-    option(1, "Choose random Pokemon")
+    option(0, "Choose random Pokemon")
+    option(1, "Choose random Pokemon by biome")
     option(2, "Specify Pokemon")
     option(3, "Cancel")
     inp = input("--> ")
@@ -145,11 +158,11 @@ def get_pokemon_name(pokemon):
         return -1
 
     if inp == 0: # By biome
-        print("Not configured yet")
-        return -1
+        return pokemon[random.randrange(1, len(pokemon) - 1)]['Name']
 
     elif inp == 1: # Random Pokemon
-        return pokemon[random.randrange(1, len(pokemon) - 1)]['Name']
+        print("Not configured yet")
+        return -1
 
     elif inp == 2: # Specified name
         name = input("Name of Pokemon: ")

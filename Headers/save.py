@@ -1,4 +1,4 @@
-def save(item, filename): # save to a file
+def save(items, filename): # save to a file
     print("Saving ",filename,"...",sep="")
 
     filename = "Saves/" + filename + ".txt"
@@ -9,29 +9,38 @@ def save(item, filename): # save to a file
         print("ERROR: Could not open",filename)
         exit()
 
+    rows = len(items)
+    if rows < 1:
+        print("ERROR: There are 0 items.")
+        return
+
+    # headers
+    cols = len(items[0])
     i = 0
-    size = len(item[0])
-    for h in item[0].keys():
-        openfile.write(h)
-        if i < size - 1:
+    for key in items[0].keys():
+        if i == cols - 1:
+            openfile.write(str(key))
+            openfile.write('\n')
+        else:
+            openfile.write(str(key))
             openfile.write('\t')
         i += 1
-    openfile.write('\n')
 
-    i = 0
-    size = len(item)
-    while i < size:
-        j = len(item[i])
-        k = 0
-        for key in item[i].keys():
-            openfile.write(str(item[i][key]))
-            if k < j - 1:
-                openfile.write('\t')
-            k += 1
-        openfile.write('\n')
-        i += 1
+    cols = len(items[0])
+    for item_key in items.keys():
+        i = 0
+        for key in items[item_key].keys():
+            if i == cols - 1:
+                openfile.write(str(items[item_key][key]))
+                openfile.write("\n")
+            else:
+                openfile.write(str(items[item_key][key]))
+                openfile.write("\t")
+            i += 1
 
-    print("Save complete. Saved",size,"items.\n")
+    openfile.close()
+
+    print("Save complete. Saved",len(items),"items.\n")
 
 def save_all(stored_pokemon, trainers, parties): # save everything
     save(stored_pokemon, "pokemon")

@@ -30,7 +30,17 @@ def pokemon_manager(pokemon, stored_pokemon, to_next_level, parties, move_levels
                     create(pokemon, to_next_level, stored_pokemon, level, name, nickname, move_levels, moves)
 
     elif inp == 1: # Delete Pokemon
-        print("Not configured")
+        print_list(stored_pokemon)
+        print("Which pokemon would you like to delete (-1 to cancel)?")
+        to_delete = correct_type(input("--> "))
+        if to_delete == -1:
+            print("Action cancelled.")
+        else:
+            try:
+                del stored_pokemon[to_delete]
+                print(to_delete,"was successfully deleted")
+            except:
+                print("ERROR: Could not delete",to_delete)
         
     elif inp == 2: # List Pokemon
         print_list(stored_pokemon)
