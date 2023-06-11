@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "1c3f4414-b447-4f08-91df-10100cc44f82": {
+      "ProjectGuid": "1c3f4414-b447-4f08-91df-10100cc44f82",
+      "DisplayName": "Pokémon_Gateway",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

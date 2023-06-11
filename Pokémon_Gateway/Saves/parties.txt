@@ -1,0 +1,5 @@
+ID	Name	Pokemon
+0	Party	8,22,9,11,17,7,16,12,20,23,28,10,13,14
+1	Zed	25,26,27
+2	Test_Party	13
+3	Dugtrio	39

@@ -1,0 +1,971 @@
+ID	Name	Type	Action	Stat	Description	Buy	Sell	Discoverable
+0	Aguav Berry	Berries	Curr HP	0.05	Restores 5% of Pokemon's total HP.	100	20	1
+1	Figy Berry	Berries	Curr HP	0.05	Restores 5% of Pokemon's total HP.	100	20	1
+2	Iapapa Berry	Berries	Curr HP	0.15	Restores 15% of Pokemon's total HP but causes paralysis.	100	20	1
+3	Mago Berry	Berries	Curr HP	0.15	Restores 15% of Pokemon's total HP but causes sleep.	100	20	1
+4	Wiki Berry	Berries	Curr HP	0.05	Restores 5% of Pokemon's total HP but causes confusion.	100	20	1
+5	Tamato Berry	Berries	Battles	1	Increases friendship.	100	20	1
+6	Grepa Berry	Berries	Battles	1	Increases friendship.	100	20	1
+7	Hondew Berry	Berries	Battles	1	Increases friendship.	100	20	1
+8	Pomeg Berry	Berries	Battles	1	Increases friendship.	100	20	1
+9	Qualot Berry	Berries	Battles	1	Increases friendship.	100	20	1
+10	Kelpsy Berry	Berries	Battles	1	Increases friendship.	100	20	1
+11	Chesto Berry	Berries	Status	Sleep	Recovers a Pokemon from sleep.	100	20	1
+12	Pecha Berry	Berries	Status	Poison	Recovers a Pokemon from poison.	100	20	1
+13	Cheri Berry	Berries	Status	Paralysis	Recovers a Pokemon from paralysis.	100	20	1
+14	Persim Berry	Berries	Status	Confusion	Recovers a Pokemon from confusion.	100	20	1
+15	Lum Berry	Berries	Status	Sleep	Recovers a Pokemon from sleep.	100	20	1
+16	Rawst Berry	Berries	Status	Burn	Recovers a Pokemon from burn.	100	20	1
+17	Sitrus Berry	Berries	Heal	0.04	Heals a Pokemon by a little bit.	100	20	1
+18	Oran Berry	Berries	Heal	0.04	Heals a Pokemon by a little bit.	100	20	1
+19	Aspear Berry	Berries	Status	Frozen	Defrosts a Pokemon.	100	20	1
+20	Pearl String	General items	Money		Very large pearls that sparkle in a pretty silver color.	10000	2000	1
+21	Pretty Wing	General items	Money		Though this feather is beautiful, it's just a regular feather and has no effect on Pokémon.	10000	2000	1
+22	Stardust	General items	Money		Lovely, red-colored sand with a loose, silky feel. It can be sold at a high price to shops.	8000	1600	1
+23	Dawn Stone	General items	Evolve		Evolves certain species of Pokémon.	2000	400	1
+24	Dusk Stone	General items	Evolve		Evolves certain species of Pokémon.	2000	400	1
+25	Fire Stone	General items	Evolve		Evolves certain species of Pokémon.	2000	400	1
+26	Ice Stone	General items	Evolve		Evolves certain species of Pokémon.	2000	400	1
+27	Leaf Stone	General items	Evolve		Evolves certain species of Pokémon.	2000	400	1
+28	Moon Stone	General items	Evolve		Evolves certain species of Pokémon.	2000	400	1
+29	Shiny Stone	General items	Evolve		Evolves certain species of Pokémon.	2000	400	1
+30	Sun Stone	General items	Evolve		Evolves certain species of Pokémon.	2000	400	1
+31	Thunder Stone	General items	Evolve		Evolves certain species of Pokémon.	2000	400	1
+32	Water Stone	General items	Evolve		Evolves certain species of Pokémon.	2000	400	1
+33	Roller Skates	General items	RP		Attaches roller skates to the bottom of your shoes, allowing you to glide quickly around and perform tricks.	500	100	1
+34	Yellow Apricorn	General items	Apricorn		A yellow Apricorn. It has an invigorating scent.	100	20	1
+35	White Apricorn	General items	Apricorn		A white Apricorn. It doesn't smell like anything.	100	20	1
+36	Sprinklotad	General items	Watering Can		A watering can shaped like a Lotad. It helps promote the healthy growth of any Berries planted in good, soft soil.	100	20	1
+37	Yellow Flute	General items	Money		A toy flute made from yellow glass.	300	60	1
+38	White Flute	General items	Money		A toy flute made from white glass.	300	60	1
+39	Red Flute	General items	Money		A toy flute made from red glass. 	300	60	1
+40	Blue Flute	General items	Money		A toy flute made from blue glass.	300	60	1
+41	Black Flute	General items	Money		A toy flute made from black glass.	300	60	1
+42	Honey	General items	RP		A sweet honey with a lush aroma that attracts wild Pokémon when it is used in grass, caves, or on special trees.	200	40	1
+43	Pearl	General items	Money		A somewhat-small pearl that sparkles in a pretty silver color. It can be sold cheaply to shops.	8000	1600	1
+44	Tiny Mushroom	General items	Money		A small and rare mushroom. It is sought after by collectors.	5000	1000	1
+45	Relic Silver	General items	Money		A silver coin used in a civilization about 3,000 years ago.	7000	1400	1
+46	Comet Shard	General items	Money		A shard which fell to the ground when a comet approached.	2000	400	1
+47	Star Piece	General items	Money		A shard of a pretty gem that sparkles in a red color. It can be sold at a high price to shops.	4000	800	1
+48	Red Apricorn	General items	Apricorn		A red Apricorn. It assails your nostrils.	100	20	1
+49	Balm Mushroom	General items	Apricorn		A rare mushroom which gives off a nice fragrance.	2000	400	1
+50	Big Pearl	General items	Money		A quite-large pearl that sparkles in a pretty silver color. It can be sold at a high price to shops.	4000	800	1
+51	Heart Scale	General items	Money		A pretty, heart-shaped scale that is extremely rare. It glows faintly in the colors of the rainbow.	1000	200	1
+52	Pink Apricorn	General items	Apricorn		A pink Apricorn. It has a nice, sweet scent.	100	20	1
+53	Beach Glass	General items	Money		A piece of colored glass. Waves have rounded its edges. It's slightly rough to the touch.	5000	1000	1
+54	Old Amber	General items	Money		A piece of amber that contains the genetic material of an ancient Pokémon. It is clear with a reddish tint.	6000	1200	1
+55	Nugget	General items	Money		A nugget of pure gold that gives off a lustrous gleam. It can be sold at a high price to shops.	4000	800	1
+56	Escape Rope	General items	Escape		A long, durable rope. Use it to escape instantly from a cave or a dungeon.	200	40	1
+57	Big Mushroom	General items	Money		A large and rare mushroom. It is sought after by collectors.	3000	600	1
+58	Green Apricorn	General items	Apricorn		A green Apricorn. It has a mysterious, aromatic scent.	100	20	1
+59	Relic Gold	General items	Money		A gold coin used in a civilization about 3,000 years ago.	5000	1000	1
+60	Apricorn	General items	Apricorn		A fruit whose shell can be used to form the capsules of all manner of Poké Balls when crafting them from scratch.	100	20	1
+61	Rare Bone	General items	Money		A bone that is extremely valuable for Pokémon archeology. It can be sold for a high price to shops.	6000	1200	1
+62	Blue Apricorn	General items	Apricorn		A blue Apricorn. It smells a bit like grass.	100	20	1
+63	Black Apricorn	General items	Apricorn		A black Apricorn It has an indescribable scent.	100	20	1
+64	Big Nugget	General items	Price		A big nugget of pure gold that gives off a lustrous gleam. A maniac will buy it for a high price.	8000	1600	1
+65	Lemonade	Medicine	Curr HP	70	Restores 70 HP.	350	70	1
+66	Super Potion	Medicine	Curr HP	60	Restores 60 HP.	300	60	1
+67	Energy Powder	Medicine	Curr HP	60	Restores 60 HP.	300	60	1
+68	Soda Pop	Medicine	Curr HP	50	Restores 50 HP.	250	50	1
+69	Fresh Water	Medicine	Curr HP	30	Restores 30 HP.	150	30	1
+70	Potion	Medicine	Curr HP	20	Restores 20 HP.	100	20	1
+71	Hyper Potion	Medicine	Curr HP	120	Restores 120 HP.	600	120	1
+72	Energy Root	Medicine	Curr HP	120	Restores 120 HP.	600	120	1
+73	Moomoo Milk	Medicine	Curr HP	100	Milk with a very high nutrition content. It restores the HP of one Pokémon by 100 points.	500	100	1
+74	Exp. Candy XL	Medicine	Exp	30000	Increases the Pokémon's Exp points by 30,000.	20000	4000	1
+75	Carbos	Medicine	Speed EV	10	Increases Speed EVs by 10.	1000	200	1
+76	Swift Wing	Medicine	Speed EV	1	Increases Speed EVs by 1.	500	100	1
+77	Zinc	Medicine	Sp Defense EV	10	Increases Special Defense EVs by 10.	1000	200	1
+78	Clever Wing	Medicine	Sp Defense EV	1	Increases Special Defense EVs by 1.	500	100	1
+79	Calcium	Medicine	Sp Attack EV	10	Increases Special Attack EVs by 10.	1000	200	1
+80	Genius Wing	Medicine	Sp Attack EV	1	Increases Special Attack EVs by 1.	500	100	1
+81	HP Up	Medicine	HP EV	10	Increases HP EVs by 10.	1000	200	1
+82	Health Wing	Medicine	HP EV	1	Increases HP EVs by 1.	500	100	1
+83	Iron	Medicine	Defense EV	10	Increases Defense EVs by 10.	1000	200	1
+84	Resist Wing	Medicine	Defense EV	1	Increases Defense EVs by 1.	500	100	1
+85	Protein	Medicine	Attack EV	10	Increases Attack EVs by 10.	1000	200	1
+86	Muscle Wing	Medicine	Attack EV	1	Increases Attack EVs by 1.	500	100	1
+87	Quick Candy L	Medicine	Speed	2	Increases a Pokémon's Speed stat.	800	160	1
+88	Quick Candy XL	Medicine	Speed	3	Increases a Pokémon's Speed stat.	1000	200	1
+89	Quick Candy	Medicine	Speed	1	Increases a Pokémon's Speed stat.	600	120	1
+90	Courage Candy L	Medicine	Sp Defense	2	Increases a Pokémon's Special Defense stat.	800	160	1
+91	Courage Candy XL	Medicine	Sp Defense	3	Increases a Pokémon's Special Defense stat.	1000	200	1
+92	Courage Candy	Medicine	Sp Defense	1	Increases a Pokémon's Special Defense stat.	600	120	1
+93	Smart Candy L	Medicine	Sp Attack	2	Increases a Pokémon's Special Attack stat.	800	160	1
+94	Smart Candy XL	Medicine	Sp Attack	3	Increases a Pokémon's Special Attack stat.	1000	200	1
+95	Smart Candy	Medicine	Sp Attack	1	Increases a Pokémon's Special Attack stat.	600	120	1
+96	Health Candy L	Medicine	HP	2	Increases a Pokémon's HP stat.	800	160	1
+97	Health Candy XL	Medicine	HP	3	Increases a Pokémon's HP stat.	1000	200	1
+98	Health Candy	Medicine	HP	1	Increases a Pokémon's HP stat.	600	120	1
+99	Tough Candy L	Medicine	Defense	2	Increases a Pokémon's Defense stat.	800	160	1
+100	Tough Candy XL	Medicine	Defense	3	Increases a Pokémon's Defense stat.	1000	200	1
+101	Tough Candy	Medicine	Defense	1	Increases a Pokémon's Defense stat.	600	120	1
+102	Mighty Candy L	Medicine	Attack	2	Increases a Pokémon's Attack stat.	800	160	1
+103	Mighty Candy XL	Medicine	Attack	3	Increases a Pokémon's Attack stat.	1000	200	1
+104	Mighty Candy	Medicine	Attack	1	Increases a Pokémon's Attack stat.	600	120	1
+105	Max Potion	Medicine	Curr HP	1	Fully restores HP.	900	180	1
+106	Antidote	Medicine	Status	All	A spray-type medicine. It lifts the effect of poison from one Pokémon.	200	40	1
+107	Full Heal	Medicine	Status	All	A spray-type medicine. It heals all the status problems of a single Pokémon.	200	40	1
+108	Burn Heal	Medicine	Status	Burn	A spray-type medicine. It heals a single Pokémon that is suffering from a burn.	200	40	1
+109	Paralyze Heal	Medicine	Status	Paralysis	A spray-type medicine. It eliminates paralysis from a single Pokémon.	200	40	1
+110	Ice Heal	Medicine	Status	Frozen	A spray-type medicine. It defrosts a Pokémon that has been frozen solid.	200	40	1
+111	Awakening	Medicine	Status	Sleep	A spray-type medicine. It awakens a Pokémon from the clutches of sleep.	200	40	1
+112	Revive	Medicine	Revive		A medicine that revives a fainted Pokémon. It restores half the Pokémon's maximum HP.	1000	200	1
+113	Max Revive	Medicine	Revive		A medicine that revives a fainted Pokémon. It fully restores the Pokémon's HP.	1500	300	1
+114	Rare Candy	Medicine	Level	1	A candy that is packed with energy. It raises the level of a single Pokémon by one.	1000	200	1
+115	Berry Juice	Medicine	HP	20	A 100% pure juice made of Berries. It restores the HP of one Pokémon by just 20 points.	200	40	1
+116	Master Ball	Pokeballs	Ball	0	The best Ball with the ultimate level of performance. It will catch any wild Pokémon without fail.	99999	20000	1
+117	Ultra Ball	Pokeballs	Ball	150	An ultra-performance Ball that provides a higher Pokémon catch rate than a Great Ball.	900	180	1
+118	Great Ball	Pokeballs	Ball	200	A good, high-performance Ball that provides a higher Pokémon catch rate than a standard Poké Ball.	400	80	1
+119	Poké Ball	Pokeballs	Ball	255	A device for catching wild Pokémon. It is thrown like a ball at the target. It is designed as a capsule system.	100	20	1
+120	TM1	Machine	1		Teaches the move Pound.	1200	240	1
+121	TM2	Machine	2		Teaches the move Karate Chop.	1500	300	1
+122	TM3	Machine	3		Teaches the move Double Slap.	450	90	1
+123	TM4	Machine	4		Teaches the move Comet Punch.	540	108	1
+124	TM5	Machine	5		Teaches the move Mega Punch.	2400	480	1
+125	TM6	Machine	6		Teaches the move Pay Day.	1200	240	1
+126	TM7	Machine	7		Teaches the move Fire Punch.	2250	450	1
+127	TM8	Machine	8		Teaches the move Ice Punch.	2250	450	1
+128	TM9	Machine	9		Teaches the move Thunder Punch.	2250	450	1
+129	TM10	Machine	10		Teaches the move Scratch.	1200	240	1
+130	TM11	Machine	11		Teaches the move Vise Grip.	1650	330	1
+131	TM12	Machine	12		Teaches the move Guillotine.	3000	600	1
+132	TM13	Machine	13		Teaches the move Razor Wind.	2400	480	1
+133	TM14	Machine	14		Teaches the move Swords Dance.	500	100	1
+134	HM15	Machine	15		Teaches the move Cut.	1500	300	0
+135	TM16	Machine	16		Teaches the move Gust.	1200	240	1
+136	TM17	Machine	17		Teaches the move Wing Attack.	1800	360	1
+137	TM18	Machine	18		Teaches the move Whirlwind.	500	100	1
+138	HM19	Machine	19		Teaches the move Fly.	2700	540	0
+139	TM20	Machine	20		Teaches the move Bind.	450	90	1
+140	TM21	Machine	21		Teaches the move Slam.	2400	480	1
+141	TM22	Machine	22		Teaches the move Vine Whip.	1350	270	1
+142	TM23	Machine	23		Teaches the move Stomp.	1950	390	1
+143	TM24	Machine	24		Teaches the move Double Kick.	900	180	1
+144	TM25	Machine	25		Teaches the move Mega Kick.	3600	720	1
+145	TM26	Machine	26		Teaches the move Jump Kick.	3000	600	1
+146	TM27	Machine	27		Teaches the move Rolling Kick.	1800	360	1
+147	TM28	Machine	28		Teaches the move Sand Attack.	1000	200	1
+148	TM29	Machine	29		Teaches the move Headbutt.	2100	420	1
+149	TM30	Machine	30		Teaches the move Horn Attack.	1950	390	1
+150	TM31	Machine	31		Teaches the move Fury Attack.	450	90	1
+151	TM32	Machine	32		Teaches the move Horn Drill.	7500	1500	1
+152	TM33	Machine	33		Teaches the move Tackle.	1200	240	1
+153	TM34	Machine	34		Teaches the move Body Slam.	2550	510	1
+154	TM35	Machine	35		Teaches the move Wrap.	450	90	1
+155	TM36	Machine	36		Teaches the move Take Down.	2700	540	1
+156	TM37	Machine	37		Teaches the move Thrash.	3600	720	1
+157	TM38	Machine	38		Teaches the move Double-Edge.	3600	720	1
+158	TM39	Machine	39		Teaches the move Tail Whip.	500	100	1
+159	TM40	Machine	40		Teaches the move Poison Sting.	450	90	1
+160	TM41	Machine	41		Teaches the move Twineedle.	750	150	1
+161	TM42	Machine	42		Teaches the move Pin Missile.	750	150	1
+162	TM43	Machine	43		Teaches the move Leer.	500	100	1
+163	TM44	Machine	44		Teaches the move Bite.	1800	360	1
+164	TM45	Machine	45		Teaches the move Growl.	500	100	1
+165	TM46	Machine	46		Teaches the move Roar.	500	100	1
+166	TM47	Machine	47		Teaches the move Sing.	2000	400	1
+167	TM48	Machine	48		Teaches the move Supersonic.	1000	200	1
+168	TM49	Machine	49		Teaches the move Sonic Boom.	600	120	1
+169	TM50	Machine	50		Teaches the move Disable.	1000	200	1
+170	TM51	Machine	51		Teaches the move Acid.	1200	240	1
+171	TM52	Machine	52		Teaches the move Ember.	1200	240	1
+172	TM53	Machine	53		Teaches the move Flamethrower.	2700	540	1
+173	TM54	Machine	54		Teaches the move Mist.	1000	200	1
+174	TM55	Machine	55		Teaches the move Water Gun.	1200	240	1
+175	TM56	Machine	56		Teaches the move Hydro Pump.	3300	660	1
+176	TM57	Machine	57		Teaches the move Surf.	2700	540	1
+177	TM58	Machine	58		Teaches the move Ice Beam.	2700	540	1
+178	TM59	Machine	59		Teaches the move Blizzard.	3300	660	1
+179	TM60	Machine	60		Teaches the move Psybeam.	1950	390	1
+180	TM61	Machine	61		Teaches the move Bubble Beam.	1950	390	1
+181	TM62	Machine	62		Teaches the move Aurora Beam.	1950	390	1
+182	TM63	Machine	63		Teaches the move Hyper Beam.	4500	900	1
+183	TM64	Machine	64		Teaches the move Peck.	1050	210	1
+184	TM65	Machine	65		Teaches the move Drill Peck.	2400	480	1
+185	TM66	Machine	66		Teaches the move Submission.	2400	480	1
+186	TM67	Machine	67		Teaches the move Low Kick.	1000	200	1
+187	TM68	Machine	68		Teaches the move Counter.	1000	200	1
+188	TM69	Machine	69		Teaches the move Seismic Toss.	2000	400	1
+189	HM70	Machine	70		Teaches the move Strength.	2400	480	0
+190	TM71	Machine	71		Teaches the move Absorb.	600	120	1
+191	TM72	Machine	72		Teaches the move Mega Drain.	1200	240	1
+192	TM73	Machine	73		Teaches the move Leech Seed.	1000	200	1
+193	TM74	Machine	74		Teaches the move Growth.	500	100	1
+194	TM75	Machine	75		Teaches the move Razor Leaf.	1650	330	1
+195	TM76	Machine	76		Teaches the move Solar Beam.	3600	720	1
+196	TM77	Machine	77		Teaches the move Poison Powder.	1500	300	1
+197	TM78	Machine	78		Teaches the move Stun Spore.	1500	300	1
+198	TM79	Machine	79		Teaches the move Sleep Powder.	1500	300	1
+199	TM80	Machine	80		Teaches the move Petal Dance.	3600	720	1
+200	TM81	Machine	81		Teaches the move String Shot.	500	100	1
+201	TM82	Machine	82		Teaches the move Dragon Rage.	3600	720	1
+202	TM83	Machine	83		Teaches the move Fire Spin.	1050	210	1
+203	TM84	Machine	84		Teaches the move Thunder Shock.	1200	240	1
+204	TM85	Machine	85		Teaches the move Thunderbolt.	2700	540	1
+205	TM86	Machine	86		Teaches the move Thunder Wave.	3500	700	1
+206	TM87	Machine	87		Teaches the move Thunder.	3300	660	1
+207	TM88	Machine	88		Teaches the move Rock Throw.	1500	300	1
+208	TM89	Machine	89		Teaches the move Earthquake.	3000	600	1
+209	TM90	Machine	90		Teaches the move Fissure.	2000	400	1
+210	TM91	Machine	91		Teaches the move Dig.	2400	480	1
+211	TM92	Machine	92		Teaches the move Toxic.	1000	200	1
+212	TM93	Machine	93		Teaches the move Confusion.	1500	300	1
+213	TM94	Machine	94		Teaches the move Psychic.	2700	540	1
+214	TM95	Machine	95		Teaches the move Hypnosis.	1500	300	1
+215	TM96	Machine	96		Teaches the move Meditate.	500	100	1
+216	TM97	Machine	97		Teaches the move Agility.	500	100	1
+217	TM98	Machine	98		Teaches the move Quick Attack.	1200	240	1
+218	TM99	Machine	99		Teaches the move Rage.	600	120	1
+219	TM100	Machine	100		Teaches the move Teleport.	500	100	1
+220	TM101	Machine	101		Teaches the move Night Shade.	500	100	1
+221	TM102	Machine	102		Teaches the move Mimic.	500	100	1
+222	TM103	Machine	103		Teaches the move Screech.	500	100	1
+223	TM104	Machine	104		Teaches the move Double Team.	500	100	1
+224	TM105	Machine	105		Teaches the move Recover.	1000	200	1
+225	TM106	Machine	106		Teaches the move Harden.	500	100	1
+226	TM107	Machine	107		Teaches the move Minimize.	500	100	1
+227	TM108	Machine	108		Teaches the move Smokescreen.	500	100	1
+228	TM109	Machine	109		Teaches the move Confuse Ray.	500	100	1
+229	TM110	Machine	110		Teaches the move Withdraw.	500	100	1
+230	TM111	Machine	111		Teaches the move Defense Curl.	500	100	1
+231	TM112	Machine	112		Teaches the move Barrier.	500	100	1
+232	TM113	Machine	113		Teaches the move Light Screen.	500	100	1
+233	TM114	Machine	114		Teaches the move Haze.	500	100	1
+234	TM115	Machine	115		Teaches the move Reflect.	500	100	1
+235	TM116	Machine	116		Teaches the move Focus Energy.	500	100	1
+236	TM117	Machine	117		Teaches the move Bide.	500	100	1
+237	TM118	Machine	118		Teaches the move Metronome.	500	100	1
+238	TM119	Machine	119		Teaches the move Mirror Move.	500	100	1
+239	TM120	Machine	120		Teaches the move Self-Destruct.	6000	1200	1
+240	TM121	Machine	121		Teaches the move Egg Bomb.	3000	600	1
+241	TM122	Machine	122		Teaches the move Lick.	900	180	1
+242	TM123	Machine	123		Teaches the move Smog.	900	180	1
+243	TM124	Machine	124		Teaches the move Sludge.	1950	390	1
+244	TM125	Machine	125		Teaches the move Bone Club.	1950	390	1
+245	TM126	Machine	126		Teaches the move Fire Blast.	3300	660	1
+246	HM127	Machine	127		Teaches the move Waterfall.	2400	480	0
+247	TM128	Machine	128		Teaches the move Clamp.	1050	210	1
+248	TM129	Machine	129		Teaches the move Swift.	1800	360	1
+249	TM130	Machine	130		Teaches the move Skull Bash.	3900	780	1
+250	TM131	Machine	131		Teaches the move Spike Cannon.	600	120	1
+251	TM132	Machine	132		Teaches the move Constrict.	300	60	1
+252	TM133	Machine	133		Teaches the move Amnesia.	500	100	1
+253	TM134	Machine	134		Teaches the move Kinesis.	500	100	1
+254	TM135	Machine	135		Teaches the move Soft-Boiled.	500	100	1
+255	TM136	Machine	136		Teaches the move High Jump Kick.	3900	780	1
+256	TM137	Machine	137		Teaches the move Glare.	500	100	1
+257	TM138	Machine	138		Teaches the move Dream Eater.	3000	600	1
+258	TM139	Machine	139		Teaches the move Poison Gas.	500	100	1
+259	TM140	Machine	140		Teaches the move Barrage.	450	90	1
+260	TM141	Machine	141		Teaches the move Leech Life.	2400	480	1
+261	TM142	Machine	142		Teaches the move Lovely Kiss.	500	100	1
+262	TM143	Machine	143		Teaches the move Sky Attack.	4200	840	1
+263	TM144	Machine	144		Teaches the move Transform.	500	100	1
+264	TM145	Machine	145		Teaches the move Bubble.	1200	240	1
+265	TM146	Machine	146		Teaches the move Dizzy Punch.	2100	420	1
+266	TM147	Machine	147		Teaches the move Spore.	500	100	1
+267	HM148	Machine	148		Teaches the move Flash.	1000	200	0
+268	TM149	Machine	149		Teaches the move Psywave.	500	100	1
+269	TM150	Machine	150		Teaches the move Splash.	500	100	1
+270	TM151	Machine	151		Teaches the move Acid Armor.	500	100	1
+271	TM152	Machine	152		Teaches the move Crabhammer.	3000	600	1
+272	TM153	Machine	153		Teaches the move Explosion.	7500	1500	1
+273	TM154	Machine	154		Teaches the move Fury Swipes.	540	108	1
+274	TM155	Machine	155		Teaches the move Bonemerang.	1500	300	1
+275	TM156	Machine	156		Teaches the move Rest.	500	100	1
+276	TM157	Machine	157		Teaches the move Rock Slide.	2250	450	1
+277	TM158	Machine	158		Teaches the move Hyper Fang.	2400	480	1
+278	TM159	Machine	159		Teaches the move Sharpen.	500	100	1
+279	TM160	Machine	160		Teaches the move Conversion.	500	100	1
+280	TM161	Machine	161		Teaches the move Tri Attack.	2400	480	1
+281	TM162	Machine	162		Teaches the move Super Fang.	500	100	1
+282	TM163	Machine	163		Teaches the move Slash.	2100	420	1
+283	TM164	Machine	164		Teaches the move Substitute.	500	100	1
+284	TM165	Machine	165		Teaches the move Struggle.	1500	300	1
+285	TM166	Machine	166		Teaches the move Sketch.	500	100	1
+286	TM167	Machine	167		Teaches the move Triple Kick.	300	60	1
+287	TM168	Machine	168		Teaches the move Thief.	1800	360	1
+288	TM169	Machine	169		Teaches the move Spider Web.	500	100	1
+289	TM170	Machine	170		Teaches the move Mind Reader.	500	100	1
+290	TM171	Machine	171		Teaches the move Nightmare.	500	100	1
+291	TM172	Machine	172		Teaches the move Flame Wheel.	1800	360	1
+292	TM173	Machine	173		Teaches the move Snore.	1500	300	1
+293	TM174	Machine	174		Teaches the move Curse.	500	100	1
+294	TM175	Machine	175		Teaches the move Flail.	500	100	1
+295	TM176	Machine	176		Teaches the move Conversion 2.	500	100	1
+296	TM177	Machine	177		Teaches the move Aeroblast.	3000	600	1
+297	TM178	Machine	178		Teaches the move Cotton Spore.	500	100	1
+298	TM179	Machine	179		Teaches the move Reversal.	500	100	1
+299	TM180	Machine	180		Teaches the move Spite.	500	100	1
+300	TM181	Machine	181		Teaches the move Powder Snow.	1200	240	1
+301	TM182	Machine	182		Teaches the move Protect.	500	100	1
+302	TM183	Machine	183		Teaches the move Mach Punch.	1200	240	1
+303	TM184	Machine	184		Teaches the move Scary Face.	500	100	1
+304	TM185	Machine	185		Teaches the move Feint Attack.	1800	360	1
+305	TM186	Machine	186		Teaches the move Sweet Kiss.	500	100	1
+306	TM187	Machine	187		Teaches the move Belly Drum.	500	100	1
+307	TM188	Machine	188		Teaches the move Sludge Bomb.	2700	540	1
+308	TM189	Machine	189		Teaches the move Mud-Slap.	600	120	1
+309	TM190	Machine	190		Teaches the move Octazooka.	1950	390	1
+310	TM191	Machine	191		Teaches the move Spikes.	500	100	1
+311	TM192	Machine	192		Teaches the move Zap Cannon.	3600	720	1
+312	TM193	Machine	193		Teaches the move Foresight.	500	100	1
+313	TM194	Machine	194		Teaches the move Destiny Bond.	500	100	1
+314	TM195	Machine	195		Teaches the move Perish Song.	500	100	1
+315	TM196	Machine	196		Teaches the move Icy Wind.	1650	330	1
+316	TM197	Machine	197		Teaches the move Detect.	500	100	1
+317	TM198	Machine	198		Teaches the move Bone Rush.	750	150	1
+318	TM199	Machine	199		Teaches the move Lock-On.	500	100	1
+319	TM200	Machine	200		Teaches the move Outrage.	3600	720	1
+320	TM201	Machine	201		Teaches the move Sandstorm.	500	100	1
+321	TM202	Machine	202		Teaches the move Giga Drain.	2250	450	1
+322	TM203	Machine	203		Teaches the move Endure.	500	100	1
+323	TM204	Machine	204		Teaches the move Charm.	500	100	1
+324	TM205	Machine	205		Teaches the move Rollout.	900	180	1
+325	TM206	Machine	206		Teaches the move False Swipe.	1200	240	1
+326	TM207	Machine	207		Teaches the move Swagger.	500	100	1
+327	TM208	Machine	208		Teaches the move Milk Drink.	500	100	1
+328	TM209	Machine	209		Teaches the move Spark.	1950	390	1
+329	TM210	Machine	210		Teaches the move Fury Cutter.	1200	240	1
+330	TM211	Machine	211		Teaches the move Steel Wing.	2100	420	1
+331	TM212	Machine	212		Teaches the move Mean Look.	500	100	1
+332	TM213	Machine	213		Teaches the move Attract.	500	100	1
+333	TM214	Machine	214		Teaches the move Sleep Talk.	500	100	1
+334	TM215	Machine	215		Teaches the move Heal Bell.	500	100	1
+335	TM216	Machine	216		Teaches the move Return.	500	100	1
+336	TM217	Machine	217		Teaches the move Present.	500	100	1
+337	TM218	Machine	218		Teaches the move Frustration.	500	100	1
+338	TM219	Machine	219		Teaches the move Safeguard.	500	100	1
+339	TM220	Machine	220		Teaches the move Pain Split.	500	100	1
+340	TM221	Machine	221		Teaches the move Sacred Fire.	3000	600	1
+341	TM222	Machine	222		Teaches the move Magnitude.	500	100	1
+342	TM223	Machine	223		Teaches the move Dynamic Punch.	3000	600	1
+343	TM224	Machine	224		Teaches the move Megahorn.	3600	720	1
+344	TM225	Machine	225		Teaches the move Dragon Breath.	1800	360	1
+345	TM226	Machine	226		Teaches the move Baton Pass.	500	100	1
+346	TM227	Machine	227		Teaches the move Encore.	500	100	1
+347	TM228	Machine	228		Teaches the move Pursuit.	1200	240	1
+348	TM229	Machine	229		Teaches the move Rapid Spin.	1500	300	1
+349	TM230	Machine	230		Teaches the move Sweet Scent.	500	100	1
+350	TM231	Machine	231		Teaches the move Iron Tail.	3000	600	1
+351	TM232	Machine	232		Teaches the move Metal Claw.	1500	300	1
+352	TM233	Machine	233		Teaches the move Vital Throw.	2100	420	1
+353	TM234	Machine	234		Teaches the move Morning Sun.	500	100	1
+354	TM235	Machine	235		Teaches the move Synthesis.	500	100	1
+355	TM236	Machine	236		Teaches the move Moonlight.	1000	200	1
+356	TM237	Machine	237		Teaches the move Hidden Power.	1800	360	1
+357	TM238	Machine	238		Teaches the move Cross Chop.	3000	600	1
+358	TM239	Machine	239		Teaches the move Twister.	1200	240	1
+359	TM240	Machine	240		Teaches the move Rain Dance.	500	100	1
+360	TM241	Machine	241		Teaches the move Sunny Day.	500	100	1
+361	TM242	Machine	242		Teaches the move Crunch.	2400	480	1
+362	TM243	Machine	243		Teaches the move Mirror Coat.	500	100	1
+363	TM244	Machine	244		Teaches the move Psych Up.	500	100	1
+364	TM245	Machine	245		Teaches the move Extreme Speed.	2400	480	1
+365	TM246	Machine	246		Teaches the move Ancient Power.	1800	360	1
+366	TM247	Machine	247		Teaches the move Shadow Ball.	2400	480	1
+367	TM248	Machine	248		Teaches the move Future Sight.	3600	720	1
+368	HM249	Machine	249		Teaches the move Rock Smash.	1200	240	0
+369	HM250	Machine	250		Teaches the move Whirlpool.	1050	210	0
+370	TM251	Machine	251		Teaches the move Beat Up.	500	100	1
+371	TM252	Machine	252		Teaches the move Fake Out.	1200	240	1
+372	TM253	Machine	253		Teaches the move Uproar.	2700	540	1
+373	TM254	Machine	254		Teaches the move Stockpile.	500	100	1
+374	TM255	Machine	255		Teaches the move Spit Up.	500	100	1
+375	TM256	Machine	256		Teaches the move Swallow.	500	100	1
+376	TM257	Machine	257		Teaches the move Heat Wave.	2850	570	1
+377	TM258	Machine	258		Teaches the move Hail.	800	160	1
+378	TM259	Machine	259		Teaches the move Torment.	500	100	1
+379	TM260	Machine	260		Teaches the move Flatter.	500	100	1
+380	TM261	Machine	261		Teaches the move Will-O-Wisp.	1000	200	1
+381	TM262	Machine	262		Teaches the move Memento.	800	160	1
+382	TM263	Machine	263		Teaches the move Facade.	2100	420	1
+383	TM264	Machine	264		Teaches the move Focus Punch.	4500	900	1
+384	TM265	Machine	265		Teaches the move Smelling Salts.	2100	420	1
+385	TM266	Machine	266		Teaches the move Follow Me.	500	100	1
+386	TM267	Machine	267		Teaches the move Nature Power.	500	100	1
+387	TM268	Machine	268		Teaches the move Charge.	1000	200	1
+388	TM269	Machine	269		Teaches the move Taunt.	500	100	1
+389	TM270	Machine	270		Teaches the move Helping Hand.	500	100	1
+390	TM271	Machine	271		Teaches the move Trick.	500	100	1
+391	TM272	Machine	272		Teaches the move Role Play.	500	100	1
+392	TM273	Machine	273		Teaches the move Wish.	500	100	1
+393	TM274	Machine	274		Teaches the move Assist.	500	100	1
+394	TM275	Machine	275		Teaches the move Ingrain.	500	100	1
+395	TM276	Machine	276		Teaches the move Superpower.	3600	720	1
+396	TM277	Machine	277		Teaches the move Magic Coat.	500	100	1
+397	TM278	Machine	278		Teaches the move Recycle.	500	100	1
+398	TM279	Machine	279		Teaches the move Revenge.	1800	360	1
+399	TM280	Machine	280		Teaches the move Brick Break.	2250	450	1
+400	TM281	Machine	281		Teaches the move Yawn.	500	100	1
+401	TM282	Machine	282		Teaches the move Knock Off.	1950	390	1
+402	TM283	Machine	283		Teaches the move Endeavor.	500	100	1
+403	TM284	Machine	284		Teaches the move Eruption.	4500	900	1
+404	TM285	Machine	285		Teaches the move Skill Swap.	500	100	1
+405	TM286	Machine	286		Teaches the move Imprison.	500	100	1
+406	TM287	Machine	287		Teaches the move Refresh.	500	100	1
+407	TM288	Machine	288		Teaches the move Grudge.	500	100	1
+408	TM289	Machine	289		Teaches the move Snatch.	500	100	1
+409	TM290	Machine	290		Teaches the move Secret Power.	2100	420	1
+410	HM291	Machine	291		Teaches the move Dive.	2400	480	0
+411	TM292	Machine	292		Teaches the move Arm Thrust.	450	90	1
+412	TM293	Machine	293		Teaches the move Camouflage.	500	100	1
+413	TM294	Machine	294		Teaches the move Tail Glow.	500	100	1
+414	TM295	Machine	295		Teaches the move Luster Purge.	2100	420	1
+415	TM296	Machine	296		Teaches the move Mist Ball.	2100	420	1
+416	TM297	Machine	297		Teaches the move Feather Dance.	500	100	1
+417	TM298	Machine	298		Teaches the move Teeter Dance.	500	100	1
+418	TM299	Machine	299		Teaches the move Blaze Kick.	2550	510	1
+419	TM300	Machine	300		Teaches the move Mud Sport.	500	100	1
+420	TM301	Machine	301		Teaches the move Ice Ball.	900	180	1
+421	TM302	Machine	302		Teaches the move Needle Arm.	1800	360	1
+422	TM303	Machine	303		Teaches the move Slack Off.	500	100	1
+423	TM304	Machine	304		Teaches the move Hyper Voice.	2700	540	1
+424	TM305	Machine	305		Teaches the move Poison Fang.	1500	300	1
+425	TM306	Machine	306		Teaches the move Crush Claw.	2250	450	1
+426	TM307	Machine	307		Teaches the move Blast Burn.	4500	900	1
+427	TM308	Machine	308		Teaches the move Hydro Cannon.	4500	900	1
+428	TM309	Machine	309		Teaches the move Meteor Mash.	2700	540	1
+429	TM310	Machine	310		Teaches the move Astonish.	900	180	1
+430	TM311	Machine	311		Teaches the move Weather Ball.	1500	300	1
+431	TM312	Machine	312		Teaches the move Aromatherapy.	500	100	1
+432	TM313	Machine	313		Teaches the move Fake Tears.	500	100	1
+433	TM314	Machine	314		Teaches the move Air Cutter.	1800	360	1
+434	TM315	Machine	315		Teaches the move Overheat.	3900	780	1
+435	TM316	Machine	316		Teaches the move Odor Sleuth.	500	100	1
+436	TM317	Machine	317		Teaches the move Rock Tomb.	1800	360	1
+437	TM318	Machine	318		Teaches the move Silver Wind.	1800	360	1
+438	TM319	Machine	319		Teaches the move Metal Sound.	500	100	1
+439	TM320	Machine	320		Teaches the move Grass Whistle.	500	100	1
+440	TM321	Machine	321		Teaches the move Tickle.	500	100	1
+441	TM322	Machine	322		Teaches the move Cosmic Power.	500	100	1
+442	TM323	Machine	323		Teaches the move Water Spout.	4500	900	1
+443	TM324	Machine	324		Teaches the move Signal Beam.	2250	450	1
+444	TM325	Machine	325		Teaches the move Shadow Punch.	1800	360	1
+445	TM326	Machine	326		Teaches the move Extrasensory.	2400	480	1
+446	TM327	Machine	327		Teaches the move Sky Uppercut.	2550	510	1
+447	TM328	Machine	328		Teaches the move Sand Tomb.	1050	210	1
+448	TM329	Machine	329		Teaches the move Sheer Cold.	500	100	1
+449	TM330	Machine	330		Teaches the move Muddy Water.	2700	540	1
+450	TM331	Machine	331		Teaches the move Bullet Seed.	750	150	1
+451	TM332	Machine	332		Teaches the move Aerial Ace.	1800	360	1
+452	TM333	Machine	333		Teaches the move Icicle Spear.	750	150	1
+453	TM334	Machine	334		Teaches the move Iron Defense.	500	100	1
+454	TM335	Machine	335		Teaches the move Block.	500	100	1
+455	TM336	Machine	336		Teaches the move Howl.	500	100	1
+456	TM337	Machine	337		Teaches the move Dragon Claw.	2400	480	1
+457	TM338	Machine	338		Teaches the move Frenzy Plant.	4500	900	1
+458	TM339	Machine	339		Teaches the move Bulk Up.	500	100	1
+459	TM340	Machine	340		Teaches the move Bounce.	2550	510	1
+460	TM341	Machine	341		Teaches the move Mud Shot.	1650	330	1
+461	TM342	Machine	342		Teaches the move Poison Tail.	1500	300	1
+462	TM343	Machine	343		Teaches the move Covet.	1800	360	1
+463	TM344	Machine	344		Teaches the move Volt Tackle.	3600	720	1
+464	TM345	Machine	345		Teaches the move Magical Leaf.	1800	360	1
+465	TM346	Machine	346		Teaches the move Water Sport.	500	100	1
+466	TM347	Machine	347		Teaches the move Calm Mind.	500	100	1
+467	TM348	Machine	348		Teaches the move Leaf Blade.	2700	540	1
+468	TM349	Machine	349		Teaches the move Dragon Dance.	500	100	1
+469	TM350	Machine	350		Teaches the move Rock Blast.	750	150	1
+470	TM351	Machine	351		Teaches the move Shock Wave.	1800	360	1
+471	TM352	Machine	352		Teaches the move Water Pulse.	1800	360	1
+472	TM353	Machine	353		Teaches the move Doom Desire.	4200	840	1
+473	TM354	Machine	354		Teaches the move Psycho Boost.	4200	840	1
+474	TM355	Machine	355		Teaches the move Roost.	500	100	1
+475	TM356	Machine	356		Teaches the move Gravity.	500	100	1
+476	TM357	Machine	357		Teaches the move Miracle Eye.	500	100	1
+477	TM358	Machine	358		Teaches the move Wake-Up Slap.	2100	420	1
+478	TM359	Machine	359		Teaches the move Hammer Arm.	3000	600	1
+479	TM360	Machine	360		Teaches the move Gyro Ball.	500	100	1
+480	TM361	Machine	361		Teaches the move Healing Wish.	500	100	1
+481	TM362	Machine	362		Teaches the move Brine.	1950	390	1
+482	TM363	Machine	363		Teaches the move Natural Gift.	500	100	1
+483	TM364	Machine	364		Teaches the move Feint.	900	180	1
+484	TM365	Machine	365		Teaches the move Pluck.	1800	360	1
+485	TM366	Machine	366		Teaches the move Tailwind.	500	100	1
+486	TM367	Machine	367		Teaches the move Acupressure.	500	100	1
+487	TM368	Machine	368		Teaches the move Metal Burst.	500	100	1
+488	TM369	Machine	369		Teaches the move U-turn.	2100	420	1
+489	TM370	Machine	370		Teaches the move Close Combat.	3600	720	1
+490	TM371	Machine	371		Teaches the move Payback.	1500	300	1
+491	TM372	Machine	372		Teaches the move Assurance.	1800	360	1
+492	TM373	Machine	373		Teaches the move Embargo.	500	100	1
+493	TM374	Machine	374		Teaches the move Fling.	800	160	1
+494	TM375	Machine	375		Teaches the move Psycho Shift.	800	160	1
+495	TM376	Machine	376		Teaches the move Trump Card.	500	100	1
+496	TM377	Machine	377		Teaches the move Heal Block.	500	100	1
+497	TM378	Machine	378		Teaches the move Wring Out.	500	100	1
+498	TM379	Machine	379		Teaches the move Power Trick.	500	100	1
+499	TM380	Machine	380		Teaches the move Gastro Acid.	500	100	1
+500	TM381	Machine	381		Teaches the move Lucky Chant.	500	100	1
+501	TM382	Machine	382		Teaches the move Me First.	500	100	1
+502	TM383	Machine	383		Teaches the move Copycat.	500	100	1
+503	TM384	Machine	384		Teaches the move Power Swap.	500	100	1
+504	TM385	Machine	385		Teaches the move Guard Swap.	500	100	1
+505	TM386	Machine	386		Teaches the move Punishment.	500	100	1
+506	TM387	Machine	387		Teaches the move Last Resort.	4200	840	1
+507	TM388	Machine	388		Teaches the move Worry Seed.	500	100	1
+508	TM389	Machine	389		Teaches the move Sucker Punch.	2100	420	1
+509	TM390	Machine	390		Teaches the move Toxic Spikes.	500	100	1
+510	TM391	Machine	391		Teaches the move Heart Swap.	500	100	1
+511	TM392	Machine	392		Teaches the move Aqua Ring.	500	100	1
+512	TM393	Machine	393		Teaches the move Magnet Rise.	500	100	1
+513	TM394	Machine	394		Teaches the move Flare Blitz.	3600	720	1
+514	TM395	Machine	395		Teaches the move Force Palm.	1800	360	1
+515	TM396	Machine	396		Teaches the move Aura Sphere.	2400	480	1
+516	TM397	Machine	397		Teaches the move Rock Polish.	500	100	1
+517	TM398	Machine	398		Teaches the move Poison Jab.	2400	480	1
+518	TM399	Machine	399		Teaches the move Dark Pulse.	2400	480	1
+519	TM400	Machine	400		Teaches the move Night Slash.	2100	420	1
+520	TM401	Machine	401		Teaches the move Aqua Tail.	2700	540	1
+521	TM402	Machine	402		Teaches the move Seed Bomb.	2400	480	1
+522	TM403	Machine	403		Teaches the move Air Slash.	2250	450	1
+523	TM404	Machine	404		Teaches the move X-Scissor.	2400	480	1
+524	TM405	Machine	405		Teaches the move Bug Buzz.	2700	540	1
+525	TM406	Machine	406		Teaches the move Dragon Pulse.	2550	510	1
+526	TM407	Machine	407		Teaches the move Dragon Rush.	3000	600	1
+527	TM408	Machine	408		Teaches the move Power Gem.	2400	480	1
+528	TM409	Machine	409		Teaches the move Drain Punch.	2250	450	1
+529	TM410	Machine	410		Teaches the move Vacuum Wave.	1200	240	1
+530	TM411	Machine	411		Teaches the move Focus Blast.	3600	720	1
+531	TM412	Machine	412		Teaches the move Energy Ball.	2700	540	1
+532	TM413	Machine	413		Teaches the move Brave Bird.	3600	720	1
+533	TM414	Machine	414		Teaches the move Earth Power.	2700	540	1
+534	TM415	Machine	415		Teaches the move Switcheroo.	500	100	1
+535	TM416	Machine	416		Teaches the move Giga Impact.	4500	900	1
+536	TM417	Machine	417		Teaches the move Nasty Plot.	500	100	1
+537	TM418	Machine	418		Teaches the move Bullet Punch.	1200	240	1
+538	TM419	Machine	419		Teaches the move Avalanche.	1800	360	1
+539	TM420	Machine	420		Teaches the move Ice Shard.	1200	240	1
+540	TM421	Machine	421		Teaches the move Shadow Claw.	2100	420	1
+541	TM422	Machine	422		Teaches the move Thunder Fang.	1950	390	1
+542	TM423	Machine	423		Teaches the move Ice Fang.	1950	390	1
+543	TM424	Machine	424		Teaches the move Fire Fang.	1950	390	1
+544	TM425	Machine	425		Teaches the move Shadow Sneak.	1200	240	1
+545	TM426	Machine	426		Teaches the move Mud Bomb.	1950	390	1
+546	TM427	Machine	427		Teaches the move Psycho Cut.	2100	420	1
+547	TM428	Machine	428		Teaches the move Zen Headbutt.	2400	480	1
+548	TM429	Machine	429		Teaches the move Mirror Shot.	1950	390	1
+549	TM430	Machine	430		Teaches the move Flash Cannon.	2400	480	1
+550	TM431	Machine	431		Teaches the move Rock Climb.	2700	540	1
+551	TM432	Machine	432		Teaches the move Defog.	500	100	1
+552	TM433	Machine	433		Teaches the move Trick Room.	500	100	1
+553	TM434	Machine	434		Teaches the move Draco Meteor.	3900	780	1
+554	TM435	Machine	435		Teaches the move Discharge.	2400	480	1
+555	TM436	Machine	436		Teaches the move Lava Plume.	2400	480	1
+556	TM437	Machine	437		Teaches the move Leaf Storm.	3900	780	1
+557	TM438	Machine	438		Teaches the move Power Whip.	3600	720	1
+558	TM439	Machine	439		Teaches the move Rock Wrecker.	4500	900	1
+559	TM440	Machine	440		Teaches the move Cross Poison.	2100	420	1
+560	TM441	Machine	441		Teaches the move Gunk Shot.	3600	720	1
+561	TM442	Machine	442		Teaches the move Iron Head.	2400	480	1
+562	TM443	Machine	443		Teaches the move Magnet Bomb.	1800	360	1
+563	TM444	Machine	444		Teaches the move Stone Edge.	3000	600	1
+564	TM445	Machine	445		Teaches the move Captivate.	500	100	1
+565	TM446	Machine	446		Teaches the move Stealth Rock.	500	100	1
+566	TM447	Machine	447		Teaches the move Grass Knot.	500	100	1
+567	TM448	Machine	448		Teaches the move Chatter.	1950	390	1
+568	TM449	Machine	449		Teaches the move Judgment.	3000	600	1
+569	TM450	Machine	450		Teaches the move Bug Bite.	1800	360	1
+570	TM451	Machine	451		Teaches the move Charge Beam.	1500	300	1
+571	TM452	Machine	452		Teaches the move Wood Hammer.	3600	720	1
+572	TM453	Machine	453		Teaches the move Aqua Jet.	1200	240	1
+573	TM454	Machine	454		Teaches the move Attack Order.	2700	540	1
+574	TM455	Machine	455		Teaches the move Defend Order.	500	100	1
+575	TM456	Machine	456		Teaches the move Heal Order.	500	100	1
+576	TM457	Machine	457		Teaches the move Head Smash.	4500	900	1
+577	TM458	Machine	458		Teaches the move Double Hit.	1050	210	1
+578	TM459	Machine	459		Teaches the move Roar of Time.	4500	900	1
+579	TM460	Machine	460		Teaches the move Spacial Rend.	3000	600	1
+580	TM461	Machine	461		Teaches the move Lunar Dance.	500	100	1
+581	TM462	Machine	462		Teaches the move Crush Grip.	500	100	1
+582	TM463	Machine	463		Teaches the move Magma Storm.	3000	600	1
+583	TM464	Machine	464		Teaches the move Dark Void.	500	100	1
+584	TM465	Machine	465		Teaches the move Seed Flare.	3600	720	1
+585	TM466	Machine	466		Teaches the move Ominous Wind.	1800	360	1
+586	TM467	Machine	467		Teaches the move Shadow Force.	3600	720	1
+587	TM468	Machine	468		Teaches the move Hone Claws.	500	100	1
+588	TM469	Machine	469		Teaches the move Wide Guard.	500	100	1
+589	TM470	Machine	470		Teaches the move Guard Split.	500	100	1
+590	TM471	Machine	471		Teaches the move Power Split.	500	100	1
+591	TM472	Machine	472		Teaches the move Wonder Room.	500	100	1
+592	TM473	Machine	473		Teaches the move Psyshock.	2400	480	1
+593	TM474	Machine	474		Teaches the move Venoshock.	1950	390	1
+594	TM475	Machine	475		Teaches the move Autotomize.	500	100	1
+595	TM476	Machine	476		Teaches the move Rage Powder.	500	100	1
+596	TM477	Machine	477		Teaches the move Telekinesis.	500	100	1
+597	TM478	Machine	478		Teaches the move Magic Room.	500	100	1
+598	TM479	Machine	479		Teaches the move Smack Down.	1500	300	1
+599	TM480	Machine	480		Teaches the move Storm Throw.	1800	360	1
+600	TM481	Machine	481		Teaches the move Flame Burst.	2100	420	1
+601	TM482	Machine	482		Teaches the move Sludge Wave.	2850	570	1
+602	TM483	Machine	483		Teaches the move Quiver Dance.	500	100	1
+603	TM484	Machine	484		Teaches the move Heavy Slam.	500	100	1
+604	TM485	Machine	485		Teaches the move Synchronoise.	3600	720	1
+605	TM486	Machine	486		Teaches the move Electro Ball.	500	100	1
+606	TM487	Machine	487		Teaches the move Soak.	500	100	1
+607	TM488	Machine	488		Teaches the move Flame Charge.	1500	300	1
+608	TM489	Machine	489		Teaches the move Coil.	500	100	1
+609	TM490	Machine	490		Teaches the move Low Sweep.	1950	390	1
+610	TM491	Machine	491		Teaches the move Acid Spray.	1200	240	1
+611	TM492	Machine	492		Teaches the move Foul Play.	2850	570	1
+612	TM493	Machine	493		Teaches the move Simple Beam.	500	100	1
+613	TM494	Machine	494		Teaches the move Entrainment.	500	100	1
+614	TM495	Machine	495		Teaches the move After You.	500	100	1
+615	TM496	Machine	496		Teaches the move Round.	1800	360	1
+616	TM497	Machine	497		Teaches the move Echoed Voice.	1200	240	1
+617	TM498	Machine	498		Teaches the move Chip Away.	2100	420	1
+618	TM499	Machine	499		Teaches the move Clear Smog.	1500	300	1
+619	TM500	Machine	500		Teaches the move Stored Power.	600	120	1
+620	TM501	Machine	501		Teaches the move Quick Guard.	500	100	1
+621	TM502	Machine	502		Teaches the move Ally Switch.	500	100	1
+622	TM503	Machine	503		Teaches the move Scald.	2400	480	1
+623	TM504	Machine	504		Teaches the move Shell Smash.	500	100	1
+624	TM505	Machine	505		Teaches the move Heal Pulse.	500	100	1
+625	TM506	Machine	506		Teaches the move Hex.	1950	390	1
+626	TM507	Machine	507		Teaches the move Sky Drop.	1800	360	1
+627	TM508	Machine	508		Teaches the move Shift Gear.	500	100	1
+628	TM509	Machine	509		Teaches the move Circle Throw.	1800	360	1
+629	TM510	Machine	510		Teaches the move Incinerate.	1800	360	1
+630	TM511	Machine	511		Teaches the move Quash.	500	100	1
+631	TM512	Machine	512		Teaches the move Acrobatics.	1650	330	1
+632	TM513	Machine	513		Teaches the move Reflect Type.	500	100	1
+633	TM514	Machine	514		Teaches the move Retaliate.	2100	420	1
+634	TM515	Machine	515		Teaches the move Final Gambit.	500	100	1
+635	TM516	Machine	516		Teaches the move Bestow.	500	100	1
+636	TM517	Machine	517		Teaches the move Inferno.	3000	600	1
+637	TM518	Machine	518		Teaches the move Water Pledge.	2400	480	1
+638	TM519	Machine	519		Teaches the move Fire Pledge.	2400	480	1
+639	TM520	Machine	520		Teaches the move Grass Pledge.	2400	480	1
+640	TM521	Machine	521		Teaches the move Volt Switch.	2100	420	1
+641	TM522	Machine	522		Teaches the move Struggle Bug.	1500	300	1
+642	TM523	Machine	523		Teaches the move Bulldoze.	1800	360	1
+643	TM524	Machine	524		Teaches the move Frost Breath.	1800	360	1
+644	TM525	Machine	525		Teaches the move Dragon Tail.	1800	360	1
+645	TM526	Machine	526		Teaches the move Work Up.	500	100	1
+646	TM527	Machine	527		Teaches the move Electroweb.	1650	330	1
+647	TM528	Machine	528		Teaches the move Wild Charge.	2700	540	1
+648	TM529	Machine	529		Teaches the move Drill Run.	2400	480	1
+649	TM530	Machine	530		Teaches the move Dual Chop.	1200	240	1
+650	TM531	Machine	531		Teaches the move Heart Stamp.	1800	360	1
+651	TM532	Machine	532		Teaches the move Horn Leech.	2250	450	1
+652	TM533	Machine	533		Teaches the move Sacred Sword.	2700	540	1
+653	TM534	Machine	534		Teaches the move Razor Shell.	2250	450	1
+654	TM535	Machine	535		Teaches the move Heat Crash.	500	100	1
+655	TM536	Machine	536		Teaches the move Leaf Tornado.	1950	390	1
+656	TM537	Machine	537		Teaches the move Steamroller.	1950	390	1
+657	TM538	Machine	538		Teaches the move Cotton Guard.	500	100	1
+658	TM539	Machine	539		Teaches the move Night Daze.	2550	510	1
+659	TM540	Machine	540		Teaches the move Psystrike.	3000	600	1
+660	TM541	Machine	541		Teaches the move Tail Slap.	750	150	1
+661	TM542	Machine	542		Teaches the move Hurricane.	3300	660	1
+662	TM543	Machine	543		Teaches the move Head Charge.	3600	720	1
+663	TM544	Machine	544		Teaches the move Gear Grind.	1500	300	1
+664	TM545	Machine	545		Teaches the move Searing Shot.	3000	600	1
+665	TM546	Machine	546		Teaches the move Techno Blast.	3600	720	1
+666	TM547	Machine	547		Teaches the move Relic Song.	2250	450	1
+667	TM548	Machine	548		Teaches the move Secret Sword.	2550	510	1
+668	TM549	Machine	549		Teaches the move Glaciate.	1950	390	1
+669	TM550	Machine	550		Teaches the move Bolt Strike.	3900	780	1
+670	TM551	Machine	551		Teaches the move Blue Flare.	3900	780	1
+671	TM552	Machine	552		Teaches the move Fiery Dance.	2400	480	1
+672	TM553	Machine	553		Teaches the move Freeze Shock.	4200	840	1
+673	TM554	Machine	554		Teaches the move Ice Burn.	4200	840	1
+674	TM555	Machine	555		Teaches the move Snarl.	1650	330	1
+675	TM556	Machine	556		Teaches the move Icicle Crash.	2550	510	1
+676	TM557	Machine	557		Teaches the move V-create.	5400	1080	1
+677	TM558	Machine	558		Teaches the move Fusion Flare.	3000	600	1
+678	TM559	Machine	559		Teaches the move Fusion Bolt.	3000	600	1
+679	TM560	Machine	560		Teaches the move Flying Press.	3000	600	1
+680	TM561	Machine	561		Teaches the move Mat Block.	500	100	1
+681	TM562	Machine	562		Teaches the move Belch.	3600	720	1
+682	TM563	Machine	563		Teaches the move Rototiller.	500	100	1
+683	TM564	Machine	564		Teaches the move Sticky Web.	500	100	1
+684	TM565	Machine	565		Teaches the move Fell Stinger.	1500	300	1
+685	TM566	Machine	566		Teaches the move Phantom Force.	2700	540	1
+686	TM567	Machine	567		Teaches the move Trick-or-Treat.	500	100	1
+687	TM568	Machine	568		Teaches the move Noble Roar.	500	100	1
+688	TM569	Machine	569		Teaches the move Ion Deluge.	500	100	1
+689	TM570	Machine	570		Teaches the move Parabolic Charge.	1950	390	1
+690	TM571	Machine	571		Teaches the move Forest's Curse.	500	100	1
+691	TM572	Machine	572		Teaches the move Petal Blizzard.	2700	540	1
+692	TM573	Machine	573		Teaches the move Freeze-Dry.	2100	420	1
+693	TM574	Machine	574		Teaches the move Disarming Voice.	1200	240	1
+694	TM575	Machine	575		Teaches the move Parting Shot.	500	100	1
+695	TM576	Machine	576		Teaches the move Topsy-Turvy.	500	100	1
+696	TM577	Machine	577		Teaches the move Draining Kiss.	1500	300	1
+697	TM578	Machine	578		Teaches the move Crafty Shield.	500	100	1
+698	TM579	Machine	579		Teaches the move Flower Shield.	500	100	1
+699	TM580	Machine	580		Teaches the move Grassy Terrain.	500	100	1
+700	TM581	Machine	581		Teaches the move Misty Terrain.	500	100	1
+701	TM582	Machine	582		Teaches the move Electrify.	500	100	1
+702	TM583	Machine	583		Teaches the move Play Rough.	2700	540	1
+703	TM584	Machine	584		Teaches the move Fairy Wind.	1200	240	1
+704	TM585	Machine	585		Teaches the move Moonblast.	2850	570	1
+705	TM586	Machine	586		Teaches the move Boomburst.	4200	840	1
+706	TM587	Machine	587		Teaches the move Fairy Lock.	500	100	1
+707	TM588	Machine	588		Teaches the move King's Shield.	500	100	1
+708	TM589	Machine	589		Teaches the move Play Nice.	500	100	1
+709	TM590	Machine	590		Teaches the move Confide.	500	100	1
+710	TM591	Machine	591		Teaches the move Diamond Storm.	3000	600	1
+711	TM592	Machine	592		Teaches the move Steam Eruption.	3300	660	1
+712	TM593	Machine	593		Teaches the move Hyperspace Hole.	2400	480	1
+713	TM594	Machine	594		Teaches the move Water Shuriken.	450	90	1
+714	TM595	Machine	595		Teaches the move Mystical Fire.	2250	450	1
+715	TM596	Machine	596		Teaches the move Spiky Shield.	500	100	1
+716	TM597	Machine	597		Teaches the move Aromatic Mist.	500	100	1
+717	TM598	Machine	598		Teaches the move Eerie Impulse.	500	100	1
+718	TM599	Machine	599		Teaches the move Venom Drench.	500	100	1
+719	TM600	Machine	600		Teaches the move Powder.	500	100	1
+720	TM601	Machine	601		Teaches the move Geomancy.	500	100	1
+721	TM602	Machine	602		Teaches the move Magnetic Flux.	500	100	1
+722	TM603	Machine	603		Teaches the move Happy Hour.	500	100	1
+723	TM604	Machine	604		Teaches the move Electric Terrain.	500	100	1
+724	TM605	Machine	605		Teaches the move Dazzling Gleam.	2400	480	1
+725	TM606	Machine	606		Teaches the move Celebrate.	500	100	1
+726	TM607	Machine	607		Teaches the move Hold Hands.	500	100	1
+727	TM608	Machine	608		Teaches the move Baby-Doll Eyes.	500	100	1
+728	TM609	Machine	609		Teaches the move Nuzzle.	600	120	1
+729	TM610	Machine	610		Teaches the move Hold Back.	1200	240	1
+730	TM611	Machine	611		Teaches the move Infestation.	600	120	1
+731	TM612	Machine	612		Teaches the move Power-Up Punch.	1200	240	1
+732	TM613	Machine	613		Teaches the move Oblivion Wing.	2400	480	1
+733	TM614	Machine	614		Teaches the move Thousand Arrows.	2700	540	1
+734	TM615	Machine	615		Teaches the move Thousand Waves.	2700	540	1
+735	TM616	Machine	616		Teaches the move Land's Wrath.	2700	540	1
+736	TM617	Machine	617		Teaches the move Light of Ruin.	4200	840	1
+737	TM618	Machine	618		Teaches the move Origin Pulse.	3300	660	1
+738	TM619	Machine	619		Teaches the move Precipice Blades.	3600	720	1
+739	TM620	Machine	620		Teaches the move Dragon Ascent.	3600	720	1
+740	TM621	Machine	621		Teaches the move Hyperspace Fury.	3000	600	1
+741	TM622	Machine	622		Teaches the move Breakneck Blitz.	500	100	1
+742	TM623	Machine	623		Teaches the move Breakneck Blitz.	500	100	1
+743	TM624	Machine	624		Teaches the move All-Out Pummeling.	500	100	1
+744	TM625	Machine	625		Teaches the move All-Out Pummeling.	500	100	1
+745	TM626	Machine	626		Teaches the move Supersonic Skystrike.	500	100	1
+746	TM627	Machine	627		Teaches the move Supersonic Skystrike.	500	100	1
+747	TM628	Machine	628		Teaches the move Acid Downpour.	500	100	1
+748	TM629	Machine	629		Teaches the move Acid Downpour.	500	100	1
+749	TM630	Machine	630		Teaches the move Tectonic Rage.	500	100	1
+750	TM631	Machine	631		Teaches the move Tectonic Rage.	500	100	1
+751	TM632	Machine	632		Teaches the move Continental Crush.	500	100	1
+752	TM633	Machine	633		Teaches the move Continental Crush.	500	100	1
+753	TM634	Machine	634		Teaches the move Savage Spin-Out.	500	100	1
+754	TM635	Machine	635		Teaches the move Savage Spin-Out.	500	100	1
+755	TM636	Machine	636		Teaches the move Never-Ending Nightmare.	500	100	1
+756	TM637	Machine	637		Teaches the move Never-Ending Nightmare.	500	100	1
+757	TM638	Machine	638		Teaches the move Corkscrew Crash.	500	100	1
+758	TM639	Machine	639		Teaches the move Corkscrew Crash.	500	100	1
+759	TM640	Machine	640		Teaches the move Inferno Overdrive.	500	100	1
+760	TM641	Machine	641		Teaches the move Inferno Overdrive.	500	100	1
+761	TM642	Machine	642		Teaches the move Hydro Vortex.	500	100	1
+762	TM643	Machine	643		Teaches the move Hydro Vortex.	500	100	1
+763	TM644	Machine	644		Teaches the move Bloom Doom.	500	100	1
+764	TM645	Machine	645		Teaches the move Bloom Doom.	500	100	1
+765	TM646	Machine	646		Teaches the move Gigavolt Havoc.	500	100	1
+766	TM647	Machine	647		Teaches the move Gigavolt Havoc.	500	100	1
+767	TM648	Machine	648		Teaches the move Shattered Psyche.	500	100	1
+768	TM649	Machine	649		Teaches the move Shattered Psyche.	500	100	1
+769	TM650	Machine	650		Teaches the move Subzero Slammer.	500	100	1
+770	TM651	Machine	651		Teaches the move Subzero Slammer.	500	100	1
+771	TM652	Machine	652		Teaches the move Devastating Drake.	500	100	1
+772	TM653	Machine	653		Teaches the move Devastating Drake.	500	100	1
+773	TM654	Machine	654		Teaches the move Black Hole Eclipse.	500	100	1
+774	TM655	Machine	655		Teaches the move Black Hole Eclipse.	500	100	1
+775	TM656	Machine	656		Teaches the move Twinkle Tackle.	500	100	1
+776	TM657	Machine	657		Teaches the move Twinkle Tackle.	500	100	1
+777	TM658	Machine	658		Teaches the move Catastropika.	6300	1260	1
+778	TM659	Machine	659		Teaches the move Shore Up.	500	100	1
+779	TM660	Machine	660		Teaches the move First Impression.	2700	540	1
+780	TM661	Machine	661		Teaches the move Baneful Bunker.	500	100	1
+781	TM662	Machine	662		Teaches the move Spirit Shackle.	2400	480	1
+782	TM663	Machine	663		Teaches the move Darkest Lariat.	2550	510	1
+783	TM664	Machine	664		Teaches the move Sparkling Aria.	2700	540	1
+784	TM665	Machine	665		Teaches the move Ice Hammer.	3000	600	1
+785	TM666	Machine	666		Teaches the move Floral Healing.	500	100	1
+786	TM667	Machine	667		Teaches the move High Horsepower.	2850	570	1
+787	TM668	Machine	668		Teaches the move Strength Sap.	500	100	1
+788	TM669	Machine	669		Teaches the move Solar Blade.	3750	750	1
+789	TM670	Machine	670		Teaches the move Leafage.	1200	240	1
+790	TM671	Machine	671		Teaches the move Spotlight.	500	100	1
+791	TM672	Machine	672		Teaches the move Toxic Thread.	500	100	1
+792	TM673	Machine	673		Teaches the move Laser Focus.	500	100	1
+793	TM674	Machine	674		Teaches the move Gear Up.	500	100	1
+794	TM675	Machine	675		Teaches the move Throat Chop.	2400	480	1
+795	TM676	Machine	676		Teaches the move Pollen Puff.	2700	540	1
+796	TM677	Machine	677		Teaches the move Anchor Shot.	2400	480	1
+797	TM678	Machine	678		Teaches the move Psychic Terrain.	500	100	1
+798	TM679	Machine	679		Teaches the move Lunge.	2400	480	1
+799	TM680	Machine	680		Teaches the move Fire Lash.	2400	480	1
+800	TM681	Machine	681		Teaches the move Power Trip.	600	120	1
+801	TM682	Machine	682		Teaches the move Burn Up.	3900	780	1
+802	TM683	Machine	683		Teaches the move Speed Swap.	500	100	1
+803	TM684	Machine	684		Teaches the move Smart Strike.	2100	420	1
+804	TM685	Machine	685		Teaches the move Purify.	500	100	1
+805	TM686	Machine	686		Teaches the move Revelation Dance.	2700	540	1
+806	TM687	Machine	687		Teaches the move Core Enforcer.	3000	600	1
+807	TM688	Machine	688		Teaches the move Trop Kick.	2100	420	1
+808	TM689	Machine	689		Teaches the move Instruct.	500	100	1
+809	TM690	Machine	690		Teaches the move Beak Blast.	3000	600	1
+810	TM691	Machine	691		Teaches the move Clanging Scales.	3300	660	1
+811	TM692	Machine	692		Teaches the move Dragon Hammer.	2700	540	1
+812	TM693	Machine	693		Teaches the move Brutal Swing.	1800	360	1
+813	TM694	Machine	694		Teaches the move Aurora Veil.	500	100	1
+814	TM695	Machine	695		Teaches the move Sinister Arrow Raid.	5400	1080	1
+815	TM696	Machine	696		Teaches the move Malicious Moonsault.	5400	1080	1
+816	TM697	Machine	697		Teaches the move Oceanic Operetta.	5850	1170	1
+817	TM698	Machine	698		Teaches the move Guardian of Alola.	500	100	1
+818	TM699	Machine	699		Teaches the move Soul-Stealing 7-Star Strike.	5850	1170	1
+819	HM700	Machine	700		Teaches the move Stoked Sparksurfer.	5250	1050	0
+820	TM701	Machine	701		Teaches the move Pulverizing Pancake.	6300	1260	1
+821	TM702	Machine	702		Teaches the move Extreme Evoboost.	500	100	1
+822	TM703	Machine	703		Teaches the move Genesis Supernova.	5550	1110	1
+823	TM704	Machine	704		Teaches the move Shell Trap.	4500	900	1
+824	TM705	Machine	705		Teaches the move Fleur Cannon.	3900	780	1
+825	TM706	Machine	706		Teaches the move Psychic Fangs.	2550	510	1
+826	TM707	Machine	707		Teaches the move Stomping Tantrum.	2250	450	1
+827	TM708	Machine	708		Teaches the move Shadow Bone.	2550	510	1
+828	TM709	Machine	709		Teaches the move Accelerock.	1200	240	1
+829	TM710	Machine	710		Teaches the move Liquidation.	2550	510	1
+830	TM711	Machine	711		Teaches the move Prismatic Laser.	4800	960	1
+831	TM712	Machine	712		Teaches the move Spectral Thief.	2700	540	1
+832	TM713	Machine	713		Teaches the move Sunsteel Strike.	3000	600	1
+833	TM714	Machine	714		Teaches the move Moongeist Beam.	3000	600	1
+834	TM715	Machine	715		Teaches the move Tearful Look.	500	100	1
+835	TM716	Machine	716		Teaches the move Zing Zap.	2400	480	1
+836	TM717	Machine	717		Teaches the move Nature's Madness.	500	100	1
+837	TM718	Machine	718		Teaches the move Multi-Attack.	3600	720	1
+838	TM719	Machine	719		Teaches the move 10,000,000 Volt Thunderbolt.	5850	1170	1
+839	TM720	Machine	720		Teaches the move Mind Blown.	4500	900	1
+840	TM721	Machine	721		Teaches the move Plasma Fists.	3000	600	1
+841	TM722	Machine	722		Teaches the move Photon Geyser.	3000	600	1
+842	TM723	Machine	723		Teaches the move Light That Burns the Sky.	6000	1200	1
+843	TM724	Machine	724		Teaches the move Searing Sunraze Smash.	6000	1200	1
+844	TM725	Machine	725		Teaches the move Menacing Moonraze Maelstrom.	6000	1200	1
+845	TM726	Machine	726		Teaches the move Let's Snuggle Forever.	5700	1140	1
+846	TM727	Machine	727		Teaches the move Splintered Stormshards.	5700	1140	1
+847	TM728	Machine	728		Teaches the move Clangorous Soulblaze.	5550	1110	1
+848	TM729	Machine	729		Teaches the move Zippy Zap.	2400	480	1
+849	TM730	Machine	730		Teaches the move Splishy Splash.	2700	540	1
+850	TM731	Machine	731		Teaches the move Floaty Fall.	2700	540	1
+851	TM732	Machine	732		Teaches the move Pika Papow.	500	100	1
+852	TM733	Machine	733		Teaches the move Bouncy Bubble.	1800	360	1
+853	TM734	Machine	734		Teaches the move Buzzy Buzz.	1800	360	1
+854	TM735	Machine	735		Teaches the move Sizzly Slide.	1800	360	1
+855	TM736	Machine	736		Teaches the move Glitzy Glow.	2400	480	1
+856	TM737	Machine	737		Teaches the move Baddy Bad.	2400	480	1
+857	TM738	Machine	738		Teaches the move Sappy Seed.	3000	600	1
+858	TM739	Machine	739		Teaches the move Freezy Frost.	3000	600	1
+859	TM740	Machine	740		Teaches the move Sparkly Swirl.	3600	720	1
+860	TM741	Machine	741		Teaches the move Veevee Volley.	500	100	1
+861	TM742	Machine	742		Teaches the move Double Iron Bash.	1800	360	1
+862	TM743	Machine	743		Teaches the move Max Guard.	500	100	1
+863	TM744	Machine	744		Teaches the move Dynamax Cannon.	3000	600	1
+864	TM745	Machine	745		Teaches the move Snipe Shot.	2400	480	1
+865	TM746	Machine	746		Teaches the move Jaw Lock.	2400	480	1
+866	TM747	Machine	747		Teaches the move Stuff Cheeks.	500	100	1
+867	TM748	Machine	748		Teaches the move No Retreat.	500	100	1
+868	TM749	Machine	749		Teaches the move Tar Shot.	500	100	1
+869	TM750	Machine	750		Teaches the move Magic Powder.	500	100	1
+870	TM751	Machine	751		Teaches the move Dragon Darts.	1500	300	1
+871	TM752	Machine	752		Teaches the move Teatime.	500	100	1
+872	TM753	Machine	753		Teaches the move Octolock.	500	100	1
+873	TM754	Machine	754		Teaches the move Bolt Beak.	2550	510	1
+874	TM755	Machine	755		Teaches the move Fishious Rend.	2550	510	1
+875	TM756	Machine	756		Teaches the move Court Change.	500	100	1
+876	TM757	Machine	757		Teaches the move Max Flare.	500	100	1
+877	TM758	Machine	758		Teaches the move Max Flutterby.	500	100	1
+878	TM759	Machine	759		Teaches the move Max Lightning.	500	100	1
+879	TM760	Machine	760		Teaches the move Max Strike.	500	100	1
+880	TM761	Machine	761		Teaches the move Max Knuckle.	500	100	1
+881	TM762	Machine	762		Teaches the move Max Phantasm.	500	100	1
+882	TM763	Machine	763		Teaches the move Max Hailstorm.	500	100	1
+883	TM764	Machine	764		Teaches the move Max Ooze.	500	100	1
+884	TM765	Machine	765		Teaches the move Max Geyser.	500	100	1
+885	TM766	Machine	766		Teaches the move Max Airstream.	500	100	1
+886	TM767	Machine	767		Teaches the move Max Starfall.	500	100	1
+887	TM768	Machine	768		Teaches the move Max Wyrmwind.	500	100	1
+888	TM769	Machine	769		Teaches the move Max Mindstorm.	500	100	1
+889	TM770	Machine	770		Teaches the move Max Rockfall.	500	100	1
+890	TM771	Machine	771		Teaches the move Max Quake.	500	100	1
+891	TM772	Machine	772		Teaches the move Max Darkness.	500	100	1
+892	TM773	Machine	773		Teaches the move Max Overgrowth.	500	100	1
+893	TM774	Machine	774		Teaches the move Max Steelspike.	500	100	1
+894	TM775	Machine	775		Teaches the move Clangorous Soul.	500	100	1
+895	TM776	Machine	776		Teaches the move Body Press.	2400	480	1
+896	TM777	Machine	777		Teaches the move Decorate.	500	100	1
+897	TM778	Machine	778		Teaches the move Drum Beating.	2400	480	1
+898	TM779	Machine	779		Teaches the move Snap Trap.	1050	210	1
+899	TM780	Machine	780		Teaches the move Pyro Ball.	3600	720	1
+900	TM781	Machine	781		Teaches the move Behemoth Blade.	3000	600	1
+901	TM782	Machine	782		Teaches the move Behemoth Bash.	3000	600	1
+902	TM783	Machine	783		Teaches the move Aura Wheel.	3300	660	1
+903	TM784	Machine	784		Teaches the move Breaking Swipe.	1800	360	1
+904	TM785	Machine	785		Teaches the move Branch Poke.	1200	240	1
+905	TM786	Machine	786		Teaches the move Overdrive.	2400	480	1
+906	TM787	Machine	787		Teaches the move Apple Acid.	2400	480	1
+907	TM788	Machine	788		Teaches the move Grav Apple.	2400	480	1
+908	TM789	Machine	789		Teaches the move Spirit Break.	2250	450	1
+909	TM790	Machine	790		Teaches the move Strange Steam.	2700	540	1
+910	TM791	Machine	791		Teaches the move Life Dew.	500	100	1
+911	TM792	Machine	792		Teaches the move Obstruct.	500	100	1
+912	TM793	Machine	793		Teaches the move False Surrender.	2400	480	1
+913	TM794	Machine	794		Teaches the move Meteor Assault.	4500	900	1
+914	TM795	Machine	795		Teaches the move Eternabeam.	4800	960	1
+915	TM796	Machine	796		Teaches the move Steel Beam.	4200	840	1
+916	TM797	Machine	797		Teaches the move Expanding Force.	2400	480	1
+917	TM798	Machine	798		Teaches the move Steel Roller.	3900	780	1
+918	TM799	Machine	799		Teaches the move Scale Shot.	750	150	1
+919	TM800	Machine	800		Teaches the move Meteor Beam.	3600	720	1
+920	TM801	Machine	801		Teaches the move Shell Side Arm.	2700	540	1
+921	TM802	Machine	802		Teaches the move Misty Explosion.	3000	600	1
+922	TM803	Machine	803		Teaches the move Grassy Glide.	2100	420	1
+923	TM804	Machine	804		Teaches the move Rising Voltage.	2100	420	1
+924	TM805	Machine	805		Teaches the move Terrain Pulse.	1500	300	1
+925	TM806	Machine	806		Teaches the move Skitter Smack.	2100	420	1
+926	TM807	Machine	807		Teaches the move Burning Jealousy.	2100	420	1
+927	TM808	Machine	808		Teaches the move Lash Out.	2250	450	1
+928	TM809	Machine	809		Teaches the move Poltergeist.	3300	660	1
+929	TM810	Machine	810		Teaches the move Corrosive Gas.	500	100	1
+930	TM811	Machine	811		Teaches the move Coaching.	500	100	1
+931	TM812	Machine	812		Teaches the move Flip Turn.	1800	360	1
+932	TM813	Machine	813		Teaches the move Triple Axel.	600	120	1
+933	TM814	Machine	814		Teaches the move Dual Wingbeat.	1200	240	1
+934	TM815	Machine	815		Teaches the move Scorching Sands.	2100	420	1
+935	TM816	Machine	816		Teaches the move Jungle Healing.	500	100	1
+936	TM817	Machine	817		Teaches the move Wicked Blow.	2400	480	1
+937	TM818	Machine	818		Teaches the move Surging Strikes.	750	150	1
+938	TM819	Machine	819		Teaches the move Thunder Cage.	2400	480	1
+939	TM820	Machine	820		Teaches the move Dragon Energy.	4500	900	1
+940	TM821	Machine	821		Teaches the move Freezing Glare.	2700	540	1
+941	TM822	Machine	822		Teaches the move Fiery Wrath.	2700	540	1
+942	TM823	Machine	823		Teaches the move Thunderous Kick.	2700	540	1
+943	TM824	Machine	824		Teaches the move Glacial Lance.	3900	780	1
+944	TM825	Machine	825		Teaches the move Astral Barrage.	3600	720	1
+945	TM826	Machine	826		Teaches the move Eerie Spell.	2400	480	1
+946	TM827	Machine	827		Teaches the move Dire Claw.	1800	360	1
+947	TM828	Machine	828		Teaches the move Psyshield Bash.	2100	420	1
+948	TM829	Machine	829		Teaches the move Power Shift.	500	100	1
+949	TM830	Machine	830		Teaches the move Stone Axe.	1950	390	1
+950	TM831	Machine	831		Teaches the move Springtide Storm.	2850	570	1
+951	TM832	Machine	832		Teaches the move Mystical Power.	2100	420	1
+952	TM833	Machine	833		Teaches the move Raging Fury.	2700	540	1
+953	TM834	Machine	834		Teaches the move Wave Crash.	2250	450	1
+954	TM835	Machine	835		Teaches the move Chloroblast.	3600	720	1
+955	TM836	Machine	836		Teaches the move Mountain Gale.	3000	600	1
+956	TM837	Machine	837		Teaches the move Victory Dance.	500	100	1
+957	TM838	Machine	838		Teaches the move Headlong Rush.	3000	600	1
+958	TM839	Machine	839		Teaches the move Barb Barrage.	1800	360	1
+959	TM840	Machine	840		Teaches the move Esper Wing.	2250	450	1
+960	TM841	Machine	841		Teaches the move Bitter Malice.	1800	360	1
+961	TM842	Machine	842		Teaches the move Shelter.	500	100	1
+962	TM843	Machine	843		Teaches the move Triple Arrows.	1500	300	1
+963	TM844	Machine	844		Teaches the move Infernal Parade.	1800	360	1
+964	TM845	Machine	845		Teaches the move Ceaseless Edge.	1950	390	1
+965	TM846	Machine	846		Teaches the move Bleakwind Storm.	2850	570	1
+966	TM847	Machine	847		Teaches the move Wildbolt Storm.	2850	570	1
+967	TM848	Machine	848		Teaches the move Sandsear Storm.	2850	570	1
+968	TM849	Machine	849		Teaches the move Lunar Blessing.	500	100	1
+969	TM850	Machine	850		Teaches the move Take Heart.	500	100	1

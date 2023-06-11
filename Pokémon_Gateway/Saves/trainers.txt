@@ -1,0 +1,11 @@
+ID	Player	Name	Pokedex Count	Pokedex	Pokemon Count	Pokemon	Money	Items
+0	Meg	Mango	1	74,802	1	74,802	100	
+1	Ava	Peach	1	817	1	817	0	
+2	Quentin	Brick	1	805	1	805	0	
+3	Ryan	Lily	1	814	1	814	100	
+5	Anthony	Sage	1	811	1	811	113	
+6	Scott	Durian	1		1		0	
+7	DM	Zed the Heir	0		1		0	
+8	DM	Gym Leader Reina	0		1		0	
+9	DM	Gym Leader Geraldo	0		0		0	
+10	DM	Xander the All-Knowing	0		0		0	
