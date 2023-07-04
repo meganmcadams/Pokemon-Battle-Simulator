@@ -41,3 +41,9 @@ ID	Pid	Pname	Tid	Tname	Plname	Full Name	Gender	Name	Level	Moves	Battles	Status	C
 41	717	Yveltal				Wild Yveltal	Male		52	173,168,366,371	0		62	62	0	157	115	152	108	112	7	31	22	21	3	9	0	0	0	0	0	0	157	115	152	108	112	0
 42	275	Shiftry				Wild Shiftry	Male		47	279,580,25,182	0		57	57	0	105	73	99	74	81	1	14	25	21	28	3	0	0	0	0	0	0	105	73	99	74	81	0
 39	51	Dugtrio				Wild Dugtrio	Female	Dug	54	251,526,213,216	0		64	64	0	128	78	63	90	128	25	29	16	8	18	9	0	0	0	0	0	0	128	78	63	90	128	0
+40	19	Rattata				Wild Rattata	Male		2	34,59	0		12	12	0	7	6	6	6	8	30	9	24	9	7	8	0	0	0	0	0	0	7	6	6	6	8	0
+43	215	Sneasel				Wild Sneasel	Male		9	207,214,492,813	0		19	19	0	24	17	13	21	28	25	31	27	24	31	27	0	0	0	0	0	0	24	17	13	21	28	0
+44	83	Farfetch'd				Wild Farfetch'd	Male		5	36,290,590	0		15	15	0	14	11	11	12	11	21	15	29	23	29	18	0	0	0	0	0	0	14	11	11	12	11	0
+45	261	Poochyena				Wild Poochyena	Male		4	104,263,240	0		14	14	0	10	8	8	8	8	30	25	18	18	30	18	0	0	0	0	0	0	10	8	8	8	8	0
+46	30	Nidorina				Wild Nidorina	Male		4	70,497,92	0		14	14	0	10	11	9	10	10	22	5	17	2	18	25	0	0	0	0	0	0	10	11	9	10	10	0
+47	50	Diglett				Wild Diglett	Female		13	590,446,496,	0		23	23	0	21	16	15	20	30	18	19	28	7	29	18	0	0	0	0	0	0	21	16	15	20	30	0
