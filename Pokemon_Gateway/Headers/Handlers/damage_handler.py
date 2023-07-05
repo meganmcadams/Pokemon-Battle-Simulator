@@ -1,13 +1,13 @@
 import random
 
-def damage(pokemon, move, attacker, opponent, weather):
 
-    if move['Power'] == 0 or move['Category'] == "Status": # if the move does nothing
+def damage(pokemon, move, attacker, opponent, weather):
+    if move['Power'] == 0 or move['Category'] == "Status":  # if the move does nothing
         return
 
-    critical_chance = 0.05 # default critical hit chance to 5%
-    critical = 1 # default critical to no increase
-    min_num = random.randrange(1,100)
+    critical_chance = 0.05  # default critical hit chance to 5%
+    critical = 1  # default critical to no increase
+    min_num = random.randrange(1, 100)
     num = critical_chance * 100
     if num >= min_num:
         critical = 1.5
@@ -21,13 +21,13 @@ def damage(pokemon, move, attacker, opponent, weather):
         burn = 0.5
 
     weather_bonus = 1
-    if weather != "": # if weather is not default
+    if weather != "":  # if weather is not default
         if weather is pokemon[int(attacker['Pid'])]['Type1'] or weather is pokemon[int(attacker['Pid'])]['Type2']:
             weather = 1.5
 
     opponent_type = pokemon[int(opponent['Pid'])][move['Type']]
 
-    rng = random.randrange(85,100) / 100
+    rng = random.randrange(85, 100) / 100
 
     part1 = ((int(attacker['Level']) * 2) / 5) + 2
 
@@ -38,8 +38,8 @@ def damage(pokemon, move, attacker, opponent, weather):
 
     left = ((part1 * part2) / 50) + 2
     damage = left * weather_bonus * critical * rng * stab * burn * opponent_type
-    
-    print(move['Name'],"did",round(damage),"damage!")
+
+    print(move['Name'], "did", round(damage), "damage!")
     opponent['Curr HP'] -= round(damage)
 
     if opponent_type < 1:

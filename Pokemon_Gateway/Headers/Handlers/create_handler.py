@@ -2,26 +2,27 @@ import random
 from Headers.Handlers.level_handler import level_up
 from Headers.tools import get_next_id, subheader, option, correct_type
 
+
 def create(pokemon, to_next_level, stored_pokemon, level, name, nickname, tid, move_levels, moves, trainers):
     poss_keys = list(stored_pokemon.keys())
-    copy = stored_pokemon[poss_keys[0]].copy() # make a copy of an existing pokemon
-    for key in copy.keys(): # for key in copy
-        copy[key] = int(0) # default every value to 0
+    copy = stored_pokemon[poss_keys[0]].copy()  # make a copy of an existing pokemon
+    for key in copy.keys():  # for key in copy
+        copy[key] = int(0)  # default every value to 0
 
-    copy['ID'] = get_next_id(stored_pokemon) # store id
+    copy['ID'] = get_next_id(stored_pokemon)  # store id
 
     pid = get_pid(pokemon, name)
-    if pid == -1: # if could not find name in pokemon
-        print("ERROR: Could not find",name,"in pokemon.")
+    if pid == -1:  # if could not find name in pokemon
+        print("ERROR: Could not find", name, "in pokemon.")
         return
-    copy['Pid'] = pid # pid
+    copy['Pid'] = pid  # pid
     copy['Pname'] = pokemon[pid]['Name']
     copy['Tid'] = tid
-    copy['Name'] = nickname # name
+    copy['Name'] = nickname  # name
     copy['Status'] = ""
-    copy['Tname'] = "" # trainer name; defaulted to none
-    copy['Plname'] = "" # player name; defaulted to none
-    copy['Full Name'] = "" # full name
+    copy['Tname'] = ""  # trainer name; defaulted to none
+    copy['Plname'] = ""  # player name; defaulted to none
+    copy['Full Name'] = ""  # full name
 
     # nickname
     if nickname.isspace():
@@ -38,16 +39,16 @@ def create(pokemon, to_next_level, stored_pokemon, level, name, nickname, tid, m
         copy['Full Name'] = "Wild " + str(copy['Pname'])
 
     # gender
-    min_num = random.randrange(1,100)
+    min_num = random.randrange(1, 100)
     num = float(pokemon[copy['Pid']]['Percent Male']) * 100
     if num <= min_num:
         copy['Gender'] = "Male"
     else:
         copy['Gender'] = "Female"
-    
-    moves = move_levels[int(pid)][0] # set moves to list of possible moves
+
+    moves = move_levels[int(pid)][0]  # set moves to list of possible moves
     res = ""
-    if level < 3: # if level is less than 3, have it learn 2 moves
+    if level < 3:  # if level is less than 3, have it learn 2 moves
         num = 2
     elif level < 7:
         num = 3
@@ -55,29 +56,29 @@ def create(pokemon, to_next_level, stored_pokemon, level, name, nickname, tid, m
         num = 4
 
     i = 0
-    while i < num: # get random moves from list of options
+    while i < num:  # get random moves from list of options
 
         res_move = -1
-        try: # try to grab random from list
+        try:  # try to grab random from list
             res_move = str(random.choice(list(moves)))
-        except: # if only 1 in list
+        except:  # if only 1 in list
             res_move = str(moves)
 
-        if res_move not in res: # if haven't stored it already
+        if res_move not in res:  # if haven't stored it already
             res += res_move
             if i < num - 1:
                 res += ","
         i += 1
 
-    copy['Moves'] = res # store result
+    copy['Moves'] = res  # store result
     copy['HP'] = pokemon[pid]['HP']
-    copy['HP IV'] = random.randrange(1,32)
-    copy['Attack IV'] = random.randrange(1,32)
-    copy['Defense IV'] = random.randrange(1,32)
-    copy['Sp Attack IV'] = random.randrange(1,32)
-    copy['Sp Defense IV'] = random.randrange(1,32)
-    copy['Speed IV'] = random.randrange(1,32)
-    
+    copy['HP IV'] = random.randrange(1, 32)
+    copy['Attack IV'] = random.randrange(1, 32)
+    copy['Defense IV'] = random.randrange(1, 32)
+    copy['Sp Attack IV'] = random.randrange(1, 32)
+    copy['Sp Defense IV'] = random.randrange(1, 32)
+    copy['Speed IV'] = random.randrange(1, 32)
+
     i = 0
     while i < level:
         level_up(pokemon[pid], copy, to_next_level, move_levels, moves, False, False)
@@ -94,8 +95,9 @@ def create(pokemon, to_next_level, stored_pokemon, level, name, nickname, tid, m
 
     stored_pokemon[stored_id] = copy.copy()
 
-    print("New pokemon, ",copy['Pname'],", successfully created | ID: ",stored_id,sep="") # print success message
+    print("New pokemon, ", copy['Pname'], ", successfully created | ID: ", stored_id, sep="")  # print success message
     return
+
 
 def get_pid(pokemon, name):
     i = 0
@@ -109,7 +111,8 @@ def get_pid(pokemon, name):
 
     return -1
 
-def get_level(): # get level that user wants to make pokemon at
+
+def get_level():  # get level that user wants to make pokemon at
     subheader("Level")
     option(0, "Create random-leveled pokemon")
     option(1, "Create pokemon with level in given range")
@@ -117,50 +120,51 @@ def get_level(): # get level that user wants to make pokemon at
     option(3, "Cancel")
     inp = input("--> ")
 
-    try: # try turning inp into an integer
+    try:  # try turning inp into an integer
         inp = int(inp)
     except:
         inp = -1
 
-    level = 1 # default level to 1
-    if inp == 0: # Random-leveled
-        level = random.randrange(1,99)
-        
+    level = 1  # default level to 1
+    if inp == 0:  # Random-leveled
+        level = random.randrange(1, 99)
+
     elif inp == 1:
         range1 = input("From level: ")
         range2 = input("To level: ")
 
-        try: # try turning inputs into integers
+        try:  # try turning inputs into integers
             range1 = int(range1)
             range2 = int(range2)
         except:
             print("ERROR: One or more of the inputs was not an integer")
             return -1
 
-        if range1 < 1 or range1 >= range2 or range2 > 99: # out of range
+        if range1 < 1 or range1 >= range2 or range2 > 99:  # out of range
             print("ERROR: One or more of the inputs was out of range")
             return -1
 
-        if inp != 3: # if there were no errors
+        if inp != 3:  # if there were no errors
             level = random.randrange(range1, range2)
 
     elif inp == 2:
         level = input("Level: ")
 
-        try: # check if given level is an integer
+        try:  # check if given level is an integer
             level = int(level)
         except:
-            print("ERROR:",level,"is not an integer")
+            print("ERROR:", level, "is not an integer")
             return -1
-        
-    elif inp == 3: # Cancel
+
+    elif inp == 3:  # Cancel
         return -1
 
-    else: # Out of range
-        print("ERROR:",inp,"was not an option or the input wasn't an integer")
+    else:  # Out of range
+        print("ERROR:", inp, "was not an option or the input wasn't an integer")
         return -1
 
     return level
+
 
 def get_pokemon_name(pokemon):
     subheader("Pokemon Name")
@@ -170,16 +174,16 @@ def get_pokemon_name(pokemon):
     option(3, "Cancel")
     inp = input("--> ")
 
-    try: # check if inp is an integer
+    try:  # check if inp is an integer
         inp = int(inp)
     except:
-        print("ERROR:",inp,"is not an integer")
+        print("ERROR:", inp, "is not an integer")
         return -1
 
-    if inp == 0: # By biome
+    if inp == 0:  # By biome
         return pokemon[random.randrange(1, len(pokemon) - 1)]['Name']
 
-    elif inp == 1: # Random Pokemon
+    elif inp == 1:  # Random Pokemon
         inp = input("Type: ")
 
         count = 0
@@ -189,30 +193,31 @@ def get_pokemon_name(pokemon):
                 return pokemon[i]['Name']
             else:
                 count += 1
-                if i > len(pokemon) - 1: # if at end
+                if i > len(pokemon) - 1:  # if at end
                     i = 0
-                else: # if not at end
+                else:  # if not at end
                     i += 1
-            if count >= len(pokemon) / 10: # if have gone through 10% of the pokemon and not found one yet
-                print("ERROR: Could not find",inp,"in types of Pokemon")
+            if count >= len(pokemon) / 10:  # if have gone through 10% of the pokemon and not found one yet
+                print("ERROR: Could not find", inp, "in types of Pokemon")
                 return -1
 
-    elif inp == 2: # Specified name
+    elif inp == 2:  # Specified name
         name = input("Name of Pokemon: ")
 
-        pid = get_pid(pokemon, name) # try to find pokemon by name
-        if pid == -1: # if not found
-            print("ERROR:",name,"not found in Pokemon")
+        pid = get_pid(pokemon, name)  # try to find pokemon by name
+        if pid == -1:  # if not found
+            print("ERROR:", name, "not found in Pokemon")
             return -1
         else:
             return name
 
-    elif inp == 3: # Cancel
+    elif inp == 3:  # Cancel
         return -1
 
-    else: # Out of range
-        print("ERROR:",inp,"was not an option or the input was not an integer")
+    else:  # Out of range
+        print("ERROR:", inp, "was not an option or the input was not an integer")
         return -1
+
 
 def get_pokemon_nickname():
     subheader("Nickname")
@@ -220,7 +225,7 @@ def get_pokemon_nickname():
     option(1, "Set nickname")
     inp = input("--> ")
 
-    try: # see if inp is an integer
+    try:  # see if inp is an integer
         inp = int(inp)
     except:
         inp = -1
@@ -233,8 +238,9 @@ def get_pokemon_nickname():
         return nickname
 
     else:
-        print("ERROR:",inp,"was not an option or the input was not an integer")
+        print("ERROR:", inp, "was not an option or the input was not an integer")
         return -1
+
 
 def get_pokemon_tid():
     subheader("Trainer")
@@ -242,7 +248,7 @@ def get_pokemon_tid():
     option(1, "Set trainer (ID)")
     inp = input("--> ")
 
-    try: # see if inp is an integer
+    try:  # see if inp is an integer
         inp = int(inp)
     except:
         inp = -1
@@ -255,5 +261,5 @@ def get_pokemon_tid():
         return correct_type(tid)
 
     else:
-        print("ERROR:",inp,"was not an option or the input was not an integer")
+        print("ERROR:", inp, "was not an option or the input was not an integer")
         return -1

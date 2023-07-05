@@ -1,12 +1,12 @@
-def save(items, filename): # save to a file
-    print("Saving ",filename,"...",sep="")
+def save(items, filename):  # save to a file
+    print("Saving ", filename, "...", sep="")
 
     filename = "Saves/" + filename + ".txt"
 
-    try: # try to open file
+    try:  # try to open file
         openfile = open(filename, 'w')
-    except: # if couldn't open it
-        print("ERROR: Could not open",filename)
+    except:  # if couldn't open it
+        print("ERROR: Could not open", filename)
         exit()
 
     rows = len(items)
@@ -41,9 +41,10 @@ def save(items, filename): # save to a file
 
     openfile.close()
 
-    print("Save complete. Saved",len(items),"items.\n")
+    print("Save complete. Saved", len(items), "items.\n")
 
-def save_all(stored_pokemon, trainers, parties, shops): # save everything
+
+def save_all(stored_pokemon, trainers, parties, shops):  # save everything
     save(stored_pokemon, "pokemon")
     save(trainers, "trainers")
     save(parties, "parties")

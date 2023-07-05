@@ -4,8 +4,8 @@ import random
 from Headers.Handlers.battle_handler import reset_stats
 from Headers.save import save
 
-def pokemon_manager(pokemon, stored_pokemon, to_next_level, parties, move_levels, moves, trainers):
 
+def pokemon_manager(pokemon, stored_pokemon, to_next_level, parties, move_levels, moves, trainers):
     save(stored_pokemon, "pokemon.txt")
 
     header("Pokemon Manager")
@@ -16,12 +16,12 @@ def pokemon_manager(pokemon, stored_pokemon, to_next_level, parties, move_levels
     option(4, "Exit")
     inp = input("--> ")
 
-    try: # try turning inp into an integer
+    try:  # try turning inp into an integer
         inp = int(inp)
     except:
         inp = -1
 
-    if inp == 0: # Create Pokemon
+    if inp == 0:  # Create Pokemon
         level = get_level()
 
         if level != -1:
@@ -29,14 +29,15 @@ def pokemon_manager(pokemon, stored_pokemon, to_next_level, parties, move_levels
 
             if name != -1:
                 nickname = get_pokemon_nickname()
-                
+
                 if nickname != -1:
                     tid = get_pokemon_tid()
-                
-                    if tid != -1:
-                        create(pokemon, to_next_level, stored_pokemon, level, name, nickname, tid, move_levels, moves, trainers)
 
-    elif inp == 1: # Delete Pokemon
+                    if tid != -1:
+                        create(pokemon, to_next_level, stored_pokemon, level, name, nickname, tid, move_levels, moves,
+                               trainers)
+
+    elif inp == 1:  # Delete Pokemon
         print_list(stored_pokemon)
         print("Which pokemon would you like to delete (-1 to cancel)?")
         to_delete = correct_type(input("--> "))
@@ -45,31 +46,33 @@ def pokemon_manager(pokemon, stored_pokemon, to_next_level, parties, move_levels
         else:
             try:
                 del stored_pokemon[to_delete]
-                print(to_delete,"was successfully deleted")
+                print(to_delete, "was successfully deleted")
             except:
-                print("ERROR: Could not delete",to_delete)
-        
-    elif inp == 2: # List Pokemon
+                print("ERROR: Could not delete", to_delete)
+
+    elif inp == 2:  # List Pokemon
         print_list(stored_pokemon)
 
-    elif inp == 3: # Pokemon Center
+    elif inp == 3:  # Pokemon Center
         print_list(parties)
         print("Which party is going to the Pokemon Center?")
         party = input("--> ")
         try:
             pokemon_center(parties[int(party)], stored_pokemon)
         except:
-            print("ERROR:",party,"was not an option")
+            print("ERROR:", party, "was not an option")
 
-    elif inp == 4: # Exit
+    elif inp == 4:  # Exit
         return
 
-    else: # Out of range
-        print("ERROR:",inp,"was not an option or the input was not an integer")
+    else:  # Out of range
+        print("ERROR:", inp, "was not an option or the input was not an integer")
 
-    pokemon_manager(pokemon, stored_pokemon, to_next_level, parties, move_levels, moves, trainers) # recursive call to reset menu
+    pokemon_manager(pokemon, stored_pokemon, to_next_level, parties, move_levels, moves,
+                    trainers)  # recursive call to reset menu
 
-def pokemon_center(party, stored_pokemon): # heal all pokemon
+
+def pokemon_center(party, stored_pokemon):  # heal all pokemon
     try:
         pokemon = party['Pokemon'].split(',')
     except:

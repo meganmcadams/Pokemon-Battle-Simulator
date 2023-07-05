@@ -1,6 +1,6 @@
 class Container(object):
     def __init__(self, list):
-        self.list = list # is a dictionary with keys as index 0
+        self.list = list  # is a dictionary with keys as index 0
 
     def add(self, id, item):
         self.list[id] = item

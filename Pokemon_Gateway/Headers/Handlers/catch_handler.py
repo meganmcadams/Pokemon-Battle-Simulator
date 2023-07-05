@@ -1,6 +1,7 @@
 from Headers.tools import *
 import random
 
+
 def throw_pokeball(pokemon, items, trainers, current_party, opposing_party, opposing_pokemon, tid):
     print("not done yet")
 
@@ -21,6 +22,7 @@ def throw_pokeball(pokemon, items, trainers, current_party, opposing_party, oppo
     # THIS IS NOT DONE THIS IS NOT DONE THIS IS NOT DONE THIS IS NOT DONE THIS IS NOT DONE
     # THIS IS NOT DONE THIS IS NOT DONE THIS IS NOT DONE THIS IS NOT DONE THIS IS NOT DONE
 
+
 def get_balls(items, trainer):
     try:
         trainer_items = trainer['Items'].split(',')
@@ -40,8 +42,9 @@ def get_balls(items, trainer):
 
     return balls
 
+
 def catch_pokemon(pokemon, caught_pokemon, trainers, tid):
-    print("1... 2... 3... Click!",opposing_pokemon['Name'],"was caught!")
+    print("1... 2... 3... Click!", opposing_pokemon['Name'], "was caught!")
     if trainers[tid]['Pokemon'] == "":
         trainers[tid]['Pokemon'] = str(opposing_pokemon['ID'])
     else:

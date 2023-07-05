@@ -2,9 +2,9 @@ from Headers.save import save
 from Headers.tools import header, option, correct_type
 from Headers.Handlers.shop_handler import create_shop
 
+
 def shop_manager(shops, items, categorized_items):
-    
-    save(shops,"shops.txt")
+    save(shops, "shops.txt")
 
     header("Shop Manager")
     option(0, "Create Shop")
@@ -13,18 +13,18 @@ def shop_manager(shops, items, categorized_items):
     option(3, "Exit")
     inp = correct_type(input("--> "))
 
-    if inp == 0: # Create Shop
+    if inp == 0:  # Create Shop
         create_shop(shops, items, categorized_items)
 
-    elif inp == 1: # Delete Shop
+    elif inp == 1:  # Delete Shop
         pass
-    elif inp == 2: # Run Shop
+    elif inp == 2:  # Run Shop
         pass
 
-    elif inp == 3: # Exit
+    elif inp == 3:  # Exit
         return
 
     else:
-        print("ERROR:",inp,"was not an option or the input was not an integer")
+        print("ERROR:", inp, "was not an option or the input was not an integer")
 
-    shop_manager(shops, items, categorized_items) # recursive call to reset menu
+    shop_manager(shops, items, categorized_items)  # recursive call to reset menu
