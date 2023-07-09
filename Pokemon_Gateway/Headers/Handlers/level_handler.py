@@ -51,9 +51,10 @@ def level_up(pokemon, p, to_next_level, move_levels, moves, announce, sub_exp):
     learn_moves(pokemon, p, to_next_level, moves)  # learn moves if any
 
 
-def print_stat_changes(new_p, old_p, stat_list=["HP", "Attack", "Defense", "Sp Attack", "Sp Defense",
-                                                "Speed"]):  # make list of stats):
-
+def print_stat_changes(new_p, old_p, stat_list=None):  # make list of stats):
+    if stat_list is None:
+        stat_list = ["HP", "Attack", "Defense", "Sp Attack", "Sp Defense",
+         "Speed"]
     for stat in stat_list:
         print(stat, ": ", old_p[stat], " --> ", new_p[stat], sep="")
     print("")  # print newline
