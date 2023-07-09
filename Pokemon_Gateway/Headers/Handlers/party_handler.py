@@ -1,6 +1,4 @@
-from Headers.tools import *
-import random
-from Headers.Handlers.catch_handler import *
+from catch_handler import *
 
 
 def validate_parties(pokemon, parties, party1, party2):

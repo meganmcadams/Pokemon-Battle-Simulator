@@ -44,9 +44,7 @@ def subheader(text):
 
 
 def option(num, text):
-    temp = text;  # store text
-    text = "    | " + str(num) + ": " + str(temp)
-    print(text)
+    print(f"    | {num}: {text}")
 
 
 def print_list(items):

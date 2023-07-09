@@ -1,4 +1,4 @@
-from Headers.tools import subheader, get_next_id, option, correct_type
+from ..tools import subheader, get_next_id, option, correct_type
 import random
 
 

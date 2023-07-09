@@ -1,6 +1,6 @@
 import random
-from Headers.Handlers.level_handler import level_up
-from Headers.tools import get_next_id, subheader, option, correct_type
+from ..Handlers.level_handler import level_up
+from ..tools import get_next_id, subheader, option, correct_type
 
 
 def create(pokemon, to_next_level, stored_pokemon, level, name, nickname, tid, move_levels, moves, trainers):

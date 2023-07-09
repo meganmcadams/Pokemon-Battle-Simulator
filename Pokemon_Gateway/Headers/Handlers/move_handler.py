@@ -1,3 +1,5 @@
+from ..tools import correct_type
+
 def perform_move(pokemon, move, attacker, opponent, weather):
     try:  # try splitting into a list
         turns = move['Times'].split(',')
