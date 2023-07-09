@@ -1,4 +1,4 @@
-from Headers.tools import *
+from ..tools import *
 
 
 def trainer_manager(trainers):

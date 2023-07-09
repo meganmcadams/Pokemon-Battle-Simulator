@@ -1,6 +1,6 @@
-from Headers.save import save
-from Headers.tools import header, option, correct_type
-from Headers.Handlers.shop_handler import create_shop
+from ..save import save
+from ..tools import header, option, correct_type
+from ..Handlers.shop_handler import create_shop
 
 
 def shop_manager(shops, items, categorized_items):
