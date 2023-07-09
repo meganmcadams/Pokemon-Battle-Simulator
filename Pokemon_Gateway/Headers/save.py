@@ -1,7 +1,10 @@
+import os.path
+
+
 def save(items, filename):  # save to a file
     print("Saving ", filename, "...", sep="")
 
-    filename = "Saves/" + filename + ".txt"
+    filename = os.path.join("Saves", filename + ".txt")
 
     try:  # try to open file
         openfile = open(filename, 'w')

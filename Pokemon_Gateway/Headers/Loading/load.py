@@ -1,3 +1,4 @@
+import os
 import re
 from ..tools import *
 
@@ -7,7 +8,8 @@ def load(filename, foldername):  # loads file as dictionary of lists, first colu
     item = filename
     print("Loading ", filename, "...", sep="")
 
-    filename = str(foldername) + "/" + str(filename) + ".txt"
+    filename = os.path.join(str(foldername), str(filename) + ".txt")
+
 
     try:  # try to open file
         openfile = open(filename, 'r', encoding="ISO-8859-1")  # this encoding is needed for some unix systems

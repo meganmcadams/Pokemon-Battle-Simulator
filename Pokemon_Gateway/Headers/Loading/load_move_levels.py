@@ -1,3 +1,4 @@
+import os.path
 import re
 from ..tools import *
 
@@ -5,7 +6,7 @@ from ..tools import *
 def load_move_levels(pokemon_num):
     print("Loading move levels...")
 
-    filename = "Resources/move_levels.txt"
+    filename = os.path.join("Resources", "move_levels.txt")
 
     try:  # try to open file
         openfile = open(filename, 'r')
