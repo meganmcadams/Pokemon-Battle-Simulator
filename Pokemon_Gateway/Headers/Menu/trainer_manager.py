@@ -1,4 +1,5 @@
 from ..tools import *
+from party_builder import delete_party
 
 
 def trainer_manager(trainers):
@@ -13,7 +14,7 @@ def trainer_manager(trainers):
 
     try:  # try turning inp into an integer
         inp = int(inp)
-    except:  # if not an integer
+    except Exception:  # if not an integer
         inp = -1  # set to -1 to classify as a wrong input
 
     if inp == 0:  # Create Party
@@ -64,5 +65,5 @@ def delete_trainer(trainers):
         try:
             del trainers[to_delete]
             print(to_delete, "was successfully deleted")
-        except:
+        except Exception:
             print("ERROR: Could not delete", to_delete)

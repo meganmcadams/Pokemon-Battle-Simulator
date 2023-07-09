@@ -10,26 +10,25 @@ def load_move_levels(pokemon_num):
 
     try:  # try to open file
         openfile = open(filename, 'r')
-    except:  # if couldn't open it
+    except Exception:  # if couldn't open it
         print("ERROR: Could not open", filename)
         exit()
 
     move_levels = {}
-    row = {}
 
-    headersDone = False
+    headers_done = False
     headers = []
 
     for line in openfile:
         line = line.split('\t')
         i = 0
-        for l in line:  # fix the items in the line
+        for _ in line:  # fix the items in the line
             line[i] = str(line[i]).strip()
             line[i] = correct_type(line[i])  # fix type to int, float, or string
             i += 1
 
-        if not headersDone:  # if haven't stored headers yet
-            headersDone = True
+        if not headers_done:  # if haven't stored headers yet
+            headers_done = True
             for h in line:
                 h = re.sub('[^0-9a-zA-Z .]+', '', h)  # get rid of random chars
                 headers.append(h)  # append header to list
@@ -48,7 +47,7 @@ def load_move_levels(pokemon_num):
 
             try:
                 move_levels[pid][level].append(mid)  # try to add move to pid's level list
-            except:
+            except Exception:
                 move_levels[pid][level] = []  # declare list
                 move_levels[pid][level].append(mid)  # now try adding
 

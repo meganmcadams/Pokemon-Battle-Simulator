@@ -20,7 +20,7 @@ def level_up(pokemon, p, to_next_level, move_levels, moves, announce, sub_exp):
 
     # try: # ensure that pokemon is the actual pokemon itself, not the full list of all pokemon
     #    name = pokemon['Name']
-    # except:
+    # except Exception:
     #    pokemon = pokemon[p['Pid']]
 
     if sub_exp:
@@ -51,10 +51,10 @@ def level_up(pokemon, p, to_next_level, move_levels, moves, announce, sub_exp):
     learn_moves(pokemon, p, to_next_level, moves)  # learn moves if any
 
 
-def print_stat_changes(new_p, old_p, stat_list=None):  # make list of stats):
+def print_stat_changes(new_p, old_p, stat_list=None):  # make list of stats
     if stat_list is None:
         stat_list = ["HP", "Attack", "Defense", "Sp Attack", "Sp Defense",
-         "Speed"]
+                     "Speed"]
     for stat in stat_list:
         print(stat, ": ", old_p[stat], " --> ", new_p[stat], sep="")
     print("")  # print newline
@@ -63,16 +63,16 @@ def print_stat_changes(new_p, old_p, stat_list=None):  # make list of stats):
 def learn_moves(pokemon, p, move_levels, moves):
     try:  # get moves learnable at their curr level
         learnables = move_levels[p['Pid']][p['Level']]
-    except:  # if there aren't any
+    except Exception:  # if there aren't any
         return
 
     try:  # turn into a list
         curr_moves = p['Moves'].split(',')
-    except:  # if can't turn into a list, take the 1 move and put it in a list
+    except Exception:  # if can't turn into a list, take the 1 move and put it in a list
         curr_moves = [p['Moves']]
 
     i = 0
-    for m in curr_moves:
+    for _ in curr_moves:
         curr_moves[i] = int(curr_moves[i])
         i += 1
 
@@ -88,7 +88,7 @@ def learn_moves(pokemon, p, move_levels, moves):
 
                 try:
                     inp = int(inp)
-                except:
+                except Exception:
                     print(inp, "was not an option")
                     learn_moves(pokemon, p, move_levels, moves)  # try again
                     return
@@ -103,14 +103,14 @@ def learn_moves(pokemon, p, move_levels, moves):
 
                     try:  # try to turn inp into an integer
                         inp = int(inp)
-                    except:
+                    except Exception:
                         print(inp, "was not an option")
                         learn_moves(pokemon, p, move_levels, moves)  # try again
                         return
 
                     try:  # try to replace move with new move
                         curr_moves[inp] = int(m)
-                    except:
+                    except Exception:
                         print(inp, "was not an option")
                         learn_moves(pokemon, p, move_levels, moves)  # try again
                         return
@@ -161,7 +161,7 @@ def evolution_check(pokemon, p, to_next_level, move_levels, moves):
 
     try:
         evolves_at_level = int(curr_pokemon['Evolves at Level'])
-    except:
+    except Exception:
         return  # needs a stone or can't evolve
 
     if p['Level'] >= evolves_at_level:  # if should evolve

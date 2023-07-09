@@ -13,7 +13,7 @@ def party_builder(pokemon, stored_pokemon, parties):
 
     try:  # try turning inp into an integer
         inp = int(inp)
-    except:  # if not an integer
+    except Exception:  # if not an integer
         inp = -1  # set to -1 to classify as a wrong input
 
     if inp == 0:  # Create Party
@@ -43,15 +43,12 @@ def create_party(stored_pokemon, parties):
     pokemon_split = pokemon.split(',')  # split pokemon by commas for error checking
     for p in pokemon_split:
         try:  # try turning to int
-            temp = stored_pokemon[correct_type(p)]
-        except:
+            stored_pokemon[correct_type(p)]
+        except Exception:
             print("ERROR:", p, "is not an integer or is not a stored pokemon")
             return
 
-    party = {}
-    party['ID'] = get_next_id(parties)
-    party['Name'] = name
-    party['Pokemon'] = pokemon
+    party = {'ID': get_next_id(parties), 'Name': name, 'Pokemon': pokemon}
     parties[party['ID']] = party
 
     print("Party", party['ID'], "successfully created")
@@ -67,5 +64,5 @@ def delete_party(parties):
         try:
             del parties[to_delete]
             print(to_delete, "was successfully deleted")
-        except:
+        except Exception:
             print("ERROR: Could not delete", to_delete)

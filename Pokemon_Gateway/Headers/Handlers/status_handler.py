@@ -1,4 +1,3 @@
-from ..tools import *
 import random
 
 
@@ -22,10 +21,10 @@ def status_check(pokemon, move, opponent):
             print(pokemon[opponent['Pid']]['Name'], "is no longer afflicted with", opponent['Status'])
             opponent['Status'] = ""
 
-    if add_status == True:  # if can add a status
+    if add_status:  # if can add a status
         try:  # try splitting possible statuses into a list
             statuses = move['Status'].split(',')
-        except:  # if only one in list
+        except Exception:  # if only one in list
             statuses = [move['Status']]
 
         i = random.randrange(0, len(statuses))  # pick random status from list

@@ -10,24 +10,22 @@ def load(filename, foldername):  # loads file as dictionary of lists, first colu
 
     filename = os.path.join(str(foldername), str(filename) + ".txt")
 
-
     try:  # try to open file
         openfile = open(filename, 'r', encoding="ISO-8859-1")  # this encoding is needed for some unix systems
-    except:  # if couldn't open it
+    except Exception:  # if couldn't open it
         print("ERROR: Could not open", filename)
         exit()
 
     col = {}  # dictionary of ids
     row = {}  # dictionary of headers to put into columns
     headers = []  # list of headers to use as keys for rows
-    headersDone = False  # whether or not we've stored the headers yet
+    headers_done = False  # if we've stored the headers yet
 
     for line in openfile:
         line = line.split('\t')  # split line into list of items
-        rows = {}  # reset rows
 
-        if not headersDone:  # if haven't stored headers yet
-            headersDone = True
+        if not headers_done:  # if haven't stored headers yet
+            headers_done = True
             for h in line:
                 h = h.strip()
                 h = re.sub('[^0-9a-zA-Z .]+', '', h)  # get rid of random chars
@@ -40,9 +38,9 @@ def load(filename, foldername):  # loads file as dictionary of lists, first colu
                 exit()
 
             i = 0
-            for l in line:  # for item in line
-                l = correct_type(l.strip())
-                row[headers[i]] = l  # store contents into appropriate column
+            for word in line:  # for item in line
+                word = correct_type(word.strip())
+                row[headers[i]] = word  # store contents into appropriate column
                 i += 1
 
             # end of for l in line:

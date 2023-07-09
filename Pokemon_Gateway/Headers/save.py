@@ -8,7 +8,7 @@ def save(items, filename):  # save to a file
 
     try:  # try to open file
         openfile = open(filename, 'w')
-    except:  # if couldn't open it
+    except Exception:  # if couldn't open it
         print("ERROR: Could not open", filename)
         exit()
 

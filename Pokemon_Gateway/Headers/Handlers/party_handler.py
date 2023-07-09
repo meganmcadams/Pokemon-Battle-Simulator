@@ -5,7 +5,7 @@ def validate_parties(pokemon, parties, party1, party2):
     try:  # try turning into ints
         party1 = int(party1)
         party2 = int(party2)
-    except:
+    except Exception:
         print("ERROR: One or more of the inputs was not an integer")
         return -1, -1, -1, -1
 
@@ -19,12 +19,12 @@ def validate_parties(pokemon, parties, party1, party2):
 
     try:  # try breaking into list
         party1_pokemon = party1['Pokemon'].split(',')
-    except:  # if only 1 pokemon
+    except Exception:  # if only 1 pokemon
         party1_pokemon = [party1['Pokemon']]
 
     try:  # try breaking into list
         party2_pokemon = party2['Pokemon'].split(',')
-    except:  # if only 1 pokemon
+    except Exception:  # if only 1 pokemon
         party2_pokemon = [party2['Pokemon']]
 
     for p in party1_pokemon:
@@ -51,12 +51,12 @@ def get_party_order(trainers, pokemon, stored_pokemon, party1_pokemon, party2_po
     party_order = []  # declare party order as list
 
     i = 0
-    for p in party1_pokemon:  # store pokemon from party1 into party_order
+    for _ in party1_pokemon:  # store pokemon from party1 into party_order
         party_order.append(party1_pokemon[i])
         i += 1
 
     i = 0
-    for p in party2_pokemon:  # store pokemon from party2 into party_order
+    for _ in party2_pokemon:  # store pokemon from party2 into party_order
         party_order.append(party2_pokemon[i])
         i += 1
 
@@ -64,7 +64,7 @@ def get_party_order(trainers, pokemon, stored_pokemon, party1_pokemon, party2_po
     for p in party_order:  # print pokemon in party_order so user knows what their options are
         try:
             owner = str(trainers[int(p['Tid'])]['Name']) + "'s"
-        except:
+        except Exception:
             owner = "Wild"
         party_order_names[int(p['ID'])] = str(owner + " " + str(pokemon[p['Pid']]['Name']) + " (" + str(p['ID']) + ")")
 
@@ -77,7 +77,7 @@ def get_party_order(trainers, pokemon, stored_pokemon, party1_pokemon, party2_po
 
     try:  # try to turn inp into an integer
         inp = int(inp)
-    except:
+    except Exception:
         inp = -1
 
     if inp == 0:
@@ -96,12 +96,12 @@ def get_party_order(trainers, pokemon, stored_pokemon, party1_pokemon, party2_po
         print("Input the Pokemon's IDs in the order that you'd like them to go.")
 
         i = 0
-        for p in party_order:
+        for _ in party_order:
             order_inp.append(input(str(i + 1) + ": "))
             i += 1
         print("")  # print newline
 
-        done = []  # store done order_inps to prevent repeats
+        done = []  # store done order to prevent repeats
 
         i = 0
         while i < len(order_inp):  # check if it's in party_order

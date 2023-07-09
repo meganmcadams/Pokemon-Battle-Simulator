@@ -7,14 +7,14 @@ def get_move(pokemon, moves):
 
     try:  # try breaking into list
         pokemon_moves = pokemon['Moves'].split(',')
-    except:  # if only 1 pokemon
+    except Exception:  # if only 1 pokemon
         pokemon_moves = [pokemon['Moves']]
 
     i = 0
     for m in pokemon_moves:  # set pokemon_moves[i] to actual move info, not just mid
         try:  # try to find move info
             pokemon_moves[i] = moves[int(pokemon_moves[i])]
-        except:
+        except Exception:
             print("ERROR: Could not find", pokemon_moves[i], "in moves")
             return -3  # error
 
@@ -34,7 +34,7 @@ def get_move(pokemon, moves):
 
     try:  # try turning to integer
         inp = int(inp)
-    except:
+    except Exception:
         print("ERROR:", inp, "was not an option")
         return -3  # error
 
@@ -110,14 +110,14 @@ def get_target(pokemon, stored_pokemon, current_party, opposing_party):
 
     try:  # try breaking into list
         opposing_party = opposing_party['Pokemon'].split(',')
-    except:  # if only 1 pokemon
+    except Exception:  # if only 1 pokemon
         opposing_party = [opposing_party['Pokemon']]
 
     i = 0
     for p in opposing_party:  # set opposing_party[i] to actual info
         try:
             opposing_party[i] = stored_pokemon[int(opposing_party[i])]
-        except:
+        except Exception:
             print("ERROR: Could not find", opposing_party[i], "in pokemon")
             return -1
 

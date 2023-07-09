@@ -26,7 +26,7 @@ p = load("pokemon", "Resources")
 pokemon = Pokemon(p)  # store in class
 moves = load("moves", "Resources")
 parties = load("parties", "Saves")
-move_levels = load_move_levels(len(pokemon.list))  # special load func for move_levels (move_levels[pid][level])
+move_levels = load_move_levels(len(pokemon))  # special load func for move_levels (move_levels[pid][level])
 to_next_level = load("to_next_level", "Resources")
 stored_pokemon = load("pokemon", "Saves")
 shops = load("shops", "Saves")
@@ -36,7 +36,7 @@ items = load("items", "Resources")
 categorized_items = categorize_items(items)
 
 for key in stored_pokemon:  # check for level ups
-    level_check(pokemon.list, stored_pokemon[key], to_next_level, move_levels, moves)
+    level_check(pokemon, stored_pokemon[key], to_next_level, move_levels, moves)
 
 while True:
 
@@ -52,11 +52,11 @@ while True:
 
     try:
         inp = int(inp)
-    except:
+    except Exception:
         inp = -1
 
     if inp == 0:  # Pokemon Manager
-        pokemon_manager(pokemon.list, stored_pokemon, to_next_level, parties, move_levels, moves, trainers.list)
+        pokemon_manager(pokemon, stored_pokemon, to_next_level, parties, move_levels, moves, trainers)
         save(stored_pokemon, "pokemon")
 
     elif inp == 1:  # Encounter Generator
@@ -65,20 +65,20 @@ while True:
 
     elif inp == 2:  # Trainer Manager
         trainer_manager(trainers)
-        save(trainers.list, "trainers")
+        save(trainers, "trainers")
 
     elif inp == 3:  # Shop Manager
         shop_manager(shops, items, categorized_items)
-        save(trainers.list, "trainers")
+        save(trainers, "trainers")
         save(shops, "shops")
 
     elif inp == 4:  # Battle Simulator
-        battle_simulator(trainers, items, pokemon.list, stored_pokemon, parties, moves, to_next_level, move_levels)
+        battle_simulator(trainers, items, pokemon, stored_pokemon, parties, moves, to_next_level, move_levels)
         save(stored_pokemon, "pokemon")
-        save(trainers.list, "trainers")
+        save(trainers, "trainers")
 
     elif inp == 5:  # Party Builder
-        party_builder(pokemon.list, stored_pokemon, parties)
+        party_builder(pokemon, stored_pokemon, parties)
         save(parties, "parties")
 
     elif inp == 6:  # exit
@@ -87,4 +87,4 @@ while True:
     else:
         print("ERROR:", inp, "was not an option.")
 
-save_all(stored_pokemon, trainers.list, parties, shops)
+save_all(stored_pokemon, trainers, parties, shops)

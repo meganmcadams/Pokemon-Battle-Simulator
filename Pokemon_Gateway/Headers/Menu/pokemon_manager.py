@@ -1,8 +1,7 @@
-from ..tools import header, option, print_list, correct_type
-from ..Handlers.create_handler import get_pokemon_name, get_pokemon_nickname, get_pokemon_tid, create, get_level
-import random
 from ..Handlers.battle_handler import reset_stats
+from ..Handlers.create_handler import get_pokemon_name, get_pokemon_nickname, get_pokemon_tid, create, get_level
 from ..save import save
+from ..tools import header, option, print_list, correct_type
 
 
 def pokemon_manager(pokemon, stored_pokemon, to_next_level, parties, move_levels, moves, trainers):
@@ -18,7 +17,7 @@ def pokemon_manager(pokemon, stored_pokemon, to_next_level, parties, move_levels
 
     try:  # try turning inp into an integer
         inp = int(inp)
-    except:
+    except Exception:
         inp = -1
 
     if inp == 0:  # Create Pokemon
@@ -47,7 +46,7 @@ def pokemon_manager(pokemon, stored_pokemon, to_next_level, parties, move_levels
             try:
                 del stored_pokemon[to_delete]
                 print(to_delete, "was successfully deleted")
-            except:
+            except Exception:
                 print("ERROR: Could not delete", to_delete)
 
     elif inp == 2:  # List Pokemon
@@ -59,7 +58,7 @@ def pokemon_manager(pokemon, stored_pokemon, to_next_level, parties, move_levels
         party = input("--> ")
         try:
             pokemon_center(parties[int(party)], stored_pokemon)
-        except:
+        except Exception:
             print("ERROR:", party, "was not an option")
 
     elif inp == 4:  # Exit
@@ -75,7 +74,7 @@ def pokemon_manager(pokemon, stored_pokemon, to_next_level, parties, move_levels
 def pokemon_center(party, stored_pokemon):  # heal all pokemon
     try:
         pokemon = party['Pokemon'].split(',')
-    except:
+    except Exception:
         pokemon = [party['Pokemon']]
 
     for p in pokemon:

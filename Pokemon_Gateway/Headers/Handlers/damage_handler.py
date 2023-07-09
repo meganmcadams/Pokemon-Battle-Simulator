@@ -37,10 +37,10 @@ def damage(pokemon, move, attacker, opponent, weather):
         part2 = int(move['Power']) * (int(attacker['Curr Attack']) / int(opponent['Curr Defense']))
 
     left = ((part1 * part2) / 50) + 2
-    damage = left * weather_bonus * critical * rng * stab * burn * opponent_type
+    damage_amount = left * weather_bonus * critical * rng * stab * burn * opponent_type
 
-    print(move['Name'], "did", round(damage), "damage!")
-    opponent['Curr HP'] -= round(damage)
+    print(move['Name'], "did", round(damage_amount), "damage!")
+    opponent['Curr HP'] -= round(damage_amount)
 
     if opponent_type < 1:
         print("It wasn't very effective...")

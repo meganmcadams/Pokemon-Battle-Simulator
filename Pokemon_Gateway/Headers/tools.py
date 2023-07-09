@@ -1,6 +1,3 @@
-from re import X
-
-
 def header(text):
     text_size = len(text)
     print("")  # print newline
@@ -74,10 +71,10 @@ def get_next_id(items):
 def correct_type(item):  # fix the type, if possible
     try:
         item = int(item)
-    except:
+    except Exception:
         try:
             item = float(item)
-        except:
+        except Exception:
             item = str(item)
 
     return item
@@ -89,7 +86,7 @@ def get_pid(pokemon, name):
         try:
             if pokemon[key]['Name'] == name:
                 return int(key)
-        except:
+        except Exception:
             pass
         i += 1
 

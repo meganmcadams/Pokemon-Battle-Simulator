@@ -61,7 +61,7 @@ def create(pokemon, to_next_level, stored_pokemon, level, name, nickname, tid, m
         res_move = -1
         try:  # try to grab random from list
             res_move = str(random.choice(list(moves)))
-        except:  # if only 1 in list
+        except Exception:  # if only 1 in list
             res_move = str(moves)
 
         if res_move not in res:  # if haven't stored it already
@@ -105,7 +105,7 @@ def get_pid(pokemon, name):
         try:
             if pokemon[key]['Name'] == name:
                 return int(key)
-        except:
+        except Exception:
             pass
         i += 1
 
@@ -122,7 +122,7 @@ def get_level():  # get level that user wants to make pokemon at
 
     try:  # try turning inp into an integer
         inp = int(inp)
-    except:
+    except Exception:
         inp = -1
 
     level = 1  # default level to 1
@@ -136,7 +136,7 @@ def get_level():  # get level that user wants to make pokemon at
         try:  # try turning inputs into integers
             range1 = int(range1)
             range2 = int(range2)
-        except:
+        except Exception:
             print("ERROR: One or more of the inputs was not an integer")
             return -1
 
@@ -152,7 +152,7 @@ def get_level():  # get level that user wants to make pokemon at
 
         try:  # check if given level is an integer
             level = int(level)
-        except:
+        except Exception:
             print("ERROR:", level, "is not an integer")
             return -1
 
@@ -176,7 +176,7 @@ def get_pokemon_name(pokemon):
 
     try:  # check if inp is an integer
         inp = int(inp)
-    except:
+    except Exception:
         print("ERROR:", inp, "is not an integer")
         return -1
 
@@ -227,7 +227,7 @@ def get_pokemon_nickname():
 
     try:  # see if inp is an integer
         inp = int(inp)
-    except:
+    except Exception:
         inp = -1
 
     if inp == 0:
@@ -250,7 +250,7 @@ def get_pokemon_tid():
 
     try:  # see if inp is an integer
         inp = int(inp)
-    except:
+    except Exception:
         inp = -1
 
     if inp == 0:
