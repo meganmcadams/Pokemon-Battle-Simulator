@@ -1,4 +1,7 @@
-def header(text):
+import typing
+
+
+def header(text: str) -> None:
     text_size = len(text)
     print("")  # print newline
 
@@ -23,7 +26,7 @@ def header(text):
         print('')  # newline
 
 
-def subheader(text):
+def subheader(text: str) -> None:
     text_size = len(text)
     print("")  # print newline
     if text_size >= 20:
@@ -40,11 +43,11 @@ def subheader(text):
         print(text)  # print subheader
 
 
-def option(num, text):
+def option(num: int, text: str) -> None:
     print(f"    | {num}: {text}")
 
 
-def print_list(items):
+def print_list(items: dict) -> None:
     if len(items) < 1:  # if there aren't any items to print
         print("ERROR: There are", len(items), "items.")
         return
@@ -55,7 +58,7 @@ def print_list(items):
         print("")  # print newline
 
 
-def get_next_id(items):
+def get_next_id(items: dict) -> int:
     keylist = list(items.keys())
     keylist.sort()
 
@@ -68,7 +71,7 @@ def get_next_id(items):
     return len(items)
 
 
-def correct_type(item):  # fix the type, if possible
+def correct_type(item: typing.Any) -> typing.Union[float, int, str]:  # fix the type, if possible
     try:
         item = int(item)
     except Exception:
@@ -93,7 +96,7 @@ def get_pid(pokemon, name):
     return -1
 
 
-def categorize_items(items):
+def categorize_items(items: dict) -> dict:
     categories = []
     items_categorized = {}
     for key in items.keys():  # for every item

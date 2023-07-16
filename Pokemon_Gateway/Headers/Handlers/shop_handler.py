@@ -2,7 +2,7 @@ from ..tools import subheader, get_next_id, option, correct_type
 import random
 
 
-def create_shop(shops, items, categorized_items):
+def create_shop(shops: dict, items, categorized_items: dict) -> None:
     subheader("Create Shop")
 
     poss_keys = list(shops.keys())
