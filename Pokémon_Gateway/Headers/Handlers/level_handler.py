@@ -168,7 +168,7 @@ def evolution_check(pokemon, p, to_next_level, move_levels, moves):
             p['Pname'] = pokemon[p['Pid']]['Name']
 
             p['Level'] -= 1 # delevel
-            level_up(pokemon, p, to_next_level, move_levels, moves, False, False) # relevel
+            level_up(old_p, p, to_next_level, move_levels, moves, False, False) # relevel
 
             print(p['Full Name']," evolved into ",p['Pname'],"!",sep="")
 
