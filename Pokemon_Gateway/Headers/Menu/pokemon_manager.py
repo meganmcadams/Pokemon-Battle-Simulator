@@ -4,8 +4,8 @@ from ..save import save
 from ..tools import header, option, print_list, correct_type
 
 
-def pokemon_manager(pokemon, stored_pokemon, to_next_level, parties, move_levels, moves, trainers):
-    save(stored_pokemon, "pokemon.txt")
+def pokemon_manager(stored_pokemon, to_next_level, parties, move_levels, moves, trainers):
+    save(stored_pokemon, "pokemon")
 
     header("Pokemon Manager")
     option(0, "Create Pokemon")
@@ -24,7 +24,7 @@ def pokemon_manager(pokemon, stored_pokemon, to_next_level, parties, move_levels
         level = get_level()
 
         if level != -1:
-            name = get_pokemon_name(pokemon)
+            name = get_pokemon_name()
 
             if name != -1:
                 nickname = get_pokemon_nickname()
@@ -33,7 +33,7 @@ def pokemon_manager(pokemon, stored_pokemon, to_next_level, parties, move_levels
                     tid = get_pokemon_tid()
 
                     if tid != -1:
-                        create(pokemon, to_next_level, stored_pokemon, level, name, nickname, tid, move_levels, moves,
+                        create(to_next_level, stored_pokemon, level, name, nickname, tid, move_levels,
                                trainers)
 
     elif inp == 1:  # Delete Pokemon
@@ -67,7 +67,7 @@ def pokemon_manager(pokemon, stored_pokemon, to_next_level, parties, move_levels
     else:  # Out of range
         print("ERROR:", inp, "was not an option or the input was not an integer")
 
-    pokemon_manager(pokemon, stored_pokemon, to_next_level, parties, move_levels, moves,
+    pokemon_manager(stored_pokemon, to_next_level, parties, move_levels, moves,
                     trainers)  # recursive call to reset menu
 
 

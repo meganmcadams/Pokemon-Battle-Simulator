@@ -118,7 +118,7 @@ def battle_simulator(trainers, items, pokemon, stored_pokemon, parties, moves, t
         cycle += 1
 
     # evolution/level check
-    exp(pokemon, winner, loser)
+    exp(winner, loser)
 
     # rewards if won
 
@@ -127,7 +127,7 @@ def battle_simulator(trainers, items, pokemon, stored_pokemon, parties, moves, t
         level_check(pokemon, p, to_next_level, move_levels, moves)
         try:  # try to give money to the trainer, if any
             trainers[int(p['Tid'])]['Money'] += len(loser) + (loser[0]['Level'] * 2) * random.randrange(50, 200)
-        except:
+        except Exception:
             pass
         pass
 
