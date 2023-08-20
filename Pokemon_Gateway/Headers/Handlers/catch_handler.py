@@ -26,7 +26,7 @@ def throw_pokeball(pokemon, items, trainers, current_party, opposing_party, oppo
 def get_balls(items, trainer):
     try:
         trainer_items = trainer['Items'].split(',')
-    except:
+    except Exception:
         trainer_items = [trainer['Items']]
 
     balls = []
@@ -37,7 +37,7 @@ def get_balls(items, trainer):
             curr_item = items[i]
             if "Ball" in curr_item['Name']:
                 balls.append(curr_item)
-        except:
+        except Exception:
             pass
 
     return balls
