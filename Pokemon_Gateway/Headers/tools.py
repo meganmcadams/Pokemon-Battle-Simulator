@@ -1,5 +1,7 @@
 import typing
 
+from Headers.Classes.SavedPokemon import SavedPokemon
+
 
 def header(text: str) -> None:
     text_size = len(text)
@@ -58,9 +60,8 @@ def print_list(items: dict) -> None:
         print("")  # print newline
 
 
-def get_next_id(items: dict) -> int:
-    keylist = list(items.keys())
-    keylist.sort()
+def get_next_id() -> int:
+    keylist = sorted(list(SavedPokemon.get_all().keys()))
 
     prev = -1
     for key in keylist:
@@ -68,7 +69,7 @@ def get_next_id(items: dict) -> int:
             return prev + 1
         prev += 1
 
-    return len(items)
+    return len(keylist)
 
 
 def correct_type(item: typing.Any) -> typing.Union[float, int, str]:  # fix the type, if possible

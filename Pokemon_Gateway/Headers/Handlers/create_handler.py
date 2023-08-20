@@ -1,101 +1,89 @@
+import copy
 import random
+
+from ..Classes.Move import Move
+from ..Classes.Pokemon import Pokemon
+from ..Classes.SavedPokemon import SavedPokemon
 from ..Handlers.level_handler import level_up
 from ..tools import get_next_id, subheader, option, correct_type
 
 
-def create(pokemon, to_next_level, stored_pokemon, level, name, nickname, tid, move_levels, moves, trainers):
+def create(to_next_level, stored_pokemon, level, name, nickname, tid, move_levels, trainers):
     poss_keys = list(stored_pokemon.keys())
-    copy = stored_pokemon[poss_keys[0]].copy()  # make a copy of an existing pokemon
-    for key in copy.keys():  # for key in copy
-        copy[key] = int(0)  # default every value to 0
+    new_mon = SavedPokemon()
+    new_mon.id = get_next_id()
 
-    copy['ID'] = get_next_id(stored_pokemon)  # store id
-
-    pid = get_pid(pokemon, name)
-    if pid == -1:  # if could not find name in pokemon
+    dex_entry = Pokemon.get_pokemon(name)
+    if dex_entry == -1:  # if could not find name in pokemon
         print("ERROR: Could not find", name, "in pokemon.")
         return
-    copy['Pid'] = pid  # pid
-    copy['Pname'] = pokemon[pid]['Name']
-    copy['Tid'] = tid
-    copy['Name'] = nickname  # name
-    copy['Status'] = ""
-    copy['Tname'] = ""  # trainer name; defaulted to none
-    copy['Plname'] = ""  # player name; defaulted to none
-    copy['Full Name'] = ""  # full name
+    new_mon.pid = dex_entry  # pid
+    new_mon.tid = tid
+    new_mon.nickname = nickname  # name
+    new_mon.status = ""
+    new_mon.tname = ""  # trainer name; defaulted to none
+    new_mon.pname = ""  # player name; defaulted to none
+    new_mon.full_name = ""  # full name
 
     # nickname
     if nickname.isspace():
-        copy['Name'] = "Wild " + pokemon[pid]['Name']
-    else:
-        copy['Name'] = nickname
+        new_mon.nickname = "Wild " + new_mon.name
 
     # trainer and player
     if tid != "":
-        copy['Tname'] = trainers[tid]['Name']
-        copy['Plname'] = trainers[tid]['Player']
-        copy['Full Name'] = str(copy['Tname']) + "'s " + str(copy['Pname']) + " (" + str(copy['Name']) + ")"
+        new_mon.tname = trainers[tid]['Name']
+        new_mon.plname = trainers[tid]['Player']
+        new_mon.full_name = str(new_mon.tname) + "'s " + str(new_mon.name) + " (" + str(new_mon.name) + ")"
     else:
-        copy['Full Name'] = "Wild " + str(copy['Pname'])
+        new_mon.full_name = "Wild " + str(new_mon.name)
 
     # gender
     min_num = random.randrange(1, 100)
-    num = float(pokemon[copy['Pid']]['Percent Male']) * 100
+    num = float(Pokemon.get_pokemon(dex_entry).gender_ratio * 100)
     if num <= min_num:
-        copy['Gender'] = "Male"
+        new_mon.gender = "Male"
     else:
-        copy['Gender'] = "Female"
+        new_mon.gender = "Female"
 
-    moves = move_levels[int(pid)][0]  # set moves to list of possible moves
-    res = ""
+    moves = move_levels[int(dex_entry)][0]  # set moves to list of possible moves
     if level < 3:  # if level is less than 3, have it learn 2 moves
         num = 2
     elif level < 7:
         num = 3
     else:
         num = 4
+    tmp = []
 
-    i = 0
-    while i < num:  # get random moves from list of options
+    while len(tmp) < num:  # get random moves from list of options
 
         res_move = -1
         try:  # try to grab random from list
-            res_move = str(random.choice(list(moves)))
+            res_move = random.choice(list(moves))
         except Exception:  # if only 1 in list
-            res_move = str(moves)
+            res_move = moves
+        tmp.append(Move.get_move(res_move))
 
-        if res_move not in res:  # if haven't stored it already
-            res += res_move
-            if i < num - 1:
-                res += ","
-        i += 1
-
-    copy['Moves'] = res  # store result
-    copy['HP'] = pokemon[pid]['HP']
-    copy['HP IV'] = random.randrange(1, 32)
-    copy['Attack IV'] = random.randrange(1, 32)
-    copy['Defense IV'] = random.randrange(1, 32)
-    copy['Sp Attack IV'] = random.randrange(1, 32)
-    copy['Sp Defense IV'] = random.randrange(1, 32)
-    copy['Speed IV'] = random.randrange(1, 32)
+    new_mon.moves = tmp  # store result
+    new_mon.stats.hp = new_mon.base_stats.hp
+    new_mon.ivs.hp = random.randrange(1, 32)
+    new_mon.ivs.attack = random.randrange(1, 32)
+    new_mon.ivs.defense = random.randrange(1, 32)
+    new_mon.ivs.sp_attack = random.randrange(1, 32)
+    new_mon.ivs.sp_defense = random.randrange(1, 32)
+    new_mon.ivs.speed = random.randrange(1, 32)
 
     i = 0
     while i < level:
-        level_up(pokemon[pid], copy, to_next_level, move_levels, moves, False, False)
+        level_up(new_mon, to_next_level, moves, False, False)
         i += 1
 
-    copy['Curr HP'] = copy['HP']
-    copy['Curr Attack'] = copy['Attack']
-    copy['Curr Defense'] = copy['Defense']
-    copy['Curr Sp Attack'] = copy['Sp Attack']
-    copy['Curr Sp Defense'] = copy['Sp Defense']
-    copy['Curr Speed'] = copy['Speed']
+    new_mon.curr_stats = copy.deepcopy(new_mon.stats)
 
-    stored_id = copy['ID']
+    stored_id = new_mon['ID']
 
-    stored_pokemon[stored_id] = copy.copy()
-
-    print("New pokemon, ", copy['Pname'], ", successfully created | ID: ", stored_id, sep="")  # print success message
+    stored_pokemon[stored_id] = new_mon
+    SavedPokemon.register(new_mon)
+    print("New pokemon, ", new_mon.name, ", successfully created | ID: ", stored_id, sep="")  # print success message
     return
 
 
@@ -181,30 +169,22 @@ def get_pokemon_name(pokemon):
         return -1
 
     if inp == 0:  # By biome
-        return pokemon[random.randrange(1, len(pokemon) - 1)]['Name']
+        return Pokemon.get_pokemon(random.randrange(1, Pokemon.amount - 1)).name
 
     elif inp == 1:  # Random Pokemon
         inp = input("Type: ")
 
-        count = 0
         while True:
-            i = random.randrange(0, len(pokemon) - 1)
-            if pokemon[i]['Type1'] == inp or pokemon[i]['Type2'] == inp:
-                return pokemon[i]['Name']
-            else:
-                count += 1
-                if i > len(pokemon) - 1:  # if at end
-                    i = 0
-                else:  # if not at end
-                    i += 1
-            if count >= len(pokemon) / 10:  # if have gone through 10% of the pokemon and not found one yet
+            mons = [i for i in Pokemon.get_all() if inp in pokemon.types]
+            if len(mons) == 0:
                 print("ERROR: Could not find", inp, "in types of Pokemon")
                 return -1
+            return random.choice(mons).name
 
     elif inp == 2:  # Specified name
         name = input("Name of Pokemon: ")
 
-        pid = get_pid(pokemon, name)  # try to find pokemon by name
+        pid = Pokemon.get_pokemon(name)  # try to find pokemon by name
         if pid == -1:  # if not found
             print("ERROR:", name, "not found in Pokemon")
             return -1

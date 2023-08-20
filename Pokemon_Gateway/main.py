@@ -1,42 +1,47 @@
 # tools
-from Headers.tools import categorize_items, header, option
-from Headers.Handlers.level_handler import level_check
-
+from Headers.Classes.Container import Container
+from Headers.Classes.Move import Move
 # classes
 from Headers.Classes.Pokemon import Pokemon
-from Headers.Classes.Trainers import Trainers
-
+from Headers.Classes.SavedPokemon import SavedPokemon
+from Headers.Handlers.level_handler import level_check
+from Headers.Loading.load import load
 # loading
 from Headers.Loading.load_move_levels import load_move_levels
-from Headers.Loading.load import load
-
-# saving
-from Headers.save import save, save_all
-
+from Headers.Menu.battle_simulator import battle_simulator
 # menu
 from Headers.Menu.party_builder import party_builder
-from Headers.Menu.battle_simulator import battle_simulator
 from Headers.Menu.pokemon_manager import pokemon_manager
-from Headers.Menu.trainer_manager import trainer_manager
 from Headers.Menu.shop_manager import shop_manager
+from Headers.Menu.trainer_manager import trainer_manager
+# saving
+from Headers.save import save, save_all
+from Headers.tools import categorize_items, header, option
 
 header('Pokemon Battle Simulator')
 
 p = load("pokemon", "Resources")
-pokemon = Pokemon(p)  # store in class
+
+pokemon = Container(p)  # store in class
+for key, value in sorted(pokemon.items()):
+    Pokemon.register(value)
 moves = load("moves", "Resources")
+for key, value in sorted(moves.items()):
+    Move.register(value)
 parties = load("parties", "Saves")
 move_levels = load_move_levels(len(pokemon))  # special load func for move_levels (move_levels[pid][level])
 to_next_level = load("to_next_level", "Resources")
 stored_pokemon = load("pokemon", "Saves")
+for key, value in stored_pokemon.items():
+    SavedPokemon.register(value)
 shops = load("shops", "Saves")
 t = load("trainers", "Saves")
-trainers = Trainers(t)  # store in class
+trainers = Container(t)  # store in class
 items = load("items", "Resources")
 categorized_items = categorize_items(items)
 
-for key in stored_pokemon:  # check for level ups
-    level_check(pokemon, stored_pokemon[key], to_next_level, move_levels, moves)
+for mon in SavedPokemon.iter():  # check for level ups
+    level_check(mon, to_next_level, move_levels, moves)
 
 while True:
 
@@ -48,15 +53,15 @@ while True:
     option(4, "Battle Simulator")
     option(5, "Party Builder")
     option(6, "Exit")
+    print(SavedPokemon.get_pokemon(1).moves[0].name)
     inp = input("--> ")
-
     try:
         inp = int(inp)
     except Exception:
         inp = -1
 
     if inp == 0:  # Pokemon Manager
-        pokemon_manager(pokemon, stored_pokemon, to_next_level, parties, move_levels, moves, trainers)
+        pokemon_manager(stored_pokemon, to_next_level, parties, move_levels, moves, trainers)
         save(stored_pokemon, "pokemon")
 
     elif inp == 1:  # Encounter Generator
