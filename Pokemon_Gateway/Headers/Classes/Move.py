@@ -1,6 +1,6 @@
 import random
 
-MOVES = []
+MOVES = {}
 
 
 class Move:
@@ -42,11 +42,15 @@ class Move:
         for key, value in move.items():
             setattr(to_add, key.lower().replace(" ", "_"), value)
 
-        MOVES.append(to_add)
+        MOVES[to_add.id] = to_add
 
     @staticmethod
     def get_move(index: int) -> 'Move':
-        return MOVES[index - 1]
+        return MOVES[index]
+
+    @staticmethod
+    def get_all() -> dict[int, 'Move']:
+        return MOVES
 
     @staticmethod
     def random() -> 'Move':
