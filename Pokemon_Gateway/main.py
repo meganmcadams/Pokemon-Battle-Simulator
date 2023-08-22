@@ -1,5 +1,5 @@
 # tools
-from Headers.Classes.Container import Container
+from Headers.Classes.Trainer import Trainer
 from Headers.Classes.Move import Move
 # classes
 from Headers.Classes.Pokemon import Pokemon
@@ -23,25 +23,26 @@ header('Pokemon Battle Simulator')
 p = load("pokemon", "Resources")
 
 # todo: move to Pokemon.get_all()
-pokemon = Container(p)  # store in class
 
-for key, value in sorted(pokemon.items()):
+
+for key, value in sorted(p.items()):
     Pokemon.register(value)
 moves = load("moves", "Resources")
 for key, value in sorted(moves.items()):
     Move.register(value)
 parties = load("parties", "Saves")
-move_levels = load_move_levels(len(pokemon))  # special load func for move_levels (move_levels[pid][level])
+move_levels = load_move_levels(len(p))  # special load func for move_levels (move_levels[pid][level])
 to_next_level = load("to_next_level", "Resources")
 stored_pokemon = load("pokemon", "Saves")
 for key, value in stored_pokemon.items():
     SavedPokemon.register(value)
 shops = load("shops", "Saves")
 t = load("trainers", "Saves")
-trainers = Container(t)  # store in class
+for key,value in t:
+    Trainer.register(value)
 items = load("items", "Resources")
 categorized_items = categorize_items(items)
-
+trainers = Trainer.get_all()
 for mon in SavedPokemon.iter():  # check for level ups
     level_check(mon, to_next_level, move_levels, moves)
 
@@ -80,7 +81,7 @@ while True:
         save(shops, "shops")
 
     elif inp == 4:  # Battle Simulator
-        battle_simulator(trainers, items, pokemon, stored_pokemon, parties, moves, to_next_level, move_levels)
+        battle_simulator(trainers, items, Pokemon.get_all(), stored_pokemon, parties, moves, to_next_level, move_levels)
         save(stored_pokemon, "pokemon")
         save(trainers, "trainers")
 

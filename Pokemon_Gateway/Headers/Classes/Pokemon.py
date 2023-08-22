@@ -2,12 +2,12 @@ import dataclasses
 import typing
 from typing import Union
 
-POKEMON: typing.List['Pokemon'] = []
+
+# TODO: move to dict
+POKEMON: dict[int, 'Pokemon'] = {}
 
 
 class Pokemon:
-    amount = 0
-
     def __init__(self, dex_entry=0, name="", evo="", base_evo="", next_evo="", evolves_at_level=0,
                  learnable_moves=None, type_effectiveness=None, base_egg_steps=0, capture_rate=0,
                  classification="", exp_growth="", height=0.0, gender_ratio=0.0, base_total=0, exp_yield=0,
@@ -133,8 +133,8 @@ class Pokemon:
 
     @staticmethod
     def iter() -> 'Pokemon':
-        for i in POKEMON:
-            yield i
+        for key, item in POKEMON.items():
+            yield item
 
     @staticmethod
     def create_pokemon(dict_: dict) -> 'Pokemon':
@@ -183,20 +183,20 @@ class Pokemon:
     @staticmethod
     def get_pokemon(id_: Union[int, str]) -> typing.Union['Pokemon', int]:
         if isinstance(id_, int):
-            return POKEMON[id_ - 1]
-        for mon in POKEMON:
-            if mon.name == id_:
-                return mon
+            return POKEMON[id_]
+        for key,value in POKEMON:
+            if value.name == id_:
+                return value
         return -1
 
     @staticmethod
-    def get_all() -> typing.List['Pokemon']:
+    def get_all() -> typing.Dict[int, 'Pokemon']:
         return POKEMON
 
     @staticmethod
     def register(pokemon: dict):
-        POKEMON.append(Pokemon.create_pokemon(pokemon))
-        Pokemon.amount += 1
+        mon = Pokemon.create_pokemon(pokemon)
+        POKEMON[mon.dex_entry] = mon
 
     @staticmethod
     def get_level_exp(exp_growth: str, level: int) -> int:
