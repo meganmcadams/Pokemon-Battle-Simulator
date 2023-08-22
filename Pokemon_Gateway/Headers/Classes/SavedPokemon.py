@@ -35,11 +35,11 @@ class SavedPokemon(Pokemon):
 
     @staticmethod
     def iter() -> 'SavedPokemon':
-        for key, value in SAVED_MONS:
+        for key, value in SAVED_MONS.items():
             yield value
 
     @staticmethod
-    def register(data: dict | 'SavedPokemon'):
+    def register(data: typing.Union[dict, 'SavedPokemon']):
         if isinstance(data, SavedPokemon):
             SAVED_MONS[data.id] = data
         saved_mon = SavedPokemon(data["Pid"])
@@ -75,7 +75,7 @@ class SavedPokemon(Pokemon):
 
     @staticmethod
     def get_pokemon(id_: typing.Union[int, str]) -> 'SavedPokemon':
-        return SAVED_MONS[id_ - 1]
+        return SAVED_MONS[id_]
 
     @staticmethod
     def get_all() -> typing.Dict[int, 'SavedPokemon']:
