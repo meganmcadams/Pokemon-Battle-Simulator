@@ -1,7 +1,9 @@
 from ..tools import *
+from Headers.Classes.SavedPokemon import SavedPokemon
+from Headers.Classes.Party import Party
 
 
-def party_builder(pokemon, stored_pokemon, parties):
+def party_builder():
     print("")  # print newline
     header("Party Builder")
     option(0, "Create Party")
@@ -17,13 +19,13 @@ def party_builder(pokemon, stored_pokemon, parties):
         inp = -1  # set to -1 to classify as a wrong input
 
     if inp == 0:  # Create Party
-        create_party(stored_pokemon, parties)
+        create_party()
 
     elif inp == 1:  # Delete Party
-        delete_party(parties)
+        delete_party()
 
     elif inp == 2:  # List Parties
-        print_list(parties)
+        print_list(Party.get_all())
 
     elif inp == 3:  # Exit
         return
@@ -31,38 +33,39 @@ def party_builder(pokemon, stored_pokemon, parties):
     else:  # incorrect input
         print("ERROR:", inp, "was not an option or the input was not an integer.")
 
-    party_builder(pokemon, stored_pokemon, parties)  # recursive call to continue indefinitely until exit
+    party_builder()  # recursive call to continue indefinitely until exit
     return  # return after recursive call
 
 
-def create_party(stored_pokemon, parties):
+def create_party():
     name = input("Name: ")
     pokemon = input("Pokemon (comma-separated): ")
     print("")  # print newline
 
     pokemon_split = pokemon.split(',')  # split pokemon by commas for error checking
+
     for p in pokemon_split:
         try:  # try turning to int
-            stored_pokemon[correct_type(p)]
+            SavedPokemon.get_pokemon(correct_type(p))
         except Exception:
             print("ERROR:", p, "is not an integer or is not a stored pokemon")
             return
+    id_ = get_next_id(Party.get_all())
+    party = Party(id_, name, [SavedPokemon.get_pokemon(int(p)) for p in pokemon_split])
+    Party.register(id_, party)
 
-    party = {'ID': get_next_id(parties), 'Name': name, 'Pokemon': pokemon}
-    parties[party['ID']] = party
-
-    print("Party", party['ID'], "successfully created")
+    print("Party", party.id, "successfully created")
 
 
-def delete_party(parties):
-    print_list(parties)
+def delete_party():
+    print_list(Party.get_all())
     print("Which party would you like to delete (-1 to cancel)?")
     to_delete = correct_type(input("--> "))
     if to_delete == -1:
         print("Action cancelled.")
     else:
         try:
-            del parties[to_delete]
+            Party.delete(to_delete)
             print(to_delete, "was successfully deleted")
         except Exception:
             print("ERROR: Could not delete", to_delete)
