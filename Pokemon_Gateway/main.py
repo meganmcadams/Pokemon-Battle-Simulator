@@ -22,7 +22,9 @@ header('Pokemon Battle Simulator')
 
 p = load("pokemon", "Resources")
 
+# todo: move to Pokemon.get_all()
 pokemon = Container(p)  # store in class
+
 for key, value in sorted(pokemon.items()):
     Pokemon.register(value)
 moves = load("moves", "Resources")
@@ -69,7 +71,7 @@ while True:
         save(stored_pokemon, "pokemon")
 
     elif inp == 2:  # Trainer Manager
-        trainer_manager(trainers)
+        trainer_manager()
         save(trainers, "trainers")
 
     elif inp == 3:  # Shop Manager
@@ -83,7 +85,7 @@ while True:
         save(trainers, "trainers")
 
     elif inp == 5:  # Party Builder
-        party_builder(pokemon, stored_pokemon, parties)
+        party_builder()
         save(parties, "parties")
 
     elif inp == 6:  # exit
@@ -92,4 +94,4 @@ while True:
     else:
         print("ERROR:", inp, "was not an option.")
 
-save_all(stored_pokemon, trainers, parties, shops)
+save_all()
