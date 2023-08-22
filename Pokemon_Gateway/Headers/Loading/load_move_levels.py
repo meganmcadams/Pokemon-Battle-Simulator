@@ -38,18 +38,18 @@ def load_move_levels(pokemon_num):
                 exit()
 
         else:  # if are past the headers
-            pid = line[0]
-            mid = line[1]
+            dex_entry = line[0]
+            move_id = line[1]
             level = line[2]
 
-            if int(pid) not in move_levels.keys():  # if we need to make a new row
-                move_levels[pid] = {}  # make new dict row
+            if int(dex_entry) not in move_levels.keys():  # if we need to make a new row
+                move_levels[dex_entry] = {}  # make new dict row
 
             try:
-                move_levels[pid][level].append(mid)  # try to add move to pid's level list
+                move_levels[dex_entry][level].append(move_id)  # try to add move to pid's level list
             except Exception:
-                move_levels[pid][level] = []  # declare list
-                move_levels[pid][level].append(mid)  # now try adding
+                move_levels[dex_entry][level] = []  # declare list
+                move_levels[dex_entry][level].append(move_id)  # now try adding
 
     openfile.close()  # close file
     print("Loading complete. Loaded", len(move_levels), "move levels.\n")
