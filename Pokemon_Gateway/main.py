@@ -76,7 +76,7 @@ while True:
 
     elif inp == 3:  # Shop Manager
         shop_manager(shops, items, categorized_items)
-        save(trainers, "trainers")
+        save(Trainer.as_dicts(), "trainers")
         save(shops, "shops")
 
     elif inp == 4:  # Battle Simulator
@@ -86,7 +86,7 @@ while True:
 
     elif inp == 5:  # Party Builder
         party_builder()
-        save(parties, "parties")
+        save(Party.as_dicts(), "parties")
 
     elif inp == 6:  # exit
         break
