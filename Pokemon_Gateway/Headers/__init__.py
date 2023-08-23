@@ -4,3 +4,4 @@ from Headers.Classes.SavedPokemon import SavedPokemon
 from Headers.Classes.Trainer import Trainer
 from Headers.Classes.Shop import Shop
 from Headers.Classes.Party import Party
+from Headers.Classes.Item import Item
