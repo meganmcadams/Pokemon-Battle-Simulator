@@ -35,3 +35,6 @@ class Party:
 
     def __setitem__(self, key, value):
         self.pokemon[key] = value
+
+    def __getitem__(self, item):
+        return self.pokemon[item]
