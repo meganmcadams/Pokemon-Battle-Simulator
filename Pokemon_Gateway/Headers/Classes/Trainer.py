@@ -24,7 +24,7 @@ class Trainer:
     @staticmethod
     def register(trainer):
         # todo: finish
-        TRAINERS[trainer.id] = trainer
+        TRAINERS[trainer["ID"]] = trainer
 
     @staticmethod
     def get_trainer(id_: int) -> 'Trainer':

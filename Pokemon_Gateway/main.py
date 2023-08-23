@@ -38,7 +38,7 @@ for key, value in stored_pokemon.items():
     SavedPokemon.register(value)
 shops = load("shops", "Saves")
 t = load("trainers", "Saves")
-for key,value in t:
+for key,value in t.items():
     Trainer.register(value)
 items = load("items", "Resources")
 categorized_items = categorize_items(items)
