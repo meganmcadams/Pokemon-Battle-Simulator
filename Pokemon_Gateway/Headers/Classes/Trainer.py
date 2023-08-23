@@ -1,3 +1,5 @@
+import typing
+
 from Headers import Pokemon
 from Headers import SavedPokemon
 
@@ -29,3 +31,19 @@ class Trainer:
     @staticmethod
     def get_trainer(id_: int) -> 'Trainer':
         return TRAINERS[id_]
+
+    @staticmethod
+    def as_dicts() -> typing.Dict[int, dict]:
+        retval = {}
+        for key, value in TRAINERS.items():
+            retval[key] = {
+                "ID": value.id,
+                "Player": value.player,
+                "Name": value.name,
+                "Pokedex Count": value.pokedex_count,
+                "Pokedex": value.pokedex,
+                "Pokemon Count": value.pokemon_count,
+                "Pokemon": value.pokemon,
+                "Money": value.money,
+                "Items": ','.join(value.items)
+            }

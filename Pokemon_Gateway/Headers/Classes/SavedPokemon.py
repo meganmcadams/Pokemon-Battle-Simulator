@@ -110,3 +110,51 @@ class SavedPokemon(Pokemon):
     @staticmethod
     def delete(id_: int):
         del SAVED_MONS[id_]
+
+    @staticmethod
+    def as_dicts() -> typing.Dict[int, dict]:
+        # this sucks lmao
+        retval = {}
+        for key, value in SAVED_MONS.items():
+            retval[key] = {
+                "ID": value.id,
+                "Pid": value.dex_entry,
+                "Pname": value.name,
+                "Tid": value.tid,
+                "Tname": value.tname,
+                "Plname": value.plname,
+                "Full Name": value.full_name,
+                "Gender": value.gender,
+                "Name": value.nickname,
+                "Level": value.level,
+                "Moves": ",".join([str(i.id) for i in value.moves]),
+                "Battles": value.battles,
+                "Status": value.status,
+                "Curr HP": value.curr_stats.hp,
+                "HP": value.stats.hp,
+                "Exp": value.exp,
+                "Attack": value.stats.attack,
+                "Defense": value.stats.defense,
+                "Sp Attack": value.stats.sp_attack,
+                "Sp Defense": value.stats.sp_defense,
+                "Speed": value.stats.speed,
+                "HP IV": value.ivs.hp,
+                "Attack IV": value.ivs.attack,
+                "Defense IV": value.ivs.defense,
+                "Sp Attack IV": value.ivs.sp_attack,
+                "Sp Defense IV": value.ivs.sp_defense,
+                "Speed IV": value.ivs.speed,
+                "HP EV": value.evs.hp,
+                "Attack EV": value.evs.attack,
+                "Defense EV": value.evs.defense,
+                "Sp Attack EV": value.evs.sp_attack,
+                "Sp Defense EV": value.evs.sp_defense,
+                "Speed EV": value.evs.speed,
+                "Curr Attack": value.curr_stats.attack,
+                "Curr Defense": value.curr_stats.defense,
+                "Curr Sp Attack": value.curr_stats.sp_attack,
+                "Curr Sp Defense": value.curr_stats.sp_defense,
+                "Curr Speed": value.curr_stats.speed,
+                "Flinched": value.flinched
+            }
+        return retval

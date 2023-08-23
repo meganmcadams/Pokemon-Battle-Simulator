@@ -56,7 +56,6 @@ while True:
     option(4, "Battle Simulator")
     option(5, "Party Builder")
     option(6, "Exit")
-    print(SavedPokemon.get_pokemon(1).moves[0].name)
     inp = input("--> ")
     try:
         inp = int(inp)
@@ -65,15 +64,15 @@ while True:
 
     if inp == 0:  # Pokemon Manager
         pokemon_manager(stored_pokemon, to_next_level, parties, move_levels, moves, trainers)
-        save(stored_pokemon, "pokemon")
+        save(SavedPokemon.as_dicts(), "pokemon")
 
     elif inp == 1:  # Encounter Generator
         print("This is not configured yet.")
-        save(stored_pokemon, "pokemon")
+        save(SavedPokemon.as_dicts(), "pokemon")
 
     elif inp == 2:  # Trainer Manager
         trainer_manager()
-        save(trainers, "trainers")
+        save(Trainer.as_dicts(), "trainers")
 
     elif inp == 3:  # Shop Manager
         shop_manager(shops, items, categorized_items)
@@ -82,8 +81,8 @@ while True:
 
     elif inp == 4:  # Battle Simulator
         battle_simulator(trainers, items, Pokemon.get_all(), stored_pokemon, parties, moves, to_next_level, move_levels)
-        save(stored_pokemon, "pokemon")
-        save(trainers, "trainers")
+        save(SavedPokemon.as_dicts(), "pokemon")
+        save(Trainer.as_dicts(), "trainers")
 
     elif inp == 5:  # Party Builder
         party_builder()

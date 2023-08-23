@@ -30,6 +30,17 @@ class Party:
     def delete(id_: int) -> None:
         del PARTIES[id_]
 
+    @staticmethod
+    def as_dicts() -> typing.Dict[int, dict]:
+        retval = {}
+        for key, value in PARTIES.items():
+            retval[key] = {
+                "ID": value.id,
+                "Name": value.name,
+                "Pokemon": ','.join([str(pokemon.id) for pokemon in value.pokemon])
+            }
+        return retval
+
     def __iter__(self):
         return self.pokemon.__iter__()
 
