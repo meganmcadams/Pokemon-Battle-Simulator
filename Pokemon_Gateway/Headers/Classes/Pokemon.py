@@ -201,27 +201,27 @@ class Pokemon:
     @staticmethod
     def get_level_exp(exp_growth: str, level: int) -> int:
         if exp_growth == "Fast":
-            return (4 * (level ** 3)) / 5
+            return int((4 * (level ** 3)) / 5)
         if exp_growth == "Medium Fast":
-            return level ** 3
+            return int(level ** 3)
         if exp_growth == "Medium Slow":
-            return (6 / 5 * (level ** 3)) - (15 * (level ** 2)) + (100 * level) - 140
+            return int((6 / 5 * (level ** 3)) - (15 * (level ** 2)) + (100 * level) - 140)
         if exp_growth == "Slow":
-            return (5 * (level ** 3)) / 4
+            return int((5 * (level ** 3)) / 4)
         if exp_growth == "Erratic":
             if level < 50:
-                return ((level ** 3) * (100 - level)) / 50
+                return int(((level ** 3) * (100 - level)) / 50)
             if 50 <= level < 68:
-                return ((level ** 3) * (150 - level)) / 100
+                return int(((level ** 3) * (150 - level)) / 100)
             if 68 <= level <= 98:
-                return ((level ** 3) * ((1911 - (10 * level)) / 3)) / 500
-            return ((level ** 3) * (160 - level)) / 100
+                return int(((level ** 3) * ((1911 - (10 * level)) / 3)) / 500)
+            return int(((level ** 3) * (160 - level)) / 100)
         if exp_growth == "Fluctuating":
             if level < 15:
-                return (level ** 3) * ((((level + 1) / 3) + 24) / 50)
+                return int((level ** 3) * ((((level + 1) / 3) + 24) / 50))
             if 15 <= level < 36:
-                return (level ** 3) * (level + 14) / 50
-            return (level ** 3) * (((level / 2) + 32) / 50)
+                return int((level ** 3) * (level + 14) / 50)
+            return int((level ** 3) * (((level / 2) + 32) / 50))
 
 
 @dataclasses.dataclass
