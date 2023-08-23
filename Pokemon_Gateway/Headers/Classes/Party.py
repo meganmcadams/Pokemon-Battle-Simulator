@@ -27,3 +27,9 @@ class Party:
     @staticmethod
     def delete(id_: int) -> None:
         del PARTIES[id_]
+
+    def __iter__(self):
+        return self.pokemon.__iter__()
+
+    def __setitem__(self, key, value):
+        self.pokemon[key] = value
