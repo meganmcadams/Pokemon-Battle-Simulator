@@ -1,4 +1,9 @@
-from .catch_handler import *
+from Headers.tools import option, subheader
+from Headers.Classes.Party import Party
+from Headers.Classes.Trainer import Trainer
+from Headers.Classes.SavedPokemon import SavedPokemon
+import typing
+import random
 
 
 def validate_parties(pokemon, parties, party1, party2):
@@ -45,28 +50,11 @@ def validate_parties(pokemon, parties, party1, party2):
     return party1, party2, party1_pokemon, party2_pokemon
 
 
-def get_party_order(trainers, pokemon, stored_pokemon, party1_pokemon, party2_pokemon):
+def get_party_order(party1: Party, party2: Party) -> typing.Union[list[SavedPokemon], int]:
     subheader("Party Order")
 
-    party_order = []  # declare party order as list
-
-    i = 0
-    for _ in party1_pokemon:  # store pokemon from party1 into party_order
-        party_order.append(party1_pokemon[i])
-        i += 1
-
-    i = 0
-    for _ in party2_pokemon:  # store pokemon from party2 into party_order
-        party_order.append(party2_pokemon[i])
-        i += 1
-
-    party_order_names = {}  # declare names of party pokemon
-    for p in party_order:  # print pokemon in party_order so user knows what their options are
-        try:
-            owner = str(trainers[int(p['Tid'])]['Name']) + "'s"
-        except Exception:
-            owner = "Wild"
-        party_order_names[int(p['ID'])] = str(owner + " " + str(pokemon[p['Pid']]['Name']) + " (" + str(p['ID']) + ")")
+    # party_order holds all pokemon in all parties, will be sorted later
+    party_order = [value for value in party1.pokemon] + [value for value in party2.pokemon]
 
     # Menu
     option(0, "Use speed of Pokemon")
@@ -81,61 +69,56 @@ def get_party_order(trainers, pokemon, stored_pokemon, party1_pokemon, party2_po
         inp = -1
 
     if inp == 0:
-        print("Not configured")
-        return -1, -1
+        party_order.sort(key=lambda x: x.stats.speed, reverse=True)  # sort by speed
+        return party_order
 
     elif inp == 1:  # Manually enter
         options = []  # options from party_order
         for p in party_order:  # print pokemon in party_order so user knows what their options are
-            print(party_order_names[p['ID']])
-            options.append(str(p['ID']))
+            try:
+                owner = str(Trainer.get_trainer(p.tid).name) + "'s"
+            except Exception:
+                owner = "Wild"
+            print(f"{owner}'s {p.name} ({p.id})")
+            options.append(str(p.id))
         print("")  # print newline
 
         order_inp = []
 
         print("Input the Pokemon's IDs in the order that you'd like them to go.")
 
-        i = 0
-        for _ in party_order:
+        for i in range(len(party_order)):
             order_inp.append(input(str(i + 1) + ": "))
-            i += 1
         print("")  # print newline
 
+        # ugh, why aren't sets ordered, this is so annoying
         done = []  # store done order to prevent repeats
 
         i = 0
         while i < len(order_inp):  # check if it's in party_order
             if order_inp[i] not in options:  # if isn't in options that we got earlier from party_order
                 print("ERROR:", order_inp[i], "not found in party_order\n")
-                return -1, -1
+                return -1
 
             if order_inp[i] in done:  # if already done that one
                 print("ERROR: You entered", order_inp[i], "more than once\n")
-                return -1, -1
+                return -1
 
             done.append(order_inp[i])  # append what we've done so we don't accidentally repeat
-            order_inp[i] = stored_pokemon[int(order_inp[i])]  # set to pokemon instead of id
+            order_inp[i] = SavedPokemon.get_pokemon(order_inp[i].id)
+
 
             i += 1
 
-        return party_order_names, party_order
+        return party_order
 
     elif inp == 2:  # Random order
-        options = []
-        for p in party_order:  # copy party order to options
-            options.append(p)
-        party_order = []  # reset party order
-
-        while len(options) > 0:  # while there are more pokemon to put in the party order
-            p = random.choice(options)
-            party_order.append(p)
-            options.remove(p)
-
-        return party_order_names, party_order
+        random.shuffle(party_order)  # shuffle the party order
+        return party_order
 
     elif inp == 3:  # Cancel
-        return -1, -1
+        return -1
 
     else:
         print("ERROR:", inp, "was not an option or the input was not an integer")
-        return -1, -1
+        return -1
