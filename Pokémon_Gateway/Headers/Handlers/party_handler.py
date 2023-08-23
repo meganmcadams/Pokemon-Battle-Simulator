@@ -81,8 +81,8 @@ def get_party_order(trainers, pokemon, stored_pokemon, party1_pokemon, party2_po
         inp = -1
 
     if inp == 0:
-        print("Not configured")
-        return -1, -1
+        party_order.sort(key=lambda x: x['Speed'], reverse=True) # sort by speed
+        return party_order_names, party_order
 
     elif inp == 1: # Manually enter
         options = [] # options from party_order
