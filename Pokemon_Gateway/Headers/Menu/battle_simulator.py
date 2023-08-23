@@ -4,17 +4,18 @@ from Headers.Handlers.damage_handler import *
 from Headers.Handlers.level_handler import *
 from Headers.Handlers.party_handler import *
 from Headers.Handlers.status_handler import *
+from Headers.tools import header, print_list
 
 
 # noinspection PyTypeChecker
-def battle_simulator(trainers, items, parties, moves, to_next_level, move_levels):
+def battle_simulator(move_levels):
     header("Battle Simulator")
 
-    if len(parties) < 2:  # if there are less than 2 parties
+    if len(Party.get_all()) < 2:  # if there are less than 2 parties
         print("ERROR: At least 2 parties are needed to run the battle simulator")
         return
 
-    print_list(parties)  # list existing parties
+    print_list(Party.as_dicts())  # list existing parties
     party1_id = input("Party 1: ")
     party2_id = input("Party 2: ")
 
@@ -123,7 +124,7 @@ def battle_simulator(trainers, items, parties, moves, to_next_level, move_levels
     # rewards if won
 
     for p in winner:
-        level_check(p, to_next_level, move_levels, moves)
+        level_check(p, move_levels)
         try:  # try to give money to the trainer, if any
             Trainer.get_trainer(p.tid).money += len(loser) + (loser[0].level * 2) * random.randrange(50, 200)
         except Exception:
