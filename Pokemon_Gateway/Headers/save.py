@@ -1,5 +1,10 @@
 import os.path
 
+from Headers.Classes.Party import Party
+from Headers.Classes.SavedPokemon import SavedPokemon
+from Headers.Classes.Shop import Shop
+from Headers.Classes.Trainer import Trainers
+
 
 def save(items, filename):  # save to a file
     print("Saving ", filename, "...", sep="")
@@ -47,8 +52,8 @@ def save(items, filename):  # save to a file
     print("Save complete. Saved", len(items), "items.\n")
 
 
-def save_all(stored_pokemon, trainers, parties, shops):  # save everything
-    save(stored_pokemon, "pokemon")
-    save(trainers, "trainers")
-    save(parties, "parties")
-    save(shops, "shops")
+def save_all():  # save everything
+    save(SavedPokemon.get_all(), "pokemon")
+    save(Trainers.get_all(), "trainers")
+    save(Party.get_all(), "parties")
+    save(Shop.get_all(), "shops")
