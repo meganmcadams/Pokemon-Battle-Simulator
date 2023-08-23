@@ -11,8 +11,8 @@ class Trainer:
         self.id: int = 0
         self.player: str = ""
         self.name: str = ""
-        self.pokedex_count: list[Pokemon] = []
-        self.pokedex: str = ""
+        self.pokedex: list[Pokemon] = []
+        self.pokedex_count: int = 0
         self.pokemon_count: int = 0
         self.pokemon: list[SavedPokemon] = []
         self.money: int = 0
@@ -47,3 +47,7 @@ class Trainer:
                 "Money": value.money,
                 "Items": ','.join(value.items)
             }
+
+    @staticmethod
+    def delete(id_: int) -> None:
+        del TRAINERS[id_]
