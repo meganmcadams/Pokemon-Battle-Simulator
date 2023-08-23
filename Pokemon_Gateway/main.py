@@ -29,6 +29,11 @@ move_levels = load_move_levels(len(p))  # special load func for move_levels (mov
 stored_pokemon = load("pokemon", "Saves")
 for key, value in stored_pokemon.items():
     SavedPokemon.register(value)
+
+parties = load("parties", "Saves")
+for key, value in parties.items():
+    Party.register(value)
+
 shops = load("shops", "Saves")
 
 t = load("trainers", "Saves")
