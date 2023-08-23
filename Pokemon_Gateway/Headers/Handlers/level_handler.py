@@ -1,3 +1,4 @@
+from ..Classes.Move import Move
 from ..Classes.Pokemon import Pokemon
 from ..tools import *
 import copy
@@ -11,12 +12,12 @@ def level_check(p: SavedPokemon, to_next_level, move_levels, moves):
 
     if int(p.exp) >= int(
             to_next_level[int(p.level) + 1][curr_pokemon.exp_growth]):  # if exp is good to level up
-        level_up(p, to_next_level, moves, True, True)  # level up the pokemon
+        level_up(p, to_next_level, True, True)  # level up the pokemon
         level_check(p, to_next_level, move_levels, moves)  # recursive call in case double level up
     evolution_check(p, to_next_level, moves)
 
 
-def level_up(pokemon: SavedPokemon, to_next_level, moves, announce, sub_exp):
+def level_up(pokemon: SavedPokemon, to_next_level: dict[int, dict[str, int]], announce: bool, sub_exp: bool):
     # pokemon = the pokemon to level up
     # p = stored info about pokemon
 
@@ -26,19 +27,19 @@ def level_up(pokemon: SavedPokemon, to_next_level, moves, announce, sub_exp):
     #    pokemon = pokemon[p['Pid']]
 
     if sub_exp:
-        pokemon.exp -= to_next_level[pokemon.level + 1][pokemon['Exp Growth']]  # subtract needed exp from pokemon exp
+        pokemon.exp -= to_next_level[pokemon.level + 1][pokemon.exp_growth]  # subtract needed exp from pokemon exp
 
     old = copy.deepcopy(pokemon)
 
     pokemon.level += 1  # increase level
-    pokemon.stats.hp = int((int(pokemon.ivs.hp) + 2 * int(pokemon.stats.hp) + (int(pokemon.evs.hp) / 4))
-                           * int(pokemon.level) / 100) + 10 + int(
-        pokemon.level)
     # ( (IV + 2 * BaseStat + (EV/4) ) * Level/100 ) + 10 + Level
 
     # (((IV + 2 * BaseStat + (EV/4) ) * Level/100 ) + 5) * Nature Value
     pokemon.stats.hp = int(0.001 * (2 * pokemon.base_stats.hp + pokemon.ivs.hp + (0.25 * pokemon.evs.hp)
                                     * pokemon.level) + pokemon.level + 10)
+    # check for shedinja
+    if pokemon.dex_entry == 292:
+        pokemon.stats.hp = 1
 
     stat_list = ["attack", "defense", "sp_attack", "sp_defense", "speed"]  # make list of stats
     for s in stat_list:  # set each stat
@@ -52,40 +53,33 @@ def level_up(pokemon: SavedPokemon, to_next_level, moves, announce, sub_exp):
         print(pokemon.full_name, "leveled up to level", pokemon.level)  # notify user
         print_stat_changes(pokemon, old)
 
-    learn_moves(pokemon, to_next_level, moves)  # learn moves if any
+    learn_moves(pokemon, to_next_level)  # learn moves if any
 
 
-def print_stat_changes(new_p, old_p, stat_list=None):  # make list of stats
+def print_stat_changes(new_p: SavedPokemon, old_p: SavedPokemon, stat_list=None):  # make list of stats
     if stat_list is None:
         stat_list = ["HP", "Attack", "Defense", "Sp Attack", "Sp Defense",
                      "Speed"]
     for stat in stat_list:
+        # easier to access stats this way, though you can `.stats.hp` if you want
         print(stat, ": ", old_p[stat], " --> ", new_p[stat], sep="")
     print("")  # print newline
 
 
-def learn_moves(p, move_levels, moves):
+def learn_moves(p: SavedPokemon, move_levels: dict[int, dict[int, list[int]]]):
     try:  # get moves learnable at their curr level
         learnables = move_levels[p.dex_entry][p.level]
     except Exception:  # if there aren't any
         return
 
-    try:  # turn into a list
-        curr_moves = p.moves.split(',')
-    except Exception:  # if can't turn into a list, take the 1 move and put it in a list
-        curr_moves = [p.moves]
-
-    i = 0
-    for _ in curr_moves:
-        curr_moves[i] = int(curr_moves[i])
-        i += 1
+    curr_moves = p.moves
 
     for m in learnables:
         if int(m) not in curr_moves:
-            print(p.name, " wants to learn ", moves[int(m)]['Name'], ".", sep="")
+            print(p.name, " wants to learn ", Move.get_move(int(m)).name, ".", sep="")
 
             if len(curr_moves) >= 4:
-                print("Forget a move to learn ", moves[int(m)]['Name'], "?", sep="")
+                print("Forget a move to learn ", Move.get_move(int(m)).name, "?", sep="")
                 option(0, "Yes")
                 option(1, "No")
                 inp = input("--> ")
@@ -94,13 +88,13 @@ def learn_moves(p, move_levels, moves):
                     inp = int(inp)
                 except Exception:
                     print(inp, "was not an option")
-                    learn_moves(p, move_levels, moves)  # try again
+                    learn_moves(p, move_levels)  # try again
                     return
 
                 if inp == 0:  # Yes
                     i = 0
                     for c in curr_moves:
-                        option(i, moves[int(c)]['Name'])
+                        option(i, Move.get_move(int(c)).name)
                         i += 1
 
                     inp = input("--> ")
@@ -109,14 +103,14 @@ def learn_moves(p, move_levels, moves):
                         inp = int(inp)
                     except Exception:
                         print(inp, "was not an option")
-                        learn_moves(p, move_levels, moves)  # try again
+                        learn_moves(p, move_levels)  # try again
                         return
 
                     try:  # try to replace move with new move
-                        curr_moves[inp] = int(m)
+                        curr_moves[inp] = Move.get_move(inp)
                     except Exception:
                         print(inp, "was not an option")
-                        learn_moves(p, move_levels, moves)  # try again
+                        learn_moves(p, move_levels)  # try again
                         return
 
                     new_moves = ""
@@ -129,19 +123,19 @@ def learn_moves(p, move_levels, moves):
 
                     p.moves = new_moves
 
-                    print(p.name, " has learned ", moves[int(m)]['Name'], ".", sep="")
+                    print(p.name, " has learned ", Move.get_move(int(m)).name, ".", sep="")
 
                 elif inp == 1:  # No
                     pass
 
                 else:  # Incorrect input
                     print(inp, "was not an option")
-                    learn_moves(p, move_levels, moves)  # try again
+                    learn_moves(p, move_levels)  # try again
                     return
 
             else:  # length of moves is less than 4
                 p.moves = str(p.moves) + "," + str(m)
-                print(p.name, " has learned ", moves[int(m)]['Name'], ".", sep="")
+                print(p.name, " has learned ", Move.get_move(int(m)).name, ".", sep="")
 
 
 def exp(winning_party: typing.List[SavedPokemon], defeated_party: typing.List[SavedPokemon]):
@@ -169,7 +163,7 @@ def evolution_check(p: SavedPokemon, to_next_level, moves):
         return  # needs a stone or can't evolve
 
     if p.level >= evolves_at_level:  # if should evolve
-        print(p['Full Name'], " wants to evolve.")
+        print(p.full_name, " wants to evolve.")
         option(0, "Allow")
         option(1, "Deny")
         inp = correct_type(input("--> "))
@@ -180,7 +174,7 @@ def evolution_check(p: SavedPokemon, to_next_level, moves):
             p.pname = Pokemon.get_pokemon(p.pid).name
 
             p.level -= 1  # delevel
-            level_up(p, to_next_level, moves, False, False)  # relevel
+            level_up(p, to_next_level, False, False)  # relevel
 
             print(p.full_name, " evolved into ", p.pname, "!", sep="")
 
