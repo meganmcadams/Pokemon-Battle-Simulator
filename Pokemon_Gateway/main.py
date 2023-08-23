@@ -1,48 +1,43 @@
-# tools
-from Headers import Move
-# classes
-from Headers import Pokemon
-from Headers import SavedPokemon
-from Headers import Trainer
-from Headers.Handlers.level_handler import level_check
-from Headers.Loading.load import load
+from Headers import Move, Party, Pokemon, SavedPokemon, Trainer
 # loading
+from Headers.Loading.load import load
 from Headers.Loading.load_move_levels import load_move_levels
-from Headers.Menu.battle_simulator import battle_simulator
 # menu
+from Headers.Handlers.level_handler import level_check
+from Headers.Menu.battle_simulator import battle_simulator
 from Headers.Menu.party_builder import party_builder
 from Headers.Menu.pokemon_manager import pokemon_manager
 from Headers.Menu.shop_manager import shop_manager
 from Headers.Menu.trainer_manager import trainer_manager
 # saving
 from Headers.save import save, save_all
+# tools
 from Headers.tools import categorize_items, header, option
 
 header('Pokemon Battle Simulator')
 
 p = load("pokemon", "Resources")
-
-# todo: move to Pokemon.get_all()
-
-
-for key, value in sorted(p.items()):
+for key, value in p.items():
     Pokemon.register(value)
+
 moves = load("moves", "Resources")
-for key, value in sorted(moves.items()):
+for key, value in moves.items():
     Move.register(value)
-parties = load("parties", "Saves")
+
 move_levels = load_move_levels(len(p))  # special load func for move_levels (move_levels[pid][level])
-to_next_level = load("to_next_level", "Resources")
+
 stored_pokemon = load("pokemon", "Saves")
 for key, value in stored_pokemon.items():
     SavedPokemon.register(value)
 shops = load("shops", "Saves")
+
 t = load("trainers", "Saves")
 for key,value in t.items():
     Trainer.register(value)
+
 items = load("items", "Resources")
 categorized_items = categorize_items(items)
-trainers = Trainer.get_all()
+
 for mon in SavedPokemon.iter():  # check for level ups
     level_check(mon, move_levels)
 
@@ -80,7 +75,7 @@ while True:
         save(shops, "shops")
 
     elif inp == 4:  # Battle Simulator
-        battle_simulator(trainers, items, parties, moves, to_next_level, move_levels)
+        battle_simulator(move_levels)
         save(SavedPokemon.as_dicts(), "pokemon")
         save(Trainer.as_dicts(), "trainers")
 
