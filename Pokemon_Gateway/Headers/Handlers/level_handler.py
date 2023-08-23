@@ -1,7 +1,8 @@
-from ..Classes.Move import Move
-from ..Classes.Pokemon import Pokemon
-from ..tools import *
 import copy
+
+from Headers.Classes.Move import Move
+from Headers.Classes.Pokemon import Pokemon
+from Headers.tools import *
 
 
 def level_check(p: SavedPokemon, to_next_level, move_levels, moves):

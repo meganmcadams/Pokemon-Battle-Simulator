@@ -1,4 +1,4 @@
-from ..tools import correct_type
+from Headers.tools import correct_type
 
 
 def perform_move(pokemon, move, attacker, opponent, weather):

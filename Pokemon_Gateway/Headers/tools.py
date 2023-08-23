@@ -1,7 +1,5 @@
 import typing
 
-from Headers.Classes.SavedPokemon import SavedPokemon
-
 
 def header(text: str) -> None:
     text_size = len(text)

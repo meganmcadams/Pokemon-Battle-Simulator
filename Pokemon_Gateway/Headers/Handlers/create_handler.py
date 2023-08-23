@@ -1,11 +1,11 @@
 import copy
 import random
 
-from ..Classes.Move import Move
-from ..Classes.Pokemon import Pokemon
-from ..Classes.SavedPokemon import SavedPokemon
-from ..Handlers.level_handler import level_up
-from ..tools import get_next_id, subheader, option, correct_type
+from Headers.Classes.Move import Move
+from Headers.Classes.Pokemon import Pokemon
+from Headers.Classes.SavedPokemon import SavedPokemon
+from Headers.Handlers.level_handler import level_up
+from Headers.tools import get_next_id, subheader, option, correct_type
 
 
 def create(to_next_level, stored_pokemon, level, name, nickname, tid, move_levels, trainers):

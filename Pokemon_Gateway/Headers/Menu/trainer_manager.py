@@ -1,9 +1,11 @@
-from ..tools import *
-from .party_builder import delete_party
-from Headers.Classes.Trainer import Trainers
+from Headers.Classes.Trainer import Trainer
+from Headers.tools import *
+from party_builder import delete_party
 
 
-def trainer_manager(trainers: Trainers) -> None:
+# TODO: all broken--funcs shouldnt have any arguments, should pull trainers from Trainer.get_all()
+
+def trainer_manager(trainers: Trainer) -> None:
     print("")  # print newline
     header("Trainer Manager")
     option(0, "Create Trainer")
@@ -37,7 +39,7 @@ def trainer_manager(trainers: Trainers) -> None:
     return  # return after recursive call
 
 
-def create_trainer(trainers: Trainers) -> None:
+def create_trainer(trainers: Trainer) -> None:
     name = input("Name: ")
     print("")  # print newline
 
@@ -56,7 +58,7 @@ def create_trainer(trainers: Trainers) -> None:
     print("Trainer", trainer['ID'], "successfully created")
 
 
-def delete_trainer(trainers: Trainers) -> None:
+def delete_trainer(trainers: Trainer) -> None:
     print_list(trainers)
     print("Which trainer would you like to delete (-1 to cancel)?")
     to_delete = correct_type(input("--> "))

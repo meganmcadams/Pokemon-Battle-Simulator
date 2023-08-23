@@ -1,6 +1,7 @@
 import os
 import re
-from ..tools import *
+
+from Headers.tools import *
 
 
 def load(filename, foldername):  # loads file as dictionary of lists, first column needs to be ids

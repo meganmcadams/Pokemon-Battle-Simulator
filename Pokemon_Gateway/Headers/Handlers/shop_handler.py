@@ -1,5 +1,6 @@
-from ..tools import subheader, get_next_id, option, correct_type
 import random
+
+from Headers.tools import subheader, get_next_id, option, correct_type
 
 
 def create_shop(shops: dict, items, categorized_items: dict) -> None:

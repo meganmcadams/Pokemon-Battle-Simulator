@@ -1,10 +1,9 @@
 import random
 
-from ..Classes.Move import Move
-from ..Classes.Party import Party
-from ..Classes.Pokemon import Pokemon
-from ..Classes.Trainer import Trainer
-from ..tools import *
+from Headers.Classes.Move import Move
+from Headers.Classes.Party import Party
+from Headers.Classes.Trainer import Trainer
+from Headers.tools import *
 
 
 def get_move(pokemon: SavedPokemon):

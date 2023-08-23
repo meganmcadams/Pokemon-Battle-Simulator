@@ -1,5 +1,4 @@
-from ..tools import *
-import random
+from Headers.tools import *
 
 
 def throw_pokeball(pokemon, items, trainers, current_party, opposing_party, opposing_pokemon, tid):

@@ -1,6 +1,7 @@
 import os.path
 import re
-from ..tools import *
+
+from Headers.tools import *
 
 
 def load_move_levels(pokemon_num):

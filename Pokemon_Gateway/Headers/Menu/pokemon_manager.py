@@ -1,7 +1,7 @@
-from ..Handlers.battle_handler import reset_stats
-from ..Handlers.create_handler import get_pokemon_name, get_pokemon_nickname, get_pokemon_tid, create, get_level
-from ..save import save
-from ..tools import header, option, print_list, correct_type
+from Headers.Handlers.battle_handler import reset_stats
+from Headers.Handlers.create_handler import get_pokemon_name, get_pokemon_nickname, get_pokemon_tid, create, get_level
+from Headers.save import save
+from Headers.tools import header, option, print_list, correct_type
 
 
 def pokemon_manager(stored_pokemon, to_next_level, parties, move_levels, moves, trainers):

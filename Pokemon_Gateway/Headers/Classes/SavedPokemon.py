@@ -1,8 +1,8 @@
 import typing
 
-from .Move import Move
-from .Pokemon import Pokemon
-from .Pokemon import IVs, EVs, Stats
+from Move import Move
+from Pokemon import Pokemon, IVs, EVs, Stats
+
 SAVED_MONS: typing.Dict[int, 'SavedPokemon'] = {}
 
 

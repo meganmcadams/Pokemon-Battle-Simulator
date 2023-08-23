@@ -1,9 +1,10 @@
-from Headers.tools import option, subheader
-from Headers.Classes.Party import Party
-from Headers.Classes.Trainer import Trainer
-from Headers.Classes.SavedPokemon import SavedPokemon
-import typing
 import random
+import typing
+
+from Headers.Classes.Party import Party
+from Headers.Classes.SavedPokemon import SavedPokemon
+from Headers.Classes.Trainer import Trainer
+from Headers.tools import option, subheader
 
 
 def validate_parties(pokemon, parties, party1, party2):
