@@ -1,8 +1,10 @@
 import random
 
+from Headers import Move, SavedPokemon
 
-def damage(pokemon, move, attacker, opponent, weather):
-    if move['Power'] == 0 or move['Category'] == "Status":  # if the move does nothing
+
+def damage(move: Move, attacker: SavedPokemon, opponent: SavedPokemon, weather):
+    if move.power == 0 or move.category == "Status":  # if the move does nothing
         return
 
     critical_chance = 0.05  # default critical hit chance to 5%
@@ -13,34 +15,35 @@ def damage(pokemon, move, attacker, opponent, weather):
         critical = 1.5
 
     stab = 1
-    if move['Type'] is pokemon[int(attacker['Pid'])]['Type1'] or move['Type'] is pokemon[int(attacker['Pid'])]['Type2']:
+    if move.type is attacker.types[0] or move.type is attacker.types[1]:
         stab = 1.5
 
     burn = 1
-    if opponent['Status'] == "Burn" and move['Category'] == "Physical":
+    if opponent.status == "Burn" and move.category == "Physical":
         burn = 0.5
 
     weather_bonus = 1
     if weather != "":  # if weather is not default
-        if weather is pokemon[int(attacker['Pid'])]['Type1'] or weather is pokemon[int(attacker['Pid'])]['Type2']:
-            weather = 1.5
+        if weather is attacker.types[0] or weather is attacker.types[1]:
+            weather_bonus = 1.5
 
-    opponent_type = pokemon[int(opponent['Pid'])][move['Type']]
+    opponent_type = opponent.type_effectiveness[move.type]
 
     rng = random.randrange(85, 100) / 100
 
-    part1 = ((int(attacker['Level']) * 2) / 5) + 2
+    part1 = ((attacker.level * 2) / 5) + 2
 
-    if move['Category'] == "Special":
-        part2 = int(move['Power']) * (int(attacker['Curr Sp Attack']) / int(opponent['Curr Sp Defense']))
+    if move.category == "Special":
+
+        part2 = move.power * (attacker.curr_stats.sp_attack / opponent.curr_stats.sp_defense)
     else:
-        part2 = int(move['Power']) * (int(attacker['Curr Attack']) / int(opponent['Curr Defense']))
+        part2 = move.power * (attacker.curr_stats.attack / opponent.curr_stats.defense)
 
     left = ((part1 * part2) / 50) + 2
     damage_amount = left * weather_bonus * critical * rng * stab * burn * opponent_type
 
-    print(move['Name'], "did", round(damage_amount), "damage!")
-    opponent['Curr HP'] -= round(damage_amount)
+    print(move.name, "did", round(damage_amount), "damage!")
+    opponent.stats.hp -= round(damage_amount)
 
     if opponent_type < 1:
         print("It wasn't very effective...")
