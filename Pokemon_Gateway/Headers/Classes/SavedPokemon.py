@@ -10,23 +10,22 @@ class SavedPokemon(Pokemon):
     def __init__(self, dex_entry: int = 0):
         super().__init__()
         self.full_name = ""
-        self.id: int = 0
-        self.tid = 0
-        self.tname = 0
+        self.id: int = -1
+        self.tid = -1
+        self.tname = ""
         self.plname = ""
         self.gender = ""
         self.nickname = ""
-        self.level = 0
+        self.level = -1
         self.moves: typing.List[Move] = []
-        self.battles = 0
+        self.battles = -1
         self.status = ""
-        self.curr_hp = 0
         self.stats: Stats = Stats()
         self.ivs: IVs = IVs()
         self.evs: EVs = EVs()
         self.curr_stats: Stats = Stats()
         self.exp = 0
-        self.flinched = False
+        self.flinched = 0
 
         if dex_entry != 0:
             base_dict = Pokemon.get_pokemon(dex_entry).__dict__()
@@ -55,7 +54,6 @@ class SavedPokemon(Pokemon):
 
         saved_mon.battles = data['Battles']
         saved_mon.status = data['Status']
-        saved_mon.curr_hp = data['Curr HP']  # curr hp is defined separately in saved pokemon txt
         saved_mon.curr_stats = Stats()
         saved_mon.ivs = IVs()
         saved_mon.evs = EVs()
@@ -70,6 +68,8 @@ class SavedPokemon(Pokemon):
                 setattr(saved_mon.evs, internal_name, data[i + " EV"])
                 setattr(saved_mon.ivs, internal_name, data[i + " IV"])
             setattr(saved_mon.stats, internal_name, data[i])
+            setattr(saved_mon.curr_stats, internal_name, data[i])
+        saved_mon.curr_stats.hp = data['Curr HP']  # curr hp is defined separately in saved pokemon txt
 
         SAVED_MONS[saved_mon.id] = saved_mon
 
