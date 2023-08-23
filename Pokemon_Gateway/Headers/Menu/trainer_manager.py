@@ -1,6 +1,6 @@
 from Headers import Trainer
 from Headers.tools import *
-from party_builder import delete_party
+from .party_builder import delete_party
 
 
 # TODO: all broken--funcs shouldnt have any arguments, should pull trainers from Trainer.get_all()
