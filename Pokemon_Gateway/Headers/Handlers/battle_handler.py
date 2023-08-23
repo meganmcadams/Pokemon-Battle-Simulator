@@ -146,10 +146,10 @@ def get_target(pokemon, stored_pokemon, current_party, opposing_party):
     return opposing_party[inp]
 
 
-def weather_check(move, weather):
-    # todo: what is this supposed to return?
-    if move['Weather'] != "":
-        weather = move['Weather']
+def weather_check(move: Move, weather: str) -> str:
+    if move.weather != "":
+        weather = move.weather
+    return move.weather if move.weather != "" else weather
 
 
 def reset_stats(pokemon: SavedPokemon):

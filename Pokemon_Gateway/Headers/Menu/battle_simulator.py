@@ -73,7 +73,7 @@ def battle_simulator(trainers, items, pokemon, stored_pokemon, parties, moves, t
                     if accuracy_check(curr_pokemon, curr_move) is True:  # determine if it hits
                         stat_change_check(curr_move, curr_pokemon, target)  # apply stat changes
                         status_check(pokemon, curr_move, target)  # apply status effect
-                        weather_check(curr_move, weather)  # update weather
+                        weather = weather_check(curr_move, weather)  # update weather
 
                     damage(pokemon, curr_move, curr_pokemon, target, weather)  # dish out damage
 
