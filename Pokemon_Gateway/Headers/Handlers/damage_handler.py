@@ -15,17 +15,14 @@ def damage(move: Move, attacker: SavedPokemon, opponent: SavedPokemon, weather):
         critical = 1.5
 
     stab = 1
-    if move.type is attacker.types[0] or move.type is attacker.types[1]:
+    if move.type in attacker.types:
         stab = 1.5
 
     burn = 1
     if opponent.status == "Burn" and move.category == "Physical":
         burn = 0.5
 
-    weather_bonus = 1
-    if weather != "":  # if weather is not default
-        if weather is attacker.types[0] or weather is attacker.types[1]:
-            weather_bonus = 1.5
+    weather_bonus = 1.5 if weather == move.type else 1
 
     opponent_type = opponent.type_effectiveness[move.type]
 
@@ -40,10 +37,10 @@ def damage(move: Move, attacker: SavedPokemon, opponent: SavedPokemon, weather):
         part2 = move.power * (attacker.curr_stats.attack / opponent.curr_stats.defense)
 
     left = ((part1 * part2) / 50) + 2
-    damage_amount = left * weather_bonus * critical * rng * stab * burn * opponent_type
+    damage_amount = round(left * weather_bonus * critical * rng * stab * burn * opponent_type)
 
-    print(move.name, "did", round(damage_amount), "damage!")
-    opponent.stats.hp -= round(damage_amount)
+    print(f"{move.name} did {damage_amount} damage!")
+    opponent.stats.hp -= damage_amount
 
     if opponent_type < 1:
         print("It wasn't very effective...")
