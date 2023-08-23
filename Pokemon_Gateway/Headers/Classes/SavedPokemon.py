@@ -73,6 +73,32 @@ class SavedPokemon(Pokemon):
 
         SAVED_MONS[saved_mon.id] = saved_mon
 
+    def evolve(self):
+        evolution = Pokemon.get_pokemon(self.next_evo)
+        self.dex_entry = evolution.dex_entry
+        self.name = evolution.name
+        self.evo = evolution.evo
+        self.base_evo = evolution.base_evo
+        self.next_evo = evolution.next_evo
+        self.evolve_level = evolution.evolve_level
+        self.learnable_moves = evolution.learnable_moves
+        self.type_effectiveness = evolution.type_effectiveness
+        self.base_egg_steps = evolution.base_egg_steps
+        self.capture_rate = evolution.capture_rate
+        self.classification = evolution.classification
+        self.exp_growth = evolution.exp_growth
+        self.height = evolution.height
+        self.gender_ratio = evolution.gender_ratio
+        self.base_total = evolution.base_total
+        self.exp_yield = evolution.exp_yield
+        self.evs_given = evolution.evs_given
+        self.total_evs = evolution.total_evs
+        self.base_stats = evolution.base_stats
+        self.types = evolution.types
+        self.weight = evolution.weight
+        self.gen = evolution.gen
+        self.legendary = evolution.legendary
+
     @staticmethod
     def get_pokemon(id_: typing.Union[int, str]) -> 'SavedPokemon':
         return SAVED_MONS[id_]
@@ -80,3 +106,7 @@ class SavedPokemon(Pokemon):
     @staticmethod
     def get_all() -> typing.Dict[int, 'SavedPokemon']:
         return SAVED_MONS
+
+    @staticmethod
+    def delete(id_: int):
+        del SAVED_MONS[id_]
