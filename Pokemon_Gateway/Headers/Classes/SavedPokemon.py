@@ -21,10 +21,10 @@ class SavedPokemon(Pokemon):
         self.battles = 0
         self.status = ""
         self.curr_hp = 0
-        self.stats = Stats()
-        self.ivs = IVs()
-        self.evs = EVs()
-        self.curr_stats = Stats()
+        self.stats: Stats = Stats()
+        self.ivs: IVs = IVs()
+        self.evs: EVs = EVs()
+        self.curr_stats: Stats = Stats()
         self.exp = 0
         self.flinched = False
 
