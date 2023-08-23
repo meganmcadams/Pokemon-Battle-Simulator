@@ -57,7 +57,7 @@ def pokemon_manager(move_levels):
         print("Which party is going to the Pokemon Center?")
         party = input("--> ")
         try:
-            pokemon_center(Party.get_party(int(party)), SavedPokemon.get_all())
+            pokemon_center(Party.get_party(int(party)))
         except Exception:
             print("ERROR:", party, "was not an option")
 
@@ -70,12 +70,7 @@ def pokemon_manager(move_levels):
     pokemon_manager(move_levels)  # recursive call to reset menu
 
 
-def pokemon_center(party, stored_pokemon):  # heal all pokemon
-    try:
-        pokemon = party['Pokemon'].split(',')
-    except Exception:
-        pokemon = [party['Pokemon']]
-
-    for p in pokemon:
-        reset_stats(stored_pokemon[int(p)])
-        stored_pokemon[int(p)]['Curr HP'] = stored_pokemon[int(p)]['HP']
+def pokemon_center(party: Party):  # heal all pokemon
+    for p in party.pokemon:
+        reset_stats(p)
+        p.curr_stats.hp = p.stats.hp
