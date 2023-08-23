@@ -44,7 +44,7 @@ items = load("items", "Resources")
 categorized_items = categorize_items(items)
 trainers = Trainer.get_all()
 for mon in SavedPokemon.iter():  # check for level ups
-    level_check(mon, to_next_level, move_levels, moves)
+    level_check(mon, move_levels)
 
 while True:
 
@@ -63,7 +63,7 @@ while True:
         inp = -1
 
     if inp == 0:  # Pokemon Manager
-        pokemon_manager(stored_pokemon, to_next_level, parties, move_levels, moves, trainers)
+        pokemon_manager(move_levels)
         save(SavedPokemon.as_dicts(), "pokemon")
 
     elif inp == 1:  # Encounter Generator
@@ -80,7 +80,7 @@ while True:
         save(shops, "shops")
 
     elif inp == 4:  # Battle Simulator
-        battle_simulator(trainers, items, Pokemon.get_all(), stored_pokemon, parties, moves, to_next_level, move_levels)
+        battle_simulator(trainers, items, parties, moves, to_next_level, move_levels)
         save(SavedPokemon.as_dicts(), "pokemon")
         save(Trainer.as_dicts(), "trainers")
 
