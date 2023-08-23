@@ -7,7 +7,7 @@ from Headers import Trainer
 from Headers.tools import option, subheader
 
 
-def validate_parties(pokemon, party1, party2):
+def validate_parties(party1, party2):
     parties = Party.get_all()
     try:  # try turning into ints
         party1 = int(party1)
@@ -24,30 +24,13 @@ def validate_parties(pokemon, party1, party2):
     party1 = parties[party1]
     party2 = parties[party2]
 
-    try:  # try breaking into list
-        party1_pokemon = party1['Pokemon'].split(',')
-    except Exception:  # if only 1 pokemon
-        party1_pokemon = [party1['Pokemon']]
-
-    try:  # try breaking into list
-        party2_pokemon = party2['Pokemon'].split(',')
-    except Exception:  # if only 1 pokemon
-        party2_pokemon = [party2['Pokemon']]
+    party1_pokemon = party1.pokemon
+    party2_pokemon = party2.pokemon
 
     for p in party1_pokemon:
         if p in party2_pokemon:
             print("ERROR: Pokemon overlap between parties")
             return -1, -1, -1, -1
-
-    i = 0
-    while i < len(party1_pokemon):
-        party1_pokemon[i] = pokemon[int(party1_pokemon[i])]  # set pokemon to actual pokemon, not pid
-        i += 1
-
-    i = 0
-    while i < len(party2_pokemon):
-        party2_pokemon[i] = pokemon[int(party2_pokemon[i])]  # set pokemon to actual pokemon, not pid
-        i += 1
 
     return party1, party2, party1_pokemon, party2_pokemon
 

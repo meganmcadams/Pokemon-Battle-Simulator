@@ -1,15 +1,16 @@
 from Headers.tools import *
 
 
-def throw_pokeball(pokemon, items, trainers, current_party, opposing_party, opposing_pokemon, tid):
+def throw_pokeball(opposing_pokemon: SavedPokemon, tid: int):
     print("not done yet")
+    trainer = Trainer.get_trainer(tid)
 
     option(0, "Success")
     option(1, "Failure")
     inp = correct_type(input("--> "))
 
     if inp == 0:
-        catch_pokemon(pokemon, opposing_pokemon, trainers, tid)
+        catch_pokemon(opposing_pokemon, trainer)
         return 1
     else:
         print("1... 2... Oh no! The Pokemon broke free!")
@@ -42,7 +43,7 @@ def get_balls(items, trainer):
     return balls
 
 
-def catch_pokemon(pokemon, caught_pokemon, trainers, tid):
+def catch_pokemon(opposing_pokemon, trainer):
     print("1... 2... 3... Click!", opposing_pokemon['Name'], "was caught!")
     if trainers[tid]['Pokemon'] == "":
         trainers[tid]['Pokemon'] = str(opposing_pokemon['ID'])

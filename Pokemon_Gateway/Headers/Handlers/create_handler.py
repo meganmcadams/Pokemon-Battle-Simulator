@@ -1,15 +1,14 @@
 import copy
 import random
 
-from Headers import Move
+from Headers import Move, Trainer
 from Headers import Pokemon
 from Headers import SavedPokemon
 from Headers.Handlers.level_handler import level_up
 from Headers.tools import get_next_id, subheader, option, correct_type
 
 
-def create(to_next_level, stored_pokemon, level, name, nickname, tid, move_levels, trainers):
-    poss_keys = list(stored_pokemon.keys())
+def create(level: int, name: str, nickname: str, tid: int, move_levels: dict[int, dict[int, list[int]]]):
     new_mon = SavedPokemon()
     new_mon.id = get_next_id(SavedPokemon.get_all())
 
@@ -30,12 +29,13 @@ def create(to_next_level, stored_pokemon, level, name, nickname, tid, move_level
         new_mon.nickname = "Wild " + new_mon.name
 
     # trainer and player
-    if tid != "":
-        new_mon.tname = trainers[tid]['Name']
-        new_mon.plname = trainers[tid]['Player']
-        new_mon.full_name = str(new_mon.tname) + "'s " + str(new_mon.name) + " (" + str(new_mon.name) + ")"
+    if tid != -1:
+        trainer = Trainer.get_trainer(tid)
+        new_mon.tname = trainer.name
+        new_mon.plname = trainer.player
+        new_mon.full_name = f"{new_mon.tname}'s {new_mon.name} ({new_mon.name})"
     else:
-        new_mon.full_name = "Wild " + str(new_mon.name)
+        new_mon.full_name = f"Wild {new_mon.name}"
 
     # gender
     min_num = random.randrange(1, 100)
@@ -55,8 +55,6 @@ def create(to_next_level, stored_pokemon, level, name, nickname, tid, move_level
     tmp = []
 
     while len(tmp) < num:  # get random moves from list of options
-
-        res_move = -1
         try:  # try to grab random from list
             res_move = random.choice(list(moves))
         except Exception:  # if only 1 in list
@@ -74,16 +72,15 @@ def create(to_next_level, stored_pokemon, level, name, nickname, tid, move_level
 
     i = 0
     while i < level:
-        level_up(new_mon, to_next_level, False, False)
+        level_up(new_mon, move_levels, False, False)
         i += 1
 
     new_mon.curr_stats = copy.deepcopy(new_mon.stats)
 
     stored_id = new_mon['ID']
 
-    stored_pokemon[stored_id] = new_mon
     SavedPokemon.register(new_mon)
-    print("New pokemon, ", new_mon.name, ", successfully created | ID: ", stored_id, sep="")  # print success message
+    print(f"New pokemon, {new_mon.name}, successfully created | ID: {stored_id}")
     return
 
 
@@ -154,7 +151,7 @@ def get_level():  # get level that user wants to make pokemon at
     return level
 
 
-def get_pokemon_name(pokemon):
+def get_pokemon_name():
     subheader("Pokemon Name")
     option(0, "Choose random Pokemon")
     option(1, "Choose random Pokemon by type")
@@ -169,13 +166,13 @@ def get_pokemon_name(pokemon):
         return -1
 
     if inp == 0:  # By biome
-        return Pokemon.get_pokemon(random.randrange(1, Pokemon.amount - 1)).name
+        return Pokemon.get_pokemon(random.randrange(1, len(Pokemon.get_all()) - 1)).name
 
     elif inp == 1:  # Random Pokemon
         inp = input("Type: ")
 
         while True:
-            mons = [i for i in Pokemon.get_all() if inp in pokemon.types]
+            mons = [i for i in Pokemon.iter() if inp in i.types]
             if len(mons) == 0:
                 print("ERROR: Could not find", inp, "in types of Pokemon")
                 return -1
