@@ -8,43 +8,30 @@ POKEMON: dict[int, 'Pokemon'] = {}
 
 
 class Pokemon:
-    def __init__(self, dex_entry=0, name="", evo="", base_evo="", next_evo="", evolves_at_level=0,
-                 learnable_moves=None, type_effectiveness=None, base_egg_steps=0, capture_rate=0,
-                 classification="", exp_growth="", height=0.0, gender_ratio=0.0, base_total=0, exp_yield=0,
-                 evs=None, total_evs=0, stats=None, types=None, weight=0.0, gen=0, legendary=False):
-        if type_effectiveness is None:
-            type_effectiveness = {}
-        if learnable_moves is None:
-            learnable_moves = []
-        if evs is None:
-            evs = {}
-        if stats is None:
-            stats = {}
-        if types is None:
-            types = []
-        self.dex_entry: int = dex_entry
-        self.name: str = name
-        self.evo: str = evo
-        self.base_evo: str = base_evo
-        self.next_evo: str = next_evo
-        self.evolve_level: int = evolves_at_level
-        self.learnable_moves = learnable_moves
-        self.type_effectiveness: typing.Dict[str, float] = type_effectiveness
-        self.base_egg_steps: int = base_egg_steps
-        self.capture_rate: float = capture_rate
-        self.classification: str = classification
-        self.exp_growth: str = exp_growth
-        self.height: float = height
-        self.gender_ratio: float = gender_ratio
-        self.base_total: int = base_total
-        self.exp_yield: int = exp_yield
-        self.evs_given: EVs = evs
-        self.total_evs: int = total_evs
-        self.base_stats: Stats = stats
-        self.types: typing.List[str] = types
-        self.weight: float = weight
-        self.gen: int = gen
-        self.legendary: int = legendary
+    def __init__(self, ):
+        self.dex_entry: int = 0
+        self.name: str = ""
+        self.evo: str = ""
+        self.base_evo: str = ""
+        self.next_evo: str = ""
+        self.evolve_level: int = 0
+        self.learnable_moves = []
+        self.type_effectiveness: typing.Dict[str, float] = {}
+        self.base_egg_steps: int = 0
+        self.capture_rate: float = 0
+        self.classification: str = ""
+        self.exp_growth: str = ""
+        self.height: float = 0
+        self.gender_ratio: float = 0
+        self.base_total: int = 0
+        self.exp_yield: int = 0
+        self.evs_given: EVs = None
+        self.total_evs: int = 0
+        self.base_stats: Stats = None
+        self.types: typing.List[str] = []
+        self.weight: float = 0
+        self.gen: int = 0
+        self.legendary: int = 0
 
     def __dict__(self):
         return {
