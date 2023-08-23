@@ -1,6 +1,9 @@
 import random
 
 from ..Classes.Move import Move
+from ..Classes.Party import Party
+from ..Classes.Pokemon import Pokemon
+from ..Classes.Trainer import Trainer
 from ..tools import *
 
 
@@ -102,19 +105,15 @@ def stat_change_check(move: Move, attacker: SavedPokemon, opponent: SavedPokemon
     attacker.curr_stats.sp_defense += int(move.p_sp_defense)
 
     # flinch check
+    # todo: update flinch check to use move flinch rates
     if int(move.flinch) > 0:
         num = random.randrange(1, 2)
         if num == 1:
             opponent.flinched = 1  # set flinched to true
 
 
-def get_target(pokemon, stored_pokemon, current_party, opposing_party):
+def get_target(stored_pokemon, opposing_party: Party):
     subheader("Target")
-
-    try:  # try breaking into list
-        opposing_party = opposing_party['Pokemon'].split(',')
-    except Exception:  # if only 1 pokemon
-        opposing_party = [opposing_party['Pokemon']]
 
     i = 0
     for _ in opposing_party:  # set opposing_party[i] to actual info
@@ -132,8 +131,7 @@ def get_target(pokemon, stored_pokemon, current_party, opposing_party):
         if p.curr_hp <= 0:  # if the pokemon is dead
             pass
         else:
-            option(i, str(str(pokemon[int(p['Pid'])]['Name']) + " (" + str(p['ID']) + ")" + " | Curr HP: " + str(
-                p['Curr HP']) + "/" + str(p['HP'])))
+            option(i, f"{p.name} ({p.id}) | Curr HP: {p.curr_hp}/{p.stats.hp}")
             options.append(i)
         i += 1
 
@@ -152,7 +150,7 @@ def weather_check(move: Move, weather: str) -> str:
     return move.weather if move.weather != "" else weather
 
 
-def reset_stats(pokemon: SavedPokemon):
+def reset_stats(pokemon: SavedPokemon) -> None:
     pokemon.curr_stats.attack = int(pokemon.stats.attack)
     pokemon.curr_stats.defense = int(pokemon.stats.defense)
     pokemon.curr_stats.sp_attack = int(pokemon.stats.sp_attack)
@@ -160,26 +158,20 @@ def reset_stats(pokemon: SavedPokemon):
     pokemon.curr_stats.speed = int(pokemon.stats.speed)
 
 
-def health_check(party_order, party1_pokemon, party2_pokemon, party_order_names, fainted_pokemon):  #
-    for p in party_order:
-        if int(p['Curr HP']) <= 0 and p not in fainted_pokemon:
-            print(party_order_names[p['ID']], "has fainted!")
+def health_check(turn_order: list[SavedPokemon], party1_pokemon: Party,
+                 party2_pokemon: Party, fainted_pokemon: list[SavedPokemon]) -> int:
+    for p in turn_order:
+        if p.curr_hp <= 0 and p not in fainted_pokemon:
+            try:
+                owner = Trainer.get_trainer(p.tid).name + "'s"
+            except Exception:
+                owner = "Wild"
+            print(f"{owner} {p.name} ({p.id}) has fainted!")
             fainted_pokemon.append(p)  # add to list of fainted pokemon
 
-    party1_count = 0
-    for p in party1_pokemon:
-        if int(p['Curr HP']) > 0:
-            party1_count += 1
-
-    party2_count = 0
-    for p in party2_pokemon:
-        if int(p['Curr HP']) > 0:
-            party2_count += 1
-
-    if party1_count < 1:
-        return 2  # 2 won
-
-    if party2_count < 1:
+    if all(p.curr_hp <= 0 for p in party2_pokemon):
         return 1  # 1 won
+    elif all(p.curr_hp <= 0 for p in party1_pokemon):
+        return 2
 
     return 0
