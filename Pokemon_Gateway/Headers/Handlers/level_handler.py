@@ -63,8 +63,8 @@ def print_stat_changes(new_p: SavedPokemon, old_p: SavedPokemon, stat_list=None)
         stat_list = ["HP", "Attack", "Defense", "Sp Attack", "Sp Defense",
                      "Speed"]
     for stat in stat_list:
-        # easier to access stats this way, though you can `.stats.hp` if you want
-        print(stat, ": ", old_p[stat], " --> ", new_p[stat], sep="")
+        # could do this with getattr, but I'm too lazy to change it.
+        print(f"{stat}: {old_p[stat]} --> {new_p[stat]}")
     print("")  # print newline
 
 
@@ -78,10 +78,10 @@ def learn_moves(p: SavedPokemon, move_levels: dict[int, dict[int, list[int]]]):
 
     for m in learnables:
         if int(m) not in curr_moves:
-            print(p.name, " wants to learn ", Move.get_move(int(m)).name, ".", sep="")
+            print(f"{p.name} wants to learn {Move.get_move(int(m)).name}.")
 
             if len(curr_moves) >= 4:
-                print("Forget a move to learn ", Move.get_move(int(m)).name, "?", sep="")
+                print(f"Forget a move to learn {Move.get_move(int(m)).name}?")
                 option(0, "Yes")
                 option(1, "No")
                 inp = input("--> ")
@@ -125,7 +125,7 @@ def learn_moves(p: SavedPokemon, move_levels: dict[int, dict[int, list[int]]]):
 
                     p.moves = new_moves
 
-                    print(p.name, " has learned ", Move.get_move(int(m)).name, ".", sep="")
+                    print(f"{p.name} has learned {Move.get_move(int(m)).name}.")
 
                 elif inp == 1:  # No
                     pass
@@ -137,7 +137,7 @@ def learn_moves(p: SavedPokemon, move_levels: dict[int, dict[int, list[int]]]):
 
             else:  # length of moves is less than 4
                 p.moves = str(p.moves) + "," + str(m)
-                print(p.name, " has learned ", Move.get_move(int(m)).name, ".", sep="")
+                print(f"{p.name} has learned {Move.get_move(int(m)).name}.")
 
 
 def exp(winning_party: typing.List[SavedPokemon], defeated_party: typing.List[SavedPokemon]):
@@ -178,13 +178,13 @@ def evolution_check(p: SavedPokemon, to_next_level, moves):
             p.level -= 1  # delevel
             level_up(p, to_next_level, False, False)  # relevel
 
-            print(p.full_name, " evolved into ", p.pname, "!", sep="")
+            print(f"{pokemon.full_name} evolved into {pokemon.name}!")
 
             # update full name
-            if p.tid == "":
-                p.full_name = "Wild " + str(p.pname)
+            if pokemon.tid == -1:
+                pokemon.full_name = f"Wild {pokemon.name}"
             else:
-                p.full_name = str(p.tname) + "'s " + str(p.pname) + " (" + str(p.name) + ")"
+                pokemon.full_name = f"{pokemon.tname}'s {pokemon.name} ({pokemon.nickname})"
 
             print_stat_changes(old_p, p)
 

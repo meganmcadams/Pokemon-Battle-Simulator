@@ -39,11 +39,11 @@ def get_move(pokemon: SavedPokemon):
     try:  # try turning to integer
         inp = int(inp)
     except Exception:
-        print("ERROR:", inp, "was not an option")
+        print(f"ERROR: {inp} was not an option")
         return -3  # error
 
     if inp not in options:
-        print("ERROR:", inp, "was not an option")
+        print(f"ERROR: {inp} was not an option")
         return -3  # error
 
     if inp == -1 or inp == -2:  # if pass or throw pokeball
@@ -127,7 +127,7 @@ def get_target(opposing_party: Party):
     inp = correct_type(input("--> "))
 
     if inp not in options:
-        print("ERROR:", inp, "was not an option")
+        print(f"ERROR: {inp} was not an option")
         return -1
 
     return opposing_party[inp]
