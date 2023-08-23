@@ -3,8 +3,7 @@ import random
 from Headers import Move
 from Headers import Party
 from Headers import SavedPokemon
-from Headers import Trainer
-from Headers.tools import *
+from Headers.tools import option, subheader, format_name, correct_type
 
 
 def get_move(pokemon: SavedPokemon):
@@ -112,18 +111,8 @@ def stat_change_check(move: Move, attacker: SavedPokemon, opponent: SavedPokemon
             opponent.flinched = 1  # set flinched to true
 
 
-def get_target(stored_pokemon, opposing_party: Party):
+def get_target(opposing_party: Party):
     subheader("Target")
-
-    i = 0
-    for _ in opposing_party:  # set opposing_party[i] to actual info
-        try:
-            opposing_party[i] = stored_pokemon[int(opposing_party[i])]
-        except Exception:
-            print("ERROR: Could not find", opposing_party[i], "in pokemon")
-            return -1
-
-        i += 1
 
     options = []
     i = 0
@@ -162,11 +151,7 @@ def health_check(turn_order: list[SavedPokemon], party1_pokemon: Party,
                  party2_pokemon: Party, fainted_pokemon: list[SavedPokemon]) -> int:
     for p in turn_order:
         if p.curr_hp <= 0 and p not in fainted_pokemon:
-            try:
-                owner = Trainer.get_trainer(p.tid).name + "'s"
-            except Exception:
-                owner = "Wild"
-            print(f"{owner} {p.name} ({p.id}) has fainted!")
+            print(f"{format_name(p)} has fainted!")
             fainted_pokemon.append(p)  # add to list of fainted pokemon
 
     if all(p.curr_hp <= 0 for p in party2_pokemon):
@@ -175,3 +160,5 @@ def health_check(turn_order: list[SavedPokemon], party1_pokemon: Party,
         return 2
 
     return 0
+
+
