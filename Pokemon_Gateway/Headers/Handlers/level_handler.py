@@ -148,27 +148,24 @@ def exp(winning_party: typing.List[SavedPokemon], defeated_party: typing.List[Sa
     print("")  # print newline
 
 
-def evolution_check(p: SavedPokemon, to_next_level, moves):
-    curr_pokemon = Pokemon.get_pokemon(p.dex_entry)
+def evolution_check(pokemon: SavedPokemon, move_levels: dict[int, dict[int, list[int]]]):
 
     try:
-        evolves_at_level = int(curr_pokemon.evolve_level)
+        int(pokemon.evolve_level)
     except Exception:
         return  # needs a stone or can't evolve
-
-    if p.level >= evolves_at_level:  # if should evolve
-        print(p.full_name, " wants to evolve.")
+    if pokemon.level >= pokemon.evolve_level:  # if should evolve
+        print(pokemon.full_name, " wants to evolve.")
         option(0, "Allow")
         option(1, "Deny")
         inp = correct_type(input("--> "))
 
         if inp == 0:
-            old_p = copy.deepcopy(p)
-            p.pid = Pokemon.get_pokemon(curr_pokemon.next_evo)
-            p.pname = Pokemon.get_pokemon(p.pid).name
+            old_p = copy.deepcopy(pokemon)
+            pokemon.evolve()  # easier to move this to SavedPokemon, where i can just reuse a bunch of code
 
-            p.level -= 1  # delevel
-            level_up(p, to_next_level, False, False)  # relevel
+            pokemon.level -= 1  # delevel
+            level_up(pokemon, move_levels,False, False)  # relevel
 
             print(f"{pokemon.full_name} evolved into {pokemon.name}!")
 
@@ -178,7 +175,7 @@ def evolution_check(p: SavedPokemon, to_next_level, moves):
             else:
                 pokemon.full_name = f"{pokemon.tname}'s {pokemon.name} ({pokemon.nickname})"
 
-            print_stat_changes(old_p, p)
+            print_stat_changes(old_p, pokemon)
 
         else:
-            print(p.full_name, "did not evolve.")
+            print(pokemon.full_name, "did not evolve.")
