@@ -21,7 +21,7 @@ def battle_simulator(trainers, items, pokemon, stored_pokemon, parties, moves, t
     if party1 == -1:  # if party validation was unsuccessful
         return
 
-    party_order_names, party_order = get_party_order(trainers, pokemon, stored_pokemon, party1_pokemon, party2_pokemon)
+    party_order_names, party_order = get_party_order(stored_pokemon, party1_pokemon, party2_pokemon)
     if party_order == -1:  # if party order was unsuccessful
         return
 
