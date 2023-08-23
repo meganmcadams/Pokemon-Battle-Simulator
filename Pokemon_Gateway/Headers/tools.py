@@ -1,5 +1,7 @@
 import typing
 
+from Headers import SavedPokemon, Trainer
+
 
 def header(text: str) -> None:
     text_size = len(text)
@@ -109,3 +111,11 @@ def categorize_items(items: dict) -> dict:
         items_categorized[category].append(item)  # add item to appropriate category
 
     return items_categorized
+
+
+def format_name(pokemon: SavedPokemon):
+    try:
+        owner = Trainer.get_trainer(pokemon.tid).name + "'s"
+    except Exception:
+        owner = "Wild"
+    return f"{owner} {pokemon.name} ({pokemon.id})"
