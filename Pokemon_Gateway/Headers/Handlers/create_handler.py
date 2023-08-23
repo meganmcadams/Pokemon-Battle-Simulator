@@ -11,7 +11,7 @@ from ..tools import get_next_id, subheader, option, correct_type
 def create(to_next_level, stored_pokemon, level, name, nickname, tid, move_levels, trainers):
     poss_keys = list(stored_pokemon.keys())
     new_mon = SavedPokemon()
-    new_mon.id = get_next_id()
+    new_mon.id = get_next_id(SavedPokemon.get_all())
 
     dex_entry = Pokemon.get_pokemon(name)
     if dex_entry == -1:  # if could not find name in pokemon
@@ -74,7 +74,7 @@ def create(to_next_level, stored_pokemon, level, name, nickname, tid, move_level
 
     i = 0
     while i < level:
-        level_up(new_mon, to_next_level, moves, False, False)
+        level_up(new_mon, to_next_level, False, False)
         i += 1
 
     new_mon.curr_stats = copy.deepcopy(new_mon.stats)
