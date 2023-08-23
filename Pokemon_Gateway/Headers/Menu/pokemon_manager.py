@@ -1,11 +1,12 @@
+from Headers import SavedPokemon, Party
 from Headers.Handlers.battle_handler import reset_stats
 from Headers.Handlers.create_handler import get_pokemon_name, get_pokemon_nickname, get_pokemon_tid, create, get_level
 from Headers.save import save
 from Headers.tools import header, option, print_list, correct_type
 
 
-def pokemon_manager(stored_pokemon, to_next_level, parties, move_levels, moves, trainers):
-    save(stored_pokemon, "pokemon")
+def pokemon_manager(move_levels):
+    save(SavedPokemon.as_dicts(), "pokemon")
 
     header("Pokemon Manager")
     option(0, "Create Pokemon")
@@ -33,31 +34,30 @@ def pokemon_manager(stored_pokemon, to_next_level, parties, move_levels, moves, 
                     tid = get_pokemon_tid()
 
                     if tid != -1:
-                        create(to_next_level, stored_pokemon, level, name, nickname, tid, move_levels,
-                               trainers)
+                        create(level, name, nickname, tid, move_levels)
 
     elif inp == 1:  # Delete Pokemon
-        print_list(stored_pokemon)
+        print_list(SavedPokemon.get_all())
         print("Which pokemon would you like to delete (-1 to cancel)?")
         to_delete = correct_type(input("--> "))
         if to_delete == -1:
             print("Action cancelled.")
         else:
             try:
-                del stored_pokemon[to_delete]
+                SavedPokemon.delete(to_delete)
                 print(to_delete, "was successfully deleted")
             except Exception:
                 print("ERROR: Could not delete", to_delete)
 
     elif inp == 2:  # List Pokemon
-        print_list(stored_pokemon)
+        print_list(SavedPokemon.get_all())
 
     elif inp == 3:  # Pokemon Center
-        print_list(parties)
+        print_list(Party.get_all())
         print("Which party is going to the Pokemon Center?")
         party = input("--> ")
         try:
-            pokemon_center(parties[int(party)], stored_pokemon)
+            pokemon_center(Party.get_party(int(party)), SavedPokemon.get_all())
         except Exception:
             print("ERROR:", party, "was not an option")
 
@@ -67,8 +67,7 @@ def pokemon_manager(stored_pokemon, to_next_level, parties, move_levels, moves, 
     else:  # Out of range
         print("ERROR:", inp, "was not an option or the input was not an integer")
 
-    pokemon_manager(stored_pokemon, to_next_level, parties, move_levels, moves,
-                    trainers)  # recursive call to reset menu
+    pokemon_manager(move_levels)  # recursive call to reset menu
 
 
 def pokemon_center(party, stored_pokemon):  # heal all pokemon
