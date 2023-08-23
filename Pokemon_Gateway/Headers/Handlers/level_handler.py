@@ -1,35 +1,27 @@
 import copy
+import typing
 
 from Headers import Move
 from Headers import Pokemon
 from Headers import SavedPokemon
-from Headers.tools import *
+from Headers.tools import option, correct_type
 
 
-def level_check(p: SavedPokemon, to_next_level, move_levels, moves):
-    # pokemon = the pokemon to level up
-    # p = stored info about pokemon
-
-    curr_pokemon = Pokemon.get_pokemon(p.dex_entry)
-
-    if int(p.exp) >= int(
-            to_next_level[int(p.level) + 1][curr_pokemon.exp_growth]):  # if exp is good to level up
-        level_up(p, to_next_level, True, True)  # level up the pokemon
-        level_check(p, to_next_level, move_levels, moves)  # recursive call in case double level up
-    evolution_check(p, to_next_level, moves)
+def level_check(pokemon: SavedPokemon, move_levels):
+    # if exp is good to level up
+    if (int(pokemon.exp) >= int(pokemon.get_level_exp(pokemon.exp_growth, pokemon.level + 1)) -
+            int(pokemon.get_level_exp(pokemon.exp_growth, pokemon.level))):
+        level_up(pokemon, move_levels, True, True)  # level up the pokemon
+        level_check(pokemon, move_levels)  # recursive call in case double level up
+    evolution_check(pokemon, move_levels)
 
 
-def level_up(pokemon: SavedPokemon, to_next_level: dict[int, dict[str, int]], announce: bool, sub_exp: bool):
-    # pokemon = the pokemon to level up
-    # p = stored info about pokemon
-
-    # try: # ensure that pokemon is the actual pokemon itself, not the full list of all pokemon
-    #    name = pokemon['Name']
-    # except Exception:
-    #    pokemon = pokemon[p['Pid']]
+def level_up(pokemon: SavedPokemon, move_levels, announce: bool, sub_exp: bool):
 
     if sub_exp:
-        pokemon.exp -= to_next_level[pokemon.level + 1][pokemon.exp_growth]  # subtract needed exp from pokemon exp
+        # i dont know how this works, but it does
+        pokemon.exp -= Pokemon.get_level_exp(pokemon.exp_growth, pokemon.level + 1) - Pokemon.get_level_exp(
+            pokemon.exp_growth, pokemon.level)
 
     old = copy.deepcopy(pokemon)
 
@@ -55,7 +47,7 @@ def level_up(pokemon: SavedPokemon, to_next_level: dict[int, dict[str, int]], an
         print(pokemon.full_name, "leveled up to level", pokemon.level)  # notify user
         print_stat_changes(pokemon, old)
 
-    learn_moves(pokemon, to_next_level)  # learn moves if any
+    learn_moves(pokemon, move_levels)  # learn moves if any
 
 
 def print_stat_changes(new_p: SavedPokemon, old_p: SavedPokemon, stat_list=None):  # make list of stats
