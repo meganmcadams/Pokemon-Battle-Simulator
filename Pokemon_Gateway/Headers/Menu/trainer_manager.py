@@ -1,6 +1,6 @@
 from ..tools import *
 from .party_builder import delete_party
-from Headers.Classes.Trainers import Trainers
+from Headers.Classes.Trainer import Trainers
 
 
 def trainer_manager(trainers: Trainers) -> None:
