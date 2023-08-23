@@ -2,6 +2,7 @@ import random
 
 from Headers.Classes.Move import Move
 from Headers.Classes.Party import Party
+from Headers.Classes.SavedPokemon import SavedPokemon
 from Headers.Classes.Trainer import Trainer
 from Headers.tools import *
 

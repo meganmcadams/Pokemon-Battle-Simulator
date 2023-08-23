@@ -1,4 +1,5 @@
 from Headers.Handlers.battle_handler import *
+from Headers.Handlers.catch_handler import throw_pokeball
 from Headers.Handlers.damage_handler import *
 from Headers.Handlers.level_handler import *
 from Headers.Handlers.party_handler import *

@@ -2,6 +2,7 @@ import copy
 
 from Headers.Classes.Move import Move
 from Headers.Classes.Pokemon import Pokemon
+from Headers.Classes.SavedPokemon import SavedPokemon
 from Headers.tools import *
 
 
