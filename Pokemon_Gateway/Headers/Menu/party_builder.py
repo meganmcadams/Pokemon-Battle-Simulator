@@ -52,7 +52,7 @@ def create_party():
             return
     id_ = get_next_id(Party.get_all())
     party = Party(id_, name, [SavedPokemon.get_pokemon(int(p)) for p in pokemon_split])
-    Party.register(id_, party)
+    Party.register(party)
 
     print("Party", party.id, "successfully created")
 
