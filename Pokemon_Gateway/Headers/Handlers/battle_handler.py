@@ -150,7 +150,7 @@ def reset_stats(pokemon: SavedPokemon) -> None:
 def health_check(turn_order: list[SavedPokemon], party1_pokemon: Party,
                  party2_pokemon: Party, fainted_pokemon: list[SavedPokemon]) -> int:
     for p in turn_order:
-        if p.curr_hp <= 0 and p not in fainted_pokemon:
+        if p.curr_stats.hp <= 0 and p not in fainted_pokemon:
             print(f"{format_name(p)} has fainted!")
             fainted_pokemon.append(p)  # add to list of fainted pokemon
 
