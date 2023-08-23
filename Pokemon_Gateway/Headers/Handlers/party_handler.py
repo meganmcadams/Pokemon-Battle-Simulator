@@ -7,7 +7,8 @@ from Headers import Trainer
 from Headers.tools import option, subheader
 
 
-def validate_parties(pokemon, parties, party1, party2):
+def validate_parties(pokemon, party1, party2):
+    parties = Party.get_all()
     try:  # try turning into ints
         party1 = int(party1)
         party2 = int(party2)
@@ -51,7 +52,7 @@ def validate_parties(pokemon, parties, party1, party2):
     return party1, party2, party1_pokemon, party2_pokemon
 
 
-def get_party_order(party1: Party, party2: Party) -> typing.Union[list[SavedPokemon], int]:
+def get_party_order(party1: Party, party2: Party) -> typing.Union[list[SavedPokemon], typing.Literal[-1]]:
     subheader("Party Order")
 
     # party_order holds all pokemon in all parties, will be sorted later
