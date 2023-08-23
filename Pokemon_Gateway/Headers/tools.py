@@ -60,8 +60,8 @@ def print_list(items: dict) -> None:
         print("")  # print newline
 
 
-def get_next_id() -> int:
-    keylist = sorted(list(SavedPokemon.get_all().keys()))
+def get_next_id(dict_: dict) -> int:
+    keylist = sorted(list(dict_.keys()))
 
     prev = -1
     for key in keylist:
