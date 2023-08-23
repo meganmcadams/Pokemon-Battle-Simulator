@@ -6,10 +6,11 @@ PARTIES = {}
 
 
 class Party:
-    def __init__(self, id_: int, name: str, pokemon: typing.List[SavedPokemon]):
+    def __init__(self, id_: int = 0, name: str = "", pokemon: typing.List[SavedPokemon] = None):
         self.id: int = id_
         self.name: str = name
-        self.pokemon: typing.List[SavedPokemon] = pokemon
+        if pokemon is None:
+            self.pokemon: typing.List[SavedPokemon] = [] if pokemon is None else pokemon
 
     @staticmethod
     def get_party(id_: int) -> typing.Union['Party', typing.Literal[-1]]:
@@ -23,8 +24,15 @@ class Party:
         return PARTIES
 
     @staticmethod
-    def register(id_: int, party: 'Party') -> None:
-        PARTIES[id_] = party
+    def register(party_: typing.Union['Party', dict]) -> None:
+        if isinstance(party_, Party):
+            PARTIES[party_.id] = party_
+        else:
+            party = Party()
+            party.id = party_["ID"]
+            party.name = party_["Name"]
+            party.pokemon = [SavedPokemon.get_pokemon(int(i)) for i in str(party_["Pokemon"]).rstrip(',').split(',')]
+            PARTIES[party.id] = party
 
     @staticmethod
     def delete(id_: int) -> None:
