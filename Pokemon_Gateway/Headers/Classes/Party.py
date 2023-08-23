@@ -1,6 +1,6 @@
 import typing
 
-from Headers.Classes.SavedPokemon import SavedPokemon
+from Headers import SavedPokemon
 
 PARTIES = {}
 

@@ -1,5 +1,5 @@
-from Headers.Classes.Party import Party
-from Headers.Classes.SavedPokemon import SavedPokemon
+from Headers import Party
+from Headers import SavedPokemon
 from Headers.tools import *
 
 

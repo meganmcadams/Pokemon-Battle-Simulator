@@ -1,4 +1,4 @@
-from Headers.Classes.Trainer import Trainer
+from Headers import Trainer
 from Headers.tools import *
 from party_builder import delete_party
 

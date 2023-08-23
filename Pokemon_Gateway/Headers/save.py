@@ -1,9 +1,9 @@
 import os.path
 
-from Headers.Classes.Party import Party
-from Headers.Classes.SavedPokemon import SavedPokemon
-from Headers.Classes.Shop import Shop
-from Headers.Classes.Trainer import Trainer
+from Headers import Party
+from Headers import SavedPokemon
+from Headers import Shop
+from Headers import Trainer
 
 
 def save(items, filename):  # save to a file

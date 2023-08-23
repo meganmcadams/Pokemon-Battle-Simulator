@@ -1,9 +1,9 @@
 import copy
 import random
 
-from Headers.Classes.Move import Move
-from Headers.Classes.Pokemon import Pokemon
-from Headers.Classes.SavedPokemon import SavedPokemon
+from Headers import Move
+from Headers import Pokemon
+from Headers import SavedPokemon
 from Headers.Handlers.level_handler import level_up
 from Headers.tools import get_next_id, subheader, option, correct_type
 

@@ -1,9 +1,9 @@
 # tools
-from Headers.Classes.Move import Move
+from Headers import Move
 # classes
-from Headers.Classes.Pokemon import Pokemon
-from Headers.Classes.SavedPokemon import SavedPokemon
-from Headers.Classes.Trainer import Trainer
+from Headers import Pokemon
+from Headers import SavedPokemon
+from Headers import Trainer
 from Headers.Handlers.level_handler import level_check
 from Headers.Loading.load import load
 # loading

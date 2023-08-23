@@ -1,9 +1,9 @@
 import random
 import typing
 
-from Headers.Classes.Party import Party
-from Headers.Classes.SavedPokemon import SavedPokemon
-from Headers.Classes.Trainer import Trainer
+from Headers import Party
+from Headers import SavedPokemon
+from Headers import Trainer
 from Headers.tools import option, subheader
 
 

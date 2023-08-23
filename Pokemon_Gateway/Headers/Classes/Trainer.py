@@ -1,5 +1,5 @@
-from Headers.Classes.Pokemon import Pokemon
-from Headers.Classes.SavedPokemon import SavedPokemon
+from Headers import Pokemon
+from Headers import SavedPokemon
 
 TRAINERS = {}
 
