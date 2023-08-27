@@ -23,7 +23,7 @@ def damage(pokemon, move, attacker, opponent, weather):
     weather_bonus = 1
     if weather != "": # if weather is not default
         if weather is pokemon[int(attacker['Pid'])]['Type1'] or weather is pokemon[int(attacker['Pid'])]['Type2']:
-            weather = 1.5
+            weather_bonus = 1.5
 
     opponent_type = pokemon[int(opponent['Pid'])][move['Type']]
 
