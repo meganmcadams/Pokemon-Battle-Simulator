@@ -53,7 +53,7 @@ def save(items, filename):  # save to a file
 
 
 def save_all():  # save everything
-    save(SavedPokemon.get_all(), "pokemon")
-    save(Trainer.get_all(), "trainers")
-    save(Party.get_all(), "parties")
-    save(Shop.get_all(), "shops")
+    save(SavedPokemon.as_dicts(), "pokemon")
+    save(Trainer.as_dicts(), "trainers")
+    save(Party.as_dicts(), "parties")
+    save(Shop.as_dicts(), "shops")
