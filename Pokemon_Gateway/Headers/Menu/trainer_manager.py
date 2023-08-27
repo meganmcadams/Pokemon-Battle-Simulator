@@ -20,14 +20,14 @@ def trainer_manager() -> None:
     except Exception:  # if not an integer
         inp = -1  # set to -1 to classify as a wrong input
 
-    if inp == 0:  # Create Party
+    if inp == 0:  # Create Trainer
         create_trainer()
 
-    elif inp == 1:  # Delete Party
+    elif inp == 1:  # Delete Trainer
         delete_party()
 
-    elif inp == 2:  # List Parties
-        print_list(Trainer.get_all())
+    elif inp == 2:  # List Trainers
+        print_list(Trainer.as_dicts())
 
     elif inp == 3:  # Exit
         return
@@ -53,7 +53,8 @@ def create_trainer() -> None:
 
 
 def delete_trainer() -> None:
-    print_list(Trainer.get_all())
+    # print_list(Trainer.get_all())
+    Trainer.list_trainers()
     print("Which trainer would you like to delete (-1 to cancel)?")
     to_delete = correct_type(input("--> "))
     if to_delete == -1:
