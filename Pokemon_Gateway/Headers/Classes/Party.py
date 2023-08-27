@@ -57,3 +57,9 @@ class Party:
 
     def __getitem__(self, item):
         return self.pokemon[item]
+
+    @staticmethod
+    def list_parties():
+        print(f"{'ID':<5}{'Name':<20}")
+        for key, value in PARTIES.items():
+            print(f"{key:<5}{value.name:<20}")

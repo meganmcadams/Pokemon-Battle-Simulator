@@ -158,3 +158,8 @@ class SavedPokemon(Pokemon):
                 "Flinched": value.flinched
             }
         return retval
+
+    @staticmethod
+    def list_all():
+        for i in SavedPokemon.get_all().values():
+            print(f"{'ID':<5}: {i.id} | {i.nickname} ({i.plname}'s {i.name})")

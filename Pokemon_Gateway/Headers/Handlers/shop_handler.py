@@ -1,7 +1,7 @@
 import random
 
 from Headers import Shop, Item, Trainer
-from Headers.tools import subheader, get_next_id, option, correct_type, print_list
+from Headers.tools import subheader, get_next_id, option, correct_type
 
 
 def create_shop() -> None:
@@ -67,7 +67,7 @@ def create_shop() -> None:
 
 
 def delete_shop():
-    print_list(Shop.get_all())
+    Shop.list_shops()
     print("Which shop would you like to delete (-1 to cancel)?")
     to_delete = correct_type(input("--> "))
     if to_delete == -1:

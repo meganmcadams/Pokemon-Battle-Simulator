@@ -50,10 +50,10 @@ def pokemon_manager(move_levels):
                 print("ERROR: Could not delete", to_delete)
 
     elif inp == 2:  # List Pokemon
-        print_list(SavedPokemon.get_all())
+        SavedPokemon.list_all()
 
     elif inp == 3:  # Pokemon Center
-        print_list(Party.get_all())
+        print_list(Party.as_dicts())
         print("Which party is going to the Pokemon Center?")
         party = input("--> ")
         try:

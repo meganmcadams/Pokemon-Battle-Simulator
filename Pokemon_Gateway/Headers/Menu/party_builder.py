@@ -25,7 +25,7 @@ def party_builder():
         delete_party()
 
     elif inp == 2:  # List Parties
-        print_list(Party.get_all())
+        print_list(Party.as_dicts())
 
     elif inp == 3:  # Exit
         return
@@ -58,7 +58,7 @@ def create_party():
 
 
 def delete_party():
-    print_list(Party.get_all())
+    Party.list_parties()
     print("Which party would you like to delete (-1 to cancel)?")
     to_delete = correct_type(input("--> "))
     if to_delete == -1:
