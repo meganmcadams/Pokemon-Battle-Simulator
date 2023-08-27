@@ -122,11 +122,11 @@ def battle_simulator(move_levels):
     exp(winner, loser)
 
     # rewards if won
-
+    money = len(loser) + (loser[0].level * 2) * random.randrange(50, 200)
     for p in winner:
         level_check(p, move_levels)
         try:  # try to give money to the trainer, if any
-            Trainer.get_trainer(p.tid).money += len(loser) + (loser[0].level * 2) * random.randrange(50, 200)
+            Trainer.get_trainer(p.tid).money += money
         except Exception:
             pass
         pass
