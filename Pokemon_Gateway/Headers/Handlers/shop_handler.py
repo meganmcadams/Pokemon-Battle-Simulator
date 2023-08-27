@@ -1,7 +1,7 @@
 import random
 
-from Headers import Shop, Item
-from Headers.tools import subheader, get_next_id, option, correct_type
+from Headers import Shop, Item, Trainer
+from Headers.tools import subheader, get_next_id, option, correct_type, print_list
 
 
 def create_shop() -> None:
@@ -45,7 +45,6 @@ def create_shop() -> None:
                 return
             curr_items = categorized_items[c]
             i = 0
-            # todo: figure out how this works
             item_count = random.randint(lower_bound, upper_bound)
             while i < int(item_count) and len(curr_items) > 0:  # while should get more items for that category
                 random_item = random.choice(curr_items)  # get random item
@@ -65,3 +64,64 @@ def create_shop() -> None:
 
     Shop.register(new_shop)
     print("Shop", new_shop['Name'], "successfully created.")  # confirmation message
+
+
+def delete_shop():
+    print_list(Shop.get_all())
+    print("Which shop would you like to delete (-1 to cancel)?")
+    to_delete = correct_type(input("--> "))
+    if to_delete == -1:
+        print("Action cancelled.")
+    else:
+        try:
+            Shop.delete(to_delete)
+            print(to_delete, "was successfully deleted")
+        except Exception:
+            print("ERROR: Could not delete", to_delete)
+
+
+def run_shop():
+    Shop.list_shops()
+    print("Which shop would you like to run (-1 to cancel)?")
+    to_run = correct_type(input("--> "))
+    if to_run == -1:
+        print("Action cancelled.")
+    else:
+        try:
+            shop = Shop.get_shop(to_run)
+            print("Which trainer would you like to run the shop with?")
+            Trainer.list_trainers()
+            trainer = correct_type(input("--> "))
+            if trainer == -1:
+                print("Action cancelled.")
+                return
+            trainer = Trainer.get_trainer(trainer)
+            print(f"Now shopping with {trainer.name} (${trainer.money}) at {shop.name}")
+            print("What would you like to buy?")
+            dict_items = {index: item for index, item in enumerate(shop.items)}
+            print(f"{'ID':<5}{'Name':<20}{'Price':<10}")
+            for key, value in dict_items.items():
+                print(f"{key:<5}{value.name:<20}{value.buy:<10}")
+            item = correct_type(input("--> "))
+            if item == -1:
+                print("Action cancelled.")
+                return
+            item = Item.get_item(item)
+            print("How many would you like to buy?")
+            amount = correct_type(input("--> "))
+            if amount == -1:
+                print("Action cancelled.")
+                return
+            if amount > 0:
+                if trainer.money < item.buy * amount:
+                    print("You don't have enough money to buy that many.")
+                    return
+                print("You bought", amount, item.name + ("s" if amount > 1 else ""))
+                trainer.money -= item.buy * amount
+                print("You now have", trainer.money, "dollars")
+                for i in range(amount):
+                    trainer.items.append(item)
+
+        except Exception as e:
+            print(e)
+            print("ERROR: Could not run", to_run)

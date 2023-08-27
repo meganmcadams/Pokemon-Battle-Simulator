@@ -1,6 +1,5 @@
 from typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from Headers import Item
+from Headers import Item
 
 SHOPS: dict[int, 'Shop'] = {}
 
@@ -60,4 +59,9 @@ class Shop():
     @staticmethod
     def delete(id_: int) -> None:
         del SHOPS[id_]
-    
+
+    @staticmethod
+    def list_shops() -> None:
+        print(f"{'ID':<5}{'Name':<20}{'Location':<20}")
+        for key, value in SHOPS.items():
+            print(f"{key:<5}{value.name:<20}{value.location:<20}")

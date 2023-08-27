@@ -1,4 +1,4 @@
-from Headers import Move, Party, Pokemon, SavedPokemon, Trainer
+from Headers import Move, Party, Pokemon, SavedPokemon, Trainer, Shop, Item
 # loading
 from Headers.Loading.load import load
 from Headers.Loading.load_move_levels import load_move_levels
@@ -34,14 +34,19 @@ parties = load("parties", "Saves")
 for key, value in parties.items():
     Party.register(value)
 
-shops = load("shops", "Saves")
-
 t = load("trainers", "Saves")
 for key,value in t.items():
     Trainer.register(value)
 
 items = load("items", "Resources")
 categorized_items = categorize_items(items)
+for key, value in items.items():
+    Item.register(value)
+
+shops = load("shops", "Saves")
+for key, value in shops.items():
+    Shop.register(value)
+
 
 for mon in SavedPokemon.iter():  # check for level ups
     level_check(mon, move_levels)
