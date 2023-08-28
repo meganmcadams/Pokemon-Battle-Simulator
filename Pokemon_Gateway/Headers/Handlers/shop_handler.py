@@ -88,6 +88,7 @@ def run_shop():
         print("Action cancelled.")
     else:
         try:
+
             shop = Shop.get_shop(to_run)
             print("Which trainer would you like to run the shop with?")
             Trainer.list_trainers()
@@ -97,31 +98,76 @@ def run_shop():
                 return
             trainer = Trainer.get_trainer(trainer)
             print(f"Now shopping with {trainer.name} (${trainer.money}) at {shop.name}")
-            print("What would you like to buy?")
-            dict_items = {index: item for index, item in enumerate(shop.items)}
-            print(f"{'ID':<5}{'Name':<20}{'Price':<10}")
-            for key, value in dict_items.items():
-                print(f"{key:<5}{value.name:<20}{value.buy:<10}")
-            item = correct_type(input("--> "))
-            if item == -1:
-                print("Action cancelled.")
-                return
-            item = Item.get_item(item)
-            print("How many would you like to buy?")
-            amount = correct_type(input("--> "))
-            if amount == -1:
-                print("Action cancelled.")
-                return
-            if amount > 0:
-                if trainer.money < item.buy * amount:
-                    print("You don't have enough money to buy that many.")
+            while True:
+                option(0, "Buy")
+                option(1, "Sell")
+                option(2, "Exit")
+                inp = correct_type(input("--> "))
+                if inp == 0:
+                    buy(shop, trainer)
+                elif inp == 1:
+                    sell(trainer)
+                elif inp == 2:
+                    print("Action cancelled.")
                     return
-                print("You bought", amount, item.name + ("s" if amount > 1 else ""))
-                trainer.money -= item.buy * amount
-                print("You now have", trainer.money, "dollars")
-                for i in range(amount):
-                    trainer.items.append(item)
 
         except Exception as e:
             print(e)
-            print("ERROR: Could not run", to_run)
+            print("ERROR: An error occured while running shop", to_run)
+
+
+def buy(shop, trainer):
+    print("What would you like to buy?")
+    dict_items = {index: item for index, item in enumerate(shop.items)}
+    print(f"{'ID':<5}{'Name':<20}{'Price':<10}")
+    for key, value in dict_items.items():
+        print(f"{key:<5}{value.name:<20}{value.buy:<10}")
+    item = correct_type(input("--> "))
+    if item == -1:
+        print("Action cancelled.")
+        return
+    item = Item.get_item(item)
+    print("How many would you like to buy?")
+    amount = correct_type(input("--> "))
+    if amount == -1:
+        print("Action cancelled.")
+        return
+    if amount > 0:
+        if trainer.money < item.buy * amount:
+            print("You don't have enough money to buy that many.")
+            return
+        print("You bought", amount, item.name + ("s" if amount > 1 else ""))
+        trainer.money -= item.buy * amount
+        print("You now have", trainer.money, "dollars")
+        for i in range(amount):
+            trainer.items.append(item)
+
+
+def sell(trainer):
+    print("What would you like to sell? (-1 to cancel)")
+    item_set = set(trainer.items)
+    dict_items = {index: item for index, item in enumerate(item_set)}
+    print(f"{'ID':<5}{'Name':<20}{'Quantity':<10}{'Sell Price':<10}")
+    for key, value in dict_items.items():
+        print(f"{key:<5}{value.name:<20}{trainer.items.count(value):<5}{value.sell:<10}")
+
+    item = correct_type(input("--> "))
+    if item == -1:
+        print("Action cancelled.")
+        return
+    try:
+        item = item_set[item]
+    except IndexError:
+        print("Invalid input")
+        return
+    print("How many would you like to sell? (-1 to cancel)")
+    amount = correct_type(input("--> "))
+    if amount == -1:
+        print("Action cancelled.")
+        return
+    if 0 < amount < trainer.items.count(item):
+        print("You sold", amount, item.name + ("s" if amount > 1 else ""))
+        trainer.money += item.sell * amount
+        print("You now have", trainer.money, "dollars")
+        for i in range(amount):
+            trainer.items.remove(item)

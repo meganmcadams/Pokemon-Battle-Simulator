@@ -32,16 +32,16 @@ class Trainer:
         trainer.id = trainer_["ID"]
         trainer.player = trainer_["Player"]
         trainer.name = trainer_["Name"]
-        if trainer.pokedex:
+        if trainer_["Pokedex"]:
             trainer.pokedex = [Pokemon.get_pokemon(int(i)) for i in str(trainer_["Pokedex"]).rstrip(',').split(',')]
         trainer.pokedex_count = trainer_["Pokedex Count"]
         trainer.pokemon_count = trainer_["Pokemon Count"]
         # todo: trainer["Pokemon"] is a list of dex entries, not SavedPokemon entries
-        if trainer.pokemon:
+        if trainer_["Pokemon"]:
             trainer.pokemon = [Pokemon.get_pokemon(int(i)) for i in str(trainer_["Pokemon"]).rstrip(',').split(',')]
             # trainer.pokemon = [SavedPokemon.get_pokemon(int(i)) for i in str(trainer_["Pokemon"]).rstrip(',').split(',')]
         trainer.money = trainer_["Money"]
-        if trainer.items:
+        if trainer_["Items"]:
             trainer.items = [Item.get_item(int(i)) for i in str(trainer_["Items"]).rstrip(',').split(',')]
         TRAINERS[trainer.id] = trainer
 

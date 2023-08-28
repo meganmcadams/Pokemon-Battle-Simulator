@@ -34,14 +34,14 @@ parties = load("parties", "Saves")
 for key, value in parties.items():
     Party.register(value)
 
-t = load("trainers", "Saves")
-for key,value in t.items():
-    Trainer.register(value)
-
 items = load("items", "Resources")
 categorized_items = categorize_items(items)
 for key, value in items.items():
     Item.register(value)
+
+t = load("trainers", "Saves")
+for key,value in t.items():
+    Trainer.register(value)
 
 shops = load("shops", "Saves")
 for key, value in shops.items():
