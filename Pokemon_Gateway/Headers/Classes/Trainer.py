@@ -27,7 +27,6 @@ class Trainer:
         if isinstance(trainer_, Trainer):
             TRAINERS[trainer_.id] = trainer_
             return
-        # todo: finish
         trainer = Trainer()
         trainer.id = trainer_["ID"]
         trainer.player = trainer_["Player"]
@@ -36,10 +35,8 @@ class Trainer:
             trainer.pokedex = [Pokemon.get_pokemon(int(i)) for i in str(trainer_["Pokedex"]).rstrip(',').split(',')]
         trainer.pokedex_count = trainer_["Pokedex Count"]
         trainer.pokemon_count = trainer_["Pokemon Count"]
-        # todo: trainer["Pokemon"] is a list of dex entries, not SavedPokemon entries
         if trainer_["Pokemon"]:
             trainer.pokemon = [Pokemon.get_pokemon(int(i)) for i in str(trainer_["Pokemon"]).rstrip(',').split(',')]
-            # trainer.pokemon = [SavedPokemon.get_pokemon(int(i)) for i in str(trainer_["Pokemon"]).rstrip(',').split(',')]
         trainer.money = trainer_["Money"]
         if trainer_["Items"]:
             trainer.items = [Item.get_item(int(i)) for i in str(trainer_["Items"]).rstrip(',').split(',')]

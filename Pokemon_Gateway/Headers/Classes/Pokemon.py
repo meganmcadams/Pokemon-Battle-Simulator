@@ -3,7 +3,6 @@ import typing
 from typing import Union
 
 
-# TODO: move to dict
 POKEMON: dict[int, 'Pokemon'] = {}
 
 

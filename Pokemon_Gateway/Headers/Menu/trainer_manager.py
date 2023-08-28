@@ -3,8 +3,6 @@ from Headers.tools import *
 from .party_builder import delete_party
 
 
-# TODO: all broken--funcs shouldnt have any arguments, should pull trainers from Trainer.get_all()
-
 def trainer_manager() -> None:
     print("")  # print newline
     header("Trainer Manager")
