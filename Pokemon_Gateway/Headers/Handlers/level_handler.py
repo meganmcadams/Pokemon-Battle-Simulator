@@ -17,7 +17,6 @@ def level_check(pokemon: SavedPokemon, move_levels):
 
 
 def level_up(pokemon: SavedPokemon, move_levels, announce: bool, sub_exp: bool):
-
     if sub_exp:
         # i dont know how this works, but it does
         pokemon.exp -= Pokemon.get_level_exp(pokemon.exp_growth, pokemon.level + 1) - Pokemon.get_level_exp(
@@ -56,7 +55,9 @@ def print_stat_changes(new_p: SavedPokemon, old_p: SavedPokemon, stat_list=None)
                      "Speed"]
     for stat in stat_list:
         # could do this with getattr, but I'm too lazy to change it.
-        print(f"{stat}: {old_p[stat]} --> {new_p[stat]}")
+        # later me: changing it now, shit's broken
+        internal_name = stat.lower().replace(' ', '_')
+        print(f"{stat}: {getattr(old_p.stats, internal_name)} --> {getattr(new_p.stats, internal_name)}")
     print("")  # print newline
 
 
@@ -67,13 +68,12 @@ def learn_moves(p: SavedPokemon, move_levels: dict[int, dict[int, list[int]]]):
         return
 
     curr_moves = p.moves
-
     for m in learnables:
-        if int(m) not in curr_moves:
-            print(f"{p.name} wants to learn {Move.get_move(int(m)).name}.")
+        if m not in [i.id for i in curr_moves]:
+            print(f"{p.name} wants to learn {Move.get_move(m).name}.")
 
             if len(curr_moves) >= 4:
-                print(f"Forget a move to learn {Move.get_move(int(m)).name}?")
+                print(f"Forget a move to learn {Move.get_move(m).name}?")
                 option(0, "Yes")
                 option(1, "No")
                 inp = input("--> ")
@@ -88,7 +88,7 @@ def learn_moves(p: SavedPokemon, move_levels: dict[int, dict[int, list[int]]]):
                 if inp == 0:  # Yes
                     i = 0
                     for c in curr_moves:
-                        option(i, Move.get_move(int(c)).name)
+                        option(i, c.name)
                         i += 1
 
                     inp = input("--> ")
@@ -101,26 +101,16 @@ def learn_moves(p: SavedPokemon, move_levels: dict[int, dict[int, list[int]]]):
                         return
 
                     try:  # try to replace move with new move
-                        curr_moves[inp] = Move.get_move(inp)
+                        curr_moves[inp] = Move.get_move(m)
                     except Exception:
                         print(inp, "was not an option")
                         learn_moves(p, move_levels)  # try again
                         return
 
-                    new_moves = ""
-                    i = 0
-                    for c in curr_moves:  # replace moves
-                        new_moves += str(c)
-                        if i < 3:
-                            new_moves += ","
-                        i += 1
-
-                    p.moves = new_moves
-
-                    print(f"{p.name} has learned {Move.get_move(int(m)).name}.")
+                    print(f"{p.name} has learned {Move.get_move(m).name}.")
 
                 elif inp == 1:  # No
-                    pass
+                    continue
 
                 else:  # Incorrect input
                     print(inp, "was not an option")
@@ -128,8 +118,7 @@ def learn_moves(p: SavedPokemon, move_levels: dict[int, dict[int, list[int]]]):
                     return
 
             else:  # length of moves is less than 4
-                p.moves = str(p.moves) + "," + str(m)
-                print(f"{p.name} has learned {Move.get_move(int(m)).name}.")
+                print(f"{p.name} has learned {Move.get_move(m).name}.")
 
 
 def exp(winning_party: typing.List[SavedPokemon], defeated_party: typing.List[SavedPokemon]):

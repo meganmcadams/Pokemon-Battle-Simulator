@@ -33,65 +33,34 @@ class Pokemon:
         self.gen: int = 0
         self.legendary: int = 0
 
-    def __dict__(self):
-        return {
-            'dex_entry': self.dex_entry,
-            'name': self.name,
-            'evo': self.evo,
-            'base_evo': self.base_evo,
-            'next_evo': self.next_evo,
-            'evolve_level': self.evolve_level,
-            'learnable_moves': self.learnable_moves,
-            'type_effectiveness': self.type_effectiveness,
-            'base_egg_steps': self.base_egg_steps,
-            'capture_rate': self.capture_rate,
-            'classification': self.classification,
-            'exp_growth': self.exp_growth,
-            'height': self.height,
-            'gender_ratio': self.gender_ratio,
-            'base_total': self.base_total,
-            'exp_yield': self.exp_yield,
-            'evs_given': self.evs_given,
-            'total_evs': self.total_evs,
-            'base_stats': self.base_stats,
-            'types': self.types,
-            'weight': self.weight,
-            'gen': self.gen,
-            'legendary': self.legendary
-        }
+    # def __dict__(self):
 
-    def __getitem__(self, item):
-        # print(self.__dict__())
-        try:
-            return self.__dict__()[item]
-        except KeyError:
-            # print(self['stats'])
-            header_dict = {
-                'ID': self['id'], 'Name': self['name'], 'Evo': self['evo'], 'Base Evo': self['base_evo'],
-                'Next Evo': self['next_evo'], 'Evolves at Level': self['evolve_level'],
-                'Learnable Moves': self['learnable_moves'], 'Bug': self['type_effectiveness']['Bug'],
-                'Dark': self['type_effectiveness']['Dark'], 'Dragon': self['type_effectiveness']['Dragon'],
-                'Electric': self['type_effectiveness']['Electric'], 'Fairy': self['type_effectiveness']['Fairy'],
-                'Fighting': self['type_effectiveness']['Fighting'], 'Fire': self['type_effectiveness']['Fire'],
-                'Flying': self['type_effectiveness']['Flying'], 'Ghost': self['type_effectiveness']['Ghost'],
-                'Grass': self['type_effectiveness']['Grass'], 'Ground': self['type_effectiveness']['Ground'],
-                'Ice': self['type_effectiveness']['Ice'], 'Normal': self['type_effectiveness']['Normal'],
-                'Poison': self['type_effectiveness']['Poison'], 'Psychic': self['type_effectiveness']['Psychic'],
-                'Rock': self['type_effectiveness']['Rock'], 'Steel': self['type_effectiveness']['Steel'],
-                'Water': self['type_effectiveness']['Water'], 'Base Egg Steps': self['base_egg_steps'],
-                'Capture Rate': self['capture_rate'], 'Classification': self['classification'],
-                'Exp Growth': self['exp_growth'], 'Height': self['height'], 'Percent Male': self['gender_ratio'],
-                'Base Total': self['base_total'], 'EXP': self["Exp"], 'HP EV': self['evs']["HP"],
-                'Attack EV': self['evs']["Attack"], 'Defense EV': self['evs']["Defense"],
-                'Sp Attack EV': self['evs']["Sp Attack"], 'Sp Defense EV': self['evs']["Sp Defense"],
-                'Speed EV': self['evs']["Speed"], 'Total EVs': self['total_evs'],
-                'Attack': self['base_stats']["Attack"], 'Defense': self['base_stats']["Defense"],
-                'HP': self['base_stats']["HP"], 'Sp Attack': self['base_stats']["Sp Attack"],
-                'Sp Defense': self['base_stats']["Sp Defense"], 'Speed': self['base_stats']["Speed"],
-                'Type1': self['type1'], 'Type2': self['type2'], 'Weight': self['weight'], 'Gen': self['gen'],
-                'Legendary': self['legendary']
+    def to_dict(self) -> dict:
+        return {
+                'dex_entry': self.dex_entry,
+                'name': self.name,
+                'evo': self.evo,
+                'base_evo': self.base_evo,
+                'next_evo': self.next_evo,
+                'evolve_level': self.evolve_level,
+                'learnable_moves': self.learnable_moves,
+                'type_effectiveness': self.type_effectiveness,
+                'base_egg_steps': self.base_egg_steps,
+                'capture_rate': self.capture_rate,
+                'classification': self.classification,
+                'exp_growth': self.exp_growth,
+                'height': self.height,
+                'gender_ratio': self.gender_ratio,
+                'base_total': self.base_total,
+                'exp_yield': self.exp_yield,
+                'evs_given': self.evs_given,
+                'total_evs': self.total_evs,
+                'base_stats': self.base_stats,
+                'types': self.types,
+                'weight': self.weight,
+                'gen': self.gen,
+                'legendary': self.legendary
             }
-            return header_dict[item]
 
     def __str__(self):
         return f"Pokemon: {self.name}\n" \
@@ -171,14 +140,10 @@ class Pokemon:
     def get_pokemon(id_: Union[int, str]) -> typing.Union['Pokemon', int]:
         if isinstance(id_, int):
             return POKEMON[id_]
-        for key,value in POKEMON:
+        for key, value in POKEMON.items():
             if value.name == id_:
                 return value
         return -1
-
-    @staticmethod
-    def get_all() -> typing.Dict[int, 'Pokemon']:
-        return POKEMON
 
     @staticmethod
     def register(pokemon: dict):
@@ -209,6 +174,10 @@ class Pokemon:
             if 15 <= level < 36:
                 return int((level ** 3) * (level + 14) / 50)
             return int((level ** 3) * (((level / 2) + 32) / 50))
+
+    @staticmethod
+    def get_all() -> typing.Dict[int, 'Pokemon']:
+        return POKEMON
 
 
 @dataclasses.dataclass

@@ -1,7 +1,7 @@
 import copy
 import random
 
-from Headers import Move, Trainer
+from Headers import Move, Trainer, Stats
 from Headers import Pokemon
 from Headers import SavedPokemon
 from Headers.Handlers.level_handler import level_up
@@ -9,14 +9,15 @@ from Headers.tools import get_next_id, subheader, option, correct_type
 
 
 def create(level: int, name: str, nickname: str, tid: int, move_levels: dict[int, dict[int, list[int]]]):
-    new_mon = SavedPokemon()
-    new_mon.id = get_next_id(SavedPokemon.get_all())
 
-    dex_entry = Pokemon.get_pokemon(name)
-    if dex_entry == -1:  # if could not find name in pokemon
+    base_mon = Pokemon.get_pokemon(name)
+    if base_mon == -1:  # if could not find name in pokemon
         print("ERROR: Could not find", name, "in pokemon.")
         return
-    new_mon.pid = dex_entry  # pid
+
+    new_mon = SavedPokemon(base_mon.dex_entry)
+    new_mon.id = get_next_id(SavedPokemon.get_all())
+    # new_mon.pid = base_mon.dex_entry  # pid
     new_mon.tid = tid
     new_mon.nickname = nickname  # name
     new_mon.status = ""
@@ -26,10 +27,10 @@ def create(level: int, name: str, nickname: str, tid: int, move_levels: dict[int
 
     # nickname
     if nickname.isspace():
-        new_mon.nickname = "Wild " + new_mon.name
+        new_mon.nickname = "Wild " + base_mon.name
 
     # trainer and player
-    if tid != -1:
+    if tid != -1 and tid != "":
         trainer = Trainer.get_trainer(tid)
         new_mon.tname = trainer.name
         new_mon.plname = trainer.player
@@ -39,13 +40,13 @@ def create(level: int, name: str, nickname: str, tid: int, move_levels: dict[int
 
     # gender
     min_num = random.randrange(1, 100)
-    num = float(Pokemon.get_pokemon(dex_entry).gender_ratio * 100)
+    num = float(base_mon.gender_ratio * 100)
     if num <= min_num:
         new_mon.gender = "Male"
     else:
         new_mon.gender = "Female"
 
-    moves = move_levels[int(dex_entry)][0]  # set moves to list of possible moves
+    moves = move_levels[base_mon.dex_entry][0]  # set moves to list of possible moves
     if level < 3:  # if level is less than 3, have it learn 2 moves
         num = 2
     elif level < 7:
@@ -62,6 +63,8 @@ def create(level: int, name: str, nickname: str, tid: int, move_levels: dict[int
         tmp.append(Move.get_move(res_move))
 
     new_mon.moves = tmp  # store result
+    new_mon.stats = Stats()
+    new_mon.base_stats = copy.deepcopy(base_mon.base_stats)
     new_mon.stats.hp = new_mon.base_stats.hp
     new_mon.ivs.hp = random.randrange(1, 32)
     new_mon.ivs.attack = random.randrange(1, 32)
@@ -77,7 +80,7 @@ def create(level: int, name: str, nickname: str, tid: int, move_levels: dict[int
 
     new_mon.curr_stats = copy.deepcopy(new_mon.stats)
 
-    stored_id = new_mon['ID']
+    stored_id = new_mon.id
 
     SavedPokemon.register(new_mon)
     print(f"New pokemon, {new_mon.name}, successfully created | ID: {stored_id}")

@@ -37,7 +37,7 @@ def pokemon_manager(move_levels):
                         create(level, name, nickname, tid, move_levels)
 
     elif inp == 1:  # Delete Pokemon
-        print_list(SavedPokemon.get_all())
+        print_list(SavedPokemon.as_dicts())
         print("Which pokemon would you like to delete (-1 to cancel)?")
         to_delete = correct_type(input("--> "))
         if to_delete == -1:

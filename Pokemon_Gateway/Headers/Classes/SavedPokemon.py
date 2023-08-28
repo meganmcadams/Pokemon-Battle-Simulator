@@ -16,7 +16,7 @@ class SavedPokemon(Pokemon):
         self.plname = ""
         self.gender = ""
         self.nickname = ""
-        self.level = -1
+        self.level = 0
         self.moves: typing.List[Move] = []
         self.battles = -1
         self.status = ""
@@ -28,7 +28,7 @@ class SavedPokemon(Pokemon):
         self.flinched = 0
 
         if dex_entry != 0:
-            base_dict = Pokemon.get_pokemon(dex_entry).__dict__()
+            base_dict = Pokemon.get_pokemon(dex_entry).to_dict()
             for key, item in base_dict.items():
                 setattr(self, key, item)
 
@@ -41,16 +41,19 @@ class SavedPokemon(Pokemon):
     def register(data: typing.Union[dict, 'SavedPokemon']):
         if isinstance(data, SavedPokemon):
             SAVED_MONS[data.id] = data
+            return
         saved_mon = SavedPokemon(data["Pid"])
 
         saved_mon.id = data['ID']
         saved_mon.tid = data['Tid']
         saved_mon.tname = data['Tname']
+        saved_mon.plname = data['Plname']
+        saved_mon.full_name = data['Full Name']
         saved_mon.gender = data['Gender']
         saved_mon.nickname = data['Name']
         saved_mon.level = data['Level']
 
-        saved_mon.moves = [Move.get_move(int(i)) or print(i) for i in str(data['Moves']).rstrip(',').split(',')]
+        saved_mon.moves = [Move.get_move(int(i)) for i in str(data['Moves']).rstrip(',').split(',')]
 
         saved_mon.battles = data['Battles']
         saved_mon.status = data['Status']
@@ -162,4 +165,4 @@ class SavedPokemon(Pokemon):
     @staticmethod
     def list_all():
         for i in SavedPokemon.get_all().values():
-            print(f"{'ID':<5}: {i.id} | {i.nickname} ({i.plname}'s {i.name})")
+            print(f"{'ID':<5}: {i.id} | {i.nickname} ({i.full_name})")
