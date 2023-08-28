@@ -65,8 +65,16 @@ def accuracy_check(curr_pokemon: SavedPokemon, move: Move):  # determine if a mo
         num = random.randrange(1, 2)  # 50% chance to be hurt by confusion
         if num == 1:
             print(curr_pokemon.name, "was hurt by its confusion!")
-            # todo: damage calc based on current attack stat
-            curr_pokemon.curr_hp -= (int(curr_pokemon.stats.hp) * 0.05)  # decrease health by 5%
+
+            # Confusion damage is calculated as a typeless 40 base power physical move with a 100% chance to hit.
+            # It cannot be a critical hit and will not activate effects that require contact.
+            part1 = ((curr_pokemon.level * 2) / 5) + 2
+            part2 = 40 * (curr_pokemon.curr_stats.attack / curr_pokemon.curr_stats.defense)
+
+            left = ((part1 * part2) / 50) + 2
+            rng = random.randrange(85, 100) / 100
+            damage_amount = round(left * rng)
+            curr_pokemon.curr_stats.hp -= damage_amount
             return False
         else:
             print(curr_pokemon.name, "pushed through its confusion.")
