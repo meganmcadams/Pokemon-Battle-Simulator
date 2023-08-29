@@ -9,8 +9,7 @@ class Party:
     def __init__(self, id_: int = 0, name: str = "", pokemon: typing.List[SavedPokemon] = None):
         self.id: int = id_
         self.name: str = name
-        if pokemon is None:
-            self.pokemon: typing.List[SavedPokemon] = [] if pokemon is None else pokemon
+        self.pokemon: typing.List[SavedPokemon] = [] if pokemon is None else pokemon
 
     @staticmethod
     def get_party(id_: int) -> typing.Union['Party', typing.Literal[-1]]:
