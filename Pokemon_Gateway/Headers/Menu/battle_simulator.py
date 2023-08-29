@@ -67,7 +67,7 @@ def battle_simulator(move_levels):
 
                     target = -1
                     while target == -1:  # get target
-                        target = get_target(opposing_party)
+                        target = get_target(party_order, opposing_party)
 
                     if curr_move == -1:  # throw pokeball
                         throw_pokeball(target, curr_pokemon.tid)
@@ -78,7 +78,6 @@ def battle_simulator(move_levels):
                         weather = weather_check(curr_move, weather)  # update weather
 
                     damage(curr_move, curr_pokemon, target, weather)  # dish out damage
-
                 # end of if not pass
 
             # do a health check if the pokemon is dead or not if it did hit
@@ -122,13 +121,12 @@ def battle_simulator(move_levels):
     exp(winner, loser)
 
     # rewards if won
-    money = len(loser) + (loser[0].level * 2) * random.randrange(50, 200)
+    money = len(loser.pokemon) + (loser[0].level * 2) * random.randrange(50, 200)
     for p in winner:
         level_check(p, move_levels)
         try:  # try to give money to the trainer, if any
             Trainer.get_trainer(p.tid).money += money
         except Exception:
             pass
-        pass
 
     return

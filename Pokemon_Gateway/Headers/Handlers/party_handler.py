@@ -90,12 +90,10 @@ def get_party_order(party1: Party, party2: Party) -> typing.Union[list[SavedPoke
                 return -1
 
             done.append(order_inp[i])  # append what we've done so we don't accidentally repeat
-            order_inp[i] = SavedPokemon.get_pokemon(order_inp[i].id)
-
+            order_inp[i] = SavedPokemon.get_pokemon(int(order_inp[i]))
 
             i += 1
-
-        return party_order
+        return order_inp
 
     elif inp == 2:  # Random order
         random.shuffle(party_order)  # shuffle the party order

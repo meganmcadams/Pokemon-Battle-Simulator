@@ -41,6 +41,12 @@ class Move:
         to_add = Move()
         for key, value in move.items():
             setattr(to_add, key.lower().replace(" ", "_"), value)
+        stats = ["hp", "attack", "defense", "sp_attack", "sp_defense", "speed"]
+        for stat in stats:
+            if getattr(to_add, f"p_{stat}") == '':
+                setattr(to_add, f"p_{stat}", 0)
+            if getattr(to_add, f"o_{stat}") == '':
+                setattr(to_add, f"o_{stat}", 0)
 
         MOVES[to_add.id] = to_add
 

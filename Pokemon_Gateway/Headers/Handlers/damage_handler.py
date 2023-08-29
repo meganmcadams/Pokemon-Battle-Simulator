@@ -40,7 +40,7 @@ def damage(move: Move, attacker: SavedPokemon, opponent: SavedPokemon, weather):
     damage_amount = round(left * weather_bonus * critical * rng * stab * burn * opponent_type)
 
     print(f"{move.name} did {damage_amount} damage!")
-    opponent.stats.hp -= damage_amount
+    opponent.curr_stats.hp -= damage_amount
 
     if opponent_type < 1:
         print("It wasn't very effective...")

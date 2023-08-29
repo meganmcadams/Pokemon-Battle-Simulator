@@ -1,7 +1,7 @@
 import copy
 import typing
 
-from Headers import Move
+from Headers import Move, Party
 from Headers import Pokemon
 from Headers import SavedPokemon
 from Headers.tools import option, correct_type
@@ -121,14 +121,14 @@ def learn_moves(p: SavedPokemon, move_levels: dict[int, dict[int, list[int]]]):
                 print(f"{p.name} has learned {Move.get_move(m).name}.")
 
 
-def exp(winning_party: typing.List[SavedPokemon], defeated_party: typing.List[SavedPokemon]):
+def exp(winning_party: Party, defeated_party: Party):
     print("")  # print newline
 
     # get exp
     total = 0
     for d in defeated_party:
         total += Pokemon.get_pokemon(d.dex_entry).exp_yield * d.level / 2
-    total /= len(defeated_party)  # get average
+    total /= len(defeated_party.pokemon)  # get average
 
     for mon in winning_party:
         mon.exp += total

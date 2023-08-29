@@ -9,21 +9,6 @@ from Headers.tools import option, subheader, format_name, correct_type
 def get_move(pokemon: SavedPokemon):
     subheader("Move")
 
-    # try:  # try breaking into list
-    #     pokemon_moves = pokemon['Moves'].split(',')
-    # except Exception:  # if only 1 pokemon
-    #     pokemon_moves = [pokemon['Moves']]
-
-    # i = 0
-    # for m in pokemon.moves:  # set pokemon_moves[i] to actual move info
-    #     try:  # try to find move info
-    #         pokemon.moves[i] = moves[int(pokemon.moves[i])]
-    #     except Exception:
-    #         print("ERROR: Could not find", pokemon.moves[i], "in moves")
-    #         return -3  # error
-    #
-    #     i += 1
-
     options = [-2, -1]
     option(-2, "Pass")
     option(-1, "Throw Pokeball")
@@ -119,16 +104,22 @@ def stat_change_check(move: Move, attacker: SavedPokemon, opponent: SavedPokemon
             opponent.flinched = 1  # set flinched to true
 
 
-def get_target(opposing_party: Party):
+def get_target(party_order, opposing_party: Party):
+    def get_real_target(target: SavedPokemon):
+        for p in party_order:
+            if p.id == target.id:
+                return p
+        return target
     subheader("Target")
 
     options = []
     i = 0
     for p in opposing_party:  # print target options
-        if p.curr_hp <= 0:  # if the pokemon is dead
+        p = get_real_target(p)
+        if p.curr_stats.hp <= 0:  # if the pokemon is dead
             pass
         else:
-            option(i, f"{p.name} ({p.id}) | Curr HP: {p.curr_hp}/{p.stats.hp}")
+            option(i, f"{p.name} ({p.id}) | Curr HP: {p.curr_stats.hp}/{p.stats.hp}")
             options.append(i)
         i += 1
 
@@ -138,7 +129,7 @@ def get_target(opposing_party: Party):
         print(f"ERROR: {inp} was not an option")
         return -1
 
-    return opposing_party[inp]
+    return get_real_target(opposing_party[inp])
 
 
 def weather_check(move: Move, weather: str) -> str:
@@ -162,9 +153,9 @@ def health_check(turn_order: list[SavedPokemon], party1_pokemon: Party,
             print(f"{format_name(p)} has fainted!")
             fainted_pokemon.append(p)  # add to list of fainted pokemon
 
-    if all(p.curr_hp <= 0 for p in party2_pokemon):
+    if all(p.curr_stats.hp <= 0 for p in party2_pokemon):
         return 1  # 1 won
-    elif all(p.curr_hp <= 0 for p in party1_pokemon):
+    elif all(p.curr_stats.hp <= 0 for p in party1_pokemon):
         return 2
 
     return 0
