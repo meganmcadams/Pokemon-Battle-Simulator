@@ -14,10 +14,11 @@ class Party:
 
     @staticmethod
     def get_party(id_: int) -> typing.Union['Party', typing.Literal[-1]]:
-        for party in PARTIES:
-            if party.id == id_:
-                return party
-        return -1
+        return PARTIES.get(id_, -1)
+        # for party in PARTIES:
+        #     if party.id == id_:
+        #         return party
+        # return -1
 
     @staticmethod
     def get_all() -> typing.Dict[int, 'Party']:

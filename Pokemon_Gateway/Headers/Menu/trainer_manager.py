@@ -22,7 +22,7 @@ def trainer_manager() -> None:
         create_trainer()
 
     elif inp == 1:  # Delete Trainer
-        delete_party()
+        delete_trainer()
 
     elif inp == 2:  # List Trainers
         print_list(Trainer.as_dicts())
