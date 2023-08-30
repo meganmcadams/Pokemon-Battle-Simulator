@@ -15,17 +15,26 @@ def battle_simulator(move_levels):
         print("ERROR: At least 2 parties are needed to run the battle simulator")
         return
 
-    print_list(Party.as_dicts())  # list existing parties
-    party1_id = input("Party 1: ")
-    party2_id = input("Party 2: ")
+    team_1_str = input("Pokemon in first team: ")
+    team_2_str = input("Pokemon in second team: ")
+    print([int(i) for i in team_1_str.split(",")])
+    print([int(i) for i in team_2_str.split(",")])
+    # try:
+    team_1 = [SavedPokemon.get_pokemon(int(i)) for i in team_1_str.split(",")]
+    team_2 = [SavedPokemon.get_pokemon(int(i)) for i in team_2_str.split(",")]
+    # except Exception:
+    #     print("ERROR: Could not find one or more pokemon in the teams.")
+    #     return
 
-    party1 = Party.get_party(int(party1_id))
-    party2 = Party.get_party(int(party2_id))
+    party1 = Party(pokemon=team_1)
+    party2 = Party(pokemon=team_2)
+    print([i for i in team_1])
+    print([i for i in team_2])
+    print("Party 1:", [i.name for i in party1.pokemon])
+    print("Party 2:", [i.name for i in party2.pokemon])
 
     # party1_id, party2_id, party1, party2 = validate_parties(stored_pokemon, parties, party1_id,
     #                                                                   party2_id)  # validate the parties
-    if party1_id == -1:  # if party validation was unsuccessful
-        return
 
     party_order = get_party_order(party1, party2)
     if party_order == -1:  # if party order was unsuccessful

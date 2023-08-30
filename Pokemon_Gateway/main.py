@@ -48,7 +48,7 @@ for key, value in shops.items():
     Shop.register(value)
 
 
-for mon in SavedPokemon.iter():  # check for level ups
+for mon in SavedPokemon.get_all().values():  # check for level ups
     level_check(mon, move_levels)
 
 while True:

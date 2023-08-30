@@ -33,7 +33,7 @@ class SavedPokemon(Pokemon):
                 setattr(self, key, item)
 
     @staticmethod
-    def iter() -> 'SavedPokemon':
+    def iter():
         for key, value in SAVED_MONS.items():
             yield value
 
