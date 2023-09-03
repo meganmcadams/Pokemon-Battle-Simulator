@@ -28,10 +28,6 @@ def battle_simulator(move_levels):
 
     party1 = Party(pokemon=team_1)
     party2 = Party(pokemon=team_2)
-    print([i for i in team_1])
-    print([i for i in team_2])
-    print("Party 1:", [i.name for i in party1.pokemon])
-    print("Party 2:", [i.name for i in party2.pokemon])
 
     # party1_id, party2_id, party1, party2 = validate_parties(stored_pokemon, parties, party1_id,
     #                                                                   party2_id)  # validate the parties
